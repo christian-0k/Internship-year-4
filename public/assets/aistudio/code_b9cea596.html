@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-secondary": "#333030", "secondary-fixed": "#e8e1e0", "on-primary-container": "#676364", "surface-container-low": "#410100", "tertiary-fixed-dim": "#ccc5c2", "on-primary-fixed": "#1d1b1b", "error-container": "#93000a", "on-surface": "#ffdad4", background: "#310000", "primary-fixed": "#e7e1e1", "tertiary-container": "#e9e1de", "surface-container-lowest": "#270000", "primary-container": "#e7e1e1", "on-error": "#690005", "on-secondary-fixed-variant": "#4a4646", "surface-bright": "#790200", "surface-tint": "#cac5c5", "on-primary": "#323030", "on-error-container": "#ffdad6", "surface-container": "#480100", "primary-fixed-dim": "#cac5c5", "secondary-container": "#4a4646", "on-secondary-container": "#bab4b3", "on-tertiary-fixed": "#1e1b19", primary: "#ffffff", tertiary: "#ffffff", "on-background": "#ffdad4", "on-tertiary-fixed-variant": "#4a4644", "secondary-fixed-dim": "#ccc5c5", "inverse-on-surface": "#680200", "on-secondary-fixed": "#1e1b1b", secondary: "#ccc5c5", "surface-variant": "#700200", "on-primary-fixed-variant": "#494646", "surface-dim": "#310000", "inverse-surface": "#ffdad4", "tertiary-fixed": "#e9e1de", "on-tertiary": "#33302e", error: "#ffb4ab", "outline-variant": "#444748", "on-surface-variant": "#c4c7c8", outline: "#8e9192", "surface-container-high": "#5c0100", "surface-container-highest": "#700200", "on-tertiary-container": "#686361", "inverse-primary": "#615e5e", surface: "#310000"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-sm": "0.5rem", gutter: "1.5rem", "space-md": "1rem", margin: "2rem", "margin-sm": "1rem", "gutter-sm": "1rem", "space-lg": "1.5rem", "margin-lg": "4rem", "space-xl": "2.5rem", "space-xs": "0.25rem"}, fontFamily: {"headline-lg": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], "body-lg": ["Inter"], "body-sm": ["Inter"], "code-sm": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "title-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "headline-sm": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">NetMentor<span class="text-primary">.AI</span></span><span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">PLATFORM ADMIN // ROOT</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-badge text-label-badge text-on-surface-variant/70 uppercase tracking-widest">ROOT COMMAND</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-surface-container-high text-primary font-code-sm text-code-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Overview / Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="user-directory-iam" href="#"><span class="material-symbols-outlined text-[18px]">manage_accounts</span><span>User Directory &amp; IAM</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="rbac-permissions" href="#"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span>RBAC &amp; Permissions</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-surface-container-high text-primary font-code-sm text-code-sm" data-path="multi-tenant-orgs" href="#"><span class="material-symbols-outlined text-[18px]">domain</span><span>Multi-Tenant Orgs</span></a></nav><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-badge text-label-badge text-on-surface-variant/70 uppercase tracking-widest">INFRA &amp; TELEMETRY</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-surface-container-high text-primary font-code-sm text-code-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="audit-trail-logs" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>Audit Trail &amp; Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="security-vaults" href="#"><span class="material-symbols-outlined text-[18px]">key</span><span>Security &amp; Vaults</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="api-webhooks" href="#"><span class="material-symbols-outlined text-[18px]">webhook</span><span>API &amp; Webhooks</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest"><div class="flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low rounded-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-[16px]">lock</span><span class="font-label-badge text-label-badge text-tertiary">ENCLAVE LVL 4 - MFA STRICT</span></div></div><div class="flex items-center justify-between px-space-sm"><span class="font-code-sm text-code-sm text-on-surface-variant">UTC SYNCHRONIZED</span><span class="font-code-sm text-code-sm text-primary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>LIVE</span></div><div class="flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low rounded-lg"><div class="flex flex-col"><span class="font-label-badge text-label-badge text-on-surface">EMERGENCY MODE</span><span class="font-code-sm text-code-sm text-on-surface-variant">Circuit Idle</span></div><div class="flex items-center gap-space-xs"><span class="font-label-badge text-label-badge text-on-surface-variant">DISABLED</span><div class="w-8 h-4 rounded-full bg-surface-variant relative p-0.5 cursor-not-allowed"><div class="w-3 h-3 rounded-full bg-outline"></div></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-code-sm text-code-sm text-primary">CLUSTER: US-EAST-SYS (HEALTHY 99.99%)</span></div><div class="relative flex items-center w-full max-w-md"><span class="material-symbols-outlined text-outline absolute left-3 text-[18px]">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-1.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary text-on-surface placeholder:text-outline" placeholder="Search users, orgs, tickets, IPs..." type="text"/><span class="font-code-sm text-code-sm text-outline absolute right-3 pointer-events-none bg-surface-container px-1 rounded">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-md"><div class="flex flex-col items-end"><span class="font-label-badge text-label-badge text-on-surface-variant">SYSTEM TELEMETRY</span><span class="font-code-sm text-code-sm text-primary">API Latency: 18ms</span></div><div class="flex flex-col items-end"><span class="font-label-badge text-label-badge text-on-surface-variant">LIVE CLUSTER LOAD</span><span class="font-code-sm text-code-sm text-secondary">CPU: 34% // RAM: 58%</span></div></div><div class="relative"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface font-code-sm text-code-sm hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-secondary text-[16px]">hub</span><span>Admin Portal</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button></div><button class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-tertiary text-on-tertiary-container font-label-badge text-[10px] flex items-center justify-center font-bold">2</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden 2xl:flex flex-col items-end"><span class="font-title-md text-title-md text-on-surface leading-none">Root Administrator</span><span class="font-label-badge text-label-badge text-primary">DevOps / SecOps Lead</span></div><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="material-symbols-outlined text-primary text-[14px] absolute -bottom-1 -right-1 bg-surface-container-lowest rounded-full">verified</span></div></div></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Command & Breadcrumb Bar -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<span>Root Command</span>
+<span class="text-outline">/</span>
+<span>Multi-Tenancy</span>
+<span class="text-outline">/</span>
+<span class="text-primary font-medium">Organization Directory</span>
+</div>
+<div class="flex items-center gap-space-md flex-wrap mt-1">
+<h1 class="font-headline-lg text-headline-lg font-bold tracking-tight text-on-surface">
+          Enterprise Multi-Tenant Organizations
+        </h1>
+<div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-badge text-label-badge text-primary uppercase">64 Active Enterprise Tenants</span>
+</div>
+</div>
+</div>
+<!-- Global Tenant Actions -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-2 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-space-xs transition-colors shadow-sm" onclick="document.getElementById('scim-gateway-drawer').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+<span>SSO / SCIM Health</span>
+</button>
+<button class="px-space-md py-2 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-space-xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">file_download</span>
+<span>Export Audit CSV</span>
+</button>
+<button class="px-space-md py-2 bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-code-sm text-code-sm font-semibold rounded flex items-center gap-space-xs transition-all shadow-[0_0_20px_rgba(16,185,129,0.35)]" onclick="document.getElementById('provision-drawer').classList.remove('translate-x-full')">
+<span class="material-symbols-outlined text-[18px]">add_business</span>
+<span>+ Provision Enterprise Org</span>
+</button>
+</div>
+</div>
+<!-- Real-Time Metrics Telemetry Strip -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1: Seats -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Total Enterprise Seats</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">groups</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">18,450</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">/ 22,000 Seats</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 83.8%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Capacity: 83.8% Allocated</span>
+<span class="text-primary">+450 this week</span>
+</div>
+</div>
+<!-- Metric 2: WASM Compute -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">WASM Compute Active</span>
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-primary">42,910</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">hrs MTD</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2">
+<!-- Sparkline Mini Visualization -->
+<svg class="w-full h-5 text-primary" fill="none" viewbox="0 0 160 20">
+<path d="M0 16 L20 14 L40 15 L60 8 L80 11 L100 6 L120 12 L140 4 L160 2" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0 16 L20 14 L40 15 L60 8 L80 11 L100 6 L120 12 L140 4 L160 2 L160 20 L0 20 Z" fill="currentColor" fill-opacity="0.1"></path>
+</svg>
+</div>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Peak Pods: 4,120</span>
+<span class="text-secondary font-medium">94.2% Container Eff.</span>
+</div>
+</div>
+<!-- Metric 3: Gross MRR -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Enterprise Gross MRR</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">payments</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">$388,400</span>
+<span class="font-code-sm text-code-sm text-tertiary">/ mo</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 76%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Renewal Rate: 99.1%</span>
+<span class="text-tertiary font-medium">+14.2% MoM ARR</span>
+</div>
+</div>
+<!-- Metric 4: Multi-Tenant SLA -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Core Fleet SLA Uptime</span>
+<span class="material-symbols-outlined text-primary text-[20px]">dns</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">99.98%</span>
+<span class="font-code-sm text-code-sm text-primary">All Pods</span>
+</div>
+<div class="flex items-center gap-1 mt-2">
+<span class="h-2 w-full rounded bg-primary"></span>
+<span class="h-2 w-full rounded bg-primary"></span>
+<span class="h-2 w-full rounded bg-primary"></span>
+<span class="h-2 w-full rounded bg-primary"></span>
+<span class="h-2 w-full rounded bg-primary"></span>
+<span class="h-2 w-full rounded bg-primary"></span>
+<span class="h-2 w-full rounded bg-primary"></span>
+<span class="h-2 w-full rounded bg-tertiary"></span>
+<span class="h-2 w-full rounded bg-primary"></span>
+<span class="h-2 w-full rounded bg-primary"></span>
+</div>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Degraded: 1 Pod (Boeing SCIM)</span>
+<span class="text-primary font-medium">Zero MTTR incidents</span>
+</div>
+</div>
+</div>
+<!-- Filter & Tactical Search Strip -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<div class="relative flex-1">
+<span class="material-symbols-outlined text-outline absolute left-3 top-1/2 -translate-y-1/2 text-[20px]">search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-4 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary placeholder:text-outline" id="orgSearchInput" onkeyup="filterOrganizations()" placeholder="Filter by Organization Name, Tenant Slug, Custom Domain, or Identity Org ID..." type="text"/>
+</div>
+<!-- Category Chips & Region Dropdown -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center bg-surface-container-low p-1 rounded">
+<button class="filter-chip px-space-sm py-1 rounded text-primary bg-surface-container-high font-label-badge text-label-badge uppercase transition-colors" onclick="setFilter('all', this)">
+          All (64)
+        </button>
+<button class="filter-chip px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase transition-colors" onclick="setFilter('dedicated', this)">
+          Dedicated (18)
+        </button>
+<button class="filter-chip px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase transition-colors" onclick="setFilter('pro', this)">
+          Pro (32)
+        </button>
+<button class="filter-chip px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase transition-colors" onclick="setFilter('academic', this)">
+          Academic (14)
+        </button>
+</div>
+<div class="relative">
+<select class="bg-surface-container-low text-on-surface font-code-sm text-code-sm px-space-sm py-2 rounded focus:outline-none cursor-pointer appearance-none pr-8">
+<option>Region: Global All Fleet</option>
+<option>Region: US-East-01 (N. Virginia)</option>
+<option>Region: US-West-02 (Oregon)</option>
+<option>Region: US-East-GovCloud</option>
+<option>Region: EU-Central-01 (Frankfurt)</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-outline absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Organizations Dense Data Grid / Cards -->
+<div class="flex flex-col gap-space-md" id="organizations-list">
+<!-- ORG 1: Nexus Global IT -->
+<div class="org-row bg-surface-container-lowest hover:bg-surface-container-low rounded-xl p-space-lg shadow-md transition-all flex flex-col gap-space-md relative overflow-hidden" data-name="nexus global it nexusglobal.com #org-8842" data-tier="pro">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Identity & Metadata -->
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">domain</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold">Nexus Global IT</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-code-sm text-code-sm text-secondary">#ORG-8842</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-badge text-label-badge text-primary uppercase">Enterprise Pro</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">public</span> US-East-01
+              </span>
+</div>
+<div class="flex items-center gap-space-md font-code-sm text-code-sm text-on-surface-variant mt-1 flex-wrap">
+<span>Slug: <span class="text-on-surface">nexus-global-it</span></span>
+<span>Domain: <span class="text-secondary underline decoration-secondary/30">nexusglobal.com</span></span>
+<span>MRR: <span class="text-tertiary font-medium">$7,840/mo</span></span>
+</div>
+</div>
+</div>
+<!-- Telemetry Meters -->
+<div class="flex items-center gap-space-lg flex-wrap xl:justify-end">
+<!-- Seats Gauge -->
+<div class="flex flex-col w-36">
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span>SEATS</span>
+<span class="text-on-surface font-mono">142/160</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+<!-- WASM Meter -->
+<div class="flex flex-col w-36">
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span>WASM TIME</span>
+<span class="text-secondary font-mono">1,420 hrs</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<!-- SSO & Health Badge -->
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container-high rounded text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-code-sm text-code-sm">Okta SCIM (142 sync'd)</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>99.99%</span>
+</div>
+</div>
+</div>
+<!-- Action Panel & Lead Contacts Row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs bg-surface-container-lowest/60 rounded-lg">
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">badge</span>
+<span>IT Director: <strong class="text-on-surface font-medium">Sarah Vance</strong> • sarah.vance@nexusglobal.com</span>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors" onclick="inspectTenant('Nexus Global IT', 'nexus-global-it', '#ORG-8842', '142', '160', '1,420')">
+<span class="material-symbols-outlined text-[15px] text-secondary">tune</span>
+<span>Configure Quotas</span>
+</button>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-primary">sync_alt</span>
+<span>Inspect SCIM</span>
+</button>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-tertiary">receipt</span>
+<span>View Invoices</span>
+</button>
+<button class="px-space-sm py-1 bg-primary text-on-primary font-semibold rounded font-code-sm text-code-sm flex items-center gap-1 hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[15px]">launch</span>
+<span>Manage Tenant</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ORG 2: Lockheed Martin Workforce Initiative -->
+<div class="org-row bg-surface-container-lowest hover:bg-surface-container-low rounded-xl p-space-lg shadow-md transition-all flex flex-col gap-space-md relative overflow-hidden" data-name="lockheed martin workforce initiative lockheedmartin.com #org-4410" data-tier="dedicated">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Identity & Metadata -->
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold">Lockheed Martin Workforce Initiative</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-code-sm text-code-sm text-primary">#ORG-4410</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-badge text-label-badge uppercase">Enterprise Dedicated</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-code-sm text-code-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">lock</span> US-East-GovCloud
+              </span>
+</div>
+<div class="flex items-center gap-space-md font-code-sm text-code-sm text-on-surface-variant mt-1 flex-wrap">
+<span>Slug: <span class="text-on-surface">lockheed-workforce</span></span>
+<span>Domain: <span class="text-secondary underline decoration-secondary/30">lockheedmartin.com</span></span>
+<span>MRR: <span class="text-tertiary font-medium">$18,500/mo</span></span>
+</div>
+</div>
+</div>
+<!-- Telemetry Meters -->
+<div class="flex items-center gap-space-lg flex-wrap xl:justify-end">
+<!-- Seats Gauge -->
+<div class="flex flex-col w-36">
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span>SEATS</span>
+<span class="text-on-surface font-mono">480/500</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 96%;"></div>
+</div>
+</div>
+<!-- WASM Meter -->
+<div class="flex flex-col w-36">
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span>WASM TIME</span>
+<span class="text-secondary font-mono">4,820 hrs</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+<!-- SSO & Health Badge -->
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container-high rounded text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-code-sm text-code-sm">Azure AD SCIM (480 sync'd)</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>100.0%</span>
+</div>
+</div>
+</div>
+<!-- Action Panel & Lead Contacts Row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs bg-surface-container-lowest/60 rounded-lg">
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">badge</span>
+<span>Lead Workforce Director: <strong class="text-on-surface font-medium">Arthur Vance</strong> • a.vance@lmco.com (GovCloud MFA)</span>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors" onclick="inspectTenant('Lockheed Martin Workforce', 'lockheed-workforce', '#ORG-4410', '480', '500', '4,820')">
+<span class="material-symbols-outlined text-[15px] text-secondary">tune</span>
+<span>Configure Quotas</span>
+</button>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-primary">sync_alt</span>
+<span>Inspect SCIM</span>
+</button>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-tertiary">receipt</span>
+<span>View Invoices</span>
+</button>
+<button class="px-space-sm py-1 bg-primary text-on-primary font-semibold rounded font-code-sm text-code-sm flex items-center gap-1 hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[15px]">launch</span>
+<span>Manage Tenant</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ORG 3: Raytheon Intelligence & Space -->
+<div class="org-row bg-surface-container-lowest hover:bg-surface-container-low rounded-xl p-space-lg shadow-md transition-all flex flex-col gap-space-md relative overflow-hidden" data-name="raytheon intelligence &amp; space rtx.com #org-9102" data-tier="dedicated">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Identity & Metadata -->
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-tertiary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">radar</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold">Raytheon Intelligence &amp; Space</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-code-sm text-code-sm text-tertiary">#ORG-9102</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-badge text-label-badge uppercase">Enterprise Dedicated</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">public</span> US-West-02
+              </span>
+</div>
+<div class="flex items-center gap-space-md font-code-sm text-code-sm text-on-surface-variant mt-1 flex-wrap">
+<span>Slug: <span class="text-on-surface">raytheon-intel</span></span>
+<span>Domain: <span class="text-secondary underline decoration-secondary/30">rtx.com</span></span>
+<span>MRR: <span class="text-tertiary font-medium">$24,000/mo</span></span>
+</div>
+</div>
+</div>
+<!-- Telemetry Meters -->
+<div class="flex items-center gap-space-lg flex-wrap xl:justify-end">
+<!-- Seats Gauge -->
+<div class="flex flex-col w-36">
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span>SEATS</span>
+<span class="text-on-surface font-mono">650/700</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+<!-- WASM Meter -->
+<div class="flex flex-col w-36">
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span>WASM TIME</span>
+<span class="text-secondary font-mono">6,100 hrs</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 87%;"></div>
+</div>
+</div>
+<!-- SSO & Health Badge -->
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container-high rounded text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-code-sm text-code-sm">PingFederate Active</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>99.98%</span>
+</div>
+</div>
+</div>
+<!-- Action Panel & Lead Contacts Row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs bg-surface-container-lowest/60 rounded-lg">
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">badge</span>
+<span>SecOps Director: <strong class="text-on-surface font-medium">Marcus Brody</strong> • m.brody@rtx.com</span>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors" onclick="inspectTenant('Raytheon Intel &amp; Space', 'raytheon-intel', '#ORG-9102', '650', '700', '6,100')">
+<span class="material-symbols-outlined text-[15px] text-secondary">tune</span>
+<span>Configure Quotas</span>
+</button>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-primary">sync_alt</span>
+<span>Inspect SCIM</span>
+</button>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-tertiary">receipt</span>
+<span>View Invoices</span>
+</button>
+<button class="px-space-sm py-1 bg-primary text-on-primary font-semibold rounded font-code-sm text-code-sm flex items-center gap-1 hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[15px]">launch</span>
+<span>Manage Tenant</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ORG 4: Cisco Networking Academy - North America -->
+<div class="org-row bg-surface-container-lowest hover:bg-surface-container-low rounded-xl p-space-lg shadow-md transition-all flex flex-col gap-space-md relative overflow-hidden" data-name="cisco networking academy north america netacad.com #org-3104" data-tier="academic">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Identity & Metadata -->
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-secondary-container shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">school</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold">Cisco Networking Academy — North America</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-code-sm text-code-sm text-secondary">#ORG-3104</span>
+<span class="px-2 py-0.5 rounded bg-surface-variant font-label-badge text-label-badge text-secondary uppercase">Academic Tier</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">public</span> US-East-01
+              </span>
+</div>
+<div class="flex items-center gap-space-md font-code-sm text-code-sm text-on-surface-variant mt-1 flex-wrap">
+<span>Slug: <span class="text-on-surface">netacad-na</span></span>
+<span>Domain: <span class="text-secondary underline decoration-secondary/30">netacad.com</span></span>
+<span>MRR: <span class="text-tertiary font-medium">$12,000/mo</span></span>
+</div>
+</div>
+</div>
+<!-- Telemetry Meters -->
+<div class="flex items-center gap-space-lg flex-wrap xl:justify-end">
+<!-- Seats Gauge -->
+<div class="flex flex-col w-36">
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span>SEATS</span>
+<span class="text-on-surface font-mono">2,400/3,000</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 80%;"></div>
+</div>
+</div>
+<!-- WASM Meter -->
+<div class="flex flex-col w-36">
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span>WASM TIME</span>
+<span class="text-secondary font-mono">18,200 hrs</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 91%;"></div>
+</div>
+</div>
+<!-- SSO & Health Badge -->
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container-high rounded text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-code-sm text-code-sm">SAML 2.0 / Canvas LTI v1.3</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>99.95%</span>
+</div>
+</div>
+</div>
+<!-- Action Panel & Lead Contacts Row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs bg-surface-container-lowest/60 rounded-lg">
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">badge</span>
+<span>Curriculum Dean: <strong class="text-on-surface font-medium">Dr. Elena Rostova</strong> • e.rostova@netacad.cisco.com</span>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors" onclick="inspectTenant('Cisco Networking Academy', 'netacad-na', '#ORG-3104', '2,400', '3,000', '18,200')">
+<span class="material-symbols-outlined text-[15px] text-secondary">tune</span>
+<span>Configure Quotas</span>
+</button>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-primary">sync_alt</span>
+<span>Inspect LTI/SCIM</span>
+</button>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-tertiary">receipt</span>
+<span>View Invoices</span>
+</button>
+<button class="px-space-sm py-1 bg-primary text-on-primary font-semibold rounded font-code-sm text-code-sm flex items-center gap-1 hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[15px]">launch</span>
+<span>Manage Tenant</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ORG 5: Boeing Defense & Space Systems (With Sync Alert) -->
+<div class="org-row bg-surface-container-lowest hover:bg-surface-container-low rounded-xl p-space-lg shadow-md transition-all flex flex-col gap-space-md relative overflow-hidden" data-name="boeing defense &amp; space systems boeing.com #org-7719" data-tier="pro">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Identity & Metadata -->
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-tertiary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">flight_takeoff</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold">Boeing Defense &amp; Space Systems</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-code-sm text-code-sm text-on-surface-variant">#ORG-7719</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-badge text-label-badge text-primary uppercase">Enterprise Pro</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">public</span> US-East-02
+              </span>
+</div>
+<div class="flex items-center gap-space-md font-code-sm text-code-sm text-on-surface-variant mt-1 flex-wrap">
+<span>Slug: <span class="text-on-surface">boeing-space</span></span>
+<span>Domain: <span class="text-secondary underline decoration-secondary/30">boeing.com</span></span>
+<span>MRR: <span class="text-tertiary font-medium">$9,800/mo</span></span>
+</div>
+</div>
+</div>
+<!-- Telemetry Meters -->
+<div class="flex items-center gap-space-lg flex-wrap xl:justify-end">
+<!-- Seats Gauge -->
+<div class="flex flex-col w-36">
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span>SEATS</span>
+<span class="text-on-surface font-mono">195/200</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 97.5%;"></div>
+</div>
+</div>
+<!-- WASM Meter -->
+<div class="flex flex-col w-36">
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span>WASM TIME</span>
+<span class="text-secondary font-mono">2,190 hrs</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 73%;"></div>
+</div>
+</div>
+<!-- SSO & Health Warning Badge -->
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container-high rounded text-tertiary border-l-2 border-tertiary">
+<span class="material-symbols-outlined text-[16px] text-tertiary animate-pulse">warning</span>
+<span class="font-code-sm text-code-sm">Okta Sync Degraded (429 Rate Limit)</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span>99.82%</span>
+</div>
+</div>
+</div>
+<!-- Action Panel & Lead Contacts Row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs bg-surface-container-lowest/60 rounded-lg">
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">badge</span>
+<span>Lead Systems Architect: <strong class="text-on-surface font-medium">David Chen</strong> • d.chen@boeing.com</span>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-space-sm py-1 bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50 rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors" onclick="triggerScimRecovery('boeing-space')">
+<span class="material-symbols-outlined text-[15px]">refresh</span>
+<span>Force SCIM Flush</span>
+</button>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors" onclick="inspectTenant('Boeing Defense', 'boeing-space', '#ORG-7719', '195', '200', '2,190')">
+<span class="material-symbols-outlined text-[15px] text-secondary">tune</span>
+<span>Configure Quotas</span>
+</button>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-tertiary">receipt</span>
+<span>View Invoices</span>
+</button>
+<button class="px-space-sm py-1 bg-primary text-on-primary font-semibold rounded font-code-sm text-code-sm flex items-center gap-1 hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[15px]">launch</span>
+<span>Manage Tenant</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SSO & SCIM Gateway Live Diagnostics Modal -->
+<div class="hidden bg-surface-container-lowest p-space-lg rounded-xl shadow-xl flex flex-col gap-space-md" id="scim-gateway-drawer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">hub</span>
+<div>
+<span class="font-title-md text-title-md font-bold text-on-surface">Identity Gateway &amp; SCIM v2.0 Sync Engine Status</span>
+<p class="font-code-sm text-code-sm text-on-surface-variant">Federated directory push connections for 64 active organizational pods</p>
+</div>
+</div>
+<button class="p-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('scim-gateway-drawer').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant">OKTA PROTOCOL HUB</span>
+<span class="font-label-badge text-label-badge text-primary uppercase">OPERATIONAL</span>
+</div>
+<span class="font-code-lg text-code-lg text-on-surface font-semibold">14,210 Identities Managed</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Avg Sync Latency: 142ms • Zero Inbound Drops</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant">MICROSOFT ENTRA / AZURE AD</span>
+<span class="font-label-badge text-label-badge text-primary uppercase">OPERATIONAL</span>
+</div>
+<span class="font-code-lg text-code-lg text-on-surface font-semibold">3,200 Identities Managed</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">FedRAMP Moderate Compliant Enclave Active</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant">SAML 2.0 / CANVAS LMS LTI</span>
+<span class="font-label-badge text-label-badge text-secondary uppercase">POLLING</span>
+</div>
+<span class="font-code-lg text-code-lg text-on-surface font-semibold">1,040 Active Academic Sessions</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">OAuth 2.0 Bearer Bearer Signature Valid</span>
+</div>
+</div>
+</div>
+<!-- Tenant Provisioning & Resource Allocation Drawer (Slide-Over Modal) -->
+<div class="fixed inset-y-0 right-0 w-full max-w-xl bg-surface-container-lowest shadow-[0_0_50px_rgba(0,0,0,0.8)] z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto" id="provision-drawer">
+<div class="p-space-lg flex flex-col gap-space-lg">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">TENANT PROVISIONING ENGINE</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface" id="drawer-title">Provision Enterprise Tenant</h2>
+</div>
+<button class="p-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('provision-drawer').classList.add('translate-x-full')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- General Info Form -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Organization Legal Name</label>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-space-md py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary" id="input-org-name" type="text" value="Palo Alto Networks Cyber Academy"/>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Tenant Canonical Slug</label>
+<input class="w-full bg-surface-container-low text-on-surface font-code-sm text-code-sm px-space-md py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary" id="input-org-slug" type="text" value="palo-alto-academy"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Custom Domain Host</label>
+<input class="w-full bg-surface-container-low text-on-surface font-code-sm text-code-sm px-space-md py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="labs.paloaltonetworks.com"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Enterprise Tier</label>
+<select class="bg-surface-container-low text-on-surface font-code-sm text-code-sm px-space-md py-2 rounded focus:outline-none">
+<option>Enterprise Dedicated ($18.5k/mo)</option>
+<option>Enterprise Pro ($7.8k/mo)</option>
+<option>Academic Higher-Ed ($12k/mo)</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Primary Cloud Enclave</label>
+<select class="bg-surface-container-low text-on-surface font-code-sm text-code-sm px-space-md py-2 rounded focus:outline-none">
+<option>US-East-01 (Virginia Core)</option>
+<option>US-East-GovCloud (FedRAMP)</option>
+<option>US-West-02 (Oregon High-Bandwidth)</option>
+<option>EU-Central-01 (Frankfurt GDPR)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Resource Allocation & WASM Sandbox Quotas -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+            Tenant Isolation &amp; Compute Quotas
+          </span>
+<span class="font-code-sm text-code-sm text-primary">SLO: 99.99%</span>
+</div>
+<!-- Slider 1: Concurrent WASM Labs -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between font-label-badge text-label-badge">
+<span class="text-on-surface-variant">MAX CONCURRENT SANDBOXES</span>
+<span class="text-primary font-mono font-bold" id="slider-sandbox-val">250 Pods</span>
+</div>
+<input class="w-full accent-primary bg-surface-container-high h-1.5 rounded-lg cursor-pointer" max="1000" min="50" oninput="document.getElementById('slider-sandbox-val').innerText = this.value + ' Pods'" type="range" value="250"/>
+<span class="font-code-sm text-code-sm text-on-surface-variant/70">Limits WASM vCPU container spawner pools per tenant instance.</span>
+</div>
+<!-- Slider 2: Max Bandwidth per student -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between font-label-badge text-label-badge">
+<span class="text-on-surface-variant">EGRESS CAP PER STUDENT</span>
+<span class="text-secondary font-mono font-bold" id="slider-bandwidth-val">25 Mbps</span>
+</div>
+<input class="w-full accent-secondary bg-surface-container-high h-1.5 rounded-lg cursor-pointer" max="100" min="5" oninput="document.getElementById('slider-bandwidth-val').innerText = this.value + ' Mbps'" type="range" value="25"/>
+<span class="font-code-sm text-code-sm text-on-surface-variant/70">Packet capture streaming rate throttled at interface level.</span>
+</div>
+<!-- Toggle Controls -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<label class="flex items-center justify-between cursor-pointer">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Dedicated Egress IP Pool</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Route all student lab internet via assigned static IPs</span>
+</div>
+<input checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between cursor-pointer">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Auto-Renew Let's Encrypt Wildcard SSL</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">DNS ACME challenge automated via platform proxy</span>
+</div>
+<input checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Identity & SCIM Automated Setup -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<span class="font-title-md text-title-md font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">security</span>
+          SSO / SCIM Directory Gateway
+        </span>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Identity Provider (IdP) Preset</label>
+<select class="bg-surface-container-high text-on-surface font-code-sm text-code-sm px-space-md py-2 rounded focus:outline-none">
+<option>Okta Workforce Identity Cloud (SCIM 2.0)</option>
+<option>Microsoft Entra ID (Azure Active Directory)</option>
+<option>PingFederate / PingOne</option>
+<option>Generic SAML 2.0 + JIT Provisioning</option>
+</select>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-code-sm text-code-sm text-on-surface-variant">SCIM Bearer Token Generated: <span class="text-primary font-mono">ntm_live_sec_***</span></span>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-variant text-secondary rounded font-code-sm text-code-sm flex items-center gap-1" onclick="testScimSync()">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Test Handshake</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="p-space-lg bg-surface-container-lowest flex items-center justify-between gap-space-md">
+<button class="px-space-md py-2 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded font-code-sm text-code-sm" onclick="document.getElementById('provision-drawer').classList.add('translate-x-full')">
+        Cancel
+      </button>
+<button class="px-space-lg py-2 bg-primary text-on-primary font-bold rounded font-code-sm text-code-sm flex items-center gap-space-xs shadow-[0_0_15px_rgba(16,185,129,0.4)] hover:bg-primary-fixed transition-colors" onclick="submitTenantProvision()">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Commit &amp; Provision Enclave</span>
+</button>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="hidden fixed bottom-6 right-6 bg-surface-container-high text-on-surface px-space-md py- space-sm rounded-lg shadow-2xl flex items-center gap-space-sm z-50 transition-all font-code-sm text-code-sm" id="toast-message">
+<span class="material-symbols-outlined text-primary text-[20px]" id="toast-icon">check_circle</span>
+<span id="toast-text">Operation completed successfully.</span>
+</div>
+</div>
+<script>
+  function filterOrganizations() {
+    const input = document.getElementById('orgSearchInput').value.toLowerCase();
+    const rows = document.querySelectorAll('.org-row');
+    rows.forEach(row => {
+      const text = row.getAttribute('data-name').toLowerCase();
+      if (text.includes(input)) {
+        row.style.display = 'flex';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  function setFilter(filterType, btn) {
+    document.querySelectorAll('.filter-chip').forEach(el => {
+      el.classList.remove('text-primary', 'bg-surface-container-high');
+      el.classList.add('text-on-surface-variant');
+    });
+    btn.classList.remove('text-on-surface-variant');
+    btn.classList.add('text-primary', 'bg-surface-container-high');
+
+    const rows = document.querySelectorAll('.org-row');
+    rows.forEach(row => {
+      if (filterType === 'all' || row.getAttribute('data-tier') === filterType) {
+        row.style.display = 'flex';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  function inspectTenant(name, slug, id, seatsUsed, seatsMax, wasmHrs) {
+    document.getElementById('drawer-title').innerText = 'Configure Quotas: ' + name;
+    document.getElementById('input-org-name').value = name;
+    document.getElementById('input-org-slug').value = slug;
+    document.getElementById('provision-drawer').classList.remove('translate-x-full');
+  }
+
+  function triggerScimRecovery(slug) {
+    showToast('Flushed SCIM rate limit circuit for ' + slug + '. Resyncing...', 'refresh');
+  }
+
+  function testScimSync() {
+    showToast('SCIM 2.0 Handshake: HTTP 200 OK (Latency: 28ms)', 'check_circle');
+  }
+
+  function submitTenantProvision() {
+    document.getElementById('provision-drawer').classList.add('translate-x-full');
+    showToast('Enclave provisioning job dispatched to cluster.', 'rocket_launch');
+  }
+
+  function showToast(msg, icon) {
+    const toast = document.getElementById('toast-message');
+    document.getElementById('toast-text').innerText = msg;
+    document.getElementById('toast-icon').innerText = icon;
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 4000);
+  }
+</script></main></div></body></html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-tertiary-fixed": "#1e1b19", "surface-dim": "#310000", "inverse-on-surface": "#680200", "secondary-fixed": "#e8e1e0", "primary-fixed": "#e7e1e1", "on-secondary-fixed": "#1e1b1b", "primary-fixed-dim": "#cac5c5", "surface-container": "#480100", "on-primary-container": "#676364", surface: "#310000", "surface-tint": "#cac5c5", "on-secondary-container": "#bab4b3", outline: "#8e9192", "primary-container": "#e7e1e1", "error-container": "#93000a", "surface-container-low": "#410100", "on-secondary-fixed-variant": "#4a4646", "surface-bright": "#790200", "on-secondary": "#333030", "on-tertiary": "#33302e", "on-surface-variant": "#c4c7c8", tertiary: "#ffffff", "surface-container-lowest": "#270000", "secondary-container": "#4a4646", "on-primary": "#323030", "surface-variant": "#700200", secondary: "#ccc5c5", "tertiary-fixed-dim": "#ccc5c2", "secondary-fixed-dim": "#ccc5c5", primary: "#ffffff", "surface-container-high": "#5c0100", "on-tertiary-fixed-variant": "#4a4644", "inverse-surface": "#ffdad4", "on-error": "#690005", "on-background": "#ffdad4", "tertiary-container": "#e9e1de", "on-tertiary-container": "#686361", "on-primary-fixed": "#1d1b1b", "surface-container-highest": "#700200", "outline-variant": "#444748", "inverse-primary": "#615e5e", "tertiary-fixed": "#e9e1de", "on-error-container": "#ffdad6", background: "#310000", "on-primary-fixed-variant": "#494646", "on-surface": "#ffdad4", error: "#ffb4ab"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-xl": "2.5rem", "margin-sm": "1rem", "space-xs": "0.25rem", "gutter-sm": "1rem", "margin-lg": "4rem", "space-lg": "1.5rem", gutter: "1.5rem", "space-sm": "0.5rem", margin: "2rem", "space-md": "1rem"}, fontFamily: {"body-sm": ["Inter"], "display-hero": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "body-md": ["Inter"], "title-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], "body-lg": ["Inter"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}]}}}}</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container"><header class="w-full bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] fixed top-0 z-50"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm text-on-surface hover:opacity-90 transition-opacity" data-path="home" href="#"><div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight">AI</span></div></a><span class="hidden sm:inline-flex items-center font-label-badge text-label-badge uppercase px-space-xs py-0.5 rounded bg-surface-container text-secondary font-code-sm">AI LABS</span></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-badge text-label-badge uppercase text-on-surface-variant">256-Bit TLS &amp; SOC-2 Audited</span></div><a class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[16px]">arrow_back</span><span>Back to NetMentor AI</span></a></div></div></header><main class="w-full pt-16 flex-1 flex flex-col bg-surface-container-lowest"><div class="flex flex-col w-full">
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-4rem)]">
+<!-- LEFT PANEL: Brand Telemetry & Isometric Server Visualization -->
+<div class="lg:col-span-5 relative flex flex-col justify-between p-margin-sm md:p-margin lg:p-margin-lg bg-surface-container-lowest overflow-hidden">
+<!-- Glow Gradients -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-[120px] pointer-events-none"></div>
+<div class="absolute -bottom-32 right-0 w-80 h-80 rounded-full bg-secondary-container/10 blur-[100px] pointer-events-none"></div>
+<!-- Top Metadata Header -->
+<div class="relative z-10 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-badge text-label-badge text-primary uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span>SYSTEM READY // REGION: US-EAST (EDGE)</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface">Provision WebAssembly Sandbox</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant, browser-isolated Linux nodes &amp; Cisco packet broker emulator.</p>
+</div>
+<!-- Central Visual: Isometric Server Rack & Patchbay Graphic -->
+<div class="relative z-10 my-space-lg flex flex-col items-center justify-center">
+<div class="relative w-full max-w-md bg-surface-container-low rounded-xl p-space-md shadow-xl overflow-hidden">
+<!-- Server Rack Glass Top Bar -->
+<div class="flex items-center justify-between pb-space-sm mb-space-sm bg-surface-container-high/60 rounded px-space-sm py-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary/80"></span>
+</div>
+<span class="font-code-sm text-code-sm text-secondary tracking-widest text-[11px]">RACK-U04 // WASM-CORE</span>
+<div class="flex items-center gap-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant">ONLINE</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</div>
+<!-- Server Blade SVG Visualization -->
+<svg class="w-full h-44 text-on-surface-variant" fill="none" viewbox="0 0 360 170" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid Base -->
+<path d="M20 140 L180 60 L340 140 L180 165 Z" fill="#151b2d" opacity="0.8"></path>
+<path d="M20 140 L180 165 L340 140" stroke="#3c4a42" stroke-width="1.5"></path>
+<!-- Rack Layer 1 -->
+<path d="M40 115 L180 45 L320 115 L180 145 Z" fill="#191f31"></path>
+<path d="M40 115 L40 125 L180 155 L320 125 L320 115" stroke="#4edea3" stroke-dasharray="3 3" stroke-width="1"></path>
+<!-- Rack Layer 2 -->
+<path d="M50 90 L180 25 L310 90 L180 120 Z" fill="#23293c"></path>
+<path d="M50 90 L50 100 L180 130 L310 100 L310 90" stroke="#89ceff" stroke-width="1.2"></path>
+<!-- Patch Ports & Glowing Cables -->
+<circle class="animate-pulse" cx="100" cy="98" fill="#4edea3" r="3"></circle>
+<circle cx="120" cy="93" fill="#4edea3" r="3"></circle>
+<circle cx="140" cy="88" fill="#ffb95f" r="3"></circle>
+<circle cx="160" cy="83" fill="#89ceff" r="3"></circle>
+<circle cx="200" cy="83" fill="#4edea3" r="3"></circle>
+<circle class="animate-pulse" cx="220" cy="88" fill="#89ceff" r="3"></circle>
+<circle cx="240" cy="93" fill="#4edea3" r="3"></circle>
+<circle cx="260" cy="98" fill="#4edea3" r="3"></circle>
+<!-- Patch Cables curving down -->
+<path d="M100 98 C90 130 110 150 140 155" fill="none" opacity="0.8" stroke="#4edea3" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M160 83 C160 120 180 145 220 148" fill="none" opacity="0.85" stroke="#89ceff" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M220 88 C240 120 270 135 300 132" fill="none" opacity="0.75" stroke="#ffb95f" stroke-linecap="round" stroke-width="1.2"></path>
+<!-- Fiber Optical Pulse Line -->
+<path d="M70 105 L180 50 L290 105" opacity="0.6" stroke="#4edea3" stroke-width="0.8"></path>
+<!-- Active Data Node Markers -->
+<circle cx="180" cy="50" fill="#4edea3" fill-opacity="0.3" r="5"></circle>
+<circle cx="180" cy="50" fill="#4edea3" r="2"></circle>
+</svg>
+<!-- Live Network Flow Indicator -->
+<div class="mt-space-sm flex items-center justify-between font-code-sm text-code-sm px-space-xs text-on-surface-variant">
+<span class="flex items-center gap-1.5 text-primary text-[12px]">
+<span class="material-symbols-outlined text-[14px]">router</span>
+              BGP ROUTE REFLECTOR
+            </span>
+<span class="text-[12px] text-secondary">RTT: 1.4ms</span>
+</div>
+</div>
+<!-- Telemetry Floating Cards -->
+<div class="w-full max-w-md flex flex-col gap-space-sm -mt-4 relative z-20">
+<!-- Card 1 -->
+<div class="flex items-center gap-space-md p-space-sm bg-surface-container/90 backdrop-blur-md rounded-lg shadow-md hover:bg-surface-container-high transition-all">
+<div class="w-10 h-10 rounded bg-primary-container/20 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">memory</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<p class="font-title-md text-title-md text-on-surface truncate">Free Tier: 5 WebAssembly Labs</p>
+<span class="font-label-badge text-label-badge text-primary uppercase">ALLOCATED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Isolated POSIX micro-kernel running direct in-browser.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex items-center gap-space-md p-space-sm bg-surface-container/90 backdrop-blur-md rounded-lg shadow-md hover:bg-surface-container-high transition-all">
+<div class="w-10 h-10 rounded bg-secondary-container/20 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">cloud_off</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<p class="font-title-md text-title-md text-on-surface truncate">Zero Local Hypervisors</p>
+<span class="font-label-badge text-label-badge text-secondary uppercase">NO INSTALL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">No VirtualBox, VMware, or Docker desktop overhead required.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex items-center gap-space-md p-space-sm bg-surface-container/90 backdrop-blur-md rounded-lg shadow-md hover:bg-surface-container-high transition-all">
+<div class="w-10 h-10 rounded bg-tertiary-container/20 flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">smart_toy</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<p class="font-title-md text-title-md text-on-surface truncate">Instant Socratic AI Guidance</p>
+<span class="font-label-badge text-label-badge text-tertiary uppercase">LLM-CLI</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Live debug copilot inspects packet flow, not just answers.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Infrastructure Certs Strip -->
+<div class="relative z-10 pt-space-md flex flex-wrap items-center gap-space-sm text-on-surface-variant">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant/70">LAB TARGETS:</span>
+<span class="font-code-sm text-code-sm px-space-xs py-0.5 rounded bg-surface-container-high text-secondary">Cisco CCNA 200-301</span>
+<span class="font-code-sm text-code-sm px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">CompTIA Network+ N10-008</span>
+<span class="font-code-sm text-code-sm px-space-xs py-0.5 rounded bg-surface-container-high text-primary">Linux LPIC-1</span>
+</div>
+</div>
+<!-- RIGHT PANEL: Frictionless Registration Flow -->
+<div class="lg:col-span-7 flex flex-col justify-center px-margin-sm md:px-margin lg:px-margin-lg py-space-xl bg-surface-container-low relative">
+<div class="max-w-xl w-full mx-auto flex flex-col gap-space-lg">
+<!-- Title & Subtitle -->
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-space-xs px-space-xs py-0.5 rounded bg-surface-container w-fit">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-badge text-label-badge uppercase text-primary tracking-wider">SANDBOX ACCESS // TIER 1</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Start Your Engineering Journey</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Provision your personal WebAssembly Cisco &amp; Linux lab sandbox in seconds.</p>
+</div>
+<!-- One-Click OAuth Buttons -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<button class="flex items-center justify-center gap-space-sm h-11 px-space-md rounded bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-title-md text-title-md" type="button">
+<svg class="w-4 h-4" viewbox="0 0 24 24">
+<path d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.7 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z" fill="#EA4335"></path>
+<path d="M23.5 12.3c0-.8-.1-1.7-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5.1 3.7-8.8z" fill="#4285F4"></path>
+<path d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2c0 2.9.7 5.5 1.9 7.9l3.7-2.9z" fill="#FBBC05"></path>
+<path d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 16.4C3.7 20.1 7.5 23 12 23z" fill="#34A853"></path>
+</svg>
+<span>Continue with Google</span>
+</button>
+<button class="flex items-center justify-center gap-space-sm h-11 px-space-md rounded bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-title-md text-title-md" type="button">
+<svg class="w-4 h-4 fill-current text-on-surface" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+<span>Continue with GitHub</span>
+</button>
+</div>
+<!-- Clean Divider Line -->
+<div class="relative flex items-center justify-center">
+<div class="w-full h-px bg-surface-container-highest"></div>
+<span class="absolute bg-surface-container-low px-space-sm font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">or register with email</span>
+</div>
+<!-- Registration Form Container -->
+<form class="flex flex-col gap-space-lg" id="signup-form" onsubmit="event.preventDefault(); handleFormSubmit();">
+<!-- Role Selection Checkboxes / Radio Cards -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-title-md text-title-md text-on-surface flex items-center justify-between">
+<span>Select Primary Engineering Role</span>
+<span class="font-label-badge text-label-badge text-primary uppercase">Customizes Lab Stacks</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm" id="role-container">
+<!-- Role 1: Learner (Default) -->
+<div class="cursor-pointer p-space-sm rounded-lg bg-surface-container-high transition-all flex flex-col justify-between group" id="role-card-learner" onclick="selectRole('learner')">
+<div class="flex items-start justify-between">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px]" id="role-indicator-learner">radio_button_checked</span>
+</div>
+<div class="mt-space-sm">
+<p class="font-title-md text-title-md text-on-surface">Learner / Student</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Self-paced certification prep, CCNA &amp; CompTIA labs</p>
+</div>
+</div>
+<!-- Role 2: Instructor -->
+<div class="cursor-pointer p-space-sm rounded-lg bg-surface-container transition-all flex flex-col justify-between group hover:bg-surface-container-high" id="role-card-instructor" onclick="selectRole('instructor')">
+<div class="flex items-start justify-between">
+<div class="w-8 h-8 rounded bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">co_present</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]" id="role-indicator-instructor">radio_button_unchecked</span>
+</div>
+<div class="mt-space-sm">
+<p class="font-title-md text-title-md text-on-surface">Instructor / Faculty</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Classroom management, telemetry &amp; custom rubrics</p>
+</div>
+</div>
+<!-- Role 3: Corporate -->
+<div class="cursor-pointer p-space-sm rounded-lg bg-surface-container transition-all flex flex-col justify-between group hover:bg-surface-container-high" id="role-card-corporate" onclick="selectRole('corporate')">
+<div class="flex items-start justify-between">
+<div class="w-8 h-8 rounded bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]" id="role-indicator-corporate">radio_button_unchecked</span>
+</div>
+<div class="mt-space-sm">
+<p class="font-title-md text-title-md text-on-surface">Corporate / Team</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Enterprise lab seats &amp; SOC-2 compliance</p>
+</div>
+</div>
+</div>
+<!-- Dynamic Enterprise Expansion Field -->
+<div class="hidden transition-all duration-300 pt-space-xs" id="corporate-domain-field">
+<div class="relative bg-surface-container rounded p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-code-sm text-code-sm text-tertiary uppercase flex items-center gap-1" for="org-code">
+<span class="material-symbols-outlined text-[16px]">domain_verification</span>
+                    Enterprise Organization Code / Domain
+                  </label>
+<span class="font-label-badge text-label-badge text-on-surface-variant">SSO FEDERATION ACTIVE</span>
+</div>
+<div class="relative">
+<input class="w-full h-11 px-space-sm font-code-sm text-code-sm rounded bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:bg-surface-container-highest transition-colors uppercase" id="org-code" placeholder="e.g. ORG-CISCO-8892" type="text"/>
+<span class="absolute right-3 top-3 text-tertiary material-symbols-outlined text-[18px]">vpn_key</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Auto-associates with your organization's centralized billing and lab catalog.</p>
+</div>
+</div>
+</div>
+<!-- Input Fields Group -->
+<div class="flex flex-col gap-space-md">
+<!-- Full Name Floating Input -->
+<div class="relative">
+<input class="peer w-full h-12 px-space-md pt-3 font-body-md text-body-md rounded bg-surface-container text-on-surface placeholder-transparent focus:outline-none focus:bg-surface-container-high transition-all" id="fullname" placeholder=" " type="text"/>
+<label class="absolute left-space-md top-1 text-on-surface-variant font-body-sm text-body-sm transition-all pointer-events-none peer-placeholder-shown:top-3 peer-placeholder-shown:font-body-md peer-placeholder-shown:text-body-md peer-placeholder-shown:text-on-surface-variant/70 peer-focus:top-1 peer-focus:font-body-sm peer-focus:text-body-sm peer-focus:text-primary" for="fullname">
+                Full Name
+              </label>
+<span class="hidden mt-1 font-code-sm text-code-sm text-error flex items-center gap-1" id="fullname-error">
+<span class="material-symbols-outlined text-[14px]">error</span> Name must be at least 2 characters.
+              </span>
+</div>
+<!-- Email Field with Live Domain Verification Check -->
+<div class="relative">
+<div class="relative">
+<input class="peer w-full h-12 px-space-md pt-3 pr-10 font-body-md text-body-md rounded bg-surface-container text-on-surface placeholder-transparent focus:outline-none focus:bg-surface-container-high transition-all" id="email" oninput="verifyDomain(this.value)" placeholder=" " type="email"/>
+<label class="absolute left-space-md top-1 text-on-surface-variant font-body-sm text-body-sm transition-all pointer-events-none peer-placeholder-shown:top-3 peer-placeholder-shown:font-body-md peer-placeholder-shown:text-body-md peer-placeholder-shown:text-on-surface-variant/70 peer-focus:top-1 peer-focus:font-body-sm peer-focus:text-body-sm peer-focus:text-primary" for="email">
+                  Work or Academic Email
+                </label>
+<!-- Verification Status Icon -->
+<div class="absolute right-space-md top-3.5 text-on-surface-variant" id="email-status-icon">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</div>
+</div>
+<!-- Instant Domain Verification Badge -->
+<div class="hidden mt-1.5 flex items-center justify-between px-space-xs py-1 rounded bg-surface-container-high" id="email-verification-pill">
+<span class="font-code-sm text-code-sm text-primary flex items-center gap-1" id="email-domain-tag">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>DOMAIN VERIFIED</span>
+</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase" id="email-domain-type">ACADEMIC / ENTERPRISE ROUTE</span>
+</div>
+<span class="hidden mt-1 font-code-sm text-code-sm text-error flex items-center gap-1" id="email-error">
+<span class="material-symbols-outlined text-[14px]">error</span> Please enter a valid engineering email.
+              </span>
+</div>
+<!-- Password Field with Interactive Strength Meter -->
+<div class="flex flex-col gap-space-xs">
+<div class="relative">
+<input class="peer w-full h-12 px-space-md pt-3 pr-10 font-body-md text-body-md rounded bg-surface-container text-on-surface placeholder-transparent focus:outline-none focus:bg-surface-container-high transition-all" id="password" oninput="checkPasswordStrength(this.value)" placeholder=" " type="password"/>
+<label class="absolute left-space-md top-1 text-on-surface-variant font-body-sm text-body-sm transition-all pointer-events-none peer-placeholder-shown:top-3 peer-placeholder-shown:font-body-md peer-placeholder-shown:text-body-md peer-placeholder-shown:text-on-surface-variant/70 peer-focus:top-1 peer-focus:font-body-sm peer-focus:text-body-sm peer-focus:text-primary" for="password">
+                  Master Password
+                </label>
+<button class="absolute right-space-md top-3.5 text-on-surface-variant hover:text-on-surface transition-colors" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="password-visibility-icon">visibility</span>
+</button>
+</div>
+<!-- 4-Segment Password Strength Meter Bar -->
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="grid grid-cols-4 gap-1.5 h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-surface-container-highest transition-all duration-300" id="meter-bar-1"></div>
+<div class="h-full bg-surface-container-highest transition-all duration-300" id="meter-bar-2"></div>
+<div class="h-full bg-surface-container-highest transition-all duration-300" id="meter-bar-3"></div>
+<div class="h-full bg-surface-container-highest transition-all duration-300" id="meter-bar-4"></div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-on-surface-variant">Entropy Score:</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant" id="strength-label">Empty</span>
+</div>
+</div>
+<!-- Checklist Pills -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 mt-1">
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface-variant/70 font-code-sm text-[11px] transition-colors" id="pill-len">
+<span class="material-symbols-outlined text-[13px]">radio_button_unchecked</span>
+<span>8+ Chars</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface-variant/70 font-code-sm text-[11px] transition-colors" id="pill-upper">
+<span class="material-symbols-outlined text-[13px]">radio_button_unchecked</span>
+<span>1 Uppercase</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface-variant/70 font-code-sm text-[11px] transition-colors" id="pill-num">
+<span class="material-symbols-outlined text-[13px]">radio_button_unchecked</span>
+<span>1 Number</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface-variant/70 font-code-sm text-[11px] transition-colors" id="pill-sym">
+<span class="material-symbols-outlined text-[13px]">radio_button_unchecked</span>
+<span>1 Symbol</span>
+</div>
+</div>
+</div>
+<!-- Terms and Privacy Policy Agreement -->
+<label class="flex items-start gap-space-sm cursor-pointer mt-1">
+<input class="mt-1 rounded bg-surface-container text-primary focus:ring-0 focus:ring-offset-0 transition-colors" id="terms-agree" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                I agree to the <a class="text-secondary hover:underline" href="#">Acceptable Use Policy</a>, <a class="text-secondary hover:underline" href="#">Lab Sandbox Terms</a>, and acknowledge data processing per <a class="text-secondary hover:underline" href="#">Privacy Notice</a>.
+              </span>
+</label>
+<span class="hidden font-code-sm text-code-sm text-error flex items-center gap-1" id="terms-error">
+<span class="material-symbols-outlined text-[14px]">error</span> You must accept the sandbox terms to instantiate a container.
+            </span>
+</div>
+<!-- Primary CTA Button with Emerald Glow Aura -->
+<div class="flex flex-col gap-space-sm">
+<button class="w-full h-12 rounded bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs transition-all shadow-[0_0_24px_-4px_rgba(16,185,129,0.35)] hover:shadow-[0_0_32px_0px_rgba(16,185,129,0.55)] cursor-pointer" type="submit">
+<span>Create Free Sandbox Account</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div class="flex items-center justify-between font-label-badge text-label-badge text-on-surface-variant/60 uppercase">
+<span>NO CREDIT CARD REQUIRED</span>
+<span>100% BROWSER COMPATIBLE</span>
+<span>SOC-2 TYPE II HOSTED</span>
+</div>
+</div>
+<!-- Inline Validation Demo Triggers (Interactive Test Bar) -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-xs mt-2">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-secondary">DEVELOPER RIG // INLINE VALIDATION DEMO</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Click to test field behaviors:</span>
+</div>
+<div class="flex flex-wrap gap-space-xs">
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-error font-code-sm text-code-sm hover:bg-surface-container-highest transition-colors" onclick="triggerValidationError()" type="button">
+                [Simulate Field Errors]
+              </button>
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-primary font-code-sm text-code-sm hover:bg-surface-container-highest transition-colors" onclick="populateDemoAccount()" type="button">
+                [Fill Sample Data]
+              </button>
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container-highest transition-colors" onclick="resetFormState()" type="button">
+                [Clear State]
+              </button>
+</div>
+</div>
+<!-- Footer Navigation Link -->
+<div class="text-center pt-space-xs">
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Already have an account? 
+              <a class="text-primary hover:text-primary-fixed-dim font-title-md text-title-md transition-colors underline underline-offset-4" data-path="login" href="#">Sign In (/auth/login)</a>
+</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let activeRole = 'learner';
+
+  function selectRole(role) {
+    activeRole = role;
+    const roles = ['learner', 'instructor', 'corporate'];
+    
+    roles.forEach(r => {
+      const card = document.getElementById(`role-card-${r}`);
+      const indicator = document.getElementById(`role-indicator-${r}`);
+      
+      if (r === role) {
+        card.classList.remove('bg-surface-container');
+        card.classList.add('bg-surface-container-high');
+        indicator.textContent = 'radio_button_checked';
+        indicator.classList.remove('text-on-surface-variant');
+        indicator.classList.add('text-primary');
+      } else {
+        card.classList.remove('bg-surface-container-high');
+        card.classList.add('bg-surface-container');
+        indicator.textContent = 'radio_button_unchecked';
+        indicator.classList.remove('text-primary');
+        indicator.classList.add('text-on-surface-variant');
+      }
+    });
+
+    const corpField = document.getElementById('corporate-domain-field');
+    if (role === 'corporate') {
+      corpField.classList.remove('hidden');
+    } else {
+      corpField.classList.add('hidden');
+    }
+  }
+
+  function verifyDomain(val) {
+    const pill = document.getElementById('email-verification-pill');
+    const domainTag = document.getElementById('email-domain-tag');
+    const domainType = document.getElementById('email-domain-type');
+    const icon = document.getElementById('email-status-icon');
+
+    if (!val || !val.includes('@') || !val.includes('.')) {
+      pill.classList.add('hidden');
+      icon.innerHTML = '<span class="material-symbols-outlined text-[20px]">alternate_email</span>';
+      icon.className = 'absolute right-space-md top-3.5 text-on-surface-variant';
+      return;
+    }
+
+    const domain = val.split('@')[1].toLowerCase();
+    pill.classList.remove('hidden');
+
+    if (domain.endsWith('.edu') || domain.endsWith('.ac.uk')) {
+      domainTag.innerHTML = '<span class="material-symbols-outlined text-[14px]">school</span> ACADEMIC TIER DETECTED';
+      domainTag.className = 'font-code-sm text-code-sm text-secondary flex items-center gap-1';
+      domainType.textContent = 'CAMPUS LICENSE PROVISIONED';
+      icon.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span>';
+      icon.className = 'absolute right-space-md top-3.5 text-secondary';
+    } else if (domain.includes('cisco') || domain.includes('juniper') || domain.includes('arista') || domain.includes('redhat') || domain.includes('aws') || domain.includes('google')) {
+      domainTag.innerHTML = '<span class="material-symbols-outlined text-[14px]">verified</span> ENTERPRISE CLOUD VERIFIED';
+      domainTag.className = 'font-code-sm text-code-sm text-primary flex items-center gap-1';
+      domainType.textContent = 'FAST-TRACK SOC-2 CLUSTER';
+      icon.innerHTML = '<span class="material-symbols-outlined text-[20px]">verified_user</span>';
+      icon.className = 'absolute right-space-md top-3.5 text-primary';
+    } else {
+      domainTag.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span> STANDARD DEVELOPER TIER';
+      domainTag.className = 'font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1';
+      domainType.textContent = 'FREE TIER 5 WASM LABS';
+      icon.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span>';
+      icon.className = 'absolute right-space-md top-3.5 text-on-surface-variant';
+    }
+  }
+
+  function checkPasswordStrength(pwd) {
+    const b1 = document.getElementById('meter-bar-1');
+    const b2 = document.getElementById('meter-bar-2');
+    const b3 = document.getElementById('meter-bar-3');
+    const b4 = document.getElementById('meter-bar-4');
+    const label = document.getElementById('strength-label');
+
+    const pLen = document.getElementById('pill-len');
+    const pUpper = document.getElementById('pill-upper');
+    const pNum = document.getElementById('pill-num');
+    const pSym = document.getElementById('pill-sym');
+
+    const hasLen = pwd.length >= 8;
+    const hasUpper = /[A-Z]/.test(pwd);
+    const hasNum = /[0-9]/.test(pwd);
+    const hasSym = /[^A-Za-z0-9]/.test(pwd);
+
+    function updatePill(el, valid) {
+      if (valid) {
+        el.className = 'flex items-center gap-1 px-2 py-1 rounded bg-primary/20 text-primary font-code-sm text-[11px] transition-colors';
+        el.children[0].textContent = 'check_circle';
+      } else {
+        el.className = 'flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface-variant/70 font-code-sm text-[11px] transition-colors';
+        el.children[0].textContent = 'radio_button_unchecked';
+      }
+    }
+
+    updatePill(pLen, hasLen);
+    updatePill(pUpper, hasUpper);
+    updatePill(pNum, hasNum);
+    updatePill(pSym, hasSym);
+
+    let score = 0;
+    if (pwd.length > 0) score++;
+    if (hasLen && (hasUpper || hasNum)) score++;
+    if (hasLen && hasUpper && hasNum) score++;
+    if (hasLen && hasUpper && hasNum && hasSym) score++;
+
+    // Reset bars
+    [b1, b2, b3, b4].forEach(b => {
+      b.className = 'h-full bg-surface-container-highest transition-all duration-300';
+    });
+
+    if (score === 0) {
+      label.textContent = 'Empty';
+      label.className = 'font-code-sm text-code-sm text-on-surface-variant';
+    } else if (score === 1) {
+      b1.className = 'h-full bg-error transition-all duration-300';
+      label.textContent = 'Weak [Unsafe]';
+      label.className = 'font-code-sm text-code-sm text-error';
+    } else if (score === 2) {
+      b1.className = 'h-full bg-tertiary transition-all duration-300';
+      b2.className = 'h-full bg-tertiary transition-all duration-300';
+      label.textContent = 'Fair [Moderate]';
+      label.className = 'font-code-sm text-code-sm text-tertiary';
+    } else if (score === 3) {
+      b1.className = 'h-full bg-secondary-container transition-all duration-300';
+      b2.className = 'h-full bg-secondary-container transition-all duration-300';
+      b3.className = 'h-full bg-secondary-container transition-all duration-300';
+      label.textContent = 'Good [Protected]';
+      label.className = 'font-code-sm text-code-sm text-secondary';
+    } else if (score === 4) {
+      b1.className = 'h-full bg-primary transition-all duration-300';
+      b2.className = 'h-full bg-primary transition-all duration-300';
+      b3.className = 'h-full bg-primary transition-all duration-300';
+      b4.className = 'h-full bg-primary transition-all duration-300';
+      label.textContent = 'Strong [Air-Gapped Grade]';
+      label.className = 'font-code-sm text-code-sm text-primary';
+    }
+  }
+
+  function togglePasswordVisibility() {
+    const input = document.getElementById('password');
+    const icon = document.getElementById('password-visibility-icon');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function triggerValidationError() {
+    document.getElementById('fullname-error').classList.remove('hidden');
+    document.getElementById('email-error').classList.remove('hidden');
+    document.getElementById('terms-error').classList.remove('hidden');
+  }
+
+  function resetFormState() {
+    document.getElementById('fullname').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('password').value = '';
+    document.getElementById('terms-agree').checked = false;
+    document.getElementById('fullname-error').classList.add('hidden');
+    document.getElementById('email-error').classList.add('hidden');
+    document.getElementById('terms-error').classList.add('hidden');
+    verifyDomain('');
+    checkPasswordStrength('');
+    selectRole('learner');
+  }
+
+  function populateDemoAccount() {
+    document.getElementById('fullname').value = 'Alex Thorne';
+    document.getElementById('email').value = 'alex.thorne@mit.edu';
+    document.getElementById('password').value = 'NetMentor#2025Secure';
+    document.getElementById('terms-agree').checked = true;
+    document.getElementById('fullname-error').classList.add('hidden');
+    document.getElementById('email-error').classList.add('hidden');
+    document.getElementById('terms-error').classList.add('hidden');
+    verifyDomain('alex.thorne@mit.edu');
+    checkPasswordStrength('NetMentor#2025Secure');
+    selectRole('learner');
+  }
+
+  function handleFormSubmit() {
+    const name = document.getElementById('fullname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const terms = document.getElementById('terms-agree').checked;
+
+    let hasError = false;
+
+    if (name.length < 2) {
+      document.getElementById('fullname-error').classList.remove('hidden');
+      hasError = true;
+    } else {
+      document.getElementById('fullname-error').classList.add('hidden');
+    }
+
+    if (!email.includes('@') || !email.includes('.')) {
+      document.getElementById('email-error').classList.remove('hidden');
+      hasError = true;
+    } else {
+      document.getElementById('email-error').classList.add('hidden');
+    }
+
+    if (!terms) {
+      document.getElementById('terms-error').classList.remove('hidden');
+      hasError = true;
+    } else {
+      document.getElementById('terms-error').classList.add('hidden');
+    }
+
+    if (!hasError) {
+      alert('Sandbox Instance initialized! Redirecting to Lab Workspace...');
+    }
+  }
+</script></main></body></html>

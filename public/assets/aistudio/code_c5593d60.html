@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-secondary": "#333030", "secondary-fixed": "#e8e1e0", "on-primary-container": "#676364", "surface-container-low": "#410100", "tertiary-fixed-dim": "#ccc5c2", "on-primary-fixed": "#1d1b1b", "error-container": "#93000a", "on-surface": "#ffdad4", background: "#310000", "primary-fixed": "#e7e1e1", "tertiary-container": "#e9e1de", "surface-container-lowest": "#270000", "primary-container": "#e7e1e1", "on-error": "#690005", "on-secondary-fixed-variant": "#4a4646", "surface-bright": "#790200", "surface-tint": "#cac5c5", "on-primary": "#323030", "on-error-container": "#ffdad6", "surface-container": "#480100", "primary-fixed-dim": "#cac5c5", "secondary-container": "#4a4646", "on-secondary-container": "#bab4b3", "on-tertiary-fixed": "#1e1b19", primary: "#ffffff", tertiary: "#ffffff", "on-background": "#ffdad4", "on-tertiary-fixed-variant": "#4a4644", "secondary-fixed-dim": "#ccc5c5", "inverse-on-surface": "#680200", "on-secondary-fixed": "#1e1b1b", secondary: "#ccc5c5", "surface-variant": "#700200", "on-primary-fixed-variant": "#494646", "surface-dim": "#310000", "inverse-surface": "#ffdad4", "tertiary-fixed": "#e9e1de", "on-tertiary": "#33302e", error: "#ffb4ab", "outline-variant": "#444748", "on-surface-variant": "#c4c7c8", outline: "#8e9192", "surface-container-high": "#5c0100", "surface-container-highest": "#700200", "on-tertiary-container": "#686361", "inverse-primary": "#615e5e", surface: "#310000"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-sm": "0.5rem", gutter: "1.5rem", "space-md": "1rem", margin: "2rem", "margin-sm": "1rem", "gutter-sm": "1rem", "space-lg": "1.5rem", "margin-lg": "4rem", "space-xl": "2.5rem", "space-xs": "0.25rem"}, fontFamily: {"headline-lg": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], "body-lg": ["Inter"], "body-sm": ["Inter"], "code-sm": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "title-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "headline-sm": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">NetMentor<span class="text-primary">.AI</span></span><span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">PLATFORM ADMIN // ROOT</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-badge text-label-badge text-on-surface-variant/70 uppercase tracking-widest">ROOT COMMAND</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-surface-container-high text-primary font-code-sm text-code-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Overview / Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="user-directory-iam" href="#"><span class="material-symbols-outlined text-[18px]">manage_accounts</span><span>User Directory &amp; IAM</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="rbac-permissions" href="#"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span>RBAC &amp; Permissions</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="multi-tenant-orgs" href="#"><span class="material-symbols-outlined text-[18px]">domain</span><span>Multi-Tenant Orgs</span></a></nav><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-badge text-label-badge text-on-surface-variant/70 uppercase tracking-widest">INFRA &amp; TELEMETRY</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-surface-container-high text-primary font-code-sm text-code-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="audit-trail-logs" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>Audit Trail &amp; Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="security-vaults" href="#"><span class="material-symbols-outlined text-[18px]">key</span><span>Security &amp; Vaults</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container hover:text-on-surface transition-colors" data-path="api-webhooks" href="#"><span class="material-symbols-outlined text-[18px]">webhook</span><span>API &amp; Webhooks</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest"><div class="flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low rounded-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-[16px]">lock</span><span class="font-label-badge text-label-badge text-tertiary">ENCLAVE LVL 4 - MFA STRICT</span></div></div><div class="flex items-center justify-between px-space-sm"><span class="font-code-sm text-code-sm text-on-surface-variant">UTC SYNCHRONIZED</span><span class="font-code-sm text-code-sm text-primary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>LIVE</span></div><div class="flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low rounded-lg"><div class="flex flex-col"><span class="font-label-badge text-label-badge text-on-surface">EMERGENCY MODE</span><span class="font-code-sm text-code-sm text-on-surface-variant">Circuit Idle</span></div><div class="flex items-center gap-space-xs"><span class="font-label-badge text-label-badge text-on-surface-variant">DISABLED</span><div class="w-8 h-4 rounded-full bg-surface-variant relative p-0.5 cursor-not-allowed"><div class="w-3 h-3 rounded-full bg-outline"></div></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-code-sm text-code-sm text-primary">CLUSTER: US-EAST-SYS (HEALTHY 99.99%)</span></div><div class="relative flex items-center w-full max-w-md"><span class="material-symbols-outlined text-outline absolute left-3 text-[18px]">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-1.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary text-on-surface placeholder:text-outline" placeholder="Search users, orgs, tickets, IPs..." type="text"/><span class="font-code-sm text-code-sm text-outline absolute right-3 pointer-events-none bg-surface-container px-1 rounded">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-md"><div class="flex flex-col items-end"><span class="font-label-badge text-label-badge text-on-surface-variant">SYSTEM TELEMETRY</span><span class="font-code-sm text-code-sm text-primary">API Latency: 18ms</span></div><div class="flex flex-col items-end"><span class="font-label-badge text-label-badge text-on-surface-variant">LIVE CLUSTER LOAD</span><span class="font-code-sm text-code-sm text-secondary">CPU: 34% // RAM: 58%</span></div></div><div class="relative"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface font-code-sm text-code-sm hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-secondary text-[16px]">hub</span><span>Admin Portal</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button></div><button class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-tertiary text-on-tertiary-container font-label-badge text-[10px] flex items-center justify-center font-bold">2</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden 2xl:flex flex-col items-end"><span class="font-title-md text-title-md text-on-surface leading-none">Root Administrator</span><span class="font-label-badge text-label-badge text-primary">DevOps / SecOps Lead</span></div><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="material-symbols-outlined text-primary text-[14px] absolute -bottom-1 -right-1 bg-surface-container-lowest rounded-full">verified</span></div></div></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full space-y-space-lg">
+<!-- TOP CONTEXT & COMMAND CONTROLS -->
+<div class="flex flex-col gap-space-md">
+<!-- Breadcrumb & Status Pill -->
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<span>Root Command</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Access Governance</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-medium">RBAC Matrix Engine</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-high text-secondary font-label-badge text-label-badge uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          Policy Engine v4.19-Strict
+        </span>
+<span class="flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[14px]">sync_saved_locally</span>
+          SHA-256: 7f8c...90de
+        </span>
+</div>
+</div>
+<!-- Title & Action Bar -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-xl relative overflow-hidden">
+<!-- Glow ambient accent -->
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col max-w-3xl">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-badge text-label-badge uppercase tracking-widest">IAM Enforcement Layer</span>
+<span class="text-outline text-label-badge font-label-badge">// 7 ROLES DEFINED</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">Role-Based Access Control &amp; Endpoint Permissions</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+          Configure granular read/write/execute endpoints, telemetry scopes, and administrative privileges across all 7 platform system roles. Changes take effect across active session tokens upon propagation.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center flex-wrap gap-space-sm z-10 shrink-0">
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-code-sm text-code-sm transition-all duration-150 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add_moderator</span>
+<span>+ Create Custom Role</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-code-sm text-code-sm transition-all duration-150 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+<span>Export Matrix JSON</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-error-container/40 text-error font-code-sm text-code-sm transition-all duration-150">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Rollback</span>
+</button>
+<button class="flex items-center gap-2 px-space-lg py-2 rounded-lg bg-primary text-on-primary font-title-md text-title-md font-bold tracking-wide hover:bg-primary-fixed-dim transition-all duration-150 shadow-lg shadow-primary/20" id="btn-propagate">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Save &amp; Propagate</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-primary text-primary font-label-badge text-label-badge font-extrabold tracking-normal">3 DRAFTS</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ROLE METRIC CARDS (7 PLATFORM ROLES) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-7 gap-space-sm">
+<!-- Role 1: Platform Admin -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-md transition-all hover:bg-surface-container-low group">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">shield_person</span>
+</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded-full bg-primary/20 text-primary font-semibold">GLOBAL ROOT</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Admin</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant mt-0.5">24 Active Users</div>
+</div>
+<div class="mt-space-md pt-2">
+<div class="flex justify-between items-center text-label-badge font-label-badge">
+<span class="text-on-surface-variant">SCOPE COVERAGE</span>
+<span class="text-primary font-semibold">100% UNRESTRICTED</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high rounded-full mt-1.5 overflow-hidden">
+<div class="w-full h-full bg-primary"></div>
+</div>
+</div>
+</div>
+<!-- Role 2: Org Manager -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-md transition-all hover:bg-surface-container-low group">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded-full bg-secondary/20 text-secondary font-semibold">B2B TENANT</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-secondary transition-colors">Org Manager</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant mt-0.5">890 Active Orgs</div>
+</div>
+<div class="mt-space-md pt-2">
+<div class="flex justify-between items-center text-label-badge font-label-badge">
+<span class="text-on-surface-variant">SCOPE COVERAGE</span>
+<span class="text-secondary font-semibold">TENANT ISOLATED</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high rounded-full mt-1.5 overflow-hidden">
+<div class="w-3/5 h-full bg-secondary"></div>
+</div>
+</div>
+</div>
+<!-- Role 3: Instructor -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-md transition-all hover:bg-surface-container-low group">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">school</span>
+</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded-full bg-tertiary/20 text-tertiary font-semibold">AUTHOR</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-tertiary transition-colors">Instructor</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant mt-0.5">1,420 Active Staff</div>
+</div>
+<div class="mt-space-md pt-2">
+<div class="flex justify-between items-center text-label-badge font-label-badge">
+<span class="text-on-surface-variant">SCOPE COVERAGE</span>
+<span class="text-tertiary font-semibold">COURSE &amp; LAB</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high rounded-full mt-1.5 overflow-hidden">
+<div class="w-1/2 h-full bg-tertiary"></div>
+</div>
+</div>
+</div>
+<!-- Role 4: Lab Technician -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-md transition-all hover:bg-surface-container-low group">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-secondary-container/20 text-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">dns</span>
+</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded-full bg-secondary-container/20 text-secondary-fixed font-semibold">NOC / POD</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-secondary-fixed transition-colors">Lab Technician</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant mt-0.5">340 Engineers</div>
+</div>
+<div class="mt-space-md pt-2">
+<div class="flex justify-between items-center text-label-badge font-label-badge">
+<span class="text-on-surface-variant">SCOPE COVERAGE</span>
+<span class="text-secondary font-semibold">HARDWARE MATRIX</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high rounded-full mt-1.5 overflow-hidden">
+<div class="w-2/5 h-full bg-secondary-container"></div>
+</div>
+</div>
+</div>
+<!-- Role 5: Student / Learner -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-md transition-all hover:bg-surface-container-low group">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-semibold">LEARNER</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Student / Learner</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant mt-0.5">98,200 Students</div>
+</div>
+<div class="mt-space-md pt-2">
+<div class="flex justify-between items-center text-label-badge font-label-badge">
+<span class="text-on-surface-variant">SCOPE COVERAGE</span>
+<span class="text-on-surface-variant font-semibold">SANDBOX ONLY</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high rounded-full mt-1.5 overflow-hidden">
+<div class="w-1/5 h-full bg-primary-container"></div>
+</div>
+</div>
+</div>
+<!-- Role 6: Guardian / Sponsor -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-md transition-all hover:bg-surface-container-low group">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-semibold">SPONSOR</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-on-surface transition-colors">Guardian / Sponsor</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant mt-0.5">410 Overseers</div>
+</div>
+<div class="mt-space-md pt-2">
+<div class="flex justify-between items-center text-label-badge font-label-badge">
+<span class="text-on-surface-variant">SCOPE COVERAGE</span>
+<span class="text-on-surface-variant font-semibold">APPRENTICE RO</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high rounded-full mt-1.5 overflow-hidden">
+<div class="w-1/12 h-full bg-outline"></div>
+</div>
+</div>
+</div>
+<!-- Role 7: Compliance Auditor -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-md transition-all hover:bg-surface-container-low group">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-tertiary-container/20 text-tertiary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">fact_check</span>
+</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary-fixed font-semibold">SOC2 / ISO</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-tertiary-fixed transition-colors">Compliance Auditor</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant mt-0.5">52 Auditors</div>
+</div>
+<div class="mt-space-md pt-2">
+<div class="flex justify-between items-center text-label-badge font-label-badge">
+<span class="text-on-surface-variant">SCOPE COVERAGE</span>
+<span class="text-tertiary-fixed-dim font-semibold">MERKLE LEDGER</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high rounded-full mt-1.5 overflow-hidden">
+<div class="w-1/4 h-full bg-tertiary"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- PERMISSION MATRIX SEARCH & VIEW CONTROLS -->
+<div class="flex items-center justify-between gap-space-md flex-wrap bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm flex-1 min-w-[280px]">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined text-outline absolute left-3 top-2.5 text-[18px]">filter_list</span>
+<input class="w-full bg-surface-container-high text-on-surface font-body-sm text-body-sm pl-9 pr-4 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary text-on-surface placeholder:text-outline" id="endpoint-filter" placeholder="Filter endpoints, methods (GET/POST), or scopes..." type="text"/>
+</div>
+<div class="hidden sm:flex items-center gap-1 text-label-badge font-label-badge text-on-surface-variant px-space-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Highlighting 3 Modified Draft Cells</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm font-code-sm text-code-sm">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">unfold_less</span>
+<span>Collapse All</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">unfold_more</span>
+<span>Expand All</span>
+</button>
+<div class="h-4 w-px bg-surface-container-high mx-1"></div>
+<span class="text-on-surface-variant font-label-badge text-label-badge uppercase">Display:</span>
+<button class="px-space-sm py-1 rounded bg-primary/10 text-primary font-semibold">Active Scopes</button>
+</div>
+</div>
+<!-- INTERACTIVE GRANULAR PERMISSION MATRIX TABLE -->
+<div class="w-full overflow-x-auto rounded-xl shadow-xl bg-surface-container-lowest">
+<table class="w-full border-collapse text-left min-w-[1240px]">
+<thead>
+<tr class="bg-surface-container-high font-code-sm text-code-sm text-on-surface sticky top-0 z-20 shadow-sm">
+<th class="py-3.5 px-space-md font-semibold w-96">ENDPOINT / SERVICE RESOURCE</th>
+<th class="py-3.5 px-space-sm text-center font-semibold text-primary">ADMIN</th>
+<th class="py-3.5 px-space-sm text-center font-semibold text-secondary">ORG MGR</th>
+<th class="py-3.5 px-space-sm text-center font-semibold text-tertiary">INSTRUCTOR</th>
+<th class="py-3.5 px-space-sm text-center font-semibold text-secondary-fixed">LAB TECH</th>
+<th class="py-3.5 px-space-sm text-center font-semibold text-on-surface">STUDENT</th>
+<th class="py-3.5 px-space-sm text-center font-semibold text-on-surface-variant">SPONSOR</th>
+<th class="py-3.5 px-space-sm text-center font-semibold text-tertiary-fixed">AUDITOR</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 font-body-sm text-body-sm">
+<!-- ================= GROUP 1: LEARNING & LAB SANDBOX ================= -->
+<tr class="bg-surface-container-low/90">
+<td class="py-2.5 px-space-md" colspan="8">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">smart_toy</span>
+<span class="font-title-md text-title-md text-on-surface font-bold tracking-tight">GROUP 1: Learning &amp; Lab Sandbox</span>
+<span class="font-code-sm text-code-sm text-outline">(/learn/*, WASM Virtual CLI, Packet Tracer Engine)</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-2 py-0.5 rounded-full uppercase">3 Endpoints Enforced</span>
+</div>
+</td>
+</tr>
+<!-- Row 1.1: Execute CLI Terminal Commands -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Execute CLI Terminal Commands</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-primary/10 text-primary font-bold">POST</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/sandbox/cli/exec</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center hover:bg-primary-container/30 shadow-[0_0_12px_rgba(78,222,163,0.25)]">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Root-Full]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40 hover:opacity-100">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center hover:bg-tertiary-container/30">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-tertiary mt-1 font-mono uppercase">[Course]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-secondary-container/20 text-secondary-fixed flex items-center justify-center hover:bg-secondary-container/30">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-secondary mt-1 font-mono uppercase">[Bench-Full]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/15 text-primary flex items-center justify-center hover:bg-primary-container/25">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary font-mono mt-1 uppercase">[Sandbox]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40 hover:opacity-100">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40 hover:opacity-100">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- Row 1.2: Socratic AI Tutor Queries (Modified Draft 1) -->
+<tr class="hover:bg-surface-container/50 transition-colors group bg-tertiary/5">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-tertiary transition-colors">Socratic AI Tutor Queries</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary text-on-tertiary-container font-label-badge text-[10px] font-bold">[Draft Changed]</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-secondary-container/20 text-secondary font-bold">STREAM</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/ai/socratic/prompt</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Global]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor (Changed in draft) -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-tertiary text-on-tertiary-container shadow-md shadow-tertiary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-tertiary font-bold mt-1 font-mono uppercase">[Debug-Tutor]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Self-Track]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- Row 1.3: Access Raw PCAP Broker / TAP -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Access Raw PCAP Broker / TAP</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-secondary-container/20 text-secondary font-bold">WSS</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/network/tap/pcap-stream</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Global]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-tertiary mt-1 font-mono uppercase">[Cohort]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-secondary-container/20 text-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-secondary mt-1 font-mono uppercase">[Physical-TAP]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- ================= GROUP 2: COURSE & CONTENT AUTHORING ================= -->
+<tr class="bg-surface-container-low/90">
+<td class="py-2.5 px-space-md" colspan="8">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">edit_note</span>
+<span class="font-title-md text-title-md text-on-surface font-bold tracking-tight">GROUP 2: Course &amp; Content Authoring</span>
+<span class="font-code-sm text-code-sm text-outline">(/teach/*, Curriculum YAML DSL, Live Challenge Scoring)</span>
+</div>
+<span class="font-label-badge text-label-badge text-tertiary bg-tertiary/10 px-2 py-0.5 rounded-full uppercase">3 Endpoints Enforced</span>
+</div>
+</td>
+</tr>
+<!-- Row 2.1: Create & Edit Curriculum YAML -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Create &amp; Edit Curriculum YAML</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-primary/10 text-primary font-bold">PUT</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/curriculum/manifest/:id</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Global]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-tertiary mt-1 font-mono uppercase">[Author-Org]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- Row 2.2: Publish Course to Production -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Publish Course to Production</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-primary/10 text-primary font-bold">POST</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/curriculum/publish-live</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Immediate]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">hourglass_empty</span>
+</button>
+<span class="font-label-badge text-[10px] text-tertiary mt-1 font-mono uppercase">[Req-Review]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- Row 2.3: Access Grading Queue -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Access Grading Queue</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-surface-container-high text-on-surface font-bold">GET</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/curriculum/grading/queue</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Global]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-tertiary mt-1 font-mono uppercase">[Assigned-Only]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- ================= GROUP 3: PHYSICAL LAB & HARDWARE MATRIX ================= -->
+<tr class="bg-surface-container-low/90">
+<td class="py-2.5 px-space-md" colspan="8">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">electrical_services</span>
+<span class="font-title-md text-title-md text-on-surface font-bold tracking-tight">GROUP 3: Physical Lab &amp; Hardware Matrix</span>
+<span class="font-code-sm text-code-sm text-outline">(/lab-ops/*, Smart PDUs, Serial Patch Console, FPGA Pods)</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary-fixed bg-secondary-container/20 px-2 py-0.5 rounded-full uppercase">3 Endpoints Enforced</span>
+</div>
+</td>
+</tr>
+<!-- Row 3.1: Remote Dry-Contact PDU Power Cycle -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Remote Dry-Contact PDU Power Cycle</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-error-container/30 text-error font-bold">POWER-POST</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/lab/reboot-pdu</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Master-Relay]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-secondary-container/20 text-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-secondary mt-1 font-mono uppercase">[Assigned-Pod]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- Row 3.2: Reassign Student Bench TTY -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Reassign Student Bench TTY</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-primary/10 text-primary font-bold">PATCH</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/lab/bench/tty-map</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Global]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-tertiary mt-1 font-mono uppercase">[Active-Class]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-secondary-container/20 text-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-secondary mt-1 font-mono uppercase">[All-Racks]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- Row 3.3: Transmit Spares Purchase Orders (Modified Draft 2) -->
+<tr class="hover:bg-surface-container/50 transition-colors group bg-tertiary/5">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-tertiary transition-colors">Transmit Spares Purchase Orders</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary text-on-tertiary-container font-label-badge text-[10px] font-bold">[Draft Changed]</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-primary/10 text-primary font-bold">POST</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/lab/spares/po-submit</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Unlimited]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Lab Tech (Modified) -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-tertiary text-on-tertiary-container shadow-md shadow-tertiary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-tertiary font-bold mt-1 font-mono uppercase">[Max $10k Raised]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- ================= GROUP 4: ENTERPRISE B2B GOVERNANCE ================= -->
+<tr class="bg-surface-container-low/90">
+<td class="py-2.5 px-space-md" colspan="8">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">corporate_fare</span>
+<span class="font-title-md text-title-md text-on-surface font-bold tracking-tight">GROUP 4: Enterprise B2B Governance</span>
+<span class="font-code-sm text-code-sm text-outline">(/org/*, SCIM v2, Stripe Invoicing, Merkle Transcripts)</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary bg-secondary/10 px-2 py-0.5 rounded-full uppercase">3 Endpoints Enforced</span>
+</div>
+</td>
+</tr>
+<!-- Row 4.1: Okta SCIM Directory Bindings -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Okta SCIM Directory Bindings</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-primary/10 text-primary font-bold">PUT</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/org/scim/v2/Users</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Global]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-secondary mt-1 font-mono uppercase">[Own-Org]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- Row 4.2: Purchase Seat Licenses & Invoicing -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Purchase Seat Licenses &amp; Invoicing</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-primary/10 text-primary font-bold">POST</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/billing/checkout-seats</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Global]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-secondary mt-1 font-mono uppercase">[Own-Org]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- Row 4.3: View Merkle Cryptographic Transcripts -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">View Merkle Cryptographic Transcripts</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-surface-container-high text-on-surface font-bold">GET</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/audit/merkle-verify</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Global]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-secondary mt-1 font-mono uppercase">[Own-Org]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Self]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-surface-variant text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-on-surface mt-1 font-mono uppercase">[Assigned]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-tertiary-container/30 text-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-tertiary-fixed mt-1 font-mono uppercase">[Full-Ledger]</span>
+</div>
+</td>
+</tr>
+<!-- ================= GROUP 5: ROOT ADMINISTRATION & TELEMETRY ================= -->
+<tr class="bg-surface-container-low/90">
+<td class="py-2.5 px-space-md" colspan="8">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error text-[18px]">security</span>
+<span class="font-title-md text-title-md text-on-surface font-bold tracking-tight">GROUP 5: Root Administration &amp; Platform Telemetry</span>
+<span class="font-code-sm text-code-sm text-outline">(/admin/*, Audit Trails, User Impersonation, Redis Ring Flush)</span>
+</div>
+<span class="font-label-badge text-label-badge text-error bg-error-container/20 px-2 py-0.5 rounded-full uppercase">3 Endpoints Enforced</span>
+</div>
+</td>
+</tr>
+<!-- Row 5.1: Support Impersonate Users (Modified Draft 3) -->
+<tr class="hover:bg-surface-container/50 transition-colors group bg-tertiary/5">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-tertiary transition-colors">Support Impersonate Users</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary text-on-tertiary-container font-label-badge text-[10px] font-bold">[Draft Changed]</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-error-container/30 text-error font-bold">SEC-AUTH</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/admin/iam/ghost-token</span>
+</div>
+</div>
+</td>
+<!-- Admin (Modified scope) -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-tertiary text-on-tertiary-container shadow-md shadow-tertiary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+</button>
+<span class="font-label-badge text-[10px] text-tertiary font-bold mt-1 font-mono uppercase">[MFA+JIT Log]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- Row 5.2: Modify Global RBAC Matrix -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Modify Global RBAC Matrix</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-primary/10 text-primary font-bold">PUT</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/admin/rbac/enforce</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center shadow-[0_0_12px_rgba(78,222,163,0.25)]">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Root-Only]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+<!-- Row 5.3: Flush Redis / Scale WASM Pods -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Flush Redis / Scale WASM Pods</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded font-label-badge text-label-badge bg-error-container/30 text-error font-bold">INFRA-POST</span>
+<span class="font-code-sm text-code-sm text-outline">/api/v1/infra/cluster/drain-scale</span>
+</div>
+</div>
+</td>
+<!-- Admin -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center">
+<button class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<span class="font-label-badge text-[10px] text-primary mt-1 font-mono uppercase">[Root-Cluster]</span>
+</div>
+</td>
+<!-- Org Mgr -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Instructor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Lab Tech -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Student -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Sponsor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+<!-- Auditor -->
+<td class="py-3 px-space-sm text-center">
+<div class="inline-flex flex-col items-center opacity-40">
+<button class="w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<span class="font-label-badge text-[10px] text-outline mt-1 font-mono uppercase">[Deny]</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- BOTTOM AUDIT & REAL-TIME POLICY SIMULATOR DRAWER -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Interactive Policy Sandbox Simulator -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-lg rounded-xl shadow-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">science</span>
+</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">RBAC Policy Simulator &amp; Probe Tool</h2>
+<p class="font-code-sm text-code-sm text-on-surface-variant">Dry-run endpoint authorization resolution against the active policy engine</p>
+</div>
+</div>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded-full bg-surface-container-high text-primary uppercase">Zero-Side-Effect Mode</span>
+</div>
+<!-- Simulation Inputs -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-sm">
+<div>
+<label class="block font-label-badge text-label-badge text-on-surface-variant uppercase mb-1">Target Subject (User / Actor)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-high text-on-surface font-code-sm text-code-sm px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary text-on-surface" id="sim-user" type="text" value="alexandre.mercer@cisco-net.edu"/>
+<span class="absolute right-2.5 top-2.5 font-label-badge text-[10px] text-secondary font-mono">[STUDENT]</span>
+</div>
+</div>
+<div>
+<label class="block font-label-badge text-label-badge text-on-surface-variant uppercase mb-1">Target Endpoint URI</label>
+<select class="w-full bg-surface-container-high text-on-surface font-code-sm text-code-sm px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary text-on-surface cursor-pointer" id="sim-endpoint">
+<option value="pdu">POST /api/v1/lab/reboot-pdu</option>
+<option value="cli">POST /api/v1/sandbox/cli/exec</option>
+<option value="scim">PUT /api/v1/org/scim/v2/Users</option>
+<option value="merkle">GET /api/v1/audit/merkle-verify</option>
+</select>
+</div>
+<div>
+<label class="block font-label-badge text-label-badge text-on-surface-variant uppercase mb-1">Execution Tenant Scope</label>
+<select class="w-full bg-surface-container-high text-on-surface font-code-sm text-code-sm px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary text-on-surface cursor-pointer">
+<option>org_881902_cisco_academy (Active)</option>
+<option>org_system_root (Global)</option>
+<option>sandbox_isolated_ephemeral</option>
+</select>
+</div>
+</div>
+<!-- Evaluation Console Display -->
+<div class="mt-space-md bg-surface-container-lowest p-space-md rounded-xl font-code-sm text-code-sm shadow-inner relative overflow-hidden">
+<div class="flex items-center justify-between pb-2 mb-2">
+<span class="font-label-badge text-[11px] text-on-surface-variant flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+              PROBE RESOLUTION TRACE:
+            </span>
+<span class="text-[11px] text-outline font-mono">Execution time: 0.84ms</span>
+</div>
+<div class="text-error font-medium flex items-start gap-2" id="sim-output">
+<span class="material-symbols-outlined text-[18px] shrink-0 text-error">gpp_bad</span>
+<div>
+<div class="font-bold">403 FORBIDDEN - ACCESS_DENIED_BY_POLICY</div>
+<div class="text-on-surface-variant text-[12px] mt-0.5">
+                Target principal <span class="text-on-surface">alexandre.mercer (Role: STUDENT)</span> lacks capability <span class="text-on-surface">hw:pdu:power_cycle</span> on scope <span class="text-secondary">org_881902</span>. Required privilege granted only to <span class="text-secondary-fixed">LAB_TECH</span> or <span class="text-primary">PLATFORM_ADMIN</span>.
+              </div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-sm">
+<span class="font-code-sm text-code-sm text-outline">Simulated against Active Snapshot v4.19</span>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-secondary text-on-secondary font-title-md text-title-md font-semibold hover:bg-secondary-fixed transition-colors" id="btn-run-sim">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Execute Probe Test</span>
+</button>
+</div>
+</div>
+<!-- Right Cryptographic Commit Summary & Ledger -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-bold">Uncommitted Staging</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-badge text-label-badge font-bold">3 MUTATIONS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Changes staged in browser session memory. Propagation commits to distributed Envoy clusters.</p>
+<!-- Staged Delta Items -->
+<div class="mt-space-md space-y-space-sm font-code-sm text-code-sm">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-tertiary font-medium">Instructor → Socratic AI Tutor</span>
+<span class="text-outline text-[11px]">Changed: [Cohort] → [Debug-Tutor]</span>
+</div>
+<button class="text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[16px]">undo</span></button>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-tertiary font-medium">Lab Tech → Spares Purchase</span>
+<span class="text-outline text-[11px]">Threshold: $5,000 → $10,000 PO</span>
+</div>
+<button class="text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[16px]">undo</span></button>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-tertiary font-medium">Admin → User Impersonate</span>
+<span class="text-outline text-[11px]">Enforced: [MFA + JIT Audit Hook]</span>
+</div>
+<button class="text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[16px]">undo</span></button>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-label-badge font-label-badge text-on-surface-variant">
+<span>TARGET LATENCY</span>
+<span class="text-primary font-mono">&lt; 120ms global mesh sync</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container text-on-surface-variant font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[16px] text-tertiary shrink-0">verified_user</span>
+<span>Requires Root MFA hardware token confirmation on save.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Interactive Simulation logic
+  const simUser = document.getElementById('sim-user');
+  const simEndpoint = document.getElementById('sim-endpoint');
+  const simOutput = document.getElementById('sim-output');
+  const btnRunSim = document.getElementById('btn-run-sim');
+  const btnPropagate = document.getElementById('btn-propagate');
+
+  if (btnRunSim && simOutput) {
+    btnRunSim.addEventListener('click', () => {
+      const endpoint = simEndpoint.value;
+      if (endpoint === 'pdu') {
+        simOutput.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] shrink-0 text-error">gpp_bad</span>
+          <div>
+            <div class="font-bold">403 FORBIDDEN - ACCESS_DENIED_BY_POLICY</div>
+            <div class="text-on-surface-variant text-[12px] mt-0.5">
+              Principal <span class="text-on-surface">${simUser.value} (STUDENT)</span> denied <span class="text-on-surface">hw:pdu:power_cycle</span> on <span class="text-secondary">/api/v1/lab/reboot-pdu</span>.
+            </div>
+          </div>
+        `;
+      } else if (endpoint === 'cli') {
+        simOutput.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] shrink-0 text-primary">gpp_good</span>
+          <div>
+            <div class="font-bold text-primary">200 ALLOWED - SANDBOX RESTRICTED EXEC</div>
+            <div class="text-on-surface-variant text-[12px] mt-0.5">
+              Principal <span class="text-on-surface">${simUser.value}</span> permitted <span class="text-primary">exec:sandbox_cli</span>. Network egress constrained to isolated container network.
+            </div>
+          </div>
+        `;
+      } else if (endpoint === 'merkle') {
+        simOutput.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] shrink-0 text-primary">gpp_good</span>
+          <div>
+            <div class="font-bold text-primary">200 ALLOWED - SELF RECORD SCOPED</div>
+            <div class="text-on-surface-variant text-[12px] mt-0.5">
+              Principal <span class="text-on-surface">${simUser.value}</span> authorized to verify cryptographic proof for self-achieved certifications.
+            </div>
+          </div>
+        `;
+      } else {
+        simOutput.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] shrink-0 text-error">gpp_bad</span>
+          <div>
+            <div class="font-bold">403 FORBIDDEN - SCIM_WRITE_REJECTED</div>
+            <div class="text-on-surface-variant text-[12px] mt-0.5">
+              SCIM directory bindings reserved exclusively for <span class="text-secondary">ORG_MANAGER</span> and <span class="text-primary">PLATFORM_ADMIN</span>.
+            </div>
+          </div>
+        `;
+      }
+    });
+  }
+
+  if (btnPropagate) {
+    btnPropagate.addEventListener('click', () => {
+      btnPropagate.innerHTML = `
+        <span class="material-symbols-outlined text-[18px] animate-spin">refresh</span>
+        <span>Propagating Mesh...</span>
+      `;
+      setTimeout(() => {
+        btnPropagate.innerHTML = `
+          <span class="material-symbols-outlined text-[18px]">done_all</span>
+          <span>Matrix Synced Live</span>
+        `;
+        btnPropagate.classList.remove('bg-primary');
+        btnPropagate.classList.add('bg-primary-container');
+      }, 1200);
+    });
+  }
+</script></main></div></body></html>

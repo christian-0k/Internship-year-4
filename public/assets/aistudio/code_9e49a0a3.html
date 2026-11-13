@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"surface-bright": "#790200", "surface-container-lowest": "#270000", "surface-container-highest": "#700200", "surface-dim": "#310000", "primary-container": "#e7e1e1", "on-error-container": "#ffdad6", "on-secondary": "#333030", secondary: "#ccc5c5", "on-primary-fixed-variant": "#494646", "on-tertiary-fixed": "#1e1b19", "on-primary-fixed": "#1d1b1b", "on-secondary-container": "#bab4b3", "primary-fixed": "#e7e1e1", "outline-variant": "#444748", "inverse-surface": "#ffdad4", "surface-tint": "#cac5c5", "on-error": "#690005", tertiary: "#ffffff", "surface-container": "#480100", "on-surface-variant": "#c4c7c8", "inverse-on-surface": "#680200", "on-primary-container": "#676364", background: "#310000", "tertiary-container": "#e9e1de", "on-surface": "#ffdad4", "surface-variant": "#700200", primary: "#ffffff", surface: "#310000", "on-secondary-fixed-variant": "#4a4646", "primary-fixed-dim": "#cac5c5", "tertiary-fixed": "#e9e1de", "secondary-container": "#4a4646", outline: "#8e9192", "on-secondary-fixed": "#1e1b1b", "on-tertiary-fixed-variant": "#4a4644", "on-background": "#ffdad4", "secondary-fixed": "#e8e1e0", "surface-container-low": "#410100", "inverse-primary": "#615e5e", "secondary-fixed-dim": "#ccc5c5", "on-primary": "#323030", "tertiary-fixed-dim": "#ccc5c2", error: "#ffb4ab", "on-tertiary-container": "#686361", "error-container": "#93000a", "surface-container-high": "#5c0100", "on-tertiary": "#33302e"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"gutter-sm": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem", margin: "2rem", "space-md": "1rem", gutter: "1.5rem", "space-lg": "1.5rem", "margin-lg": "4rem", "margin-sm": "1rem"}, fontFamily: {"code-lg": ["JetBrains Mono"], "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "title-md": ["Inter"], "label-badge": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 h-14 bg-surface-container-low/90 backdrop-blur-xl z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-full w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="h-7 w-7 rounded bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">bolt</span></div><span class="font-code-sm text-code-sm text-on-surface uppercase tracking-wide">DIAGNOSTIC_EVAL // QUIZ_MODE</span></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[18px]">timer</span><span class="font-code-sm text-code-sm text-tertiary font-medium">--:--:--</span></div><a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">close</span><span class="font-body-sm text-body-sm hidden sm:inline">Exit Lab</span></a></div></div><div class="absolute bottom-0 left-0 w-full h-[2px] bg-surface-container-highest"><div class="bg-primary h-full w-0 transition-all duration-300"></div></div></header><main class="relative pt-14 w-full flex-1 bg-background flex flex-col"><div class="flex flex-col w-full">
+<!-- Minimalist High-Focus Exam Header Utility Bar -->
+<header class="w-full bg-surface-container-low px-gutter py-space-sm flex flex-wrap items-center justify-between gap-space-md shadow-md sticky top-0 z-30">
+<div class="flex items-center gap-space-md min-w-0">
+<a class="inline-flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant hover:text-primary transition-colors py-1 px-2.5 rounded bg-surface-container-high/60 hover:bg-surface-container-high" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span class="hidden sm:inline">Exit to Course</span>
+</a>
+<div class="h-4 w-px bg-surface-container-highest"></div>
+<div class="truncate">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-secondary bg-surface-container-highest/80 px-2 py-0.5 rounded">CCNA 200-301 // SEC.02</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold truncate">Quiz 2.4: VLAN Trunking &amp; Spanning-Tree Protocol Assessment</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md ml-auto">
+<!-- Question Stepper Indicator -->
+<div class="flex items-center gap-space-sm bg-surface-container px-3 py-1.5 rounded">
+<span class="material-symbols-outlined text-primary text-[18px]">rule</span>
+<span class="font-code-sm text-code-sm text-on-surface">Question <span class="text-primary font-semibold">4</span> of 10</span>
+</div>
+<!-- Alert Timer -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-3 py-1.5 rounded text-tertiary">
+<span class="material-symbols-outlined text-[18px] animate-pulse">timer</span>
+<span class="font-code-lg text-code-lg font-semibold tracking-wider" id="examTimer">14:25</span>
+</div>
+<!-- Socratic Hint Launcher Trigger -->
+<button class="inline-flex items-center gap-space-xs bg-primary hover:bg-primary-fixed text-on-primary font-title-md text-body-sm px-3.5 py-1.5 rounded shadow-lg shadow-primary-container/20 hover:shadow-primary-container/40 transition-all cursor-pointer" id="openHintDrawerBtn">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+<span>Socratic Hint</span>
+<span class="font-label-badge text-label-badge bg-on-primary/20 text-on-primary px-1.5 py-0.5 rounded ml-1">Cost: -5 XP</span>
+</button>
+<!-- Demo Trigger for Remediation Modal -->
+<button class="font-label-badge text-label-badge uppercase bg-surface-container-highest hover:bg-surface-bright text-on-surface-variant hover:text-on-surface px-2.5 py-1.5 rounded transition-colors hidden lg:inline-flex items-center gap-1" id="triggerModalBtn">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+        Diagnostic Preview
+      </button>
+</div>
+</header>
+<!-- Progress Bar Matrix Strip -->
+<div class="w-full bg-surface-container-lowest grid grid-cols-10 gap-0.5 px-0.5 py-0.5">
+<div class="h-1 bg-primary rounded-full"></div>
+<div class="h-1 bg-primary rounded-full"></div>
+<div class="h-1 bg-primary rounded-full"></div>
+<div class="h-1 bg-secondary animate-pulse rounded-full"></div>
+<div class="h-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-1 bg-surface-container-highest rounded-full"></div>
+</div>
+<!-- Primary Assessment Workspace Layout -->
+<div class="relative w-full flex-1 flex overflow-hidden">
+<!-- Main Center Test Workspace -->
+<main class="flex-1 w-full max-w-6xl mx-auto px-gutter py-space-lg flex flex-col gap-space-lg overflow-y-auto">
+<!-- Diagnostic Scenario Banner & Question Card -->
+<section class="bg-surface-container-low rounded-xl p-space-lg relative overflow-hidden shadow-lg">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge uppercase text-secondary bg-secondary/10 px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">router</span>
+              Catalyst 3850 SW1 // Gi1/0/1
+            </span>
+<span class="font-label-badge text-label-badge uppercase text-tertiary bg-tertiary/10 px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+              Native VLAN Mismatch &amp; BPDU Guard
+            </span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">WEIGHT: 3.5 PTS // LAYER 2 OPERATIONS</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm">
+          Topology Fault Analysis: Port State Inconsistency &amp; Trunk Negotiation
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+          During an operational audit, link Gi1/0/1 between Catalyst 3850 SW1 and distribution switch SW2 transitions into an <code class="font-code-sm text-code-sm bg-surface-container-lowest px-1.5 py-0.5 rounded text-error">err-disabled</code> state immediately following customer workstation relocations. Syslog registers <code class="font-code-sm text-code-sm bg-surface-container-lowest px-1.5 py-0.5 rounded text-tertiary">%SPANTREE-2-BLOCK_BPDUGUARD</code> and recurring CDP mismatch traps.
+        </p>
+<!-- Network Scenario Diagram Canvas / Log Diagnostic Snapshot -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md overflow-x-auto">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs text-on-surface-variant text-code-sm font-code-sm">
+<div class="flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-error"></span>
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<span class="h-2 w-2 rounded-full bg-primary"></span>
+<span class="ml-2 font-mono">SW1# show logging | include SPANTREE|CDP-4-NATIVE_VLAN</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant">BUFFER: SYSLOG_LIVE_TAIL</span>
+</div>
+<pre class="font-code-sm text-code-sm text-secondary/90 leading-5 font-mono select-all overflow-x-auto">00:14:28: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet1/0/1 (99), with SW2 GigabitEthernet0/1 (1).
+00:14:29: %SPANTREE-2-BLOCK_BPDUGUARD: Received BPDU on port Gi1/0/1 with BPDU Guard enabled. Disabling port.
+00:14:29: %PM-4-ERR_DISABLE: bpdu-guard error detected on Gi1/0/1, putting Gi1/0/1 in err-disable state.</pre>
+</div>
+</section>
+<!-- Multi-Interaction Question Sections Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Part A: Multiple Choice Tag Analysis (7 Cols) -->
+<section class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="font-label-badge text-label-badge bg-primary-container/20 text-primary uppercase px-2 py-0.5 rounded">Part A</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Theoretical Validation</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mb-space-md">
+              Under IEEE 802.1Q specification, what occurs when SW1 forwards untagged traffic across this mismatch boundary?
+            </h2>
+<div class="flex flex-col gap-space-sm" id="partAOptions">
+<!-- Radio Card 1 -->
+<label class="group relative flex items-start gap-space-md p-space-md bg-surface-container rounded-lg cursor-pointer hover:bg-surface-container-high transition-all">
+<input class="mt-1 text-primary focus:ring-primary h-4 w-4 bg-surface-container-lowest" name="partA" type="radio" value="A"/>
+<div class="flex-1 min-w-0">
+<span class="block font-code-sm text-code-sm text-secondary font-medium mb-0.5">Option A</span>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-on-surface transition-colors">Frames emitted from SW1 untagged (VLAN 99) are ingested by SW2 into its native VLAN 1, resulting in cross-VLAN broadcast leakage and protocol leakage.</span>
+</div>
+</label>
+<!-- Radio Card 2 (Active Demo Selection) -->
+<label class="group relative flex items-start gap-space-md p-space-md bg-surface-container-high rounded-lg cursor-pointer transition-all shadow-sm">
+<input checked="" class="mt-1 text-primary focus:ring-primary h-4 w-4 bg-surface-container-lowest" name="partA" type="radio" value="B"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="block font-code-sm text-code-sm text-primary font-medium mb-0.5">Option B [CURRENT_SELECTION]</span>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">The switch hardware automatically encapsulates 802.1Q tags onto untagged frames using ingress PVID matching before egress serialization.</span>
+</div>
+</label>
+<!-- Radio Card 3 -->
+<label class="group relative flex items-start gap-space-md p-space-md bg-surface-container rounded-lg cursor-pointer hover:bg-surface-container-high transition-all">
+<input class="mt-1 text-primary focus:ring-primary h-4 w-4 bg-surface-container-lowest" name="partA" type="radio" value="C"/>
+<div class="flex-1 min-w-0">
+<span class="block font-code-sm text-code-sm text-secondary font-medium mb-0.5">Option C</span>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-on-surface transition-colors">DTP forces Gi1/0/1 into an automatic access fallback mode, completely discarding all ingress frames regardless of STP port role state.</span>
+</div>
+</label>
+<!-- Radio Card 4 -->
+<label class="group relative flex items-start gap-space-md p-space-md bg-surface-container rounded-lg cursor-pointer hover:bg-surface-container-high transition-all">
+<input class="mt-1 text-primary focus:ring-primary h-4 w-4 bg-surface-container-lowest" name="partA" type="radio" value="D"/>
+<div class="flex-1 min-w-0">
+<span class="block font-code-sm text-code-sm text-secondary font-medium mb-0.5">Option D</span>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-on-surface transition-colors">STP Root Guard preempts the packet forwarder engine and transitions the bridge ID into infinite blocking loop suppression.</span>
+</div>
+</label>
+</div>
+</div>
+</section>
+<!-- Part B: CLI Syntax Matching Target Slots (5 Cols) -->
+<section class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="font-label-badge text-label-badge bg-secondary-container/20 text-secondary uppercase px-2 py-0.5 rounded">Part B</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">CLI Remediation Sequencing</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mb-space-sm">
+              Match configuration directives to resolve the fault:
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Drag CLI syntax elements into their appropriate functional engineering objectives.
+            </p>
+<!-- Draggable Command Pills Source Palette -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg mb-space-md">
+<span class="font-label-badge text-label-badge uppercase text-on-surface-variant block mb-2">Available Command Fragments</span>
+<div class="flex flex-wrap gap-2" id="commandPills">
+<div class="cmd-pill cursor-grab active:cursor-grabbing font-code-sm text-code-sm bg-surface-container-highest hover:bg-primary/20 text-primary px-2.5 py-1.5 rounded transition-all flex items-center gap-1 shadow-sm" draggable="true">
+<span class="material-symbols-outlined text-[14px]">drag_indicator</span>
+                  switchport trunk native vlan 99
+                </div>
+<div class="cmd-pill cursor-grab active:cursor-grabbing font-code-sm text-code-sm bg-surface-container-highest hover:bg-secondary/20 text-secondary px-2.5 py-1.5 rounded transition-all flex items-center gap-1 shadow-sm" draggable="true">
+<span class="material-symbols-outlined text-[14px]">drag_indicator</span>
+                  spanning-tree bpduguard enable
+                </div>
+<div class="cmd-pill cursor-grab active:cursor-grabbing font-code-sm text-code-sm bg-surface-container-highest hover:bg-tertiary/20 text-tertiary px-2.5 py-1.5 rounded transition-all flex items-center gap-1 shadow-sm" draggable="true">
+<span class="material-symbols-outlined text-[14px]">drag_indicator</span>
+                  switchport mode trunk
+                </div>
+</div>
+</div>
+<!-- Matching Drop Slots Target -->
+<div class="space-y-space-sm">
+<!-- Slot 1 -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-1.5 drop-slot">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="font-mono text-secondary font-semibold">1. Standardize Untagged PVID (SW2 Side)</span>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-1.5 py-0.5 rounded">SLOT ACTIVE</span>
+</div>
+<div class="h-10 bg-surface-container-lowest rounded flex items-center px-space-sm text-primary font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[16px] mr-1 text-primary">terminal</span>
+                  switchport trunk native vlan 99
+                </div>
+</div>
+<!-- Slot 2 -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-1.5 drop-slot">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="font-mono text-secondary font-semibold">2. Prevent Edge Rogue Bridge Injections</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container-highest px-1.5 py-0.5 rounded">AWAITING INPUT</span>
+</div>
+<div class="h-10 bg-surface-container-lowest rounded flex items-center justify-center text-on-surface-variant/50 font-code-sm text-code-sm bg-surface-container-lowest/80">
+                  [Drop corresponding CLI command here]
+                </div>
+</div>
+<!-- Slot 3 -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-1.5 drop-slot">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="font-mono text-secondary font-semibold">3. Suppress DTP Dynamic Desirable Mode</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container-highest px-1.5 py-0.5 rounded">AWAITING INPUT</span>
+</div>
+<div class="h-10 bg-surface-container-lowest rounded flex items-center justify-center text-on-surface-variant/50 font-code-sm text-code-sm bg-surface-container-lowest/80">
+                  [Drop corresponding CLI command here]
+                </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Part C: Hardware Component Switch Pinpoint Schematic (12 Cols Full Width) -->
+<section class="lg:col-span-12 bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-badge text-label-badge bg-tertiary-container/30 text-tertiary uppercase px-2 py-0.5 rounded">Part C</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Hardware Port Matrix Identification</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface">
+                Identify the physical port designated as GigabitEthernet1/0/1 on the Catalyst front bezel.
+              </h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1 font-code-sm text-code-sm text-on-surface-variant">
+<span class="h-2 w-2 rounded-full bg-primary animate-ping"></span>
+                Interactive Bezel Canvas
+              </span>
+</div>
+</div>
+<!-- Switch Bezel Schematic -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md overflow-x-auto relative shadow-inner">
+<div class="min-w-[780px] bg-surface-container-high rounded-lg p-space-md flex flex-col gap-space-md">
+<!-- Chassis Header Strip -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="h-2.5 w-2.5 rounded-full bg-primary shadow-sm shadow-primary"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">SYS / STAT</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="h-2.5 w-2.5 rounded-full bg-tertiary shadow-sm shadow-tertiary"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">RPS FAULT</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="h-2.5 w-2.5 rounded-full bg-primary shadow-sm shadow-primary"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">MAST</span>
+</div>
+</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant font-mono tracking-widest">
+                  CISCO CATALYST 3850-24P-S // WS-C3850-24P
+                </div>
+</div>
+<!-- Ports Array Deck -->
+<div class="grid grid-cols-12 gap-space-sm items-center bg-surface-container-lowest p-space-md rounded-lg">
+<!-- RJ45 Console Port Pinpoint -->
+<button class="group col-span-1 flex flex-col items-center justify-center p-2 rounded bg-surface-container-high hover:bg-surface-bright cursor-pointer transition-all" type="button">
+<span class="font-label-badge text-label-badge text-on-surface-variant mb-1">CON</span>
+<div class="w-7 h-6 bg-secondary/20 rounded flex items-center justify-center group-hover:bg-secondary/40">
+<span class="material-symbols-outlined text-secondary text-[14px]">settings_input_hdmi</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant mt-1">RJ-45</span>
+</button>
+<!-- 24-Port Main Ethernet Matrix (Gi1/0/1 - Gi1/0/24) -->
+<div class="col-span-9 grid grid-cols-8 gap-1.5 px-2">
+<!-- Port 1 (Target Pinpoint Active) -->
+<button class="port-pin group flex flex-col items-center p-1.5 rounded bg-primary/20 hover:bg-primary-container transition-all cursor-pointer relative shadow-sm shadow-primary/30" type="button">
+<span class="absolute -top-2 left-1/2 -translate-x-1/2 font-label-badge text-label-badge text-primary bg-surface-container-lowest px-1 rounded font-bold">1/0/1</span>
+<div class="w-6 h-5 bg-primary/40 rounded flex items-center justify-center group-hover:bg-primary">
+<div class="w-3 h-2 bg-on-primary-container rounded-xs"></div>
+</div>
+<span class="font-label-badge text-label-badge text-primary mt-1 flex items-center gap-0.5">
+<span class="h-1.5 w-1.5 rounded-full bg-error animate-pulse"></span>
+                      ERR
+                    </span>
+</button>
+<!-- Port 2 -->
+<button class="port-pin group flex flex-col items-center p-1.5 rounded bg-surface-container-high hover:bg-surface-bright transition-all cursor-pointer" type="button">
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">1/0/2</span>
+<div class="w-6 h-5 bg-surface-container-highest rounded flex items-center justify-center">
+<div class="w-3 h-2 bg-surface-dim rounded-xs"></div>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant mt-1 flex items-center gap-0.5">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                      UP
+                    </span>
+</button>
+<!-- Port 3 -->
+<button class="port-pin group flex flex-col items-center p-1.5 rounded bg-surface-container-high hover:bg-surface-bright transition-all cursor-pointer" type="button">
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">1/0/3</span>
+<div class="w-6 h-5 bg-surface-container-highest rounded flex items-center justify-center">
+<div class="w-3 h-2 bg-surface-dim rounded-xs"></div>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant mt-1 flex items-center gap-0.5">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                      UP
+                    </span>
+</button>
+<!-- Port 4 -->
+<button class="port-pin group flex flex-col items-center p-1.5 rounded bg-surface-container-high hover:bg-surface-bright transition-all cursor-pointer" type="button">
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">1/0/4</span>
+<div class="w-6 h-5 bg-surface-container-highest rounded flex items-center justify-center">
+<div class="w-3 h-2 bg-surface-dim rounded-xs"></div>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant mt-1 flex items-center gap-0.5">
+<span class="h-1.5 w-1.5 rounded-full bg-surface-bright"></span>
+                      DOWN
+                    </span>
+</button>
+<!-- Port 5-8 Cluster Demo Representation -->
+<div class="col-span-4 bg-surface-container-high/60 rounded p-1.5 flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm px-3">
+<span class="font-mono text-body-sm">Ports Gi1/0/5 ~ Gi1/0/24 (PoE+ Gigabit Stack)</span>
+<span class="font-label-badge text-label-badge uppercase bg-surface-container px-2 py-0.5 rounded text-secondary">IEEE 802.3at</span>
+</div>
+</div>
+<!-- SFP+ Uplinks Module Pinpoint -->
+<div class="col-span-2 flex items-center gap-1.5 bg-surface-container-high p-2 rounded justify-around">
+<button class="flex flex-col items-center cursor-pointer group" type="button">
+<span class="font-label-badge text-label-badge text-secondary font-mono">Te1/1/1</span>
+<div class="w-7 h-6 bg-secondary/10 group-hover:bg-secondary/30 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[14px]">cable</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary mt-1">10G SFP+</span>
+</button>
+<button class="flex flex-col items-center cursor-pointer group" type="button">
+<span class="font-label-badge text-label-badge text-secondary font-mono">Te1/1/2</span>
+<div class="w-7 h-6 bg-secondary/10 group-hover:bg-secondary/30 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[14px]">cable</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary mt-1">10G SFP+</span>
+</button>
+</div>
+</div>
+<!-- Bezel Diagnostic Footnote -->
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="font-code-sm text-code-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+                  Selected Bezel Target: Interface GigabitEthernet1/0/1 [REGISTERED]
+                </span>
+<span class="font-label-badge text-label-badge uppercase text-on-surface-variant">HW REVISION: V03</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Floating / Fixed Action Bar inside Main Container -->
+<footer class="w-full bg-surface-container-low rounded-xl px-gutter py-space-md flex flex-wrap items-center justify-between gap-space-md shadow-lg sticky bottom-space-md z-20">
+<!-- Flag for Review Toggle -->
+<label class="inline-flex items-center gap-space-xs cursor-pointer select-none">
+<input class="sr-only peer" id="flagReviewToggle" type="checkbox"/>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant peer-checked:bg-tertiary peer-checked:text-on-tertiary transition-all">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant peer-checked:text-tertiary font-medium">Flag for Review</span>
+</label>
+<!-- Stepper Controls (Previous & Next) -->
+<div class="flex items-center gap-space-md">
+<button class="inline-flex items-center gap-space-xs px-4 py-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-body-sm transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+<span>Previous Question</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-5 py-2 rounded bg-primary hover:bg-primary-fixed text-on-primary font-title-md text-body-sm shadow-md shadow-primary-container/25 hover:shadow-primary-container/45 transition-all cursor-pointer">
+<span>Next Question</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</footer>
+</main>
+<!-- Persistent Socratic AI Slide-Out Drawer (Right Panel) -->
+<aside class="w-full max-w-md bg-surface-container-low flex flex-col justify-between fixed lg:relative right-0 top-0 bottom-0 z-40 transform translate-x-full lg:translate-x-0 transition-transform duration-300 shadow-2xl" id="socraticDrawer">
+<!-- Drawer Header -->
+<div class="p-space-md bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="h-8 w-8 rounded bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-code-sm text-code-sm text-on-surface font-bold">NetMentor Socratic Co-Pilot</span>
+<span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+</div>
+<span class="font-label-badge text-label-badge text-tertiary uppercase tracking-wide">Anti-Cheat Safeguard Active</span>
+</div>
+</div>
+<button class="lg:hidden text-on-surface-variant hover:text-on-surface p-1" id="closeHintDrawerBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Socratic AI Conversational Thread -->
+<div class="flex-1 p-space-md overflow-y-auto space-y-space-md">
+<!-- Safety Guard Banner -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">shield</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Direct answer-keys are restricted during Quiz Mode. NetMentor uses guided Socratic prompts to strengthen mental schema and RFC comprehension.
+          </p>
+</div>
+<!-- Assistant Message Bubble -->
+<div class="bg-surface-container p-space-md rounded-lg relative">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-badge text-label-badge text-primary uppercase font-mono">[AI_SOCRATIC_AGENT]</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Just now</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            I cannot provide the direct answer key, but observe carefully:
+          </p>
+<div class="bg-surface-container-lowest p-space-sm rounded mt-2 text-secondary font-code-sm text-code-sm">
+            What default VLAN does a Cisco Catalyst switch serialize untagged frames over when trunking negotiation fails or native VLANs mismatch across 802.1Q tags?
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+            Also consider: why would an access workstation moving to this segment trigger BPDU Guard if Spanning Tree FastEthernet PortFast was misconfigured on an uplink trunk?
+          </p>
+</div>
+<!-- Dynamic Quick Suggestion Socratic Prompt Chips -->
+<div class="space-y-space-xs">
+<span class="font-label-badge text-label-badge uppercase text-on-surface-variant block">Explore Thinking Vector:</span>
+<div class="flex flex-col gap-1.5">
+<button class="text-left p-space-xs px-space-sm bg-surface-container hover:bg-surface-container-high rounded font-code-sm text-code-sm text-on-surface-variant hover:text-primary transition-all flex items-center justify-between group">
+<span>Explain BPDU Guard vs BPDU Filter impact</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary">arrow_forward</span>
+</button>
+<button class="text-left p-space-xs px-space-sm bg-surface-container hover:bg-surface-container-high rounded font-code-sm text-code-sm text-on-surface-variant hover:text-primary transition-all flex items-center justify-between group">
+<span>Review 802.1Q 4-byte frame header schema</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary">arrow_forward</span>
+</button>
+<button class="text-left p-space-xs px-space-sm bg-surface-container hover:bg-surface-container-high rounded font-code-sm text-code-sm text-on-surface-variant hover:text-primary transition-all flex items-center justify-between group">
+<span>Why does Native VLAN 1 pose security vulnerabilities?</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Drawer Prompt Input Footer -->
+<div class="p-space-md bg-surface-container">
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm font-body-sm rounded px-3 py-2 pr-10 focus:outline-none" placeholder="Formulate inquiry to Co-Pilot..." type="text"/>
+<button class="absolute right-2 text-primary hover:text-primary-fixed p-1">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<div class="flex items-center justify-between mt-2 font-label-badge text-label-badge text-on-surface-variant">
+<span>HINTS REMAINING: 2/3</span>
+<span class="text-tertiary">STREAK MULTIPLIER: 1.4x</span>
+</div>
+</div>
+</aside>
+</div>
+<!-- Interactive Score Summary / Remediation Showcase Modal (State View Demo) -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md hidden items-center justify-center p-gutter" id="remediationModal">
+<div class="bg-surface-container-low max-w-2xl w-full rounded-xl overflow-hidden shadow-2xl relative flex flex-col">
+<!-- Modal Header -->
+<div class="p-space-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="h-9 w-9 rounded bg-error-container/40 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">troubleshoot</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Diagnostic Assessment Outcome</h3>
+<span class="font-code-sm text-code-sm text-on-surface-variant">DOMAIN 2: NETWORK ACCESS &amp; SWITCHING PROTOCOLS</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container-high transition-colors" id="closeModalBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body Content -->
+<div class="p-space-lg space-y-space-lg max-h-[768px] overflow-y-auto">
+<!-- Score Hero Card -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-error bg-error/10 px-2 py-0.5 rounded">
+              Needs Remediation before Live Lab Unlock
+            </span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-hero text-headline-lg font-bold text-error">62%</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 85% Passing Target</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Test failed to meet minimum domain prerequisite requirements for autonomous packet lab unlock.
+            </p>
+</div>
+<!-- Circular Metric Representation Inline SVG -->
+<div class="relative w-24 h-24 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Background Circle -->
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<!-- Score Fill Circle (62%) -->
+<path class="text-error" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="62, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-code-sm text-code-sm font-bold text-on-surface">62%</span>
+</div>
+</div>
+<!-- Domain Failure Radar Breakdown -->
+<div>
+<h4 class="font-code-sm text-code-sm text-on-surface font-semibold uppercase tracking-wider mb-space-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">analytics</span>
+            Sub-Domain Competency Breakdown
+          </h4>
+<div class="space-y-space-sm font-code-sm text-code-sm">
+<!-- Metric 1: 802.1Q Encapsulation & Native VLAN (Critical Deficit) -->
+<div class="bg-surface-container p-space-sm rounded-lg space-y-1">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface">802.1Q PVID &amp; Untagged Frame Routing</span>
+<span class="text-error font-mono font-bold">45% Deficit</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Metric 2: STP Topology Stability / BPDU Guard -->
+<div class="bg-surface-container p-space-sm rounded-lg space-y-1">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface">STP Convergence &amp; BPDU Filter Safeguards</span>
+<span class="text-tertiary font-mono font-bold">60% Warning</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 60%;"></div>
+</div>
+</div>
+<!-- Metric 3: Cisco IOS Switchport Syntax -->
+<div class="bg-surface-container p-space-sm rounded-lg space-y-1">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface">Cisco IOS Switchport CLI Configuration</span>
+<span class="text-primary font-mono font-bold">88% Proficient</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Targeted AI Lab Prescription -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-start gap-space-md">
+<div class="h-10 w-10 rounded bg-primary-container/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex-1">
+<span class="font-label-badge text-label-badge text-primary uppercase font-mono">Prescribed Remediation Track</span>
+<h5 class="font-title-md text-title-md text-on-surface mt-0.5">Lab 2.4-R: Resolving BPDU Guard Errdact &amp; VLAN Leaks</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+              Step into an isolated sandbox CLI with two pre-wired Catalyst 3850 nodes. NetMentor AI will supervise your prompt configurations until convergence is verified.
+            </p>
+</div>
+</div>
+</div>
+<!-- Modal Action Buttons Footer -->
+<div class="p-space-md bg-surface-container flex flex-wrap items-center justify-between gap-space-sm">
+<button class="px-4 py-2 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-md text-body-sm transition-colors cursor-pointer" id="dismissModalBtn">
+          Review Quiz Questions
+        </button>
+<a class="inline-flex items-center gap-space-xs px-5 py-2 rounded bg-primary hover:bg-primary-fixed text-on-primary font-title-md text-body-sm shadow-lg shadow-primary-container/30 hover:shadow-primary-container/50 transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Launch Targeted Remediation Lab</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple state management for interactive demonstration
+  document.addEventListener('DOMContentLoaded', () => {
+    const hintDrawer = document.getElementById('socraticDrawer');
+    const openHintBtn = document.getElementById('openHintDrawerBtn');
+    const closeHintBtn = document.getElementById('closeHintDrawerBtn');
+
+    const modal = document.getElementById('remediationModal');
+    const triggerModalBtn = document.getElementById('triggerModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const dismissModalBtn = document.getElementById('dismissModalBtn');
+
+    // Toggle Socratic Drawer
+    if (openHintBtn && hintDrawer) {
+      openHintBtn.addEventListener('click', () => {
+        hintDrawer.classList.toggle('translate-x-full');
+      });
+    }
+
+    if (closeHintBtn && hintDrawer) {
+      closeHintBtn.addEventListener('click', () => {
+        hintDrawer.classList.add('translate-x-full');
+      });
+    }
+
+    // Toggle Modal
+    function showModal() {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function hideModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    if (triggerModalBtn) triggerModalBtn.addEventListener('click', showModal);
+    if (closeModalBtn) closeModalBtn.addEventListener('click', hideModal);
+    if (dismissModalBtn) dismissModalBtn.addEventListener('click', hideModal);
+
+    // Dynamic Timer Countdown Simulation
+    const timerEl = document.getElementById('examTimer');
+    let totalSeconds = 14 * 60 + 25;
+    setInterval(() => {
+      if (totalSeconds > 0) {
+        totalSeconds--;
+        const mins = Math.floor(totalSeconds / 60);
+        const secs = totalSeconds % 60;
+        timerEl.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+      }
+    }, 1000);
+
+    // Port Pinpoint Micro-interaction
+    const portPins = document.querySelectorAll('.port-pin');
+    portPins.forEach(pin => {
+      pin.addEventListener('click', () => {
+        portPins.forEach(p => p.classList.remove('ring-1', 'ring-primary', 'bg-primary/20'));
+        pin.classList.add('ring-1', 'ring-primary', 'bg-primary/20');
+      });
+    });
+  });
+</script></main></body></html>

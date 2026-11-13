@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-primary-fixed": "#1d1b1b", primary: "#ffffff", "inverse-on-surface": "#680200", "surface-container-lowest": "#270000", "on-surface": "#ffdad4", "on-primary-fixed-variant": "#494646", "on-surface-variant": "#c4c7c8", "surface-bright": "#790200", "surface-container-highest": "#700200", "primary-fixed-dim": "#cac5c5", "secondary-fixed-dim": "#ccc5c5", error: "#ffb4ab", secondary: "#ccc5c5", "surface-variant": "#700200", tertiary: "#ffffff", "on-background": "#ffdad4", "inverse-surface": "#ffdad4", "on-tertiary-fixed": "#1e1b19", "on-primary": "#323030", "surface-tint": "#cac5c5", "secondary-fixed": "#e8e1e0", "tertiary-fixed": "#e9e1de", "on-secondary-fixed": "#1e1b1b", "on-secondary-fixed-variant": "#4a4646", "on-tertiary": "#33302e", background: "#310000", "on-primary-container": "#676364", "primary-fixed": "#e7e1e1", "surface-container-high": "#5c0100", "tertiary-fixed-dim": "#ccc5c2", "primary-container": "#e7e1e1", "secondary-container": "#4a4646", "on-tertiary-fixed-variant": "#4a4644", "surface-container-low": "#410100", "surface-dim": "#310000", surface: "#310000", "tertiary-container": "#e9e1de", "on-tertiary-container": "#686361", "surface-container": "#480100", "on-secondary": "#333030", "on-error": "#690005", outline: "#8e9192", "on-error-container": "#ffdad6", "error-container": "#93000a", "inverse-primary": "#615e5e", "on-secondary-container": "#bab4b3", "outline-variant": "#444748"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {gutter: "1.5rem", "gutter-sm": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-lg": "4rem", "margin-sm": "1rem", "space-sm": "0.5rem", "space-xl": "2.5rem", margin: "2rem", "space-lg": "1.5rem"}, fontFamily: {"label-badge": ["JetBrains Mono"], "display-hero": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "title-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">NetMentor<span class="text-primary">.AI</span></span><span class="font-label-badge text-label-badge text-outline">B2B PORTAL</span></div></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-badge text-label-badge text-outline uppercase">Management</div></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-title-md"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container rounded-lg font-title-md" data-path="organization-overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="team-and-members" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span>Team &amp; Members</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="seats-and-licenses" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Seats &amp; Licenses</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="compliance-and-audit-reports" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span>Compliance &amp; Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="invoices-and-billing" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Invoices &amp; Billing</span></a></nav></div><div class="flex flex-col p-space-md gap-space-sm bg-surface-container-lowest"><div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-badge text-label-badge text-secondary">CCIE CONCIERGE</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-code-sm text-code-sm">SLA Uptime</span><span class="font-code-sm text-code-sm text-on-surface">99.9%</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-code-sm text-code-sm">Response</span><span class="font-code-sm text-code-sm text-primary">15m Target</span></div></div><div class="flex flex-col gap-space-xs"><div class="px-space-xs font-label-badge text-label-badge text-outline uppercase">Quick Switch Portal</div><div class="grid grid-cols-3 gap-space-xs"><button class="py-space-xs px-1 text-center bg-surface-container-high hover:bg-surface-bright text-on-surface rounded font-code-sm text-code-sm transition-all" type="button">Learner</button><button class="py-space-xs px-1 text-center bg-surface-container-high hover:bg-surface-bright text-on-surface rounded font-code-sm text-code-sm transition-all" type="button">Instructor</button><button class="py-space-xs px-1 text-center bg-surface-container-high hover:bg-surface-bright text-on-surface rounded font-code-sm text-code-sm transition-all" type="button">Lab-Ops</button></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-high"><span class="material-symbols-outlined text-[18px] text-secondary">domain</span><span class="font-code-sm text-code-sm text-on-surface">Nexus Global IT</span><span class="text-outline font-code-sm text-code-sm">//</span><span class="font-label-badge text-label-badge text-primary">#ORG-8842</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">unfold_more</span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-badge text-label-badge text-on-surface">SSO Active • 142 Sync'd</span><span class="font-label-badge text-label-badge text-secondary">[OKTA]</span></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-tertiary"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden md:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface">Sarah Vance</span><span class="font-label-badge text-label-badge text-outline">Enterprise IT Director</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface px-gutter"><div class="flex flex-col w-full">
+<!-- Executive Overview Content Stream -->
+<div class="space-y-space-lg pb-margin">
+<!-- Top Context & Action Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md pt-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<span class="hover:text-primary transition-colors cursor-pointer">Nexus Global IT</span>
+<span class="text-outline">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Enterprise Command</span>
+<span class="text-outline">/</span>
+<span class="text-secondary font-medium">Executive Overview</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">Executive Telemetry Hub</span>
+<div class="px-space-sm py-0.5 rounded-full bg-surface-container-high flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-badge text-label-badge text-primary">LIVE SYNC ACTIVE</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-md text-title-md flex items-center gap-space-xs transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Export Summary (PDF)</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-md text-title-md flex items-center gap-space-xs transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">tune</span>
+<span>Manage Plan</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md flex items-center gap-space-xs hover:bg-primary transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">group_add</span>
+<span>+ Invite Members</span>
+</button>
+</div>
+</div>
+<!-- License Alert Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-md">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary"></div>
+<div class="flex items-start md:items-center gap-space-md pl-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[22px]">notification_important</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-semibold">18 Unallocated Enterprise Licenses</span>
+<span class="font-label-badge text-label-badge text-tertiary bg-surface-container-lowest px-2 py-0.5 rounded">EXPIRING IN 45 DAYS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Assign remaining lab seats to upcoming Q1 onboarding cohorts to preserve enterprise quota and fast-track training credits.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 pl-space-xs md:pl-0">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-highest hover:bg-surface-bright text-on-surface font-title-md text-title-md transition-all" type="button">Dismiss</button>
+<button class="px-space-md py-space-sm rounded-lg bg-tertiary text-on-tertiary font-title-md text-title-md hover:bg-tertiary-fixed transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Auto-Assign Remaining</span>
+</button>
+</div>
+</div>
+<!-- High-Impact Executive KPI Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1: Seats Allocated -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase">Seat Utilization</span>
+<span class="font-display-hero text-headline-lg font-bold text-on-surface mt-1">142<span class="text-on-surface-variant font-code-sm text-title-md font-normal"> / 160</span></span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center">
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="88.75, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-code-sm text-code-sm font-semibold text-primary">89%</span>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Quota capacity</span>
+<span class="text-on-surface font-code-sm text-code-sm font-medium">18 Available</span>
+</div>
+<div class="flex items-center gap-1 font-label-badge text-label-badge text-primary">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+12 seats added this quarter</span>
+</div>
+</div>
+</div>
+<!-- Metric 2: Completion Rate -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase">Avg Completion Rate</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">78.4%</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[22px]">timer</span>
+</div>
+</div>
+<div class="py-space-xs">
+<!-- Sparkline SVG -->
+<svg class="w-full h-8 overflow-visible" preserveaspectratio="none" viewbox="0 0 100 24">
+<polyline class="text-secondary" fill="none" points="0,18 15,16 30,19 45,12 60,14 75,8 90,6 100,3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+</svg>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Avg bench effort</span>
+<span class="text-on-surface font-code-sm text-code-sm font-medium">14.2 hrs / learner</span>
+</div>
+<div class="flex items-center gap-1 font-label-badge text-label-badge text-secondary">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>+9.2% vs tech benchmark</span>
+</div>
+</div>
+</div>
+<!-- Metric 3: Certification Readiness Rate -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase">Exam Readiness</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">64.2%</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[22px]">workspace_premium</span>
+</div>
+</div>
+<div class="space-y-space-xs py-space-xs">
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 64.2%"></div>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Bench readiness:</span>
+<span class="text-primary font-semibold">91 Engineers</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center gap-1 font-label-badge text-label-badge text-on-surface-variant">
+<span class="text-secondary font-medium">CCNA</span>
+<span>•</span>
+<span class="text-tertiary font-medium">Security+</span>
+<span>•</span>
+<span class="text-primary font-medium">Net+</span>
+</div>
+</div>
+<!-- Metric 4: Compliance Pass Rate -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase">Compliance Audits</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">96.8%</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+</div>
+</div>
+<div class="space-y-space-xs py-space-xs">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Mandatory Q4 Security</span>
+<span class="text-primary font-code-sm text-code-sm font-semibold">100% On-Time</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 96.8%"></div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center gap-1.5 font-label-badge text-label-badge text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Zero-Trust Protocol Labs Verified</span>
+</div>
+</div>
+</div>
+<!-- Mid Section: Cohorts Matrix & Weekly Telemetry -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Cohort Track Breakdown (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container rounded-xl p-space-lg flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Team Cohorts &amp; Skill Matrices</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active engineering pipelines across technical silos</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary bg-surface-container-high px-space-sm py-1 rounded">4 SPECIALIZED TRACKS</span>
+</div>
+<div class="space-y-space-md">
+<!-- Cohort 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[18px]">support_agent</span>
+</div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block">Helpdesk Tier 1 Pipeline</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">48 Enrolled • Fast-track Core Foundation</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-code-sm text-code-sm text-primary font-semibold">82% Completed</span>
+<div class="flex items-center gap-1 justify-end font-label-badge text-label-badge text-tertiary">
+<span>CompTIA A+</span>
+<span>/</span>
+<span>Net+</span>
+</div>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden mt-2">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 82%"></div>
+</div>
+</div>
+<!-- Cohort 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">router</span>
+</div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block">NOC Tier 2 Engineering</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">54 Enrolled • Routing, Switching &amp; Subnetting</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-code-sm text-code-sm text-primary font-semibold">76% Completed</span>
+<div class="flex items-center gap-1 justify-end font-label-badge text-label-badge text-secondary">
+<span>Cisco CCNA 200-301</span>
+</div>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden mt-2">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 76%"></div>
+</div>
+</div>
+<!-- Cohort 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[18px]">cloud</span>
+</div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block">Cloud &amp; Datacenter NetOps</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">24 Enrolled • Infrastructure Automation &amp; EVPN</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-code-sm text-code-sm text-primary font-semibold">69% Completed</span>
+<div class="flex items-center gap-1 justify-end font-label-badge text-label-badge text-secondary">
+<span>CCNP ENCOR</span>
+<span>/</span>
+<span>LFCS</span>
+</div>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden mt-2">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 69%"></div>
+</div>
+</div>
+<!-- Cohort 4 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[18px]">security</span>
+</div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block">Cybersecurity &amp; Hardening</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">16 Enrolled • SOC Defense &amp; Packet Forensics</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-code-sm text-code-sm text-primary font-semibold">91% Completed</span>
+<div class="flex items-center gap-1 justify-end font-label-badge text-label-badge text-tertiary">
+<span>CyberOps</span>
+<span>/</span>
+<span>Wireshark</span>
+</div>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden mt-2">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 91%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-surface-container-highest/30 mt-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">All cohorts monitored with automated weekly skill checks</span>
+<button class="font-title-md text-title-md text-secondary hover:text-on-surface flex items-center gap-1 transition-colors" type="button">
+<span>Configure Matrix Rules</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Real-Time Telemetry & Stacked Lab Hours (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container rounded-xl p-space-lg flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Weekly Bench Velocity</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Engineering hours spent across modalities</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary bg-surface-container-high px-space-sm py-1 rounded">2,140 TOTAL HRS</span>
+</div>
+<!-- Modality Legend -->
+<div class="flex items-center gap-space-md mb-space-md flex-wrap pt-space-xs">
+<div class="flex items-center gap-1.5 font-label-badge text-label-badge">
+<span class="w-3 h-3 rounded-sm bg-primary"></span>
+<span class="text-on-surface">WASM Terminal (CLI)</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-badge text-label-badge">
+<span class="w-3 h-3 rounded-sm bg-secondary"></span>
+<span class="text-on-surface">Interactive Stream</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-badge text-label-badge">
+<span class="w-3 h-3 rounded-sm bg-tertiary"></span>
+<span class="text-on-surface">Skill Verification</span>
+</div>
+</div>
+<!-- Inline Stacked Bar Visualization -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Day: Mon -->
+<div class="flex items-center gap-space-sm">
+<span class="w-9 font-code-sm text-code-sm text-on-surface-variant">MON</span>
+<div class="flex-1 h-6 rounded flex overflow-hidden bg-surface-container-lowest">
+<div class="bg-primary h-full transition-all" style="width: 58%" title="CLI: 58%"></div>
+<div class="bg-secondary h-full transition-all" style="width: 27%" title="Video: 27%"></div>
+<div class="bg-tertiary h-full transition-all" style="width: 15%" title="Quiz: 15%"></div>
+</div>
+<span class="w-12 text-right font-code-sm text-code-sm text-on-surface">390h</span>
+</div>
+<!-- Day: Tue -->
+<div class="flex items-center gap-space-sm">
+<span class="w-9 font-code-sm text-code-sm text-on-surface-variant">TUE</span>
+<div class="flex-1 h-6 rounded flex overflow-hidden bg-surface-container-lowest">
+<div class="bg-primary h-full transition-all" style="width: 64%" title="CLI: 64%"></div>
+<div class="bg-secondary h-full transition-all" style="width: 22%" title="Video: 22%"></div>
+<div class="bg-tertiary h-full transition-all" style="width: 14%" title="Quiz: 14%"></div>
+</div>
+<span class="w-12 text-right font-code-sm text-code-sm text-on-surface">432h</span>
+</div>
+<!-- Day: Wed -->
+<div class="flex items-center gap-space-sm">
+<span class="w-9 font-code-sm text-code-sm text-on-surface-variant">WED</span>
+<div class="flex-1 h-6 rounded flex overflow-hidden bg-surface-container-lowest">
+<div class="bg-primary h-full transition-all" style="width: 71%" title="CLI: 71%"></div>
+<div class="bg-secondary h-full transition-all" style="width: 18%" title="Video: 18%"></div>
+<div class="bg-tertiary h-full transition-all" style="width: 11%" title="Quiz: 11%"></div>
+</div>
+<span class="w-12 text-right font-code-sm text-code-sm text-on-surface">488h</span>
+</div>
+<!-- Day: Thu -->
+<div class="flex items-center gap-space-sm">
+<span class="w-9 font-code-sm text-code-sm text-on-surface-variant">THU</span>
+<div class="flex-1 h-6 rounded flex overflow-hidden bg-surface-container-lowest">
+<div class="bg-primary h-full transition-all" style="width: 60%" title="CLI: 60%"></div>
+<div class="bg-secondary h-full transition-all" style="width: 26%" title="Video: 26%"></div>
+<div class="bg-tertiary h-full transition-all" style="width: 14%" title="Quiz: 14%"></div>
+</div>
+<span class="w-12 text-right font-code-sm text-code-sm text-on-surface">445h</span>
+</div>
+<!-- Day: Fri -->
+<div class="flex items-center gap-space-sm">
+<span class="w-9 font-code-sm text-code-sm text-on-surface-variant">FRI</span>
+<div class="flex-1 h-6 rounded flex overflow-hidden bg-surface-container-lowest">
+<div class="bg-primary h-full transition-all" style="width: 50%" title="CLI: 50%"></div>
+<div class="bg-secondary h-full transition-all" style="width: 32%" title="Video: 32%"></div>
+<div class="bg-tertiary h-full transition-all" style="width: 18%" title="Quiz: 18%"></div>
+</div>
+<span class="w-12 text-right font-code-sm text-code-sm text-on-surface">385h</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between mt-space-md">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+<span>CLI Hands-on ratio: <strong class="text-primary">63.2%</strong> of bench hours</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary">+14% vs Q3</span>
+</div>
+</div>
+</div>
+<!-- Bottom Row: Live Milestones Feed & Dedicated CCIE Concierge Advisor -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Live Milestone Ticker Feed (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Live Milestone Activity</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<span>Auto-refreshing</span>
+<span class="material-symbols-outlined text-[16px] text-primary">sync</span>
+</div>
+</div>
+<div class="space-y-space-sm">
+<!-- Feed Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-md">
+<img class="w-10 h-10 rounded-full object-cover shrink-0" data-alt="Portrait photo of Alexandre Mercer, senior network engineer wearing dark casual tech attire in a modern server laboratory with ambient cyan lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuUdr67GWg2R3jn8lvXJcN9f2rCL9jiFmBaZS79L9xQuRBk3b9yFy8mgJ-TH2KIUIoLZ1qiNBEAQ6ilZqxHVMK8sONT7OmWBUIjAjQbzr-S-wexugb9SSlGuaw1U9AzLfe_eoOo8L65eAn2Su8_P7MmA-2gZwCI83f_wgkP8zqLDOcMf4n_DgbyMGUCqAl8Gi9_TezClmUROfX7rJOf8n9q3gtxEIqT98_aDPHqhq-pJC7uIsapEsI"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Alexandre Mercer</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">• NOC Tier 2</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Passed <span class="text-primary font-medium">CCNA 200-301 Practice Bench</span> with Score 94/100</span>
+</div>
+</div>
+<div class="text-right shrink-0 pl-space-sm">
+<span class="font-label-badge text-label-badge text-primary bg-surface-container px-2 py-1 rounded block">READY FOR EXAM</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant mt-1 block">4m ago</span>
+</div>
+</div>
+<!-- Feed Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-md">
+<img class="w-10 h-10 rounded-full object-cover shrink-0" data-alt="Portrait photo of Sarah Jenkins, systems administrator with glasses in an enterprise network operations room with multiple monitoring displays in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOdAIbGizoeBOEG0FVjwNyRfKEBmnuYRSPXiJM3KIcOufBwNBhxAKZJ-U1n-bDIC4vSkvyEkPW0-Gds9B9SP-KK8Ez9omAxVn59shT-cCQz-rzRKElkuKDchSTxmhXQZTmOuESJhzWUjy0b9U4PYwsi5azGeak1MDDwZ0SLuQH7McZTtt2LyypbNsBXd91EHqUujbLTEPx2eGy-J0-3GB37NsbOIMY3M2DVM_WT63xIECWwZFC2qgS"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Sarah Jenkins</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">• Cloud &amp; Datacenter</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Completed <span class="text-secondary font-medium">Multi-Region BGP Route Failover Lab</span> (0 errors)</span>
+</div>
+</div>
+<div class="text-right shrink-0 pl-space-sm">
+<span class="font-label-badge text-label-badge text-secondary bg-surface-container px-2 py-1 rounded block">LAB VERIFIED</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant mt-1 block">18m ago</span>
+</div>
+</div>
+<!-- Feed Item 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-md">
+<img class="w-10 h-10 rounded-full object-cover shrink-0" data-alt="Portrait of Marcus Vance, security operations technician with dark hoodie smiling in front of dark diagnostic workstation with emerald green CLI prompts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhC_1XGQufubioG25CQG3o_EvaIvF6tIwXKEMBeaAJWEgaC0ZOkkLnBEqavdv3vHQ2RpieTdy_SUm7IBpDH023eBDMhZNGkhzNgVX7oxtLeUCxDcAuzAALfGON-8GVgNCdU5ob-xqk6fHCpqilhNj0JvfD9-0vtq4MWWqQ-jSYDsCRxL1jthyfUcMJnnjqHxsQ7hCg8lys_VjR2eNz5EvoF2a1YuLnPyuTCOWPYVrS1x7UZGimVLCj"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Marcus Vance</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">• Cybersecurity</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Certified in <span class="text-tertiary font-medium">CompTIA Security+ SY0-701 Readiness</span></span>
+</div>
+</div>
+<div class="text-right shrink-0 pl-space-sm">
+<span class="font-label-badge text-label-badge text-tertiary bg-surface-container px-2 py-1 rounded block">VOUCHER ISSUED</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant mt-1 block">1h ago</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-surface-container-highest/30 mt-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">142 engineers logged activities during current pay-cycle</span>
+<button class="font-title-md text-title-md text-primary hover:text-on-surface flex items-center gap-1 transition-colors" type="button">
+<span>View Full Audit Log</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Dedicated CCIE Advisor Card (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container rounded-xl p-space-lg shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-40 h-40 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-badge text-label-badge text-secondary tracking-widest uppercase">Dedicated Advisor</span>
+<span class="font-label-badge text-label-badge text-primary bg-surface-container-high px-2 py-0.5 rounded">CCIE #48912</span>
+</div>
+<div class="flex items-start gap-space-md mb-space-md">
+<img class="w-14 h-14 rounded-xl object-cover shrink-0" data-alt="Corporate headshot of David Thorne, senior CCIE advisor in professional navy collared shirt with warm professional demeanor and subtle tech lab background lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy5EnUKulz8TlzY6W3Gj8OGQ5M4YevrIA28ZVf4fF59OJUQW-Ry-jZfUF7G88X8QtFg4Yu0ufF7ljG70tOdx4vJ5Qecu9Na-2SYV4nKN0y52AjRWJaXsTXFAOrUZwBigfSgeZ76pXJezYC-LSwgIUJu_xT-cw9Ieit1IYuOgxvt1eBsO7PcP13iP_ORR363vQ-I09G93Br4DmMVT4oHmM-fW76o-OCQUYDk9dOVaJyb7bTlXhJONU-"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">David Thorne</span>
+<span class="font-title-md text-title-md text-secondary">Enterprise CCIE Solutions Architect</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant mt-0.5">Assigned to Nexus Global IT</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-xs mb-space-md">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Next Cohort Review</span>
+<span class="text-on-surface font-code-sm text-code-sm font-semibold">Thursday, 14:00 EST</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Direct Concierge SLA</span>
+<span class="text-primary font-code-sm text-code-sm font-semibold">&lt; 15m Response</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Curriculum Focus</span>
+<span class="text-secondary font-code-sm text-code-sm font-semibold">CCNA &amp; Zero-Trust</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            David provides tailored lab topology reviews, pre-audit certification mock exams, and custom sandbox deployments for your team.
+          </p>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<button class="w-full py-space-sm px-space-md rounded-lg bg-secondary text-on-secondary font-title-md text-title-md hover:bg-secondary-fixed transition-all flex items-center justify-center gap-space-xs shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>Book 1-on-1 Cohort Review</span>
+</button>
+<button class="w-full py-space-sm px-space-md rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-md text-title-md transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Direct Concierge Slack</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "NetForge Academy - IT Maintenance & Networking Training",
+  "description": "Enterprise-grade IT systems maintenance, hardware diagnostics, and network engineering training platform with interactive labs.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

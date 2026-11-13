@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"secondary-fixed-dim": "#ccc5c5", "inverse-surface": "#ffdad4", "inverse-primary": "#615e5e", tertiary: "#ffffff", primary: "#ffffff", "on-tertiary": "#33302e", "outline-variant": "#444748", "on-secondary": "#333030", "secondary-fixed": "#e8e1e0", "on-primary-container": "#676364", "surface-variant": "#700200", "on-tertiary-fixed": "#1e1b19", "primary-container": "#e7e1e1", "tertiary-fixed-dim": "#ccc5c2", "tertiary-fixed": "#e9e1de", "on-tertiary-container": "#686361", "primary-fixed-dim": "#cac5c5", "surface-container-low": "#410100", surface: "#310000", "secondary-container": "#4a4646", "on-surface": "#ffdad4", "on-error-container": "#ffdad6", "surface-container-high": "#5c0100", error: "#ffb4ab", "surface-container-highest": "#700200", "on-primary-fixed": "#1d1b1b", "on-tertiary-fixed-variant": "#4a4644", "surface-tint": "#cac5c5", "on-error": "#690005", background: "#310000", "inverse-on-surface": "#680200", "tertiary-container": "#e9e1de", "on-secondary-fixed": "#1e1b1b", "surface-container": "#480100", "on-secondary-fixed-variant": "#4a4646", "on-primary": "#323030", "surface-bright": "#790200", "on-background": "#ffdad4", "on-surface-variant": "#c4c7c8", "error-container": "#93000a", "surface-container-lowest": "#270000", outline: "#8e9192", "on-secondary-container": "#bab4b3", "primary-fixed": "#e7e1e1", secondary: "#ccc5c5", "on-primary-fixed-variant": "#494646", "surface-dim": "#310000"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"margin-sm": "1rem", "space-lg": "1.5rem", margin: "2rem", "space-md": "1rem", "gutter-sm": "1rem", gutter: "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin-lg": "4rem", "space-xl": "2.5rem"}, fontFamily: {"title-md": ["Inter"], "code-sm": ["JetBrains Mono"], "body-md": ["Inter"], "code-lg": ["JetBrains Mono"], "body-lg": ["Inter"], "label-badge": ["JetBrains Mono"], "body-sm": ["Inter"], "display-hero": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-md"><div class="px-space-lg flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[24px]">terminal</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor<span class="text-primary">.AI</span></span></div><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-badge text-label-badge text-outline tracking-wider uppercase">SPONSOR &amp; GUARDIAN PORTAL</span></div></div><div class="px-space-md"><div class="bg-surface-container-low px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex flex-col"><span class="font-label-badge text-label-badge text-outline uppercase">Cohort Node</span><span class="font-code-sm text-code-sm text-secondary font-medium truncate max-w-[170px]">US-EAST-SPON-4410</span></div><span class="material-symbols-outlined text-outline text-[18px]">verified_user</span></div></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_24px_-4px_rgba(16,185,129,0.35)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sponsored-students" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-md text-body-md">Sponsored Students</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="gradebook-and-transcripts" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span class="font-body-md text-body-md">Gradebook &amp; Transcripts</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_0_24px_-4px_rgba(16,185,129,0.35)]" data-path="alert-preferences" href="#"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span class="font-body-md text-body-md">Alert Preferences</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="support-and-ccie-advisor" href="#"><span class="material-symbols-outlined text-[20px]">support_agent</span><span class="font-body-md text-body-md">Support &amp; CCIE Advisor</span></a></nav></div><div class="flex flex-col gap-space-sm px-space-md"><div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-badge text-label-badge text-outline uppercase">Quick Switch Portal</span><span class="material-symbols-outlined text-outline text-[16px]">sync_alt</span></div><div class="grid grid-cols-2 gap-space-xs"><a class="px-space-sm py-space-xs rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm text-center transition-colors" href="#">Learner</a><a class="px-space-sm py-space-xs rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm text-center transition-colors" href="#">Instructor</a><a class="px-space-sm py-space-xs rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm text-center transition-colors" href="#">Lab-Ops</a><a class="px-space-sm py-space-xs rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm text-center transition-colors" href="#">Org Mgr</a></div></div><div class="px-space-sm py-space-xs flex items-center justify-between text-outline font-code-sm text-code-sm"><span>LATENCY: 14ms</span><span class="text-primary">NET://SECURE</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="w-full h-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-secondary text-[18px]">corporate_fare</span><span class="font-title-md text-title-md text-on-surface">Lockheed Martin Workforce Initiative</span><span class="font-code-sm text-code-sm text-outline">// #SPON-4410</span><span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-full"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-code-sm text-code-sm text-on-surface">2 Sponsored Learners</span><span class="text-outline">•</span><span class="font-label-badge text-label-badge text-primary uppercase">Live Telemetry Active</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center"><button class="w-10 h-10 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_rgba(255,185,95,0.8)]"></span></div><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-md pl-space-xs"><div class="hidden sm:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface leading-tight">Arthur Vance</span><span class="font-code-sm text-code-sm text-outline">Workforce Development Sponsor</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Feedback Banner (Hidden by default, triggered by JS) -->
+<div class="fixed bottom-24 right-8 z-50 transform translate-y-12 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-md bg-surface-container-high px-space-lg py-space-md rounded-xl shadow-2xl text-on-surface" id="toastNotification">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Telemetry Dispatch Sent</span>
+<span class="font-code-sm text-code-sm text-outline" id="toastMessage">Mock diagnostic payload transmitted to SMS and Email endpoints.</span>
+</div>
+</div>
+<!-- Top Hero Header & Metric Scrim -->
+<section class="relative px-space-lg lg:px-space-xl pt-space-lg pb-space-xl overflow-hidden">
+<!-- Ambient glowing backdrop nodes -->
+<div class="absolute -top-24 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 right-12 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<!-- Breadcrumb Meta Line -->
+<div class="flex flex-wrap items-center gap-space-xs text-outline font-code-sm text-code-sm">
+<span class="hover:text-primary transition-colors cursor-pointer">Sponsor Portal</span>
+<span class="text-surface-variant">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Settings &amp; Compliance</span>
+<span class="text-surface-variant">/</span>
+<span class="text-primary font-medium">Alert Preferences</span>
+<span class="ml-space-sm px-space-sm py-0.5 rounded bg-surface-container-low text-secondary font-label-badge text-label-badge uppercase tracking-wider">SEC-POLICY-REV-2.4</span>
+</div>
+<!-- Main Title Block & Status Banner -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg">
+<div class="flex flex-col max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight">
+            Sponsor Alert &amp; Proactive Notification Rules
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+            Configure automated early-warning thresholds, attendance drop alarms, and lab latency triggers across active apprentice pathways for Lockheed Martin workforce cohorts.
+          </p>
+</div>
+<!-- System State Pill -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-space-sm pl-space-md pr-space-lg rounded-xl shadow-md self-start xl:self-auto">
+<div class="relative flex items-center justify-center">
+<span class="w-3 h-3 rounded-full bg-primary animate-ping opacity-75"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary absolute"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-primary uppercase">Active Real-Time Daemon</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">Immediate Push &amp; Digest Enabled</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="px-space-lg lg:px-space-xl pb-32 flex flex-col gap-space-xl">
+<!-- Section 1: Dispatch Destination & Multi-Channel Transport Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Primary Recipient Card -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">badge</span>
+<span class="font-label-badge text-label-badge text-outline uppercase tracking-wider">Primary Sponsor Contact</span>
+</div>
+<span class="px-space-sm py-0.5 rounded bg-surface-container text-primary font-code-sm text-code-sm">VERIFIED NODE</span>
+</div>
+<div class="flex items-start gap-space-md mt-space-xs">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary shadow-inner">
+<span class="material-symbols-outlined text-[32px]">shield_person</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Arthur Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead Workforce Development Director</span>
+<span class="font-code-sm text-code-sm text-secondary mt-space-xs">ID: SPON-AV-99120</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-md rounded-lg mt-space-sm">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-outline flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">alternate_email</span> Direct Email
+              </span>
+<span class="text-on-surface font-medium truncate max-w-[200px]">a.vance@workforce-initiative.org</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm pt-space-xs">
+<span class="text-outline flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">smartphone</span> Secure Mobile
+              </span>
+<span class="text-on-surface font-medium">+1 (555) 234-8901</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-md flex items-center justify-between text-outline font-code-sm text-code-sm">
+<span>Routing PGP Signature: Enabled</span>
+<button class="text-secondary hover:text-on-surface transition-colors flex items-center gap-space-xs">
+<span>Manage Endpoint</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Channel Dispatch Hub Matrix -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">satellite_alt</span>
+<span class="font-label-badge text-label-badge text-outline uppercase tracking-wider">Transport Protocols &amp; Sockets</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">3 Active Routes</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Channel 1: Email -->
+<div class="bg-surface-container p-space-md rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-high">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">mail</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Email Notifications</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Urgent immediate dispatches + 08:00 UTC daily briefing rolls</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-email" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<!-- Channel 2: SMS Urgent Alerts -->
+<div class="bg-surface-container p-space-md rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-high">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">sms</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">SMS Priority Alerts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bypasses digests. Instant automated ping on severe risk breaches</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-sms" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<!-- Channel 3: Slack Integration -->
+<div class="bg-surface-container p-space-md rounded-lg flex items-center justify-between transition-all hover:bg-surface-container-high">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">webhook</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface">Enterprise Webhook Relay</span>
+<span class="font-label-badge text-label-badge text-tertiary uppercase">Slack App</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-code-sm">Payload target: #workforce-apprentices-ops</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-slack" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-outline font-code-sm text-code-sm mt-space-sm pt-space-xs">
+<span class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Handshake verified via TLS 1.3
+          </span>
+<span class="text-on-surface-variant">Dispatched latency &lt; 250ms</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Configurable Academic Early-Warning Rules (Bento Grid) -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Proactive Alert Policies</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Set granular automated tripwires for attendance, assessment decay, and practical lab stagnation.</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-lg self-start">
+<span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+<span class="font-code-sm text-code-sm text-on-surface">4 Rules Active</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Rule 1: Attendance Threshold Early-Warning -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm relative group hover:bg-surface-container-low/95 transition-all">
+<div class="flex flex-col gap-space-md">
+<!-- Header & Toggle -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">calendar_clock</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge text-outline">RULE_ID: ATT-01</span>
+<span class="px-space-xs py-0.2 rounded bg-surface-container text-primary font-label-badge text-label-badge uppercase">CRITICAL</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Attendance Early-Warning Alert</h3>
+</div>
+</div>
+<!-- Rule Enabled Switch -->
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="rule-toggle-1" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Trigger immediate sponsor alert when student 30-day cumulative attendance drops below specified threshold or two consecutive unexcused session absences occur.
+            </p>
+<!-- Dynamic Slider Control -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-sm mt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-outline">Attendance Floor Trigger</span>
+<span class="font-code-lg text-code-lg text-primary font-bold" id="attendanceValueDisplay">70%</span>
+</div>
+<!-- Custom Stylized Range Slider -->
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary focus:outline-none" id="attendanceSlider" max="90" min="60" step="5" type="range" value="70"/>
+<div class="flex justify-between items-center text-outline font-code-sm text-code-sm px-1">
+<span>60% (Lenient)</span>
+<span class="text-primary font-medium">70% (Standard)</span>
+<span>80%</span>
+<span>90% (Strict)</span>
+</div>
+</div>
+<!-- AI Action Blueprint Preview -->
+<div class="bg-surface-container-highest/60 rounded-lg p-space-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">terminal</span>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider">[EXECUTION_PREVIEW]</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="attendancePreviewText">
+                  If student misses 2 consecutive live cohort sessions or drops below 70% attendance, send urgent SMS &amp; email to Arthur Vance.
+                </span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-outline font-code-sm text-code-sm">
+<span>Route: Email + SMS Priority</span>
+<span class="text-primary">Evaluation: Hourly Cron</span>
+</div>
+</div>
+<!-- Rule 2: Consecutive Failed Quizzes / Assessments Alert -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm relative group hover:bg-surface-container-low/95 transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[22px]">quiz</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge text-outline">RULE_ID: ASSESS-02</span>
+<span class="px-space-xs py-0.2 rounded bg-surface-container text-tertiary font-label-badge text-label-badge uppercase">AUTO-REMEDIATE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Consecutive Failed Quizzes</h3>
+</div>
+</div>
+<!-- Rule Enabled Switch -->
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="rule-toggle-2" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Trigger alert if a sponsored learner scores below the passing score threshold (&lt; 70%) on consecutive modular assessments or certification practice checkpoints.
+            </p>
+<!-- Interactive Selector Chips -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs mt-space-xs">
+<span class="font-code-sm text-code-sm text-outline mb-space-xs">Consecutive Failure Threshold:</span>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="py-space-xs px-space-sm rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant font-code-sm text-code-sm transition-colors quiz-btn" data-value="1" type="button">1 Quiz</button>
+<button class="py-space-xs px-space-sm rounded bg-primary-container text-on-primary-container font-code-sm text-code-sm font-semibold shadow-sm quiz-btn" data-value="2" type="button">2 Quizzes</button>
+<button class="py-space-xs px-space-sm rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant font-code-sm text-code-sm transition-colors quiz-btn" data-value="3" type="button">3 Quizzes</button>
+</div>
+</div>
+<!-- AI Socratic Auto-Dispatch Notice -->
+<div class="bg-surface-container-highest/60 rounded-lg p-space-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">psychology</span>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-tertiary uppercase tracking-wider">[AI_DIAGNOSTIC_REMEDIATION]</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="quizPreviewText">
+                  Alert sponsor and instantly synthesize an adaptive NetMentor Socratic Subnetting drill for learner.
+                </span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-outline font-code-sm text-code-sm">
+<span>Route: Email + Slack Digest</span>
+<span class="text-secondary">Action: Auto-Intervention</span>
+</div>
+</div>
+<!-- Rule 3: Lab Inactivity & Runway Stall Alert -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm relative group hover:bg-surface-container-low/95 transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge text-outline">RULE_ID: LAB-03</span>
+<span class="px-space-xs py-0.2 rounded bg-surface-container text-secondary font-label-badge text-label-badge uppercase">TELEMETRY</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Lab Inactivity &amp; Runway Stall</h3>
+</div>
+</div>
+<!-- Rule Enabled Switch -->
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="rule-toggle-3" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Alert when a student has logged zero hands-on CLI terminal sessions, Cisco packet tracer sandboxes, or topology verification minutes over consecutive days.
+            </p>
+<!-- Select Dropdown Pill -->
+<div class="bg-surface-container p-space-md rounded-lg flex items-center justify-between mt-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">Inactivity Stagnation Trigger:</span>
+<span class="font-title-md text-title-md text-on-surface">5 Consecutive Inactive Days</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-on-surface font-code-sm" onclick="adjustInactivityDays(-1)">-</button>
+<span class="font-code-lg text-code-lg text-primary px-space-xs font-bold" id="inactivityCount">5d</span>
+<button class="w-8 h-8 rounded bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-on-surface font-code-sm" onclick="adjustInactivityDays(1)">+</button>
+</div>
+</div>
+<div class="bg-surface-container-highest/60 rounded-lg p-space-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[18px] shrink-0 mt-0.5">speed</span>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-outline uppercase tracking-wider">[RUNWAY_METRICS]</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Sends weekly curriculum pace recalculation notice to learner's Assigned CCIE Advisor.
+                </span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-outline font-code-sm text-code-sm">
+<span>Route: Weekly Digest + Email</span>
+<span class="text-on-surface-variant">CLI Buffer Sync: Live</span>
+</div>
+</div>
+<!-- Rule 4: Milestone & Certification Readiness Notification -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm relative group hover:bg-surface-container-low/95 transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge text-outline">RULE_ID: MILE-04</span>
+<span class="px-space-xs py-0.2 rounded bg-surface-container text-primary font-label-badge text-label-badge uppercase">CELEBRATION</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Milestone &amp; Exam Readiness</h3>
+</div>
+</div>
+<!-- Rule Enabled Switch -->
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="rule-toggle-4" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Celebrate academic breakthroughs! Notify sponsor whenever a student hits 90%+ CCNA / CompTIA practice mock readiness or clears full topology design labs.
+            </p>
+<!-- Checklist of Milestone Triggers -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs mt-space-xs font-code-sm text-code-sm">
+<label class="flex items-center gap-space-sm cursor-pointer hover:text-primary transition-colors text-on-surface">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>CCNA 200-301 Practice Readiness &gt; 90%</span>
+</label>
+<label class="flex items-center gap-space-sm cursor-pointer hover:text-primary transition-colors text-on-surface pt-space-xs">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>CompTIA Network+ Capstone Lab Cleared</span>
+</label>
+<label class="flex items-center gap-space-sm cursor-pointer hover:text-primary transition-colors text-on-surface pt-space-xs">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Perfect 100% Weekly Sprint Attendance</span>
+</label>
+</div>
+<div class="bg-surface-container-highest/60 rounded-lg p-space-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">verified</span>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">[EXECUTIVE_DIGEST]</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Prepares downloadable sponsor ROI credential token and employer voucher authorization.
+                </span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-outline font-code-sm text-code-sm">
+<span>Route: Email + Corporate Webhook</span>
+<span class="text-primary font-medium">Auto-Issue Enabled</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Test Alert Simulator & Live Dispatch Audit Log -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-lg shadow-sm">
+<!-- Diagnostic Trigger Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">troubleshoot</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Diagnostic Notification Pipeline</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+            Broadcast an end-to-end simulated telemetry alert to confirm cellular carrier gateway and corporate email firewall clearance.
+          </p>
+</div>
+<!-- Simulation CTA Button -->
+<button class="flex items-center gap-space-sm px-space-lg py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-secondary hover:text-on-surface transition-all font-code-sm text-code-sm font-semibold shrink-0" id="btnDispatchTest" onclick="triggerTestSimulation()">
+<span class="material-symbols-outlined text-[18px] animate-spin hidden" id="spinner">refresh</span>
+<span class="material-symbols-outlined text-[18px]" id="sendIcon">send</span>
+<span>Test Notification Dispatch</span>
+</button>
+</div>
+<!-- Audit History Table -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-outline uppercase tracking-wider">Audit Log: Recent Alert Dispatches</span>
+<span class="font-code-sm text-code-sm text-outline">Real-time syslog sync: ACTIVE</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-outline font-label-badge text-label-badge uppercase tracking-wider">
+<tr>
+<th class="px-space-md py-space-sm rounded-l">Timestamp (UTC)</th>
+<th class="px-space-md py-space-sm">Sponsored Student</th>
+<th class="px-space-md py-space-sm">Trigger Rule</th>
+<th class="px-space-md py-space-sm">Severity</th>
+<th class="px-space-md py-space-sm">Delivery Status</th>
+<th class="px-space-md py-space-sm rounded-r text-right">Log Reference</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/50 font-code-sm text-code-sm" id="auditTableBody">
+<!-- Log Item 1 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="px-space-md py-space-sm text-outline">2025-05-14 14:22:04</td>
+<td class="px-space-md py-space-sm text-on-surface font-medium">Marcus Vance (#LM-8821)</td>
+<td class="px-space-md py-space-sm text-on-surface-variant">Consecutive Quiz Drop (&lt;70% OSFP Lab)</td>
+<td class="px-space-md py-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-tertiary/10 text-tertiary font-label-badge text-label-badge uppercase">Warning</span>
+</td>
+<td class="px-space-md py-space-sm">
+<span class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[16px]">done_all</span> Delivered (SMS + Email)
+                  </span>
+</td>
+<td class="px-space-md py-space-sm text-right text-outline">#MSG-99824</td>
+</tr>
+<!-- Log Item 2 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="px-space-md py-space-sm text-outline">2025-05-12 09:15:30</td>
+<td class="px-space-md py-space-sm text-on-surface font-medium">Elena Rostova (#LM-4019)</td>
+<td class="px-space-md py-space-sm text-on-surface-variant">Milestone: 94% CCNA Practice Score</td>
+<td class="px-space-md py-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-primary/10 text-primary font-label-badge text-label-badge uppercase">Notice</span>
+</td>
+<td class="px-space-md py-space-sm">
+<span class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[16px]">done_all</span> Delivered (Slack Webhook)
+                  </span>
+</td>
+<td class="px-space-md py-space-sm text-right text-outline">#MSG-99710</td>
+</tr>
+<!-- Log Item 3 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="px-space-md py-space-sm text-outline">2025-05-09 18:02:11</td>
+<td class="px-space-md py-space-sm text-on-surface font-medium">Marcus Vance (#LM-8821)</td>
+<td class="px-space-md py-space-sm text-on-surface-variant">Attendance Session Missed (VLAN Trunking)</td>
+<td class="px-space-md py-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-primary-container/20 text-primary font-label-badge text-label-badge uppercase">Routine</span>
+</td>
+<td class="px-space-md py-space-sm">
+<span class="flex items-center gap-space-xs text-outline">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Aggregated in Digest
+                  </span>
+</td>
+<td class="px-space-md py-space-sm text-right text-outline">#MSG-99432</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Save & Action Drawer -->
+<div class="fixed bottom-0 left-72 right-0 bg-surface-container-low/95 backdrop-blur-xl px-space-lg lg:px-space-xl py-space-md shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-space-md z-40">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-code-sm text-code-sm text-on-surface">Policies synchronizing with cohort: <span class="text-secondary font-semibold">US-EAST-SPON-4410</span></span>
+</div>
+<div class="flex items-center gap-space-md w-full sm:w-auto justify-end">
+<!-- Reset Button -->
+<button class="px-space-md py-space-sm rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-title-md text-title-md transition-colors flex items-center gap-space-xs" onclick="resetDefaults()" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Reset Defaults</span>
+</button>
+<!-- Save Primary Button -->
+<button class="px-space-lg py-space-sm rounded bg-primary-container hover:bg-primary text-on-primary-container font-title-md text-title-md font-semibold transition-all shadow-lg shadow-primary-container/30 flex items-center gap-space-xs" onclick="savePreferences()" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Preference Rules</span>
+</button>
+</div>
+</div>
+<!-- Client-side Interactive Behavior -->
+<script>
+    // Live Slider Dynamic UI
+    const slider = document.getElementById('attendanceSlider');
+    const valueDisplay = document.getElementById('attendanceValueDisplay');
+    const previewText = document.getElementById('attendancePreviewText');
+
+    if (slider) {
+      slider.addEventListener('input', (e) => {
+        const val = e.target.value;
+        valueDisplay.textContent = `${val}%`;
+        previewText.textContent = `If student misses 2 consecutive live cohort sessions or drops below ${val}% attendance, send urgent SMS & email to Arthur Vance.`;
+      });
+    }
+
+    // Quiz selector chip switcher
+    const quizButtons = document.querySelectorAll('.quiz-btn');
+    const quizPreview = document.getElementById('quizPreviewText');
+
+    quizButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        quizButtons.forEach(b => {
+          b.className = 'py-space-xs px-space-sm rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant font-code-sm text-code-sm transition-colors quiz-btn';
+        });
+        btn.className = 'py-space-xs px-space-sm rounded bg-primary-container text-on-primary-container font-code-sm text-code-sm font-semibold shadow-sm quiz-btn';
+        const count = btn.getAttribute('data-value');
+        if (count === "1") {
+          quizPreview.textContent = 'Alert sponsor instantly on single failed module assessment and trigger AI diagnostics.';
+        } else if (count === "2") {
+          quizPreview.textContent = 'Alert sponsor on 2 consecutive quiz failures and dispatch Socratic remediation plan.';
+        } else {
+          quizPreview.textContent = 'Escalate to CCIE Senior Mentor and Sponsor upon 3 consecutive quiz failures.';
+        }
+      });
+    });
+
+    // Inactivity Counter Buttons
+    let currentInactivityDays = 5;
+    function adjustInactivityDays(delta) {
+      currentInactivityDays = Math.max(2, Math.min(14, currentInactivityDays + delta));
+      document.getElementById('inactivityCount').textContent = `${currentInactivityDays}d`;
+    }
+
+    // Toast alert helper
+    function showToast(message) {
+      const toast = document.getElementById('toastNotification');
+      const text = document.getElementById('toastMessage');
+      if (text) text.textContent = message;
+      toast.classList.remove('opacity-0', 'translate-y-12', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-12', 'pointer-events-none');
+      }, 4000);
+    }
+
+    // Test Alert Simulation Handler
+    function triggerTestSimulation() {
+      const spinner = document.getElementById('spinner');
+      const icon = document.getElementById('sendIcon');
+      const btn = document.getElementById('btnDispatchTest');
+
+      icon.classList.add('hidden');
+      spinner.classList.remove('hidden');
+      btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+      setTimeout(() => {
+        spinner.classList.add('hidden');
+        icon.classList.remove('hidden');
+        btn.classList.remove('opacity-75', 'cursor-not-allowed');
+
+        // Append mock item to audit table
+        const tbody = document.getElementById('auditTableBody');
+        const now = new Date().toISOString().replace('T', ' ').substring(0, 19);
+        const randomRef = '#MSG-' + Math.floor(10000 + Math.random() * 90000);
+        
+        const newRow = document.createElement('tr');
+        newRow.className = 'hover:bg-surface-container/50 transition-colors bg-primary/5';
+        newRow.innerHTML = `
+          <td class="px-space-md py-space-sm text-primary font-medium">${now}</td>
+          <td class="px-space-md py-space-sm text-on-surface font-medium">Diagnostic Simulator Node</td>
+          <td class="px-space-md py-space-sm text-on-surface-variant">Manual Test Relay (Sponsor Sandbox)</td>
+          <td class="px-space-md py-space-sm">
+            <span class="px-space-xs py-0.5 rounded bg-primary/20 text-primary font-label-badge text-label-badge uppercase">Simulation</span>
+          </td>
+          <td class="px-space-md py-space-sm">
+            <span class="flex items-center gap-space-xs text-primary">
+              <span class="material-symbols-outlined text-[16px]">done_all</span> Delivered (SMS + Email)
+            </span>
+          </td>
+          <td class="px-space-md py-space-sm text-right text-outline">${randomRef}</td>
+        `;
+        tbody.insertBefore(newRow, tbody.firstChild);
+
+        showToast(`Simulation successful! Test dispatch sent to +1 (555) 234-8901 and a.vance@workforce-initiative.org.`);
+      }, 1200);
+    }
+
+    // Save Preferences
+    function savePreferences() {
+      showToast('All sponsor alert thresholds and push schedules committed to US-EAST-SPON-4410.');
+    }
+
+    // Reset Defaults
+    function resetDefaults() {
+      if (slider) {
+        slider.value = 70;
+        slider.dispatchEvent(new Event('input'));
+      }
+      currentInactivityDays = 5;
+      document.getElementById('inactivityCount').textContent = '5d';
+      showToast('Alert preferences restored to Lockheed Martin standard baseline defaults.');
+    }
+  </script>
+</div></main></div></body></html>

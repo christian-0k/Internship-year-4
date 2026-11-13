@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-primary-fixed": "#1d1b1b", primary: "#ffffff", "inverse-on-surface": "#680200", "surface-container-lowest": "#270000", "on-surface": "#ffdad4", "on-primary-fixed-variant": "#494646", "on-surface-variant": "#c4c7c8", "surface-bright": "#790200", "surface-container-highest": "#700200", "primary-fixed-dim": "#cac5c5", "secondary-fixed-dim": "#ccc5c5", error: "#ffb4ab", secondary: "#ccc5c5", "surface-variant": "#700200", tertiary: "#ffffff", "on-background": "#ffdad4", "inverse-surface": "#ffdad4", "on-tertiary-fixed": "#1e1b19", "on-primary": "#323030", "surface-tint": "#cac5c5", "secondary-fixed": "#e8e1e0", "tertiary-fixed": "#e9e1de", "on-secondary-fixed": "#1e1b1b", "on-secondary-fixed-variant": "#4a4646", "on-tertiary": "#33302e", background: "#310000", "on-primary-container": "#676364", "primary-fixed": "#e7e1e1", "surface-container-high": "#5c0100", "tertiary-fixed-dim": "#ccc5c2", "primary-container": "#e7e1e1", "secondary-container": "#4a4646", "on-tertiary-fixed-variant": "#4a4644", "surface-container-low": "#410100", "surface-dim": "#310000", surface: "#310000", "tertiary-container": "#e9e1de", "on-tertiary-container": "#686361", "surface-container": "#480100", "on-secondary": "#333030", "on-error": "#690005", outline: "#8e9192", "on-error-container": "#ffdad6", "error-container": "#93000a", "inverse-primary": "#615e5e", "on-secondary-container": "#bab4b3", "outline-variant": "#444748"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {gutter: "1.5rem", "gutter-sm": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-lg": "4rem", "margin-sm": "1rem", "space-sm": "0.5rem", "space-xl": "2.5rem", margin: "2rem", "space-lg": "1.5rem"}, fontFamily: {"label-badge": ["JetBrains Mono"], "display-hero": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "title-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">NetMentor<span class="text-primary">.AI</span></span><span class="font-label-badge text-label-badge text-outline">B2B PORTAL</span></div></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-badge text-label-badge text-outline uppercase">Management</div></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-title-md"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="organization-overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="team-and-members" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span>Team &amp; Members</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="seats-and-licenses" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Seats &amp; Licenses</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="compliance-and-audit-reports" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span>Compliance &amp; Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="invoices-and-billing" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Invoices &amp; Billing</span></a></nav></div><div class="flex flex-col p-space-md gap-space-sm bg-surface-container-lowest"><div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-badge text-label-badge text-secondary">CCIE CONCIERGE</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-code-sm text-code-sm">SLA Uptime</span><span class="font-code-sm text-code-sm text-on-surface">99.9%</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-code-sm text-code-sm">Response</span><span class="font-code-sm text-code-sm text-primary">15m Target</span></div></div><div class="flex flex-col gap-space-xs"><div class="px-space-xs font-label-badge text-label-badge text-outline uppercase">Quick Switch Portal</div><div class="grid grid-cols-3 gap-space-xs"><button class="py-space-xs px-1 text-center bg-surface-container-high hover:bg-surface-bright text-on-surface rounded font-code-sm text-code-sm transition-all" type="button">Learner</button><button class="py-space-xs px-1 text-center bg-surface-container-high hover:bg-surface-bright text-on-surface rounded font-code-sm text-code-sm transition-all" type="button">Instructor</button><button class="py-space-xs px-1 text-center bg-surface-container-high hover:bg-surface-bright text-on-surface rounded font-code-sm text-code-sm transition-all" type="button">Lab-Ops</button></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-high"><span class="material-symbols-outlined text-[18px] text-secondary">domain</span><span class="font-code-sm text-code-sm text-on-surface">Nexus Global IT</span><span class="text-outline font-code-sm text-code-sm">//</span><span class="font-label-badge text-label-badge text-primary">#ORG-8842</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">unfold_more</span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-badge text-label-badge text-on-surface">SSO Active • 142 Sync'd</span><span class="font-label-badge text-label-badge text-secondary">[OKTA]</span></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-tertiary"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden md:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface">Sarah Vance</span><span class="font-label-badge text-label-badge text-outline">Enterprise IT Director</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface px-gutter"><div class="flex flex-col w-full pb-margin-lg">
+<div class="flex flex-col gap-space-md pt-space-lg">
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-primary font-label-badge text-label-badge uppercase tracking-wider">B2B Core Provisioning</span>
+<span class="text-outline font-code-sm text-code-sm">//</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">POOL_REF: SUB-NET-8842-ENT</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Enterprise Seats &amp; License Management</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Monitor subscription tiers, allocate license pools across business units, and purchase additional seats with automated volume discounting.</p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-secondary font-title-md text-title-md flex items-center gap-space-xs transition-all shadow-sm" onclick="document.getElementById('transfer-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+<span>Transfer Seats</span>
+</button>
+<button class="px-space-lg py-space-sm rounded-lg bg-primary hover:bg-primary-fixed text-on-primary-fixed font-title-md text-title-md flex items-center gap-space-xs transition-all shadow-[0_0_24px_-4px_rgba(78,222,163,0.35)]" onclick="document.getElementById('purchase-drawer').scrollIntoView({behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Purchase Additional Seats</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-space-xl grid grid-cols-12 gap-space-lg items-start">
+<div class="col-span-12 xl:col-span-8 flex flex-col gap-space-lg">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-xl shadow-xl flex flex-col gap-space-lg">
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-72 h-72 rounded-full bg-secondary/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md z-10">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">GLOBAL CONCURRENCY QUOTA</span>
+<div class="flex items-baseline gap-space-sm mt-1">
+<span class="font-display-hero text-display-hero text-on-surface tracking-tight font-extrabold">142</span>
+<span class="font-headline-md text-headline-md text-on-surface-variant font-light">/ 160</span>
+<span class="font-code-lg text-code-lg text-primary font-semibold ml-space-xs">Seats Active</span>
+</div>
+</div>
+<div class="flex flex-col md:items-end">
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">88.75% Utilized</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">18 standby buffers remaining</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs z-10">
+<div class="h-4 w-full bg-surface-container-lowest rounded-full overflow-hidden flex p-0.5 shadow-inner">
+<div class="h-full bg-primary rounded-l-full transition-all duration-500 relative group cursor-pointer" style="width: 88.75%">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-badge text-label-badge pointer-events-none transition-all">Occupied: 142</div>
+</div>
+<div class="h-full bg-tertiary transition-all duration-500 relative group cursor-pointer" style="width: 5%">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-badge text-label-badge pointer-events-none transition-all">Reserved: 8</div>
+</div>
+<div class="h-full bg-secondary rounded-r-full transition-all duration-500 relative group cursor-pointer" style="width: 6.25%">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-badge text-label-badge pointer-events-none transition-all">Available: 10</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-code-sm text-code-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary inline-block"></span>
+<span class="text-on-surface font-medium">Occupied: 142</span>
+<span class="text-outline font-label-badge text-label-badge">(88.75%)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary inline-block"></span>
+<span class="text-on-surface font-medium">Reserved / Invited: 8</span>
+<span class="text-outline font-label-badge text-label-badge">(5.00%)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary inline-block"></span>
+<span class="text-on-surface font-medium">Available Unassigned: 10</span>
+<span class="text-outline font-label-badge text-label-badge">(6.25%)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-md z-10">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-badge text-label-badge uppercase">Cost / Seat</span>
+<span class="material-symbols-outlined text-[16px] text-primary">price_check</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$49<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/mo</span></span>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-1.5 py-0.5 rounded w-fit">25% Volume Tier Applied</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-badge text-label-badge uppercase">Renewal Date</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">event_repeat</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold">Nov 15, 2025</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Annual Auto-Renewal</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-badge text-label-badge uppercase">Allocated Licenses</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">lan</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">142</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Across 4 Departments</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-badge text-label-badge uppercase">Standby Seats</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">inventory_2</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">18</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">10 free • 8 in-flight</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Department License Allocation &amp; Quotas</h2>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-code-sm text-code-sm">4 Units</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">Real-time SCIM Sync Engine</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-md shadow-md hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">router</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">NOC Operations</h3>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Dept ID: #NET-OPS-01</span>
+</div>
+</div>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-2 py-0.5 rounded">High Load</span>
+</div>
+<div class="flex items-baseline justify-between mt-space-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Allocated: <strong class="text-on-surface font-code-lg text-code-lg">60 Seats</strong></span>
+<span class="font-code-sm text-code-sm text-primary">58 Active <span class="text-on-surface-variant">/ 2 Free</span></span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 96.6%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-badge text-label-badge text-outline uppercase">96.7% Cap Reached</span>
+<button class="px-space-md py-1 rounded-md bg-surface-container-highest hover:bg-primary hover:text-on-primary-fixed text-primary font-code-sm text-code-sm transition-all flex items-center gap-1" onclick="quickAllocate('NOC Operations', 5)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>+ Add 5 Seats</span>
+</button>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-md shadow-md hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">cloud</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Systems &amp; Cloud Infra</h3>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Dept ID: #SYS-CLD-04</span>
+</div>
+</div>
+<span class="font-label-badge text-label-badge text-secondary bg-secondary/10 px-2 py-0.5 rounded">Optimal</span>
+</div>
+<div class="flex items-baseline justify-between mt-space-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Allocated: <strong class="text-on-surface font-code-lg text-code-lg">40 Seats</strong></span>
+<span class="font-code-sm text-code-sm text-secondary">36 Active <span class="text-on-surface-variant">/ 4 Free</span></span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-badge text-label-badge text-outline uppercase">90.0% Cap Reached</span>
+<button class="px-space-md py-1 rounded-md bg-surface-container-highest hover:bg-secondary hover:text-on-secondary text-secondary font-code-sm text-code-sm transition-all flex items-center gap-1" onclick="quickAllocate('Systems &amp; Cloud Infra', 5)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>+ Add 5 Seats</span>
+</button>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-md shadow-md hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">shield</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Global Cybersecurity &amp; SOC</h3>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Dept ID: #SEC-OPS-09</span>
+</div>
+</div>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-2 py-0.5 rounded">High Load</span>
+</div>
+<div class="flex items-baseline justify-between mt-space-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Allocated: <strong class="text-on-surface font-code-lg text-code-lg">30 Seats</strong></span>
+<span class="font-code-sm text-code-sm text-primary">28 Active <span class="text-on-surface-variant">/ 2 Free</span></span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 93.3%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-badge text-label-badge text-outline uppercase">93.3% Cap Reached</span>
+<button class="px-space-md py-1 rounded-md bg-surface-container-highest hover:bg-primary hover:text-on-primary-fixed text-primary font-code-sm text-code-sm transition-all flex items-center gap-1" onclick="quickAllocate('Global Cybersecurity &amp; SOC', 5)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>+ Add 5 Seats</span>
+</button>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-md shadow-md hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">IT Service Desk / Helpdesk</h3>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Dept ID: #DESK-HLP-12</span>
+</div>
+</div>
+<span class="font-label-badge text-label-badge text-tertiary bg-tertiary/10 px-2 py-0.5 rounded">Buffer Room</span>
+</div>
+<div class="flex items-baseline justify-between mt-space-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Allocated: <strong class="text-on-surface font-code-lg text-code-lg">30 Seats</strong></span>
+<span class="font-code-sm text-code-sm text-tertiary">20 Active <span class="text-on-surface-variant">/ 10 Free</span></span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 66.6%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-badge text-label-badge text-outline uppercase">66.7% Cap Reached</span>
+<button class="px-space-md py-1 rounded-md bg-surface-container-highest hover:bg-tertiary hover:text-on-tertiary text-tertiary font-code-sm text-code-sm transition-all flex items-center gap-1" onclick="quickAllocate('IT Service Desk / Helpdesk', 5)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>+ Add 5 Seats</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">published_with_changes</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface">Automated Seat Reclamation Policy</span>
+<span class="px-space-xs py-0.5 rounded bg-primary/20 text-primary font-label-badge text-label-badge">ACTIVE: 45 DAYS</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Reallocates license back to unassigned pool when member activity halts. <strong>2 seats flagged for reclamation</strong> within 48h.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+<button class="px-space-md py-space-xs rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-code-sm text-code-sm transition-all" onclick="document.getElementById('reclaim-banner').classList.toggle('hidden')" type="button">Review 2 Users</button>
+</div>
+</div>
+<div class="hidden p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm" id="reclaim-banner">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-tertiary uppercase">[INACTIVITY_DETECTOR] Stale Session Cache</span>
+<span class="font-code-sm text-code-sm text-outline">Threshold: 45 Days Inactive</span>
+</div>
+<div class="divide-y-0 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-code-sm text-code-sm text-outline">DR</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">David Ross • david.ross@nexusglobal.corp</span>
+<span class="font-label-badge text-label-badge text-outline">NOC Operations • Last lab login: 51 days ago</span>
+</div>
+</div>
+<button class="px-space-sm py-1 rounded bg-error/15 text-error hover:bg-error hover:text-on-error font-code-sm text-code-sm transition-all" onclick="this.parentElement.remove()" type="button">Reclaim Seat Now</button>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-code-sm text-code-sm text-outline">EK</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Elena Rostova • elena.k@nexusglobal.corp</span>
+<span class="font-label-badge text-label-badge text-outline">IT Helpdesk • Last lab login: 48 days ago</span>
+</div>
+</div>
+<button class="px-space-sm py-1 rounded bg-error/15 text-error hover:bg-error hover:text-on-error font-code-sm text-code-sm transition-all" onclick="this.parentElement.remove()" type="button">Reclaim Seat Now</button>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 xl:col-span-4 flex flex-col gap-space-lg" id="purchase-drawer">
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-2xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-secondary">INSTANT EXPANSION</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-code-sm text-code-sm">Prorated Active</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Purchase Additional Seats</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instantly scale your engineering roster. Licenses unlock automatically upon checkout confirmation.</p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Additional Seats</span>
+<div class="flex items-center gap-space-xs">
+<button class="w-7 h-7 rounded bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-on-surface font-bold" onclick="adjustSeats(-5)" type="button">-</button>
+<input class="w-16 text-center bg-surface-container-lowest font-headline-sm text-headline-sm text-primary font-bold rounded py-0.5 outline-none" id="seat-input" max="500" min="1" oninput="updatePricing(this.value)" type="number" value="20"/>
+<button class="w-7 h-7 rounded bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-on-surface font-bold" onclick="adjustSeats(5)" type="button">+</button>
+</div>
+</div>
+<input class="w-full accent-primary bg-surface-container-lowest rounded-lg cursor-pointer h-2" id="seat-slider" max="100" min="5" oninput="updatePricing(this.value)" step="5" type="range" value="20"/>
+<div class="flex items-center justify-between text-outline font-label-badge text-label-badge">
+<span>+5 SEATS</span>
+<span>+50 SEATS</span>
+<span>+100 SEATS</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Base Cost (<span id="calc-seats-label">20</span> × $49.00/mo)</span>
+<span class="text-on-surface font-code-sm text-code-sm" id="calc-monthly">$980.00/mo</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Volume Discount (25%)</span>
+<span class="text-primary font-code-sm text-code-sm">-$245.00/mo</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Prorated for 24 Days Remaining</span>
+<span class="text-secondary font-code-sm text-code-sm">Applied</span>
+</div>
+<div class="h-px bg-surface-container my-space-xs"></div>
+<div class="flex items-baseline justify-between">
+<span class="font-title-md text-title-md text-on-surface font-bold">Due Today (Prorated)</span>
+<span class="font-headline-md text-headline-md text-primary font-extrabold" id="calc-prorated-total">$784.00</span>
+</div>
+<span class="font-label-badge text-label-badge text-outline text-right">Renews at $<span id="calc-recurring-sub">735.00</span>/mo on next billing cycle</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">ENTERPRISE INCLUSIONS PER SEAT</span>
+<div class="grid grid-cols-1 gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Unlimited WASM Virtual Lab Sandbox Time</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Socratic AI CCIE &amp; Network+ Tutor Agents</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>SCIM Okta &amp; Azure AD Directory Sync</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Dedicated Enterprise Customer Success Mgr</span>
+</div>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<span class="font-label-badge text-label-badge uppercase text-outline">STRIPE CORPORATE BILLING</span>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-6 rounded bg-surface-container-lowest flex items-center justify-center font-code-sm text-code-sm font-bold text-secondary">
+                VISA
+              </div>
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">Corporate Visa •••• 4092</span>
+<span class="font-label-badge text-label-badge text-outline">Expires 09/28 • Default</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+</div>
+</div>
+<button class="w-full py-space-md rounded-lg bg-primary hover:bg-primary-fixed text-on-primary-fixed font-title-md text-title-md font-bold flex items-center justify-center gap-space-sm transition-all shadow-[0_0_24px_-4px_rgba(78,222,163,0.4)]" id="confirm-charge-btn" onclick="executeProvisioning()" type="button">
+<span class="material-symbols-outlined text-[20px]">credit_card</span>
+<span id="btn-charge-label">Confirm &amp; Charge $784.00 to Card</span>
+</button>
+<div class="hidden p-space-md rounded-lg bg-primary-container text-on-primary-container flex items-center gap-space-sm transition-all" id="provision-toast">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold">Seats Successfully Provisioned!</span>
+<span class="font-body-sm text-body-sm">Added to Standby Pool. Invoices dispatched to billing@nexusglobal.corp</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-surface-container-lowest/80 backdrop-blur-md p-space-md" id="transfer-modal">
+<div class="w-full max-w-lg rounded-xl bg-surface-container p-space-xl shadow-2xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">swap_horiz</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Transfer License Seats</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('transfer-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-badge text-label-badge uppercase text-outline">Source Department</label>
+<select class="w-full p-space-sm rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none">
+<option>IT Service Desk / Helpdesk (10 Free Available)</option>
+<option>Systems &amp; Cloud Infrastructure (4 Free Available)</option>
+<option>NOC Operations (2 Free Available)</option>
+<option>Global Cybersecurity &amp; SOC (2 Free Available)</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-badge text-label-badge uppercase text-outline">Destination Department</label>
+<select class="w-full p-space-sm rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none">
+<option>NOC Operations (At 96.7% capacity)</option>
+<option>Global Cybersecurity &amp; SOC (At 93.3% capacity)</option>
+<option>Systems &amp; Cloud Infrastructure</option>
+<option>IT Service Desk / Helpdesk</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-badge text-label-badge uppercase text-outline">Seats to Transfer</label>
+<input class="w-full p-space-sm rounded bg-surface-container-lowest text-on-surface font-code-lg text-code-lg outline-none" max="10" min="1" type="number" value="5"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-sm">
+<button class="px-space-md py-space-sm rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface font-title-md text-title-md" onclick="document.getElementById('transfer-modal').classList.add('hidden')" type="button">Cancel</button>
+<button class="px-space-lg py-space-sm rounded bg-secondary hover:bg-secondary-fixed text-on-secondary font-title-md text-title-md font-bold shadow-md" onclick="document.getElementById('transfer-modal').classList.add('hidden')" type="button">Complete Seat Migration</button>
+</div>
+</div>
+</div>
+<script>
+    function updatePricing(val) {
+      val = parseInt(val) || 0;
+      if (val < 1) val = 1;
+      document.getElementById('seat-input').value = val;
+      document.getElementById('seat-slider').value = val > 100 ? 100 : val;
+      
+      const baseMonthly = val * 49;
+      const discountedMonthly = val * 49 * 0.75;
+      const proratedTotal = (discountedMonthly * (24 / 30)).toFixed(2);
+
+      document.getElementById('calc-seats-label').innerText = val;
+      document.getElementById('calc-monthly').innerText = '$' + baseMonthly.toFixed(2) + '/mo';
+      document.getElementById('calc-recurring-sub').innerText = discountedMonthly.toFixed(2);
+      document.getElementById('calc-prorated-total').innerText = '$' + proratedTotal;
+      document.getElementById('btn-charge-label').innerText = 'Confirm & Charge $' + proratedTotal + ' to Card';
+    }
+
+    function adjustSeats(delta) {
+      let cur = parseInt(document.getElementById('seat-input').value) || 0;
+      let next = cur + delta;
+      if (next < 1) next = 1;
+      updatePricing(next);
+    }
+
+    function quickAllocate(deptName, amount) {
+      alert('Quick-Allocated ' + amount + ' seats to ' + deptName + ' from Standby Pool.');
+    }
+
+    function executeProvisioning() {
+      const btn = document.getElementById('confirm-charge-btn');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">sync</span> Authorizing Stripe Gateway...';
+      
+      setTimeout(() => {
+        btn.classList.add('hidden');
+        document.getElementById('provision-toast').classList.remove('hidden');
+      }, 1200);
+    }
+  </script>
+</div></main></div></body></html>

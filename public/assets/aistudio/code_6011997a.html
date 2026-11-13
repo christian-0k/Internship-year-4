@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-secondary-container": "#bab4b3", "secondary-fixed": "#e8e1e0", outline: "#8e9192", "surface-bright": "#790200", "on-primary-container": "#676364", "inverse-surface": "#ffdad4", "surface-container-high": "#5c0100", "on-primary-fixed": "#1d1b1b", surface: "#310000", "secondary-container": "#4a4646", "on-tertiary-fixed-variant": "#4a4644", "tertiary-fixed-dim": "#ccc5c2", "tertiary-container": "#e9e1de", "secondary-fixed-dim": "#ccc5c5", background: "#310000", "surface-variant": "#700200", "surface-container-lowest": "#270000", "primary-container": "#e7e1e1", "on-error": "#690005", "on-tertiary-fixed": "#1e1b19", "inverse-primary": "#615e5e", "surface-tint": "#cac5c5", "on-primary": "#323030", "on-secondary-fixed-variant": "#4a4646", "primary-fixed-dim": "#cac5c5", tertiary: "#ffffff", "error-container": "#93000a", primary: "#ffffff", "on-primary-fixed-variant": "#494646", "primary-fixed": "#e7e1e1", error: "#ffb4ab", "on-secondary-fixed": "#1e1b1b", "on-secondary": "#333030", "inverse-on-surface": "#680200", "surface-dim": "#310000", "on-background": "#ffdad4", "on-tertiary": "#33302e", "on-error-container": "#ffdad6", "outline-variant": "#444748", "on-tertiary-container": "#686361", "surface-container": "#480100", "on-surface": "#ffdad4", "surface-container-low": "#410100", secondary: "#ccc5c5", "tertiary-fixed": "#e9e1de", "on-surface-variant": "#c4c7c8", "surface-container-highest": "#700200"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {margin: "2rem", gutter: "1.5rem", "margin-sm": "1rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-lg": "4rem", "space-xl": "2.5rem", "space-xs": "0.25rem"}, fontFamily: {"code-lg": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "title-md": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-badge": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="overview" href="#"><img alt="NetMentor AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3Qqj316WsxePaFE-077_od--l8SvgFXndjdbChEQW2AY-1Blm6qwa6UqJVOSDg-kTGyllOp061YIN8_ABK0cQ-0Vqeq-ZlcWXsmgBTp5aEflXtFO5EjziwWqugLUQ20GXgaBj6NNCkRYmhjdZaaveZwpXc_fSrrs0d0qX-adxx--LutEc_QZIP_mIgmma0TSph4h6esf4fybCFcIElH77cqDoV7-znxJmoK0nt3JfZH2MLGWV8Kd-Y60"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">NetMentor AI</span><span class="font-label-badge text-label-badge uppercase px-space-xs py-0.5 rounded-lg bg-surface-container-high text-primary border border-primary/20">AI LABS</span></a><div class="relative group hidden xl:block"><button class="flex items-center gap-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-space-sm py-1.5 rounded-lg hover:bg-surface-container transition-colors" type="button"><span>Tracks</span><span class="material-symbols-outlined text-[18px]">expand_more</span></button><div class="absolute left-0 top-full pt-space-xs hidden group-hover:block w-72 z-50"><div class="bg-surface-container-high rounded-xl p-space-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)] border border-outline-variant/30 flex flex-col gap-1"><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="cisco-ccna-200-301" href="#"><span class="font-title-md text-title-md text-secondary">Cisco CCNA 200-301</span><span class="font-code-sm text-code-sm text-on-surface-variant">Routing, Switching &amp; Network Automation</span></a><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="comptia-a-core" href="#"><span class="font-title-md text-title-md text-tertiary">CompTIA A+ Core 1 &amp; 2</span><span class="font-code-sm text-code-sm text-on-surface-variant">Hardware, OS, Troubleshooting</span></a><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="network-plus-n10-008" href="#"><span class="font-title-md text-title-md text-primary">Network+ N10-008</span><span class="font-code-sm text-code-sm text-on-surface-variant">Infrastructure Protocols &amp; Diagnostics</span></a><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="linux-and-cloud-sysadmin" href="#"><span class="font-title-md text-title-md text-on-surface">Linux &amp; Cloud SysAdmin</span><span class="font-code-sm text-code-sm text-on-surface-variant">Bash, Kernel, AWS CLI Lab Scenarios</span></a></div></div></div></div><nav class="hidden lg:flex items-center gap-space-sm xl:gap-space-md" data-active-classes="text-primary font-bold bg-surface-container-high rounded-lg"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="courses" href="#">Course Catalog</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="pricing" href="#">Pricing</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="business" href="#">For Business</a><a aria-current="page" class="px-space-sm py-1 transition-colors text-primary font-bold bg-surface-container-high rounded-lg" data-path="verify-certificate" href="#">Verify Certificate</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-low border border-outline-variant/30 font-code-sm text-code-sm text-primary"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span>14.8k Active Labs</span></div><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface px-space-sm py-1.5 rounded-lg hover:bg-surface-container transition-colors" data-path="sign-in" href="#">Sign In</a><a class="font-title-md text-title-md bg-primary hover:bg-primary-fixed text-on-primary-container px-space-md py-2 rounded-xl transition-all shadow-[0_1px_8px_rgba(0,0,0,0.04)] font-bold" data-path="get-started" href="#">Get Started</a><div class="pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAKMsdlDwOAckha2D61l4jTIJehbZgg1jIBNgADo9MLl-QZlMw9LguSbrzgpKElg7jKtMjPUYOPu2qg2ih8lBb9eLGUX0mvXfvEyeGJgiKmnvKdk7sKKCm87-omFYwiIt-Aa8tbqsdd_ZO8uXtLNN9-gMemoAut5NDmvDkbq04qsijFRQ1LGcc32QZg29UoJ8gtQ8yBnoZjpHwZsTc90HyxtEw-AWB2Z0mxyjmenwZOjHauoR1qFUy"/></div></div></div></header><main class="w-full pt-16 bg-background"><div class="flex flex-col w-full">
+<!-- Verification Hero / Real-time Ledger Status Bar -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest px-margin-sm lg:px-margin py-space-xl">
+<!-- Subtle Ambient Glow Orbs -->
+<div class="pointer-events-none absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+<div class="pointer-events-none absolute top-12 right-1/4 h-80 w-80 rounded-full bg-secondary/10 blur-3xl"></div>
+<div class="relative mx-auto flex max-w-7xl flex-col gap-space-lg">
+<!-- Ledger Metadata Breadcrumb / Hash Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm rounded-xl bg-surface-container-low px-space-md py-space-sm shadow-md">
+<div class="flex items-center gap-space-sm font-code-sm text-code-sm text-on-surface-variant min-w-0">
+<span class="flex items-center gap-1 font-semibold text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>PUBLIC_VERIFIER://</span>
+</span>
+<span class="truncate text-on-surface font-semibold selection:bg-secondary/30" id="currentHashDisplay">nm_cert_9b8f2c817e9903b6</span>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors pl-2" id="copyHashBtn" onclick="copyCurrentHash()" title="Copy Hash to Clipboard">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<!-- Live Audit Sync Telemetry -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface-variant">
+<span class="h-2 w-2 rounded-full bg-primary animate-ping"></span>
+<span class="hidden sm:inline">Audit Block #4,891,029</span>
+<span class="text-outline">/</span>
+<span class="text-primary font-bold">Consensus Validated</span>
+</div>
+<!-- Interactive Test Simulation Switcher -->
+<div class="flex items-center gap-1 rounded-lg bg-surface-container-high p-1">
+<button class="flex items-center gap-1.5 rounded-lg px-2.5 py-1 font-label-badge text-label-badge uppercase transition-all bg-primary text-on-primary-container font-bold shadow-sm" id="btnValidMode" onclick="setAuditState(true)">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Valid Hash</span>
+</button>
+<button class="flex items-center gap-1.5 rounded-lg px-2.5 py-1 font-label-badge text-label-badge uppercase transition-all text-on-surface-variant hover:text-on-surface" id="btnInvalidMode" onclick="setAuditState(false)">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>Test Tampered Hash</span>
+</button>
+</div>
+</div>
+</div>
+<!-- STATE CONTAINER: INVALID / TAMPERED NOTIFICATION (Hidden by default) -->
+<div class="hidden flex-col gap-space-md rounded-xl bg-error-container/30 p-space-lg shadow-xl backdrop-blur-md" id="invalidStateBanner">
+<div class="flex items-start gap-space-md">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-error text-on-error shadow-lg">
+<span class="material-symbols-outlined text-[28px]">gpp_bad</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-error">CRYPTOGRAPHIC VERIFICATION FAILED</span>
+<span class="rounded-lg bg-error/20 px-2 py-0.5 font-code-sm text-code-sm font-semibold text-error">ERR_SIG_MISMATCH_404</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+              The cryptographic signature for requested hash <span class="font-code-sm text-code-sm font-bold text-error">nm_invalid_0000x</span> could not be authenticated against the NetMentor immutable ledger. This credential may have been revoked, expired, altered in transit, or never officially issued by NetMentor AI.
+            </p>
+<div class="mt-2 flex flex-wrap items-center gap-space-md font-code-sm text-code-sm text-on-surface-variant">
+<span>Timestamp: <span class="text-on-surface">2025-05-20T19:24:02.108Z</span></span>
+<span>Audit Node: <span class="text-on-surface">us-east-1.consensus.netmentor.io</span></span>
+<span>Digest Checked: <span class="text-error truncate max-w-xs">0000000000000000000000000000000000000000</span></span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button class="flex items-center gap-2 rounded-xl bg-surface-container-highest px-space-md py-2 font-title-md text-title-md text-on-surface hover:bg-surface-bright transition-colors" onclick="setAuditState(true)">
+<span class="material-symbols-outlined text-[18px]">restore</span>
+<span>Return to Verified Alexandre Mercer Credential</span>
+</button>
+<a class="flex items-center gap-2 rounded-xl bg-surface-container px-space-md py-2 font-title-md text-title-md text-secondary hover:text-primary transition-colors" data-path="verify-certificate" href="#">
+<span class="material-symbols-outlined text-[18px]">search</span>
+<span>Manual Registry Lookup</span>
+</a>
+</div>
+</div>
+<!-- STATE CONTAINER: VALID CERTIFICATE VIEW -->
+<div class="flex flex-col gap-space-xl" id="validStateView">
+<!-- Live Trust Badge & Main Banner -->
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-md rounded-xl bg-surface-container-low p-space-lg shadow-xl">
+<div class="flex items-center gap-space-md">
+<!-- Animated Shield Icon with Kinetic Pulse -->
+<div class="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-primary-container text-on-primary-container shadow-[0_0_24px_-4px_rgba(16,185,129,0.35)]">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="absolute -top-1 -right-1 flex h-4 w-4">
+<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex h-4 w-4 rounded-full bg-primary-fixed"></span>
+</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">Authentic Professional Credential</span>
+<span class="rounded-lg bg-surface-container-highest px-2.5 py-0.5 font-label-badge text-label-badge text-primary uppercase font-bold tracking-wider">
+                  VERIFIED ON-CHAIN
+                </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Issued under the NetMentor Autonomous Socratic Evaluation Authority with zero-knowledge tamper resistance.
+              </p>
+</div>
+</div>
+<!-- Micro Quick Actions Bar -->
+<div class="flex flex-wrap items-center gap-space-sm w-full lg:w-auto justify-start lg:justify-end">
+<button class="flex items-center gap-2 rounded-xl bg-primary px-space-md py-2.5 font-title-md text-title-md text-on-primary-container font-bold hover:bg-primary-fixed transition-all shadow-md" onclick="triggerDownloadFeedback()">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Signed PDF</span>
+</button>
+<button class="flex items-center gap-2 rounded-xl bg-surface-container-high px-space-md py-2.5 font-title-md text-title-md text-secondary hover:bg-surface-variant transition-colors shadow-sm" onclick="shareLinkedIn()">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span>Add to LinkedIn</span>
+</button>
+<button class="flex items-center gap-2 rounded-xl bg-surface-container-high px-space-md py-2.5 font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors shadow-sm" onclick="toggleEmbedModal(true)">
+<span class="material-symbols-outlined text-[20px]">code</span>
+<span>Embed</span>
+</button>
+</div>
+</div>
+<!-- Master Presentation Grid: Certificate Card + Detailed Audit Metrics -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT / MAIN: High-Fidelity Cyber Guilloche Certificate Showcase (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low shadow-2xl">
+<!-- Cyber Edge Accents & Background Guilloche Simulation Grid -->
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="certMesh" patternunits="userSpaceOnUse" width="40">
+<path class="text-outline-variant" d="M 40 0 L 0 40 M 0 0 L 40 40" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+<circle class="text-primary" cx="20" cy="20" fill="currentColor" r="1.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#certMesh)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Certificate Inner Wrapper with Decorative Top Bar -->
+<div class="relative z-10 flex flex-col p-space-lg sm:p-space-xl">
+<!-- Certificate Header Ribbon -->
+<div class="flex items-center justify-between gap-space-md pb-space-lg">
+<div class="flex items-center gap-space-sm">
+<img class="h-10 w-10 object-contain rounded-lg bg-surface-container-lowest p-1" data-alt="High technology vector security badge with NetMentor interconnected routing nodes in cyan and emerald on pitch dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZIesvGiEfIfJU1d3z2TpOrps2SVdJKPNX1llmIqrJut9A73gqm9AZ9DSVmnYpn1dewPmQufuhI6Q-QDxvDt5v464lmK7oz55QBFBGSSc29bcaxQfZIuN7l9KKFp8ArtY4zfY8fh7ym0dTnBjTPFtkZYROJifeSQe1axflbshFCXhfRCHOvLOgL9mbeXT6c6BeLJztCO4hUW00bXp-736b2VmPlaJ_ruhzj0Tt_6Y65K9tTjHPf7Fx"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">NetMentor AI Systems</span>
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary">Autonomous Verification Authority</span>
+</div>
+</div>
+<!-- Official Security Foil Stamp -->
+<div class="relative flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-tr from-tertiary-container via-tertiary-fixed to-tertiary p-0.5 shadow-lg">
+<div class="flex h-full w-full items-center justify-center rounded-full bg-surface-container-lowest text-center">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px] text-tertiary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-label-badge text-[9px] font-bold text-tertiary-fixed tracking-tighter">AUTHENTIC</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Certificate Typography Body -->
+<div class="flex flex-col gap-space-sm text-left my-space-md">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-secondary font-bold">
+                    OFFICIAL CERTIFICATE OF MASTERY &amp; TECHNICAL COMPETENCY
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                    This cryptographically validated document certifies that
+                  </span>
+<!-- Student Name -->
+<h1 class="font-display-hero text-headline-lg lg:text-display-hero text-on-surface tracking-tight font-extrabold selection:bg-primary-container">
+                    Alexandre Mercer
+                  </h1>
+<span class="font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+                    has successfully cleared real-time dynamic fault injection and satisfied all rigorous laboratory requirements for:
+                  </span>
+<!-- Track & Specialization Banner -->
+<div class="rounded-xl bg-surface-container-high p-space-md my-space-xs shadow-inner">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">hub</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-secondary font-bold">
+                          Cisco CCNA 200-301 Enterprise Routing &amp; Socratic AI Incident Diagnostics
+                        </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant mt-1">
+                          Enterprise multi-area routing protocols, redundant L2 fabrics, and incident automation reflexes.
+                        </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Certificate Metadata Ledger Table -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm py-space-md rounded-xl bg-surface-container-lowest px-space-md">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase text-outline">Issue Date</span>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">October 14, 2024</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase text-outline">Validity Status</span>
+<span class="font-code-sm text-code-sm font-semibold text-primary">Certified Lifetime</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase text-outline">Credential ID</span>
+<span class="font-code-sm text-code-sm font-bold text-secondary">NM-CCNA-2024-9B8F2C</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase text-outline">Proctor Type</span>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">Autonomous AI Socratic</span>
+</div>
+</div>
+<!-- Cryptographic HMAC Signature Footer Block -->
+<div class="mt-space-md rounded-xl bg-surface-container p-space-sm font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center justify-between text-outline pb-1 font-label-badge text-label-badge">
+<span>HMAC-SHA256 IMMUTABLE LEDGER SIGNATURE</span>
+<span class="text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> SECURE
+                    </span>
+</div>
+<div class="truncate text-primary font-mono text-[12px] selection:bg-primary/20">
+                    e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+                  </div>
+</div>
+<!-- Signatories & Verification Key Footnotes -->
+<div class="mt-space-lg flex flex-wrap items-center justify-between gap-space-md pt-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="h-10 w-28 object-contain opacity-80" data-alt="Cryptographic holographic signature vector mark in cyan blue with micro-circuit lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4x2KcXGK5nKrJe5WM0W8lx5mMYbemEWTj-VbhLelbN01aTth7ZPwhgT9XoPcOwwVIF_D1NXpcCEC6IJZuAz_3Wodzn5IA15eZ5OZ5G8YNOW0GSlFMWUZ8itKd6SIIRz5PYLQ8W0zuQNs-utd7G6Sh0FOyWLfy0vUAkuy8Qw9svjZeBhsuWoSBHHUg7Mk96bivarMFRh_6cgniiqns4f38Ec8iqtrg6ZmBgMul1GV5NUQutC1erByx"/>
+<div class="flex flex-col font-code-sm text-code-sm">
+<span class="font-bold text-on-surface">Dr. Ellen Vance, CCIE #49102</span>
+<span class="text-outline">Head of Curriculum &amp; Topology Standards</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex flex-col text-right font-code-sm text-code-sm">
+<span class="font-bold text-on-surface">NetMentor Socratic Kernel</span>
+<span class="text-primary font-mono">v4.18-prod-signed</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">token</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Contextual Quick Action Footer Links -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm px-space-xs text-on-surface-variant">
+<span class="font-code-sm text-code-sm">Hash Checksum: <code class="text-secondary font-bold">SHA256:9B8F...03B6</code></span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-1" data-path="cli-documentation" href="#">
+<span>View Public Audit Specification</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- RIGHT / SIDEBAR: Validated Skill Breakdown & Interactive Pod Stats (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Proctored Laboratory Proof Card -->
+<div class="flex flex-col gap-space-md rounded-xl bg-surface-container-low p-space-lg shadow-xl">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Proctored Lab Audit</span>
+<span class="flex items-center gap-1 rounded-lg bg-surface-container-highest px-2 py-0.5 font-label-badge text-label-badge text-secondary font-bold">
+                  POD RUNTIME: ACTIVE
+                </span>
+</div>
+<!-- High-Impact Telemetry Stats Grid -->
+<div class="grid grid-cols-2 gap-space-md">
+<div class="flex flex-col rounded-xl bg-surface-container p-space-md">
+<div class="flex items-center gap-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+<span class="font-label-badge text-label-badge uppercase font-bold text-outline">Lab Duration</span>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">48.5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hours in WebAssembly Pods</span>
+</div>
+<div class="flex flex-col rounded-xl bg-surface-container p-space-md">
+<div class="flex items-center gap-1.5 text-secondary mb-1">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+<span class="font-label-badge text-label-badge uppercase font-bold text-outline">Break-Fix Topology</span>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">34</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Live Production Scenarios</span>
+</div>
+</div>
+<!-- Detailed Competency Progress Meters -->
+<div class="flex flex-col gap-space-md mt-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Objective Performance Metrics</span>
+<!-- Metric 1 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface font-medium">Cisco IOS-XE CLI Configuration</span>
+<span class="text-primary font-bold">100% Mastered</span>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container">
+<div class="h-full rounded-full bg-primary shadow-[0_0_8px_rgba(78,222,163,0.5)]" style="width: 100%"></div>
+</div>
+<div class="flex justify-between font-label-badge text-[10px] text-outline">
+<span>Syntax accuracy</span>
+<span>1,420 CLI Commands Executed</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface font-medium">OSPF Multi-Area Troubleshooting</span>
+<span class="text-primary font-bold">98% Mastered</span>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container">
+<div class="h-full rounded-full bg-primary shadow-[0_0_8px_rgba(78,222,163,0.5)]" style="width: 98%"></div>
+</div>
+<div class="flex justify-between font-label-badge text-[10px] text-outline">
+<span>LSA convergence</span>
+<span>14 Split-Brain Labs Cleared</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface font-medium">VLAN Trunking &amp; Spanning Tree (STP)</span>
+<span class="text-primary font-bold">95% Mastered</span>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container -mt-2">
+<div class="h-full rounded-full bg-primary shadow-[0_0_8px_rgba(78,222,163,0.5)]" style="width: 95%"></div>
+</div>
+<!-- Metric 4: Socratic AI Reflex -->
+<div class="flex flex-col gap-1.5 rounded-xl bg-surface-container p-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">psychology</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">AI Diagnostic Reflex</span>
+</div>
+<span class="rounded-lg bg-tertiary-container/20 px-2 py-0.5 font-label-badge text-label-badge text-tertiary font-bold">
+                      TIER-1 ELITE
+                    </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Demonstrated systematic hypothesis testing under simulated kernel faults. Required zero fatal rollbacks across all timed certification scenarios.
+                  </p>
+</div>
+</div>
+</div>
+<!-- Recruiter / Verification Guarantee Card -->
+<div class="flex flex-col gap-space-sm rounded-xl bg-surface-container-high p-space-lg shadow-md">
+<div class="flex items-center gap-space-sm text-secondary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Employer Verification Guarantee</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                NetMentor AI credentials verify practical, terminal-level execution capabilities through unscripted virtual networking sandboxes, eliminating theoretical multiple-choice bias.
+              </p>
+<div class="pt-space-xs flex items-center justify-between text-outline font-code-sm text-code-sm">
+<span>Proof Protocol: zk-SNARK + SHA256</span>
+<span class="text-primary font-bold">Tamper Evident</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Modal for Badge Embed Code (Client-Side JS driven) -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-surface-container-lowest/80 p-space-md backdrop-blur-md" id="embedModal">
+<div class="relative w-full max-w-xl rounded-xl bg-surface-container-low p-space-lg shadow-2xl">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">integration_instructions</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Embed Verified Credential</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors" onclick="toggleEmbedModal(false)">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+        Add this tamper-proof verification dynamic badge directly to your engineering portfolio, GitHub README, or company profile.
+      </p>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-badge text-label-badge uppercase text-outline">HTML Embed Snippet</label>
+<div class="relative">
+<textarea class="w-full h-24 rounded-lg bg-surface-container-lowest p-space-sm font-code-sm text-code-sm text-primary resize-none focus:outline-none selection:bg-primary/20" id="embedSnippet" readonly="">&lt;a href="https://netmentor.ai/verify/nm_cert_9b8f2c817e9903b6" target="_blank"&gt;&lt;img src="https://img.shields.io/badge/NetMentor_Verified-Alexandre_Mercer_CCNA-4edea3?style=for-the-badge&amp;logo=cisco" alt="Verified NetMentor Credential"/&gt;&lt;/a&gt;</textarea>
+<button class="absolute top-2 right-2 rounded-lg bg-surface-container-high px-2 py-1 font-code-sm text-code-sm text-on-surface hover:text-primary transition-colors" onclick="copySnippet()">
+            Copy
+          </button>
+</div>
+</div>
+<div class="mt-space-lg flex justify-end gap-space-sm">
+<button class="rounded-xl bg-surface-container px-space-md py-2 font-title-md text-title-md text-on-surface hover:bg-surface-variant transition-colors" onclick="toggleEmbedModal(false)">
+          Dismiss
+        </button>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interactions Script -->
+<script>
+    function setAuditState(isValid) {
+      const validView = document.getElementById('validStateView');
+      const invalidBanner = document.getElementById('invalidStateBanner');
+      const btnValid = document.getElementById('btnValidMode');
+      const btnInvalid = document.getElementById('btnInvalidMode');
+      const hashDisplay = document.getElementById('currentHashDisplay');
+
+      if (isValid) {
+        validView.classList.remove('hidden');
+        invalidBanner.classList.add('hidden');
+        invalidBanner.classList.remove('flex');
+        
+        btnValid.className = "flex items-center gap-1.5 rounded-lg px-2.5 py-1 font-label-badge text-label-badge uppercase transition-all bg-primary text-on-primary-container font-bold shadow-sm";
+        btnInvalid.className = "flex items-center gap-1.5 rounded-lg px-2.5 py-1 font-label-badge text-label-badge uppercase transition-all text-on-surface-variant hover:text-on-surface";
+        
+        hashDisplay.textContent = 'nm_cert_9b8f2c817e9903b6';
+        hashDisplay.classList.remove('text-error');
+        hashDisplay.classList.add('text-on-surface');
+      } else {
+        validView.classList.add('hidden');
+        invalidBanner.classList.remove('hidden');
+        invalidBanner.classList.add('flex');
+        
+        btnInvalid.className = "flex items-center gap-1.5 rounded-lg px-2.5 py-1 font-label-badge text-label-badge uppercase transition-all bg-error text-on-error font-bold shadow-sm";
+        btnValid.className = "flex items-center gap-1.5 rounded-lg px-2.5 py-1 font-label-badge text-label-badge uppercase transition-all text-on-surface-variant hover:text-on-surface";
+        
+        hashDisplay.textContent = 'nm_invalid_0000x';
+        hashDisplay.classList.remove('text-on-surface');
+        hashDisplay.classList.add('text-error');
+      }
+    }
+
+    function copyCurrentHash() {
+      const hashText = document.getElementById('currentHashDisplay').textContent;
+      navigator.clipboard.writeText(hashText).then(() => {
+        const copyBtn = document.getElementById('copyHashBtn');
+        copyBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary">done</span>';
+        setTimeout(() => {
+          copyBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">content_copy</span>';
+        }, 1800);
+      });
+    }
+
+    function toggleEmbedModal(show) {
+      const modal = document.getElementById('embedModal');
+      if (show) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function copySnippet() {
+      const snippet = document.getElementById('embedSnippet');
+      snippet.select();
+      navigator.clipboard.writeText(snippet.value);
+    }
+
+    function shareLinkedIn() {
+      const url = encodeURIComponent(window.location.href);
+      const title = encodeURIComponent("Alexandre Mercer - Cisco CCNA & Socratic Diagnostics Verified Credential");
+      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`, '_blank', 'width=600,height=600');
+    }
+
+    function triggerDownloadFeedback() {
+      alert("Preparing cryptographically watermarked PDF for Alexandre Mercer (NM-CCNA-2024-9B8F2C)...");
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 pt-space-xl pb-space-lg"><div class="w-full px-space-lg lg:px-margin grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-lg"><div class="col-span-2 md:col-span-3 lg:col-span-2 flex flex-col gap-space-md pr-space-md"><div class="flex items-center gap-space-sm"><img alt="NetMentor AI Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3Qqj316WsxePaFE-077_od--l8SvgFXndjdbChEQW2AY-1Blm6qwa6UqJVOSDg-kTGyllOp061YIN8_ABK0cQ-0Vqeq-ZlcWXsmgBTp5aEflXtFO5EjziwWqugLUQ20GXgaBj6NNCkRYmhjdZaaveZwpXc_fSrrs0d0qX-adxx--LutEc_QZIP_mIgmma0TSph4h6esf4fybCFcIElH77cqDoV7-znxJmoK0nt3JfZH2MLGWV8Kd-Y60"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor AI</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">High-fidelity network simulation and accelerated certification platform for Cisco, CompTIA, and Cloud DevOps engineering professionals.</p><div class="flex items-center gap-space-sm font-code-sm text-code-sm text-primary"><span class="w-2 h-2 rounded-full bg-primary"></span><span>All Nodes Functional | 99.98% SLA</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Curriculum</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="cisco-ccna-200-301" href="#">Cisco CCNA 200-301</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="network-plus-n10-008" href="#">CompTIA Network+</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="comptia-a-core" href="#">CompTIA A+ Core Labs</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="linux-and-cloud-sysadmin" href="#">Linux Automation CLI</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Interactive Sandbox</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="sandbox-topology" href="#">Topology Simulator</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terminal-emulator" href="#">CLI Terminal Emulator</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="packet-inspector" href="#">Packet Inspector</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="subnet-calculator" href="#">Subnetting Engine</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Enterprise Solutions</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="business" href="#">Team Workspaces</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="custom-curriculum" href="#">Custom Lab Authoring</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="sso-security" href="#">SSO &amp; Compliance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="pricing" href="#">Tier Matrix</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Verification &amp; Ops</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="verify-certificate" href="#">Verify Certificate</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="cli-documentation" href="#">CLI Command Reference</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="system-status" href="#">Real-Time Status</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="changelog" href="#">Release Notes</a></div></div><div class="w-full px-space-lg lg:px-margin mt-space-xl pt-space-md border-t border-outline-variant/10 flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div>© 2025 NetMentor AI Platforms Inc. Built for Systems &amp; Network Engineers.</div><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" data-path="security" href="#">Security Operations</a></div></div></footer></body></html>

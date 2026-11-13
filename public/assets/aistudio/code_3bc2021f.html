@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {tertiary: "#ffffff", "on-error-container": "#ffdad6", "surface-container": "#480100", "on-primary": "#323030", "inverse-surface": "#ffdad4", "surface-container-high": "#5c0100", "surface-container-lowest": "#270000", "on-primary-fixed-variant": "#494646", secondary: "#ccc5c5", "on-tertiary": "#33302e", "surface-tint": "#cac5c5", "on-primary-container": "#676364", "secondary-container": "#4a4646", "inverse-primary": "#615e5e", "on-secondary-fixed-variant": "#4a4646", "on-tertiary-fixed-variant": "#4a4644", "on-secondary-container": "#bab4b3", outline: "#8e9192", error: "#ffb4ab", surface: "#310000", "on-secondary": "#333030", "on-tertiary-container": "#686361", "surface-container-highest": "#700200", "surface-container-low": "#410100", "surface-dim": "#310000", "inverse-on-surface": "#680200", "on-tertiary-fixed": "#1e1b19", "on-secondary-fixed": "#1e1b1b", "tertiary-fixed-dim": "#ccc5c2", "surface-bright": "#790200", "on-background": "#ffdad4", "secondary-fixed": "#e8e1e0", background: "#310000", "error-container": "#93000a", "outline-variant": "#444748", "on-surface-variant": "#c4c7c8", "primary-fixed": "#e7e1e1", "on-surface": "#ffdad4", "tertiary-container": "#e9e1de", "surface-variant": "#700200", primary: "#ffffff", "secondary-fixed-dim": "#ccc5c5", "on-primary-fixed": "#1d1b1b", "primary-fixed-dim": "#cac5c5", "on-error": "#690005", "primary-container": "#e7e1e1", "tertiary-fixed": "#e9e1de"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-xl": "2.5rem", "space-md": "1rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", gutter: "1.5rem", "space-lg": "1.5rem", margin: "2rem", "margin-lg": "4rem", "margin-sm": "1rem"}, fontFamily: {"body-lg": ["Inter"], "code-sm": ["JetBrains Mono"], "body-sm": ["Inter"], "title-md": ["Inter"], "body-md": ["Inter"], "display-hero-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="px-space-md py-space-md bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[22px]">memory</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor<span class="text-primary">.AI</span></span><span class="font-code-sm text-code-sm text-on-surface-variant text-[10px] uppercase tracking-wider">LAB-OPS NODE // 02</span></div></div><span class="font-label-badge text-label-badge px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-secondary border border-secondary/20">NOC</span></div><div class="px-space-md py-space-xs"><div class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-widest my-space-xs">Operations Modules</div></div><nav class="flex flex-col px-space-sm gap-space-xs" data-active-classes="bg-surface-container text-primary font-title-md"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="operations-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-body-sm text-body-sm">Operations Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment-inventory" href="#"><span class="material-symbols-outlined text-[18px]">dns</span><span class="font-body-sm text-body-sm">Equipment Inventory</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg transition-colors bg-surface-container text-primary font-title-md" data-path="maintenance-and-repair-logs" href="#"><span class="material-symbols-outlined text-[18px]">build</span><span class="font-body-sm text-body-sm">Maintenance Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="fault-triage-and-diagnostics" href="#"><span class="material-symbols-outlined text-[18px]">warning</span><span class="font-body-sm text-body-sm">Fault Diagnostics</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="consumables-and-spares" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-sm text-body-sm">Consumables &amp; Spares</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="facility-and-racks" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span class="font-body-sm text-body-sm">Facility &amp; Racks</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings-and-calibration" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-body-sm text-body-sm">Settings &amp; Calibration</span></a></nav></div><div class="p-space-sm m-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-sm shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="flex items-center justify-between"><span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Physical Telemetry</span><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span></div><div class="flex flex-col gap-space-xs"><div class="flex justify-between items-center"><span class="font-body-sm text-body-sm text-on-surface-variant">Active Bays:</span><span class="font-code-sm text-code-sm text-on-surface font-semibold">12 Racks (A-D)</span></div><div class="flex flex-col gap-0.5"><div class="flex justify-between items-center"><span class="font-body-sm text-body-sm text-on-surface-variant">Smart PDU:</span><span class="font-code-sm text-code-sm text-tertiary font-semibold">4.8 / 7.2 kW</span></div><div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-tertiary rounded-full" style="width: 66%"></div></div></div><div class="flex justify-between items-center pt-space-xs"><span class="font-code-sm text-code-sm text-on-surface-variant text-[11px]">NODE-02</span><span class="font-code-sm text-code-sm text-primary text-[11px] font-semibold">ONLINE // 21.4°C</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">terminal</span><span>facility_ops</span><span class="text-outline">/</span><span class="text-primary font-semibold">hardware_matrix</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-0.5 rounded-lg bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-badge text-label-badge text-on-surface uppercase">HVAC &amp; PDU Normal</span></div><div class="hidden 2xl:flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="text-outline">|</span><span>Shift A:</span><span class="text-on-surface font-medium">Marcus Vance</span><span class="font-label-badge text-label-badge text-tertiary bg-surface-container px-1 rounded-DEFAULT">CCT / A+</span></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-body-sm text-body-sm" type="button"><span class="material-symbols-outlined text-[16px] text-tertiary">qr_code_scanner</span><span class="hidden sm:inline">Scan QR Asset</span></button><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-body-sm hover:bg-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">add_alert</span><span class="hidden sm:inline">Log Fault</span></button><div class="relative flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high cursor-pointer"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface px-gutter"><div class="flex flex-col w-full pb-margin-lg">
+<!-- Dynamic Ambient Glow Backdrop (contained) -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-10 right-10 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Top Action & View Controller Ribbon -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-space-md pb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-code-sm text-code-sm uppercase tracking-wider mb-1">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>FACILITY_NODE_02 // SUBSYSTEM_MAINTENANCE</span>
+<span>•</span>
+<span class="text-primary font-semibold">LEDGER SYNCHRONIZED</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">Hardware Maintenance &amp; Repair Logs</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Audit trail of chassis teardowns, hot-swaps, calibration passes, and bench operations.</p>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-body-sm text-body-sm shadow-sm group" id="btn-export-ledger">
+<span class="material-symbols-outlined text-[18px] text-secondary group-hover:rotate-12 transition-transform">download</span>
+<span>Download Expense Ledger</span>
+</button>
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1.5 rounded-DEFAULT bg-surface-container-highest text-on-surface font-code-sm text-code-sm">MTD (Oct)</button>
+<button class="px-3 py-1.5 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm transition-colors">Q3</button>
+<button class="px-3 py-1.5 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm transition-colors">YTD</button>
+<button class="p-1.5 rounded-DEFAULT text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+</button>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-title-md text-body-sm shadow-[0_0_20px_rgba(78,222,163,0.3)] hover:bg-primary-fixed hover:shadow-[0_0_28px_rgba(78,222,163,0.5)] transition-all" id="btn-create-ticket">
+<span class="material-symbols-outlined text-[20px] font-bold">add</span>
+<span>+ Create Maintenance Ticket</span>
+</button>
+</div>
+</div>
+<!-- KPI Metric Blocks Bar (Bento-style with internal glow) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter mb-space-xl">
+<!-- Metric 1: Total Repairs -->
+<div class="relative bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between overflow-hidden shadow-md group hover:bg-surface-container transition-colors">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full blur-xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Repairs Completed (MTD)</span>
+<span class="p-1.5 rounded-DEFAULT bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface tracking-tight">34</span>
+<span class="font-code-sm text-code-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span> 4 In-Flight
+          </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm pt-space-xs">
+<span>Bench Throughput</span>
+<span class="text-primary font-medium">+14.2% vs Sep</span>
+</div>
+</div>
+<!-- Metric 2: Total Repair & Parts Cost -->
+<div class="relative bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between overflow-hidden shadow-md group hover:bg-surface-container transition-colors">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-secondary/5 rounded-full blur-xl group-hover:bg-secondary/10 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Parts &amp; Labor Cost</span>
+<span class="p-1.5 rounded-DEFAULT bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface tracking-tight">$3,840.50</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">/ $6,000</span>
+</div>
+<!-- Micro progress conduit -->
+<div class="flex flex-col gap-1 pt-space-xs">
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full shadow-[0_0_8px_rgba(137,206,255,0.6)]" style="width: 64.01%"></div>
+</div>
+<div class="flex justify-between font-code-sm text-code-sm text-on-surface-variant text-[11px]">
+<span>64.0% CAPEX Drawn</span>
+<span class="text-secondary">$2,159.50 Remaining</span>
+</div>
+</div>
+</div>
+<!-- Metric 3: Downtime -->
+<div class="relative bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between overflow-hidden shadow-md group hover:bg-surface-container transition-colors">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full blur-xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Avg Downtime / Asset</span>
+<span class="p-1.5 rounded-DEFAULT bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface tracking-tight">1.4 <span class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">hrs</span></span>
+<span class="font-code-sm text-code-sm text-primary flex items-center">
+<span class="material-symbols-outlined text-[16px]">trending_down</span> -28m SLA
+          </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm pt-space-xs">
+<span>Target Threshold: &lt; 2.5 hrs</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high text-primary uppercase">99.8% AVAIL</span>
+</div>
+</div>
+<!-- Metric 4: Preventative vs Reactive -->
+<div class="relative bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between overflow-hidden shadow-md group hover:bg-surface-container transition-colors">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-tertiary/5 rounded-full blur-xl group-hover:bg-tertiary/10 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Service Ratio Profile</span>
+<span class="p-1.5 rounded-DEFAULT bg-surface-container text-tertiary">
+<span class="material-symbols-outlined text-[18px]">donut_large</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface tracking-tight">78%</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">PREVENTATIVE</span>
+</div>
+<div class="flex flex-col gap-1 pt-space-xs">
+<div class="flex w-full h-1.5 rounded-full overflow-hidden bg-surface-container-highest">
+<div class="h-full bg-primary" style="width: 78%" title="78% Preventative"></div>
+<div class="h-full bg-tertiary" style="width: 22%" title="22% Reactive Faults"></div>
+</div>
+<div class="flex justify-between font-code-sm text-code-sm text-on-surface-variant text-[11px]">
+<span>PM: 27 Events</span>
+<span class="text-tertiary">Reactive: 7 Events</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Hardware Bench Photo Teaser / Operational Status -->
+<div class="relative w-full rounded-xl bg-surface-container-low overflow-hidden mb-space-xl p-space-md flex flex-col lg:flex-row items-center justify-between gap-space-md shadow-md">
+<div class="flex items-center gap-space-md z-10">
+<div class="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up photographic macro shot of a certified network engineer in ESD anti-static wrist strap soldering and replacing internal capacitors on a dual power supply bay inside a Cisco Catalyst rack switch, glowing emerald LEDs and diagnostics probe tools nearby." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIxaxxlMICI6l67lAmN2U2rlHEeGr9kzG6p_aH2iBToeNQgUKS4uuxZ6q-CCG0pS_f5E24G5vBj9lLcb4NQvYt7hbXtWBomxPA4zAEKFml26_GjFNvD8Vj5J0uXrnT4vWwJkfcmEnfhQbP1MLeytOEY-Wyuy3ot9ivz9kRiv3jOm3ba_RWOeWdWlR_S0CkgLJK9N979BqJ5xI2BksmKCmLb_-tF00Rmc7ORfypNuwMD3MqsjG6o8gp"/>
+<div class="absolute inset-0 bg-surface/30 mix-blend-multiply"></div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded-DEFAULT bg-primary-container text-on-primary-container uppercase font-bold tracking-wider">ACTIVE BENCH RUN</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">BENCH-07 // OSCILLOSCOPE ACTIVE</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface mt-1">Bench-07 Thermal Stabilization Chamber Loaded</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Technicians Marcus Vance and Sarah Jenkins are actively clearing Rack Bay C thermal alerts before scheduled 18:00 student practicals.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm z-10 flex-shrink-0">
+<div class="flex flex-col text-right">
+<span class="font-code-sm text-code-sm text-on-surface-variant">Bench Telemetry</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">21.8°C Ambient | 42% RH</span>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-body-sm text-body-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">videocam</span>
+<span>Bench Cam</span>
+</button>
+</div>
+<div class="absolute -right-16 top-0 bottom-0 w-80 bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
+</div>
+<!-- Main Content Workspace: Chronological Timeline (Left 7 Cols) + Cost & ERP Widgets (Right 5 Cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- LEFT COLUMN: Chronological Timeline (7 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Timeline Section Header & Filter Toolbar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">history_toggle_off</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Chronological Engineering Ledger</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-code-sm text-on-surface-variant hidden sm:inline">Filter by:</span>
+<button class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-high text-primary font-code-sm text-code-sm font-medium">All (4)</button>
+<button class="px-2.5 py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm transition-colors">PSU/Power</button>
+<button class="px-2.5 py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm transition-colors">Storage</button>
+<button class="px-2.5 py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm transition-colors">Calibration</button>
+</div>
+</div>
+<!-- Timeline Conduit Container -->
+<div class="relative pl-6 sm:pl-8 flex flex-col gap-space-xl">
+<!-- Continuous Vertical Cyber Line Conduit -->
+<div class="absolute left-2.5 sm:left-3.5 top-3 bottom-6 w-0.5 bg-surface-container-highest"></div>
+<!-- ================= DATE GROUP: TODAY ================= -->
+<div class="relative flex flex-col gap-space-md">
+<!-- Date Marker Tag -->
+<div class="flex items-center gap-space-sm -ml-6 sm:-ml-8 mb-space-xs">
+<span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center ring-4 ring-surface shadow-[0_0_12px_rgba(78,222,163,0.5)] z-10">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+</span>
+<span class="font-code-sm text-code-sm text-primary font-bold uppercase tracking-wider bg-surface-container-high px-2 py-0.5 rounded-DEFAULT">Today // 24 OCT 2024</span>
+<span class="h-px flex-1 bg-surface-container-high"></span>
+</div>
+<!-- CARD 1: Cisco Catalyst 3850 PSU-2 -->
+<article class="relative bg-surface-container-low rounded-xl p-space-lg shadow-md hover:shadow-xl transition-all duration-300 group">
+<!-- Node connector pin -->
+<div class="absolute -left-[27px] sm:-left-[35px] top-6 w-3 h-3 rounded-full bg-primary ring-4 ring-surface group-hover:scale-125 transition-transform shadow-[0_0_8px_#4edea3]"></div>
+<div class="flex flex-col gap-space-sm">
+<!-- Card Header with Status & Metadata -->
+<div class="flex flex-wrap items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">14:15 EST</span>
+<span class="text-outline">•</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">badge</span>
+                        Marcus Vance (CCT / A+)
+                      </span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-secondary">TIK-8902</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1 group-hover:text-primary transition-colors">
+                      Cisco Catalyst 3850 PSU-2 Hot-Swap Replacement &amp; Fan RPM Calibration
+                    </h2>
+</div>
+<!-- Status Pill -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-code-sm text-code-sm font-semibold shadow-[0_0_12px_rgba(78,222,163,0.15)]">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Closed &amp; Verified</span>
+</div>
+</div>
+<!-- Asset Breadcrumb & Location -->
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg text-on-surface-variant font-code-sm text-code-sm">
+<span class="text-tertiary">ASSET:</span>
+<span class="text-on-surface font-semibold">AST-08102</span>
+<span class="text-outline">|</span>
+<span>LOCATION:</span>
+<span class="text-on-surface">Bench-07 (Staging Rack Alpha)</span>
+<span class="text-outline">|</span>
+<span>IP/MGMT:</span>
+<span class="text-on-surface font-mono">10.240.12.85</span>
+</div>
+<!-- Technical Root Cause Accordion / Box -->
+<div class="bg-surface-container-high/60 rounded-lg p-space-sm flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-error font-code-sm text-code-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">error_outline</span>
+<span>Telemetry Root Cause Incident</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                    Ball-bearing seizure on exhaust fan 2 inside modular power module. Secondary thermal trip triggered at <span class="font-code-sm text-code-sm text-tertiary font-semibold">68°C</span> with repeated syslog telemetry traps (<span class="font-code-sm text-code-sm text-secondary">PLATFORM_ENV-3-FAN_FAIL</span>).
+                  </p>
+</div>
+<!-- Parts Used & Financial Subtotal -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Bill of Materials (BOM)</span>
+<div class="flex items-center justify-between mt-1">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface font-semibold font-mono">PWR-C1-350WAC</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">1x Cisco 350W AC Hot-Plug PSU</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">$210.00</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Labor &amp; Total Capex</span>
+<div class="flex items-center justify-between mt-1">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Labor: 0.8 hrs @ $80/hr</span>
+<span class="font-code-sm text-code-sm text-primary text-[12px] font-semibold">Verification passed</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[11px] font-mono">LABOR: $64.00</span>
+<span class="font-code-lg text-code-lg text-primary font-bold font-mono">$274.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Verification Telemetry Banner -->
+<div class="flex items-center justify-between bg-primary/5 px-space-sm py-2 rounded-lg text-on-surface font-code-sm text-code-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">speed</span>
+<span>Passed 30m Burn-in stress test; Temp stabilized at <strong class="text-primary font-semibold">41.2°C</strong> (Fan RPM: 4,200 nominal).</span>
+</div>
+<button class="text-secondary hover:text-on-surface text-[12px] flex items-center gap-1 transition-colors">
+<span>Logs</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 2: Supermicro Lab Server NVMe Array -->
+<article class="relative bg-surface-container-low rounded-xl p-space-lg shadow-md hover:shadow-xl transition-all duration-300 group">
+<!-- Node connector pin (amber in-progress) -->
+<div class="absolute -left-[27px] sm:-left-[35px] top-6 w-3 h-3 rounded-full bg-tertiary ring-4 ring-surface group-hover:scale-125 transition-transform shadow-[0_0_8px_#ffb95f]"></div>
+<div class="flex flex-col gap-space-sm">
+<!-- Header -->
+<div class="flex flex-wrap items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">11:30 EST</span>
+<span class="text-outline">•</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">badge</span>
+                        Sarah Jenkins (DC Systems Eng)
+                      </span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-tertiary">TIK-8898</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1 group-hover:text-tertiary transition-colors">
+                      Supermicro Lab Server NVMe Array Rebuild &amp; Thermal Paste Re-application
+                    </h2>
+</div>
+<!-- Status Pill -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary/10 text-tertiary font-code-sm text-code-sm font-semibold shadow-[0_0_12px_rgba(255,185,95,0.2)]">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span>Rebuild 84% Complete</span>
+</div>
+</div>
+<!-- Asset Breadcrumb -->
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg text-on-surface-variant font-code-sm text-code-sm">
+<span class="text-tertiary">ASSET:</span>
+<span class="text-on-surface font-semibold">AST-04921</span>
+<span class="text-outline">|</span>
+<span>LOCATION:</span>
+<span class="text-on-surface">Bay C, Rack 04 (Host-02 Proxmox VE)</span>
+<span class="text-outline">|</span>
+<span>ZFS POOL:</span>
+<span class="text-on-surface font-mono">tank-nvme0 [DEGRADED-&gt;RESILVERING]</span>
+</div>
+<!-- Root cause -->
+<div class="bg-surface-container-high/60 rounded-lg p-space-sm flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-tertiary font-code-sm text-code-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Root Cause Analysis</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                    U.2 Drive slot 03 kicked from RAIDZ-2 pool following sustained high I/O latency timeouts (&gt;2400ms). Disassembly revealed degraded factory thermal paste on Broadcom PCIe switch controller running hot at 84°C under synthetic loads.
+                  </p>
+</div>
+<!-- Parts and Resilvering Live Widget -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Parts &amp; Consumables</span>
+<div class="flex flex-col gap-1 mt-1 font-code-sm text-code-sm">
+<div class="flex justify-between text-on-surface">
+<span class="font-mono">Samsung PM9A3 1.92TB U.2</span>
+<span class="font-semibold">$330.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Arctic Silver 5 Compound (4g)</span>
+<span>$15.00</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Labor &amp; Subtotal</span>
+<div class="flex items-center justify-between mt-1">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Labor: 1.5 hrs @ $80/hr</span>
+<span class="font-code-sm text-code-sm text-tertiary text-[12px]">Resilver ETA: ~22 mins</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[11px] font-mono">LABOR: $120.00</span>
+<span class="font-code-lg text-code-lg text-tertiary font-bold font-mono">$465.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Resilver Progress Bar -->
+<div class="flex flex-col gap-1.5 bg-surface-container px-space-sm py-2 rounded-lg">
+<div class="flex justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary animate-spin">sync</span>
+                      Resilver Progress: 1.61TB / 1.92TB
+                    </span>
+<span class="text-tertiary font-bold font-mono">84% [124 MB/s]</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full transition-all duration-500 shadow-[0_0_8px_rgba(255,185,95,0.6)]" style="width: 84%"></div>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- ================= DATE GROUP: YESTERDAY ================= -->
+<div class="relative flex flex-col gap-space-md mt-space-sm">
+<!-- Date Marker Tag -->
+<div class="flex items-center gap-space-sm -ml-6 sm:-ml-8 mb-space-xs">
+<span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-secondary/20 text-secondary flex items-center justify-center ring-4 ring-surface shadow-[0_0_12px_rgba(137,206,255,0.4)] z-10">
+<span class="material-symbols-outlined text-[16px]">history</span>
+</span>
+<span class="font-code-sm text-code-sm text-secondary font-bold uppercase tracking-wider bg-surface-container-high px-2 py-0.5 rounded-DEFAULT">Yesterday // 23 OCT 2024</span>
+<span class="h-px flex-1 bg-surface-container-high"></span>
+</div>
+<!-- CARD 3: Patch Panel Cat6 Punch-Down -->
+<article class="relative bg-surface-container-low rounded-xl p-space-lg shadow-md hover:shadow-xl transition-all duration-300 group">
+<!-- Node connector pin -->
+<div class="absolute -left-[27px] sm:-left-[35px] top-6 w-3 h-3 rounded-full bg-primary ring-4 ring-surface group-hover:scale-125 transition-transform shadow-[0_0_8px_#4edea3]"></div>
+<div class="flex flex-col gap-space-sm">
+<!-- Header -->
+<div class="flex flex-wrap items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">16:45 EST</span>
+<span class="text-outline">•</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">badge</span>
+                        Marcus Vance (CCT / A+)
+                      </span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-secondary">TIK-8874</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1 group-hover:text-primary transition-colors">
+                      Patch Panel Cat6 Punch-Down Re-termination (Ports 17-24)
+                    </h2>
+</div>
+<!-- Status Pill -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-code-sm text-code-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Closed &amp; Fluke Certified</span>
+</div>
+</div>
+<!-- Asset Breadcrumb -->
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg text-on-surface-variant font-code-sm text-code-sm">
+<span class="text-tertiary">ASSET:</span>
+<span class="text-on-surface font-semibold">PP-BAY-B</span>
+<span class="text-outline">|</span>
+<span>LOCATION:</span>
+<span class="text-on-surface">Bay B Distribution Panel (24-Port 1U)</span>
+<span class="text-outline">|</span>
+<span>STANDARDS:</span>
+<span class="text-on-surface">TIA-568-C.2 Cat6 Channel</span>
+</div>
+<!-- Root cause -->
+<div class="bg-surface-container-high/60 rounded-lg p-space-sm flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-surface font-code-sm text-code-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px] text-primary">analytics</span>
+<span>Lab Intermittent Fault Analysis</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                    Intermittent near-end crosstalk (NEXT) and CRC frame drops reported during student CCNA lab switch topology labs. Traced to untwisted pairs exceeding 0.5 inches on punch-down blocks 19 and 20. Re-punched with 110-impact tool.
+                  </p>
+</div>
+<!-- Expense & Certification -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Consumables</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold font-mono">Keystone Jacks &amp; Ties: $18.50</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Labor Incurred</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold font-mono">0.5 hrs ($0.00 Internal)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">Fluke DSX Pass (Headroom: +6.8 dB)</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- ================= DATE GROUP: LAST WEEK ================= -->
+<div class="relative flex flex-col gap-space-md mt-space-sm">
+<!-- Date Marker Tag -->
+<div class="flex items-center gap-space-sm -ml-6 sm:-ml-8 mb-space-xs">
+<span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-secondary-container/20 text-secondary-container flex items-center justify-center ring-4 ring-surface z-10">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-bold uppercase tracking-wider bg-surface-container-high px-2 py-0.5 rounded-DEFAULT">Scheduled Service // 18 OCT 2024</span>
+<span class="h-px flex-1 bg-surface-container-high"></span>
+</div>
+<!-- CARD 4: Fluke DSX-8000 Calibration -->
+<article class="relative bg-surface-container-low rounded-xl p-space-lg shadow-md hover:shadow-xl transition-all duration-300 group">
+<!-- Node connector pin (cyan out-for-calibration) -->
+<div class="absolute -left-[27px] sm:-left-[35px] top-6 w-3 h-3 rounded-full bg-secondary ring-4 ring-surface group-hover:scale-125 transition-transform shadow-[0_0_8px_#89ceff]"></div>
+<div class="flex flex-col gap-space-sm">
+<!-- Header -->
+<div class="flex flex-wrap items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">09:00 EST</span>
+<span class="text-outline">•</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">domain</span>
+                        Fluke Networks Certified Lab
+                      </span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-secondary">RMA-44910</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1 group-hover:text-secondary transition-colors">
+                      Fluke DSX-8000 Annual Factory Calibration &amp; Lithium-Ion Pack Replacement
+                    </h2>
+</div>
+<!-- Status Pill -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-code-sm text-code-sm font-semibold shadow-[0_0_12px_rgba(137,206,255,0.2)]">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Scheduled Out-for-Calibration</span>
+</div>
+</div>
+<!-- Asset Details -->
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg text-on-surface-variant font-code-sm text-code-sm">
+<span class="text-tertiary">INSTRUMENT:</span>
+<span class="text-on-surface font-semibold">CAL-FLUKE-01</span>
+<span class="text-outline">|</span>
+<span>SN:</span>
+<span class="text-on-surface font-mono">FK800-482019-B</span>
+<span class="text-outline">|</span>
+<span>EST. RETURN:</span>
+<span class="text-primary font-semibold font-mono">29 OCT 2024 (Via FedEx Priority)</span>
+</div>
+<!-- Cost Summary Banner -->
+<div class="flex items-center justify-between bg-surface-container-high rounded-lg p-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">military_tech</span>
+<span class="font-body-sm text-body-sm text-on-surface">ISO/IEC 17025 Compliant Calibration Certificate + OEM 6800mAh Battery</span>
+</div>
+<span class="font-code-lg text-code-lg text-secondary font-bold font-mono">$850.00</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Cost Tracking, Expense Breakdown & ERP Connector (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Widget 1: Monthly Maintenance Budget & Capex Gauge -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">payments</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Maintenance Capex</h3>
+</div>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-primary uppercase">OCT FY24</span>
+</div>
+<!-- Circular Metric Donut SVG & Central Readout -->
+<div class="flex items-center justify-center py-space-sm relative">
+<svg class="w-48 h-48 transform -rotate-90" viewbox="0 0 120 120">
+<!-- Background ring -->
+<circle class="text-surface-container-highest stroke-current" cx="60" cy="60" fill="transparent" r="50" stroke-width="10"></circle>
+<!-- Budget consumption ring: 64% of 314.16 circumference = 201 -->
+<circle class="text-secondary stroke-current" cx="60" cy="60" fill="transparent" r="50" stroke-dasharray="314.16" stroke-dashoffset="113" stroke-linecap="round" stroke-width="10" style="transition: stroke-dashoffset 1s ease-in-out;"></circle>
+<!-- Secondary mini segment for pending POs -->
+<circle class="text-tertiary stroke-current" cx="60" cy="60" fill="transparent" r="50" stroke-dasharray="314.16" stroke-dashoffset="290" stroke-linecap="round" stroke-width="10"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-code-sm text-code-sm text-on-surface-variant font-mono">DRAWN MTD</span>
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface font-mono tracking-tight">$3,840</span>
+<span class="font-label-badge text-label-badge text-secondary font-mono">64% OF $6,000</span>
+</div>
+</div>
+<!-- Progress Bar & Remainder Metrics -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-sm rounded-lg">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Allocated Ceiling</span>
+<span class="text-on-surface font-semibold font-mono">$6,000.00</span>
+</div>
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Committed &amp; Invoiced</span>
+<span class="text-secondary font-semibold font-mono">$3,840.50</span>
+</div>
+<div class="flex justify-between items-center font-code-sm text-code-sm pt-1">
+<span class="text-primary font-medium">Headroom Available</span>
+<span class="text-primary font-bold font-mono">$2,159.50</span>
+</div>
+</div>
+</div>
+<!-- Widget 2: Category Cost Breakdown -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Category Distribution</h3>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">pie_chart</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Category 1: OEM Power Supplies (42%) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="text-on-surface font-medium flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-DEFAULT bg-primary"></span>
+                  OEM Power Supplies &amp; PDUs
+                </span>
+<span class="font-code-sm text-code-sm text-on-surface font-mono font-semibold">42% <span class="text-on-surface-variant">($1,613.00)</span></span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 42%"></div>
+</div>
+</div>
+<!-- Category 2: Storage & Memory (28%) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="text-on-surface font-medium flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-DEFAULT bg-secondary"></span>
+                  Storage &amp; Server Memory
+                </span>
+<span class="font-code-sm text-code-sm text-on-surface font-mono font-semibold">28% <span class="text-on-surface-variant">($1,075.34)</span></span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 28%"></div>
+</div>
+</div>
+<!-- Category 3: Tools & Calibration (18%) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="text-on-surface font-medium flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-DEFAULT bg-tertiary"></span>
+                  Lab Instrumentation Calibration
+                </span>
+<span class="font-code-sm text-code-sm text-on-surface font-mono font-semibold">18% <span class="text-on-surface-variant">($691.30)</span></span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 18%"></div>
+</div>
+</div>
+<!-- Category 4: Passive Cabling (12%) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="text-on-surface font-medium flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-DEFAULT bg-outline"></span>
+                  Passive Cabling &amp; Patch Panels
+                </span>
+<span class="font-code-sm text-code-sm text-on-surface font-mono font-semibold">12% <span class="text-on-surface-variant">($460.86)</span></span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 12%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Widget 3: ERP One-Click Synchronization Engine -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col gap-space-md border-l-2 border-primary">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">sync_alt</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">ERP Integration</h3>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono uppercase">SAP B1 • QBO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Automatic GL posting for lab hardware depreciation and consumed spares inventory. Last automated reconcile ran at <span class="text-on-surface font-mono">06:00 UTC</span>.
+          </p>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-2 font-code-sm text-code-sm">
+<div class="flex justify-between text-on-surface">
+<span>Pending Journal Vouchers:</span>
+<span class="font-bold text-tertiary">3 Unsynced</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Target Ledger:</span>
+<span class="text-on-surface">#6120-02 (Hardware Ops)</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-space-xs py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-title-md text-body-sm transition-all shadow-sm group" id="btn-erp-sync">
+<span class="material-symbols-outlined text-[18px] group-hover:rotate-180 transition-transform">cloud_sync</span>
+<span>Sync to SAP / QuickBooks</span>
+</button>
+</div>
+<!-- Technician On-Duty Shift Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold">
+              MV
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Lead Tech: Marcus Vance</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[11px]">Badge: #OP-8821 • Shift 08:00 - 17:00</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_8px_#4edea3]"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Modal: Create Maintenance Ticket (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-surface/80 backdrop-blur-md flex items-center justify-center p-space-md hidden" id="create-ticket-modal">
+<div class="bg-surface-container-low rounded-xl p-space-lg w-full max-w-2xl shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">construction</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Create Maintenance Ticket</h2>
+</div>
+<button class="p-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" id="close-ticket-modal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-space-sm" id="new-ticket-form" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-code-sm text-code-sm text-on-surface-variant">Asset Identifier (AST-*)</label>
+<input class="bg-surface-container px-space-sm py-2 rounded-DEFAULT text-on-surface font-code-sm text-code-sm outline-none focus:ring-1 focus:ring-primary" placeholder="e.g. AST-08102 or PP-BAY-C" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-code-sm text-code-sm text-on-surface-variant">Maintenance Category</label>
+<select class="bg-surface-container px-space-sm py-2 rounded-DEFAULT text-on-surface font-code-sm text-code-sm outline-none focus:ring-1 focus:ring-primary">
+<option>Power Supply / Hot-Swap (PSU)</option>
+<option>Storage Array / NVMe Resilver</option>
+<option>Layer 1 Cabling &amp; Patch Panel</option>
+<option>Annual Calibration &amp; Meter Pass</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-code-sm text-code-sm text-on-surface-variant">Action / Defect Description</label>
+<input class="bg-surface-container px-space-sm py-2 rounded-DEFAULT text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary" placeholder="Summary of failure, symptoms, or preventive schedule" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-code-sm text-code-sm text-on-surface-variant">Technical Diagnostics &amp; Telemetry Logs</label>
+<textarea class="bg-surface-container px-space-sm py-2 rounded-DEFAULT text-on-surface font-code-sm text-code-sm outline-none focus:ring-1 focus:ring-primary" placeholder="Syslog snippets, burn-in verification data, or thermal readings" rows="3"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-code-sm text-code-sm text-on-surface-variant">Est. Parts Cost ($)</label>
+<input class="bg-surface-container px-space-sm py-2 rounded-DEFAULT text-on-surface font-code-sm text-code-sm outline-none" placeholder="210.00" step="0.01" type="number"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-code-sm text-code-sm text-on-surface-variant">Labor Hours</label>
+<input class="bg-surface-container px-space-sm py-2 rounded-DEFAULT text-on-surface font-code-sm text-code-sm outline-none" placeholder="1.0" step="0.1" type="number"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-code-sm text-code-sm text-on-surface-variant">Assigned Tech</label>
+<input class="bg-surface-container px-space-sm py-2 rounded-DEFAULT text-on-surface font-code-sm text-code-sm outline-none" type="text" value="Marcus Vance"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm mt-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-body-sm text-body-sm" id="cancel-ticket-modal" type="button">
+            Cancel
+          </button>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-title-md text-body-sm hover:bg-primary-fixed shadow-[0_0_16px_rgba(78,222,163,0.3)] transition-all" id="submit-ticket-btn" type="submit">
+            Commit to Ledger
+          </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+  (function initMaintenanceLogs() {
+    // Ticket Modal Trigger
+    const btnCreate = document.getElementById('btn-create-ticket');
+    const modal = document.getElementById('create-ticket-modal');
+    const btnClose = document.getElementById('close-ticket-modal');
+    const btnCancel = document.getElementById('cancel-ticket-modal');
+    const form = document.getElementById('new-ticket-form');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+    }
+
+    if (btnCreate && modal) {
+      btnCreate.addEventListener('click', openModal);
+    }
+    if (btnClose) btnClose.addEventListener('click', closeModal);
+    if (btnCancel) btnCancel.addEventListener('click', closeModal);
+
+    if (form) {
+      form.addEventListener('submit', function() {
+        const btn = document.getElementById('submit-ticket-btn');
+        btn.innerText = 'Synchronizing...';
+        btn.disabled = true;
+        setTimeout(() => {
+          btn.innerText = 'Committed!';
+          setTimeout(() => {
+            closeModal();
+            btn.innerText = 'Commit to Ledger';
+            btn.disabled = false;
+          }, 600);
+        }, 800);
+      });
+    }
+
+    // ERP Sync Micro-Interaction
+    const btnSync = document.getElementById('btn-erp-sync');
+    if (btnSync) {
+      btnSync.addEventListener('click', function() {
+        const originalHtml = btnSync.innerHTML;
+        btnSync.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span><span>Transmitting Journal Entries...</span>';
+        btnSync.disabled = true;
+        setTimeout(() => {
+          btnSync.innerHTML = '<span class="material-symbols-outlined text-[18px] text-primary">done_all</span><span>SAP B1 / QuickBooks Synced!</span>';
+          setTimeout(() => {
+            btnSync.innerHTML = originalHtml;
+            btnSync.disabled = false;
+          }, 2400);
+        }, 1200);
+      });
+    }
+
+    // Export Ledger toast micro-interaction
+    const btnExport = document.getElementById('btn-export-ledger');
+    if (btnExport) {
+      btnExport.addEventListener('click', function() {
+        const originalText = btnExport.innerHTML;
+        btnExport.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-bounce text-secondary">file_download</span><span>Generating CSV &amp; PDF Ledger...</span>';
+        setTimeout(() => {
+          btnExport.innerHTML = originalText;
+        }, 1500);
+      });
+    }
+  })();
+</script></main></div></body></html>

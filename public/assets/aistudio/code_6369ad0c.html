@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-error": "#690005", "on-error-container": "#ffdad6", "on-background": "#ffdad4", error: "#ffb4ab", "on-tertiary-fixed-variant": "#4a4644", "surface-tint": "#cac5c5", "on-primary-fixed-variant": "#494646", "secondary-fixed": "#e8e1e0", "inverse-primary": "#615e5e", "on-tertiary": "#33302e", "surface-bright": "#790200", "tertiary-container": "#e9e1de", "inverse-on-surface": "#680200", "on-primary-container": "#676364", "primary-fixed": "#e7e1e1", "on-secondary": "#333030", "tertiary-fixed": "#e9e1de", "on-secondary-fixed-variant": "#4a4646", "error-container": "#93000a", primary: "#ffffff", "surface-container-high": "#5c0100", "on-tertiary-container": "#686361", "surface-dim": "#310000", "on-secondary-fixed": "#1e1b1b", "secondary-container": "#4a4646", "surface-container-low": "#410100", "tertiary-fixed-dim": "#ccc5c2", "primary-container": "#e7e1e1", "surface-container-highest": "#700200", background: "#310000", "surface-container-lowest": "#270000", "on-surface-variant": "#c4c7c8", "on-tertiary-fixed": "#1e1b19", "on-primary-fixed": "#1d1b1b", "primary-fixed-dim": "#cac5c5", "secondary-fixed-dim": "#ccc5c5", "inverse-surface": "#ffdad4", "outline-variant": "#444748", surface: "#310000", "on-secondary-container": "#bab4b3", "surface-container": "#480100", "on-surface": "#ffdad4", "on-primary": "#323030", secondary: "#ccc5c5", "surface-variant": "#700200", outline: "#8e9192", tertiary: "#ffffff"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-lg": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-sm": "1rem", margin: "2rem", "gutter-sm": "1rem", gutter: "1.5rem", "space-xl": "2.5rem", "margin-lg": "4rem"}, fontFamily: {"code-sm": ["JetBrains Mono"], "headline-lg-mobile": ["Plus Jakarta Sans"], "title-md": ["Inter"], "label-badge": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Inter"], "code-lg": ["JetBrains Mono"], "body-sm": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "display-hero-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}]}}}}</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low/95 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-[0_0_16px_rgba(16,185,129,0.2)]"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor</span><span class="font-code-sm text-code-sm text-primary font-bold">AI</span></div><span class="font-code-sm text-[10px] uppercase tracking-widest text-on-surface-variant/70">Obsidian Engine</span></div></div><button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span></button></div><div class="px-space-md py-space-xs"><div class="h-px w-full bg-surface-container-high"></div></div><nav class="flex flex-col gap-space-xs px-space-sm py-space-sm" data-active-classes="bg-surface-container-high text-primary font-title-md border-l-2 border-primary shadow-[inset_0_0_12px_rgba(16,185,129,0.08)]"><a aria-current="page" class="group flex items-center justify-between px-space-sm py-2 rounded-lg transition-all bg-surface-container-high text-primary font-title-md border-l-2 border-primary shadow-[inset_0_0_12px_rgba(16,185,129,0.08)]" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-colors group-hover:text-primary">dashboard</span><span class="font-title-md text-body-sm">Dashboard</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-courses" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-colors group-hover:text-primary">school</span><span class="font-title-md text-body-sm">My Courses</span></div><span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary border border-secondary/20">4 Active</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="labs" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-colors group-hover:text-primary">memory</span><span class="font-title-md text-body-sm">Practice Labs</span></div><span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-primary-container/20 text-primary border border-primary/30">WASM</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-tutor" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-colors group-hover:text-tertiary">auto_awesome</span><span class="font-title-md text-body-sm">AI Tutor</span></div><span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-tertiary-container/20 text-tertiary border border-tertiary/30">24/7 Socratic</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="certificates" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-colors group-hover:text-secondary">verified_user</span><span class="font-title-md text-body-sm">Certificates</span></div><span class="material-symbols-outlined text-[16px] text-secondary">verified</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-colors group-hover:text-primary">settings</span><span class="font-title-md text-body-sm">Settings</span></div></a></nav></div><div class="p-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-lowest/80 border border-outline-variant/30 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-code-sm text-[11px] text-on-surface-variant">POD-US-EAST</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="font-code-sm text-[10px] text-primary">ONLINE</span></div></div><div class="font-code-sm text-[11px] text-on-surface-variant/80 flex items-center justify-between"><span>Active Labs</span><span class="font-code-sm text-[11px] text-on-surface font-semibold">14.8k</span></div><div class="font-code-sm text-[11px] text-on-surface-variant/80 flex items-center justify-between"><span>Infrastructure SLA</span><span class="font-code-sm text-[11px] text-primary font-semibold">99.98%</span></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-low/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-2 text-on-surface-variant font-code-sm text-code-sm"><span class="material-symbols-outlined text-[18px]">terminal</span><span>learner-portal</span><span class="text-outline">/</span><span class="text-primary font-semibold">active-session</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container-high/70 border border-tertiary/20 text-on-surface"><span class="material-symbols-outlined text-tertiary text-[18px]">local_fire_department</span><span class="font-code-sm text-code-sm font-semibold text-tertiary">18</span><span class="font-body-sm text-body-sm text-on-surface-variant">Day Streak</span><div class="w-px h-3.5 bg-outline-variant/50 mx-1"></div><span class="font-code-sm text-[11px] text-primary font-bold">+450 XP</span></div><div class="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container-high/70 border border-secondary/20"><span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(137,206,255,0.6)]"></span><span class="font-code-sm text-code-sm text-secondary-fixed">WASM Kernel: Ready</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error text-on-error font-code-sm text-[10px] font-bold flex items-center justify-center ring-2 ring-surface-container-low shadow-[0_0_8px_rgba(255,180,171,0.5)]">3</span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm cursor-pointer group"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden sm:flex flex-col text-left"><span class="font-title-md text-[13px] text-on-surface leading-tight group-hover:text-primary transition-colors">Alexandre Mercer</span><span class="font-code-sm text-[10px] text-secondary">CCNA Candidate</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px] group-hover:text-on-surface transition-colors">expand_more</span></div></div></header><main class="relative pt-16 bg-surface flex-1 w-full px-space-md py-space-md"><div class="flex flex-col w-full gap-space-lg">
+<!-- Cryptographic Header & Verification Strip -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-xl">
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/3 -bottom-20 w-80 h-80 rounded-full bg-secondary/5 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-primary tracking-widest uppercase">ENGINEERING TELEMETRY</span>
+<span class="text-outline-variant font-code-sm text-code-sm">/</span>
+<span class="font-code-sm text-code-sm text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            SHA-256: 9b8f...4e10 [LIVE ATTESTATION]
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Learning Analytics &amp; Engineering Competency Progress
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Continuous verification of hands-on CLI execution, packet troubleshooting telemetry, and certification milestones backed by deterministic WASM environment state proofs.
+        </p>
+</div>
+<!-- Action Panel -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-title-md text-body-sm shadow-[0_0_20px_rgba(78,222,163,0.3)] hover:bg-primary-fixed hover:shadow-[0_0_28px_rgba(78,222,163,0.5)] transition-all" id="downloadTranscriptBtn">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Download Signed Transcript (PDF)</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-high text-secondary hover:bg-surface-container-highest transition-all" id="shareProfileBtn">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span class="font-title-md text-body-sm">Share Verified Profile</span>
+</button>
+</div>
+</div>
+<!-- Security & Cadence Metadata Ribbon -->
+<div class="mt-space-lg pt-space-md border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant font-code-sm text-code-sm">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">fingerprint</span>
+<span class="text-on-surface">Candidate ID:</span>
+<span class="text-primary font-semibold">AM-9842-CCNA</span>
+</div>
+<span class="hidden md:inline text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[16px]">alarm_on</span>
+<span class="text-on-surface">Last Sync:</span>
+<span>2 mins ago (Node US-EAST-4)</span>
+</div>
+<span class="hidden md:inline text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+<span class="text-on-surface">Transcript State:</span>
+<span class="text-secondary font-semibold">Digitally Signed &amp; Immutable</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-highest text-on-surface">WASM SANDBOX v4.18</span>
+</div>
+</div>
+</section>
+<!-- 365-Day Activity Heatmap Grid -->
+<section class="rounded-xl bg-surface-container-low p-space-lg shadow-lg flex flex-col gap-space-md relative">
+<!-- Top Row: Metrics and Filter Selector -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-sm border-b border-outline-variant/20">
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md w-full lg:w-auto">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface-variant uppercase">Labs Completed</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary font-bold">184</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">this year</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface-variant uppercase">Current Streak</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-tertiary font-bold flex items-center">
+              18<span class="text-base text-tertiary ml-0.5">d</span>
+</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">local_fire_department</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface-variant uppercase">Longest Streak</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">34</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">days (Q2)</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface-variant uppercase">Terminal Time</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-secondary font-bold">142.5</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">hrs</span>
+</div>
+</div>
+</div>
+<!-- Filter Controls -->
+<div class="flex items-center gap-space-xs self-start lg:self-center">
+<span class="font-code-sm text-code-sm text-on-surface-variant mr-1">Filter:</span>
+<div class="inline-flex rounded-lg bg-surface-container-highest p-1 text-on-surface-variant">
+<button class="heatmap-filter px-3 py-1 rounded text-body-sm font-title-md bg-surface-container-high text-primary shadow-sm transition-all" data-filter="all">All Activity</button>
+<button class="heatmap-filter px-3 py-1 rounded text-body-sm font-title-md hover:text-on-surface transition-all" data-filter="ccna">Cisco CCNA</button>
+<button class="heatmap-filter px-3 py-1 rounded text-body-sm font-title-md hover:text-on-surface transition-all" data-filter="netplus">CompTIA Network+</button>
+</div>
+</div>
+</div>
+<!-- Matrix Calendar Grid Container (52 weeks x 7 days) -->
+<div class="w-full overflow-x-auto pb-2">
+<div class="min-w-[840px] flex flex-col gap-1.5">
+<!-- Month Headers (Jan - Dec) -->
+<div class="flex pl-8 text-on-surface-variant font-code-sm text-[11px] justify-between pr-2">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+<span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+</div>
+<div class="flex gap-2">
+<!-- Day of Week Labels -->
+<div class="flex flex-col justify-between py-1 text-on-surface-variant font-code-sm text-[10px] w-6 shrink-0 text-right">
+<span>Mon</span>
+<span>Wed</span>
+<span>Fri</span>
+</div>
+<!-- Heatmap Canvas Blocks -->
+<div class="grid grid-flow-col grid-rows-7 gap-1 flex-1" id="heatmapGrid">
+<!-- 52 columns x 7 rows will be generated via inline script with precise intensities -->
+</div>
+</div>
+<!-- Legend and Explanatory Tooltip Target -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="font-code-sm text-code-sm text-primary flex items-center gap-2" id="activeCellTelemetry">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span class="text-on-surface-variant">Hover over any day node to inspect authenticated lab telemetry.</span>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-[11px] text-on-surface-variant">
+<span>Less</span>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-sm bg-surface-container-high"></span>
+<span class="w-3 h-3 rounded-sm bg-primary/25"></span>
+<span class="w-3 h-3 rounded-sm bg-primary/55"></span>
+<span class="w-3 h-3 rounded-sm bg-primary/85"></span>
+<span class="w-3 h-3 rounded-sm bg-primary shadow-[0_0_8px_rgba(78,222,163,0.6)]"></span>
+</div>
+<span>More labs</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Deep-Dive Split: Skills Radar + Certification Objective Progress Bars -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT 6 COLUMNS: Enlarged 6-Axis Radar / Spider Chart -->
+<div class="lg:col-span-6 rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">radar</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Competency Skills Radar</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Multi-axis CLI syntax evaluation, topology convergence latency, and fault-injection response metrics.
+          </p>
+</div>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-primary/10 text-primary uppercase">v200-301</span>
+</div>
+<!-- Radar SVG Graphic -->
+<div class="relative w-full flex items-center justify-center py-space-sm">
+<svg class="w-full max-w-[440px] h-auto drop-shadow-md select-none overflow-visible" viewbox="0 0 500 460">
+<defs>
+<radialgradient cx="50%" cy="50%" id="radarGlow" r="50%">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0.0"></stop>
+</radialgradient>
+<filter height="140%" id="neonBlur" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- Concentric Hexagon Grid Levels (20%, 40%, 60%, 80%, 100%) -->
+<!-- Center: 250, 230; Max Radius: 155 -->
+<!-- 20% -->
+<polygon fill="none" points="250,199 277,214 277,246 250,261 223,246 223,214" stroke="#23293c" stroke-dasharray="2 3" stroke-width="1"></polygon>
+<!-- 40% -->
+<polygon fill="none" points="250,168 304,199 304,261 250,292 196,261 196,199" stroke="#23293c" stroke-width="1"></polygon>
+<!-- 60% -->
+<polygon fill="none" points="250,137 331,183 331,277 250,323 169,277 169,183" stroke="#2e3447" stroke-dasharray="3 3" stroke-width="1"></polygon>
+<!-- 80% -->
+<polygon fill="none" points="250,106 357,168 357,292 250,354 143,292 143,168" stroke="#2e3447" stroke-width="1"></polygon>
+<!-- 100% Perimeter -->
+<polygon fill="#151b2d" fill-opacity="0.4" points="250,75 384,152 384,308 250,385 116,308 116,152" stroke="#3c4a42" stroke-width="1.5"></polygon>
+<!-- Axis Spokes -->
+<line stroke="#3c4a42" stroke-width="1" x1="250" x2="250" y1="230" y2="75"></line>
+<line stroke="#3c4a42" stroke-width="1" x1="250" x2="384" y1="230" y2="152"></line>
+<line stroke="#3c4a42" stroke-width="1" x1="250" x2="384" y1="230" y2="308"></line>
+<line stroke="#3c4a42" stroke-width="1" x1="250" x2="250" y1="230" y2="385"></line>
+<line stroke="#3c4a42" stroke-width="1" x1="250" x2="116" y1="230" y2="308"></line>
+<line stroke="#3c4a42" stroke-width="1" x1="250" x2="116" y1="230" y2="152"></line>
+<!-- Benchmark Layer: Cisco Passing Standard (75-80% uniform benchmark) -->
+<!-- Values: Router 78%, Subnet 80%, HW 75%, OS 75%, Wireshark 75%, Security 80% -->
+<polygon fill="none" opacity="0.8" points="250,109 354,170 350,289 250,346 150,289 143,168" stroke="#89ceff" stroke-dasharray="4 4" stroke-width="1.75"></polygon>
+<!-- Alexandre Mercer Performance Polygon:
+               Axis 1 (Top - Router Config): 92% -> R = 142.6 -> (250, 87.4)
+               Axis 2 (Top-Right - IP Subnetting): 88% -> R = 136.4 -> (250 + 136.4*cos(-30°), 230 + 136.4*sin(-30°)) = (368.1, 161.8)
+               Axis 3 (Bottom-Right - Hardware Diag): 76% -> R = 117.8 -> (250 + 117.8*cos(30°), 230 + 117.8*sin(30°)) = (352.0, 288.9)
+               Axis 4 (Bottom - OS Recovery): 71% -> R = 110.05 -> (250, 340.1)
+               Axis 5 (Bottom-Left - Wireshark): 84% -> R = 130.2 -> (250 - 130.2*cos(30°), 230 + 130.2*sin(30°)) = (137.2, 295.1)
+               Axis 6 (Top-Left - Security & ACLs): 79% -> R = 122.45 -> (250 - 122.45*cos(-30°), 230 - 122.45*sin(30°)) = (144.0, 168.8)
+          -->
+<polygon fill="url(#radarGlow)" filter="url(#neonBlur)" points="250,87.4 368.1,161.8 352.0,288.9 250,340.1 137.2,295.1 144.0,168.8" stroke="#4edea3" stroke-width="2.5"></polygon>
+<!-- Vertices Marker Dots -->
+<circle class="animate-pulse" cx="250" cy="87.4" fill="#4edea3" r="4.5"></circle>
+<circle cx="368.1" cy="161.8" fill="#4edea3" r="4.5"></circle>
+<circle cx="352.0" cy="288.9" fill="#4edea3" r="4.5"></circle>
+<circle cx="250" cy="340.1" fill="#4edea3" r="4.5"></circle>
+<circle cx="137.2" cy="295.1" fill="#4edea3" r="4.5"></circle>
+<circle cx="144.0" cy="168.8" fill="#4edea3" r="4.5"></circle>
+<!-- Vertex Axis Labels & Percentages -->
+<!-- Top: Router Config -->
+<text fill="#dce1fb" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" text-anchor="middle" x="250" y="55">Router Config</text>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="middle" x="250" y="70">92%</text>
+<!-- Top-Right: IP Subnetting -->
+<text fill="#dce1fb" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" text-anchor="start" x="395" y="142">IP Subnetting</text>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="start" x="395" y="157">88%</text>
+<!-- Bottom-Right: Hardware Diagnostics -->
+<text fill="#dce1fb" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" text-anchor="start" x="395" y="318">Hardware Diag</text>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="start" x="395" y="333">76%</text>
+<!-- Bottom: OS Recovery -->
+<text fill="#dce1fb" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" text-anchor="middle" x="250" y="415">OS Recovery</text>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="middle" x="250" y="430">71%</text>
+<!-- Bottom-Left: Wireshark Packet Inspection -->
+<text fill="#dce1fb" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" text-anchor="end" x="105" y="318">Wireshark PCAP</text>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="end" x="105" y="333">84%</text>
+<!-- Top-Left: Security & ACLs -->
+<text fill="#dce1fb" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" text-anchor="end" x="105" y="142">Network Security</text>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="end" x="105" y="157">79%</text>
+</svg>
+</div>
+<!-- Radar Chart Key / Legend -->
+<div class="mt-space-sm pt-space-xs border-t border-outline-variant/20 flex flex-wrap items-center justify-center gap-space-lg font-code-sm text-code-sm">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-sm bg-primary/30 border border-primary"></span>
+<span class="text-on-surface font-medium">Alexandre Mercer (Actual)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-5 h-0.5 border-t-2 border-dashed border-secondary"></span>
+<span class="text-secondary font-medium">Cisco CCNA Passing Target (75%)</span>
+</div>
+</div>
+</div>
+<!-- RIGHT 6 COLUMNS: Cisco CCNA 200-301 Certification Blueprint Breakdown -->
+<div class="lg:col-span-6 rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col justify-between">
+<div class="flex items-start justify-between gap-space-sm pb-space-sm border-b border-outline-variant/20">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">workspace_premium</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Cisco CCNA 200-301 Blueprint</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Weighted syllabus domain completion based on 48 proctored challenge pods</span>
+</div>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-secondary-container/20 text-secondary border border-secondary/30">
+          OVERALL: 81.4%
+        </span>
+</div>
+<!-- Progress Bars Track Stack -->
+<div class="flex flex-col gap-4 my-auto py-space-sm">
+<!-- 1.0 Network Fundamentals -->
+<div class="flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">1.0 Network Fundamentals</span>
+<span class="text-[11px] text-on-surface-variant/70 font-mono">(20% Weight)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-[10px] px-1.5 py-0.5 rounded bg-primary/20 text-primary">Mastered</span>
+<span class="font-bold text-primary">95%</span>
+</div>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-highest overflow-hidden relative">
+<div class="h-full bg-primary rounded transition-all duration-700 shadow-[0_0_12px_rgba(78,222,163,0.7)]" style="width: 95%;"></div>
+</div>
+</div>
+<!-- 2.0 Network Access -->
+<div class="flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">2.0 Network Access</span>
+<span class="text-[11px] text-on-surface-variant/70 font-mono">(20% Weight)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-[10px] px-1.5 py-0.5 rounded bg-primary/20 text-primary">Mastered</span>
+<span class="font-bold text-primary">82%</span>
+</div>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-highest overflow-hidden relative">
+<div class="h-full bg-primary rounded transition-all duration-700 shadow-[0_0_12px_rgba(78,222,163,0.7)]" style="width: 82%;"></div>
+</div>
+</div>
+<!-- 3.0 IP Connectivity -->
+<div class="flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">3.0 IP Connectivity</span>
+<span class="text-[11px] text-on-surface-variant/70 font-mono">(25% Weight)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-[10px] px-1.5 py-0.5 rounded bg-primary/20 text-primary">Mastered</span>
+<span class="font-bold text-primary">88%</span>
+</div>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-highest overflow-hidden relative">
+<div class="h-full bg-primary rounded transition-all duration-700 shadow-[0_0_12px_rgba(78,222,163,0.7)]" style="width: 88%;"></div>
+</div>
+</div>
+<!-- 4.0 IP Services -->
+<div class="flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">4.0 IP Services</span>
+<span class="text-[11px] text-on-surface-variant/70 font-mono">(10% Weight)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-[10px] px-1.5 py-0.5 rounded bg-secondary/20 text-secondary">Target Met</span>
+<span class="font-bold text-secondary">74%</span>
+</div>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-highest overflow-hidden relative">
+<div class="h-full bg-secondary rounded transition-all duration-700 shadow-[0_0_12px_rgba(137,206,255,0.7)]" style="width: 74%;"></div>
+</div>
+</div>
+<!-- 5.0 Security Fundamentals -->
+<div class="flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">5.0 Security Fundamentals</span>
+<span class="text-[11px] text-on-surface-variant/70 font-mono">(15% Weight)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-[10px] px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary">In Progress</span>
+<span class="font-bold text-tertiary">65%</span>
+</div>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-highest overflow-hidden relative">
+<div class="h-full bg-tertiary rounded transition-all duration-700" style="width: 65%;"></div>
+</div>
+</div>
+<!-- 6.0 Automation & Programmability -->
+<div class="flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">6.0 Automation &amp; Programmability</span>
+<span class="text-[11px] text-on-surface-variant/70 font-mono">(10% Weight)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">In Progress</span>
+<span class="font-bold text-on-surface-variant">40%</span>
+</div>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-highest overflow-hidden relative">
+<div class="h-full bg-outline rounded transition-all duration-700" style="width: 40%;"></div>
+</div>
+</div>
+</div>
+<!-- Socratic AI Recommendation Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest border-l-2 border-tertiary flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">psychology</span>
+<div class="flex flex-col gap-0.5 font-code-sm text-[12px]">
+<span class="font-bold text-tertiary uppercase">[AI_RECOMMENDATION_ENGINE]</span>
+<p class="text-on-surface-variant leading-relaxed">
+            Prioritize <span class="text-on-surface font-semibold">Section 5.4 Access Control Lists (ACLs)</span> and RESTCONF JSON payload inspection to push overall certification clearance probability to <span class="text-primary font-bold">96.8%</span>.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Verified Lab Milestones Audit Trail -->
+<section class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">history_edu</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Recent Verified Lab Milestones</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cryptographic execution log proofs submitted from isolated WASM hypervisors</p>
+</div>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Ledger Verified</span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="font-code-sm text-[11px] text-on-surface-variant uppercase border-b border-outline-variant/30">
+<th class="py-3 px-4 font-semibold">Timestamp (UTC)</th>
+<th class="py-3 px-4 font-semibold">Lab Session Module</th>
+<th class="py-3 px-4 font-semibold">Execution Score</th>
+<th class="py-3 px-4 font-semibold">Socratic AI Hints</th>
+<th class="py-3 px-4 font-semibold">Log Checksum</th>
+<th class="py-3 px-4 text-right font-semibold">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 font-code-sm text-[13px]">
+<!-- Lab Item 1 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="py-3.5 px-4 text-on-surface-variant whitespace-nowrap">
+              2025-02-24 <span class="text-on-surface">19:42:10</span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">router</span>
+<span class="font-title-md text-body-sm text-on-surface font-semibold">OSPF Multi-Area Routing &amp; LSDB Convergence</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary/10 text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100%</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-medium text-[11px]">
+                0 hints • Pure Recall
+              </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-on-surface-variant font-mono text-[11px]">
+<span class="text-secondary">e82a...91d0</span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<button class="replay-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-highest text-secondary hover:bg-secondary hover:text-on-secondary transition-all text-body-sm font-title-md" data-lab="OSPF Multi-Area Convergence">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>Replay CLI</span>
+</button>
+</td>
+</tr>
+<!-- Lab Item 2 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="py-3.5 px-4 text-on-surface-variant whitespace-nowrap">
+              2025-02-23 <span class="text-on-surface">14:15:32</span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">hub</span>
+<span class="font-title-md text-body-sm text-on-surface font-semibold">Extended Named IPv4 ACLs on Border Gateway</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary/10 text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>94%</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-medium text-[11px]">
+                1 hint used
+              </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-on-surface-variant font-mono text-[11px]">
+<span class="text-secondary">4cf9...1102</span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<button class="replay-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-highest text-secondary hover:bg-secondary hover:text-on-secondary transition-all text-body-sm font-title-md" data-lab="Extended Named IPv4 ACLs">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>Replay CLI</span>
+</button>
+</td>
+</tr>
+<!-- Lab Item 3 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="py-3.5 px-4 text-on-surface-variant whitespace-nowrap">
+              2025-02-22 <span class="text-on-surface">11:04:45</span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">network_check</span>
+<span class="font-title-md text-body-sm text-on-surface font-semibold">Wireshark TCP 3-Way Handshake &amp; SYN-Flood Attack Diag</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary/10 text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>98%</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-medium text-[11px]">
+                0 hints • Pure Recall
+              </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-on-surface-variant font-mono text-[11px]">
+<span class="text-secondary">7aa3...c4e9</span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<button class="replay-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-highest text-secondary hover:bg-secondary hover:text-on-secondary transition-all text-body-sm font-title-md" data-lab="Wireshark TCP SYN Diag">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>Replay CLI</span>
+</button>
+</td>
+</tr>
+<!-- Lab Item 4 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="py-3.5 px-4 text-on-surface-variant whitespace-nowrap">
+              2025-02-20 <span class="text-on-surface">18:55:12</span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">dns</span>
+<span class="font-title-md text-body-sm text-on-surface font-semibold">VLAN Trunking Protocol (VTP) &amp; Rapid-PVST+ Loops</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary/10 text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>91%</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-medium text-[11px]">
+                2 hints used
+              </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-on-surface-variant font-mono text-[11px]">
+<span class="text-secondary">b091...f57c</span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<button class="replay-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-highest text-secondary hover:bg-secondary hover:text-on-secondary transition-all text-body-sm font-title-md" data-lab="VTP and Rapid-PVST">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>Replay CLI</span>
+</button>
+</td>
+</tr>
+<!-- Lab Item 5 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="py-3.5 px-4 text-on-surface-variant whitespace-nowrap">
+              2025-02-18 <span class="text-on-surface">21:10:04</span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">settings_ethernet</span>
+<span class="font-title-md text-body-sm text-on-surface font-semibold">Static NAT and Dynamic Port Address Translation (PAT)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary/10 text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100%</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-medium text-[11px]">
+                0 hints • Pure Recall
+              </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-on-surface-variant font-mono text-[11px]">
+<span class="text-secondary">1d6c...890a</span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<button class="replay-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-highest text-secondary hover:bg-secondary hover:text-on-secondary transition-all text-body-sm font-title-md" data-lab="NAT and Port Address Translation">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>Replay CLI</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Live Terminal Playback Modal Overlay (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-surface-dim/80 backdrop-blur-md hidden items-center justify-center p-4" id="cliModal">
+<div class="w-full max-w-3xl rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-2xl overflow-hidden flex flex-col">
+<!-- Terminal Titlebar -->
+<div class="h-10 bg-surface-container-low px-4 flex items-center justify-between border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-code-sm text-code-sm text-on-surface ml-2" id="cliModalTitle">session-replay.cast</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="closeModalBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Terminal Body -->
+<div class="p-4 bg-background font-code-sm text-[13px] text-on-surface overflow-y-auto max-h-96 space-y-2">
+<p class="text-on-surface-variant font-mono">[WASM_KERNEL_HYPERVISOR_READY] Initializing session state v2.4...</p>
+<p class="text-primary">alexandre@edge-router-01# configure terminal</p>
+<p class="text-on-surface">Enter configuration commands, one per line. End with CNTL/Z.</p>
+<p class="text-primary">alexandre@edge-router-01(config)# router ospf 1</p>
+<p class="text-primary">alexandre@edge-router-01(config-router)# network 10.0.12.0 0.0.0.3 area 0</p>
+<p class="text-primary">alexandre@edge-router-01(config-router)# network 192.168.10.0 0.0.0.255 area 1</p>
+<p class="text-secondary">%OSPF-5-ADJCHANGE: Process 1, Nbr 10.0.12.2 on GigabitEthernet0/0/0 from LOADING to FULL, Loading Done</p>
+<p class="text-tertiary">[AI_OBSIDIAN_ATTESTATION]: SPF calculations completed in 1.4ms. Optimal LSDB verified.</p>
+<p class="text-primary font-bold">[VERIFICATION_SUCCESSFUL] Execution Score: 100%.</p>
+</div>
+<div class="h-12 bg-surface-container-low px-4 flex items-center justify-between text-on-surface-variant font-code-sm text-[12px] border-t border-outline-variant/20">
+<span>Speed: 1.0x (Deterministic replay)</span>
+<span class="text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Log Authenticated by NetMentor Node
+          </span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    // Generate deterministic 52-week x 7-day GitHub-style heatmap data
+    const heatmapGrid = document.getElementById('heatmapGrid');
+    const activeCellTelemetry = document.getElementById('activeCellTelemetry');
+
+    // Frequency distribution pattern resembling active learner
+    const sampleWeeks = 52;
+    const daysPerWeek = 7;
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+    const intensityClasses = [
+      'bg-surface-container-high', // 0 labs
+      'bg-primary/25',             // 1-2 labs
+      'bg-primary/55',             // 3-5 labs
+      'bg-primary/85',             // 6+ labs
+      'bg-primary'                 // heavy burst day
+    ];
+
+    let gridHtml = '';
+    
+    // Seeded pseudo generator for reliable distribution
+    for (let w = 0; w < sampleWeeks; w++) {
+      for (let d = 0; d < daysPerWeek; d++) {
+        // Pseudo algorithm: higher activity on mid-week, streaks in autumn/winter
+        const seed = (w * 7 + d * 13) % 100;
+        let intensity = 0;
+        let labCount = 0;
+        let hours = 0;
+
+        if (w > 38 && w < 48) {
+          // Autumn intense sprint
+          intensity = seed > 20 ? (seed > 65 ? 4 : 3) : 1;
+        } else if (seed > 75) {
+          intensity = 3;
+        } else if (seed > 45) {
+          intensity = 2;
+        } else if (seed > 25) {
+          intensity = 1;
+        } else {
+          intensity = 0;
+        }
+
+        if (intensity === 0) {
+          labCount = 0;
+          hours = 0;
+        } else if (intensity === 1) {
+          labCount = (seed % 2) + 1;
+          hours = (labCount * 0.4).toFixed(1);
+        } else if (intensity === 2) {
+          labCount = (seed % 3) + 3;
+          hours = (labCount * 0.6).toFixed(1);
+        } else if (intensity >= 3) {
+          labCount = (seed % 4) + 6;
+          hours = (labCount * 0.75).toFixed(1);
+        }
+
+        const dateMonth = months[Math.floor((w / sampleWeeks) * 12)];
+        const dayNumber = ((w * 7 + d) % 28) + 1;
+        const colorClass = intensityClasses[intensity];
+        const shadowClass = intensity >= 3 ? 'hover:shadow-[0_0_8px_rgba(78,222,163,0.8)]' : '';
+
+        gridHtml += `
+          <div 
+            class="w-3.5 h-3.5 rounded-sm ${colorClass} cursor-pointer transition-transform hover:scale-125 z-10 ${shadowClass}"
+            data-date="${dateMonth} ${dayNumber}"
+            data-labs="${labCount}"
+            data-hours="${hours}"
+            data-intensity="${intensity}"
+          ></div>
+        `;
+      }
+    }
+
+    if (heatmapGrid) {
+      heatmapGrid.innerHTML = gridHtml;
+
+      // Event delegation for cell hover
+      heatmapGrid.addEventListener('mouseover', (e) => {
+        const target = e.target.closest('[data-date]');
+        if (!target) return;
+        const date = target.getAttribute('data-date');
+        const labs = target.getAttribute('data-labs');
+        const hours = target.getAttribute('data-hours');
+
+        if (parseInt(labs) === 0) {
+          activeCellTelemetry.innerHTML = `
+            <span class="material-symbols-outlined text-[16px] text-on-surface-variant">event_busy</span>
+            <span class="text-on-surface font-semibold">${date}:</span> 
+            <span class="text-on-surface-variant">Rest day or asynchronous reading session (0 CLI labs)</span>
+          `;
+        } else {
+          activeCellTelemetry.innerHTML = `
+            <span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+            <span class="text-on-surface font-bold">${date}:</span> 
+            <span class="text-primary font-semibold">${labs} CLI Labs Verified</span> • 
+            <span class="text-secondary">${hours} hrs WASM Pod Runtime</span> • 
+            <span class="text-tertiary">Cryptographically Signed</span>
+          `;
+        }
+      });
+    }
+
+    // Filter Buttons Interactivity
+    const filterButtons = document.querySelectorAll('.heatmap-filter');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-surface-container-high', 'text-primary', 'shadow-sm');
+          b.classList.add('hover:text-on-surface');
+        });
+        btn.classList.add('bg-surface-container-high', 'text-primary', 'shadow-sm');
+        btn.classList.remove('hover:text-on-surface');
+      });
+    });
+
+    // Transcript Button Feedback
+    const transcriptBtn = document.getElementById('downloadTranscriptBtn');
+    if (transcriptBtn) {
+      transcriptBtn.addEventListener('click', () => {
+        const origText = transcriptBtn.innerHTML;
+        transcriptBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] animate-spin">sync</span>
+          <span>Signing SHA-256 PDF...</span>
+        `;
+        setTimeout(() => {
+          transcriptBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[18px]">done_all</span>
+            <span>Downloaded (Verified)</span>
+          `;
+          setTimeout(() => {
+            transcriptBtn.innerHTML = origText;
+          }, 2500);
+        }, 900);
+      });
+    }
+
+    // Share Profile Feedback
+    const shareBtn = document.getElementById('shareProfileBtn');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', () => {
+        const origText = shareBtn.innerHTML;
+        shareBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] text-primary">link</span>
+          <span class="text-primary">Copied Signed URL!</span>
+        `;
+        setTimeout(() => {
+          shareBtn.innerHTML = origText;
+        }, 2000);
+      });
+    }
+
+    // Terminal Playback Modal
+    const cliModal = document.getElementById('cliModal');
+    const cliModalTitle = document.getElementById('cliModalTitle');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const replayButtons = document.querySelectorAll('.replay-btn');
+
+    replayButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const labTitle = btn.getAttribute('data-lab');
+        if (cliModalTitle) {
+          cliModalTitle.textContent = `${labTitle.toLowerCase().replace(/\\s+/g, '-')}-replay.rec`;
+        }
+        if (cliModal) {
+          cliModal.classList.remove('hidden');
+          cliModal.classList.add('flex');
+        }
+      });
+    });
+
+    if (closeModalBtn && cliModal) {
+      closeModalBtn.addEventListener('click', () => {
+        cliModal.classList.add('hidden');
+        cliModal.classList.remove('flex');
+      });
+
+      cliModal.addEventListener('click', (e) => {
+        if (e.target === cliModal) {
+          cliModal.classList.add('hidden');
+          cliModal.classList.remove('flex');
+        }
+      });
+    }
+  })();
+</script></main></div></body></html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-primary-fixed": "#1d1b1b", primary: "#ffffff", "inverse-on-surface": "#680200", "surface-container-lowest": "#270000", "on-surface": "#ffdad4", "on-primary-fixed-variant": "#494646", "on-surface-variant": "#c4c7c8", "surface-bright": "#790200", "surface-container-highest": "#700200", "primary-fixed-dim": "#cac5c5", "secondary-fixed-dim": "#ccc5c5", error: "#ffb4ab", secondary: "#ccc5c5", "surface-variant": "#700200", tertiary: "#ffffff", "on-background": "#ffdad4", "inverse-surface": "#ffdad4", "on-tertiary-fixed": "#1e1b19", "on-primary": "#323030", "surface-tint": "#cac5c5", "secondary-fixed": "#e8e1e0", "tertiary-fixed": "#e9e1de", "on-secondary-fixed": "#1e1b1b", "on-secondary-fixed-variant": "#4a4646", "on-tertiary": "#33302e", background: "#310000", "on-primary-container": "#676364", "primary-fixed": "#e7e1e1", "surface-container-high": "#5c0100", "tertiary-fixed-dim": "#ccc5c2", "primary-container": "#e7e1e1", "secondary-container": "#4a4646", "on-tertiary-fixed-variant": "#4a4644", "surface-container-low": "#410100", "surface-dim": "#310000", surface: "#310000", "tertiary-container": "#e9e1de", "on-tertiary-container": "#686361", "surface-container": "#480100", "on-secondary": "#333030", "on-error": "#690005", outline: "#8e9192", "on-error-container": "#ffdad6", "error-container": "#93000a", "inverse-primary": "#615e5e", "on-secondary-container": "#bab4b3", "outline-variant": "#444748"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {gutter: "1.5rem", "gutter-sm": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-lg": "4rem", "margin-sm": "1rem", "space-sm": "0.5rem", "space-xl": "2.5rem", margin: "2rem", "space-lg": "1.5rem"}, fontFamily: {"label-badge": ["JetBrains Mono"], "display-hero": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "title-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">NetMentor<span class="text-primary">.AI</span></span><span class="font-label-badge text-label-badge text-outline">B2B PORTAL</span></div></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-badge text-label-badge text-outline uppercase">Management</div></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-title-md"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="organization-overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="team-and-members" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span>Team &amp; Members</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="seats-and-licenses" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Seats &amp; Licenses</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="compliance-and-audit-reports" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span>Compliance &amp; Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="invoices-and-billing" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Invoices &amp; Billing</span></a></nav></div><div class="flex flex-col p-space-md gap-space-sm bg-surface-container-lowest"><div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-badge text-label-badge text-secondary">CCIE CONCIERGE</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-code-sm text-code-sm">SLA Uptime</span><span class="font-code-sm text-code-sm text-on-surface">99.9%</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-code-sm text-code-sm">Response</span><span class="font-code-sm text-code-sm text-primary">15m Target</span></div></div><div class="flex flex-col gap-space-xs"><div class="px-space-xs font-label-badge text-label-badge text-outline uppercase">Quick Switch Portal</div><div class="grid grid-cols-3 gap-space-xs"><button class="py-space-xs px-1 text-center bg-surface-container-high hover:bg-surface-bright text-on-surface rounded font-code-sm text-code-sm transition-all" type="button">Learner</button><button class="py-space-xs px-1 text-center bg-surface-container-high hover:bg-surface-bright text-on-surface rounded font-code-sm text-code-sm transition-all" type="button">Instructor</button><button class="py-space-xs px-1 text-center bg-surface-container-high hover:bg-surface-bright text-on-surface rounded font-code-sm text-code-sm transition-all" type="button">Lab-Ops</button></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-high"><span class="material-symbols-outlined text-[18px] text-secondary">domain</span><span class="font-code-sm text-code-sm text-on-surface">Nexus Global IT</span><span class="text-outline font-code-sm text-code-sm">//</span><span class="font-label-badge text-label-badge text-primary">#ORG-8842</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">unfold_more</span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-badge text-label-badge text-on-surface">SSO Active • 142 Sync'd</span><span class="font-label-badge text-label-badge text-secondary">[OKTA]</span></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-tertiary"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden md:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface">Sarah Vance</span><span class="font-label-badge text-label-badge text-outline">Enterprise IT Director</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Meta Strip & Page Header -->
+<div class="flex flex-col gap-space-lg mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-badge text-label-badge text-primary uppercase">FINANCE • ENTERPRISE LEDGER</span>
+<span class="font-code-sm text-code-sm text-outline">//</span>
+<span class="font-label-badge text-label-badge text-secondary font-code-sm">NET-30 CERTIFIED</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg tracking-tight text-on-surface">Invoices, Billing &amp; Payment Methods</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage enterprise billing profiles, corporate VAT/Tax IDs, payment methods, and download official monthly tax invoices.</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-high hover:bg-surface-bright text-on-surface rounded-lg font-title-md text-title-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">archive</span>
+<span>Download All (ZIP)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-high hover:bg-surface-bright text-on-surface rounded-lg font-title-md text-title-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Update Details</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary-container text-on-primary-container hover:bg-primary font-title-md text-title-md rounded-lg shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">credit_card</span>
+<span>Add Payment Method</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Subscription Pulse Bento Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md mb-space-lg">
+<!-- Active Tier Overview Card -->
+<div class="xl:col-span-8 bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between relative overflow-hidden shadow-sm">
+<div class="absolute -right-8 -top-8 w-64 h-64 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md mb-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-badge text-label-badge px-space-sm py-space-xs rounded bg-surface-container text-primary font-mono uppercase">Contract #NEX-8842-EP</span>
+<span class="font-label-badge text-label-badge px-space-sm py-space-xs rounded bg-surface-container text-secondary">Auto-Renew: Oct 2026</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Enterprise Pro Plan</h2>
+<span class="font-code-sm text-code-sm text-outline">Billed Monthly • $7,840.00 / month (160 seats × $49)</span>
+</div>
+<div class="flex flex-col items-start md:items-end bg-surface-container-lowest p-space-md rounded-lg shadow-inner">
+<span class="font-label-badge text-label-badge text-outline uppercase">Next Scheduled Charge</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Nov 01, 2025</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">via Auto-Pay (Visa ...4092)</span>
+</div>
+</div>
+<!-- Live Allocation Gauges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md bg-surface-container p-space-md rounded-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-baseline">
+<span class="font-label-badge text-label-badge text-outline">ACTIVE SEATS</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">142 / 160</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 88.75%;"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">18 Available Seats</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-baseline">
+<span class="font-label-badge text-label-badge text-outline">WASM LAB COMPUTE</span>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">1,420 / 3,000 hrs</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 47.33%;"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">47% of Pool Utilized</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-baseline">
+<span class="font-label-badge text-label-badge text-outline">CURRENT OVERAGES</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">$0.00</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 0%;"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Zero Overage Incurred</span>
+</div>
+</div>
+</div>
+<!-- Live Burn Telemetry / Visual Spark -->
+<div class="xl:col-span-4 bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">monitoring</span>
+<span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Telemetry Trend</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-space-xs py-0.5 rounded">6 MO STABLE</span>
+</div>
+<!-- Inline SVG Burn Visualization -->
+<div class="my-space-sm flex flex-col gap-space-xs">
+<div class="h-24 w-full flex items-end">
+<svg class="w-full h-full text-secondary" fill="none" preserveaspectratio="none" viewbox="0 0 320 80">
+<path d="M0 65 L50 62 L100 58 L150 50 L200 48 L250 32 L320 28" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M0 65 L50 62 L100 58 L150 50 L200 48 L250 32 L320 28 L320 80 L0 80 Z" fill="currentColor" fill-opacity="0.08"></path>
+<circle class="fill-primary" cx="320" cy="28" r="4"></circle>
+</svg>
+</div>
+<div class="flex justify-between font-label-badge text-label-badge text-outline">
+<span>MAY</span>
+<span>JUN</span>
+<span>JUL</span>
+<span>AUG</span>
+<span>SEP</span>
+<span class="text-primary font-bold">OCT (NOW)</span>
+</div>
+</div>
+<div class="bg-surface-container-highest p-space-sm rounded-lg flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-on-surface-variant">Forecast Nov Run-Rate</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">$7,840.00</span>
+</div>
+</div>
+</div>
+<!-- Corporate Profile & Payment Profiles Asymmetric Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-lg">
+<!-- Corporate Profile & Tax Credentials -->
+<div class="lg:col-span-6 bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">domain_verification</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Corporate Billing Profile</h3>
+</div>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-space-xs py-0.5 rounded">TAX VERIFIED</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-badge text-label-badge text-outline uppercase">Legal Entity</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Nexus Global Technologies Inc.</span>
+<p class="font-code-sm text-code-sm text-on-surface-variant mt-space-xs">
+            500 Howard Street, Suite 400<br/>
+            San Jose, CA 95105, USA
+          </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-badge text-label-badge text-outline uppercase">Tax Identification</span>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-on-surface-variant">US EIN:</span>
+<span class="font-code-sm text-code-sm text-on-surface font-mono">94-8849201</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-on-surface-variant">EU VAT:</span>
+<span class="font-code-sm text-code-sm text-on-surface font-mono">EU372009182</span>
+</div>
+</div>
+<div class="mt-space-xs flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-label-badge text-label-badge">VIES Validation Active</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-badge text-label-badge text-outline uppercase">Accounts Payable Contact</span>
+<span class="font-code-sm text-code-sm text-on-surface">billing@nexusglobal.com</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Sarah Vance (CC: accounts-payable@nexusglobal.com)</span>
+</div>
+<button class="self-start sm:self-center font-code-sm text-code-sm text-secondary hover:underline flex items-center gap-1" type="button">
+<span>Edit AP Routing</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Payment Methods Matrix -->
+<div class="lg:col-span-6 bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">credit_card</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Payment Methods</h3>
+</div>
+<span class="font-code-sm text-code-sm text-outline">2 Methods Configured</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Default CC -->
+<div class="bg-surface-container p-space-md rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-8 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="font-label-badge text-label-badge text-secondary font-bold">VISA</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface">Corporate Visa •••• 4092</span>
+<span class="font-label-badge text-label-badge bg-primary-container text-on-primary-container px-space-xs py-0.5 rounded font-mono">DEFAULT</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Expires 09/2028 • Auto-Pay Primary</span>
+</div>
+</div>
+<button class="p-space-xs text-on-surface-variant hover:text-on-surface transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Backup Wire -->
+<div class="bg-surface-container p-space-md rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-8 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface">ACH Direct Debit •••• 8812</span>
+<span class="font-label-badge text-label-badge bg-surface-container-high text-on-surface-variant px-space-xs py-0.5 rounded font-mono">BACKUP</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">JPMorgan Chase Corporate Clearing</span>
+</div>
+</div>
+<button class="p-space-xs text-on-surface-variant hover:text-on-surface transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Net 30 Invoicing Notice -->
+<div class="bg-surface-container-highest/60 p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5">verified</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-tertiary">Approved for Net 30 Terms</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Authorized for direct purchase order clearance through CDW and Anixter commercial lines. Electronic PO invoicing enabled.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Downloadable Monthly VAT Invoice Table -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-sm mb-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Official Monthly Tax Invoices</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Download regulatory compliant PDF invoices with stamped VAT IDs and ledger breakdown.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center bg-surface-container px-space-sm py-space-xs rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-outline mr-2">search</span>
+<input class="bg-transparent font-code-sm text-code-sm text-on-surface placeholder:text-outline focus:outline-none w-48" placeholder="Filter by invoice ID..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Ledger Table Component -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-badge text-label-badge uppercase">
+<th class="py-space-sm px-space-md rounded-l-lg">Invoice ID</th>
+<th class="py-space-sm px-space-md">Date</th>
+<th class="py-space-sm px-space-md">Billing Period</th>
+<th class="py-space-sm px-space-md">Amount</th>
+<th class="py-space-sm px-space-md">Payment Method</th>
+<th class="py-space-sm px-space-md">Status</th>
+<th class="py-space-sm px-space-md rounded-r-lg text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent font-code-sm text-code-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-all">
+<td class="py-space-md px-space-md font-semibold text-secondary font-mono">INV-2025-1001</td>
+<td class="py-space-md px-space-md text-on-surface">Oct 01, 2025</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Oct 1 – Oct 31, 2025</td>
+<td class="py-space-md px-space-md text-on-surface font-semibold">$7,840.00</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Visa •••• 4092</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary/10 text-primary font-label-badge text-label-badge uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-space-xs hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-all" title="Download PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container-high rounded text-on-surface-variant hover:text-secondary transition-all" title="View Breakdown" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-all">
+<td class="py-space-md px-space-md font-semibold text-secondary font-mono">INV-2025-0901</td>
+<td class="py-space-md px-space-md text-on-surface">Sep 01, 2025</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Sep 1 – Sep 30, 2025</td>
+<td class="py-space-md px-space-md text-on-surface font-semibold">$7,840.00</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Visa •••• 4092</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary/10 text-primary font-label-badge text-label-badge uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-space-xs hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-all" title="Download PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container-high rounded text-on-surface-variant hover:text-secondary transition-all" title="View Breakdown" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-all">
+<td class="py-space-md px-space-md font-semibold text-secondary font-mono">INV-2025-0815</td>
+<td class="py-space-md px-space-md text-on-surface">Aug 15, 2025</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Seat Add-on (+20 Seats Prorated)</td>
+<td class="py-space-md px-space-md text-on-surface font-semibold">$784.00</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Visa •••• 4092</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary/10 text-primary font-label-badge text-label-badge uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-space-xs hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-all" title="Download PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container-high rounded text-on-surface-variant hover:text-secondary transition-all" title="View Breakdown" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container transition-all">
+<td class="py-space-md px-space-md font-semibold text-secondary font-mono">INV-2025-0801</td>
+<td class="py-space-md px-space-md text-on-surface">Aug 01, 2025</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Aug 1 – Aug 31, 2025</td>
+<td class="py-space-md px-space-md text-on-surface font-semibold">$6,860.00</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Visa •••• 4092</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary/10 text-primary font-label-badge text-label-badge uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-space-xs hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-all" title="Download PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container-high rounded text-on-surface-variant hover:text-secondary transition-all" title="View Breakdown" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container transition-all">
+<td class="py-space-md px-space-md font-semibold text-secondary font-mono">INV-2025-0701</td>
+<td class="py-space-md px-space-md text-on-surface">Jul 01, 2025</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Jul 1 – Jul 31, 2025</td>
+<td class="py-space-md px-space-md text-on-surface font-semibold">$6,860.00</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Wire Transfer (ACH)</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary/10 text-primary font-label-badge text-label-badge uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-space-xs hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-all" title="Download PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container-high rounded text-on-surface-variant hover:text-secondary transition-all" title="View Breakdown" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Enterprise PO & Compliance Downloads Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- W9 Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm group hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<span class="font-label-badge text-label-badge text-outline">REVISED JAN 2025</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-title-md text-title-md text-on-surface">Form W-9 (PDF)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">IRS Request for Taxpayer Identification Number and Certification for NetMentor Inc.</p>
+</div>
+<button class="mt-space-md flex items-center gap-space-xs font-code-sm text-code-sm text-primary hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Download Form W-9</span>
+</button>
+</div>
+<!-- ACH Wire Instructions -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm group hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<span class="font-label-badge text-label-badge text-outline">FEDWIRE / ACH</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-title-md text-title-md text-on-surface">ACH Wire Instructions</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct routing and SWIFT numbers for direct USD/EUR bank remittance settlement.</p>
+</div>
+<button class="mt-space-md flex items-center gap-space-xs font-code-sm text-code-sm text-secondary hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Download Wire Guide</span>
+</button>
+</div>
+<!-- Sole Source Letter -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm group hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">policy</span>
+</div>
+<span class="font-label-badge text-label-badge text-outline">PROCUREMENT</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-title-md text-title-md text-on-surface">Vendor Sole Source Letter</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sole source justification document for CCIE/CCNP AI automated sandbox compliance.</p>
+</div>
+<button class="mt-space-md flex items-center gap-space-xs font-code-sm text-code-sm text-tertiary hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Download Vendor Letter</span>
+</button>
+</div>
+</div>
+</div></main></div></body></html>

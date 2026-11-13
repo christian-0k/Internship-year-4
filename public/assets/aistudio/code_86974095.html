@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-secondary-container": "#bab4b3", "secondary-fixed": "#e8e1e0", outline: "#8e9192", "surface-bright": "#790200", "on-primary-container": "#676364", "inverse-surface": "#ffdad4", "surface-container-high": "#5c0100", "on-primary-fixed": "#1d1b1b", surface: "#310000", "secondary-container": "#4a4646", "on-tertiary-fixed-variant": "#4a4644", "tertiary-fixed-dim": "#ccc5c2", "tertiary-container": "#e9e1de", "secondary-fixed-dim": "#ccc5c5", background: "#310000", "surface-variant": "#700200", "surface-container-lowest": "#270000", "primary-container": "#e7e1e1", "on-error": "#690005", "on-tertiary-fixed": "#1e1b19", "inverse-primary": "#615e5e", "surface-tint": "#cac5c5", "on-primary": "#323030", "on-secondary-fixed-variant": "#4a4646", "primary-fixed-dim": "#cac5c5", tertiary: "#ffffff", "error-container": "#93000a", primary: "#ffffff", "on-primary-fixed-variant": "#494646", "primary-fixed": "#e7e1e1", error: "#ffb4ab", "on-secondary-fixed": "#1e1b1b", "on-secondary": "#333030", "inverse-on-surface": "#680200", "surface-dim": "#310000", "on-background": "#ffdad4", "on-tertiary": "#33302e", "on-error-container": "#ffdad6", "outline-variant": "#444748", "on-tertiary-container": "#686361", "surface-container": "#480100", "on-surface": "#ffdad4", "surface-container-low": "#410100", secondary: "#ccc5c5", "tertiary-fixed": "#e9e1de", "on-surface-variant": "#c4c7c8", "surface-container-highest": "#700200"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {margin: "2rem", gutter: "1.5rem", "margin-sm": "1rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-lg": "4rem", "space-xl": "2.5rem", "space-xs": "0.25rem"}, fontFamily: {"code-lg": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "title-md": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-badge": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="overview" href="#"><img alt="NetMentor AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3Qqj316WsxePaFE-077_od--l8SvgFXndjdbChEQW2AY-1Blm6qwa6UqJVOSDg-kTGyllOp061YIN8_ABK0cQ-0Vqeq-ZlcWXsmgBTp5aEflXtFO5EjziwWqugLUQ20GXgaBj6NNCkRYmhjdZaaveZwpXc_fSrrs0d0qX-adxx--LutEc_QZIP_mIgmma0TSph4h6esf4fybCFcIElH77cqDoV7-znxJmoK0nt3JfZH2MLGWV8Kd-Y60"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">NetMentor AI</span><span class="font-label-badge text-label-badge uppercase px-space-xs py-0.5 rounded-lg bg-surface-container-high text-primary border border-primary/20">AI LABS</span></a><div class="relative group hidden xl:block"><button class="flex items-center gap-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-space-sm py-1.5 rounded-lg hover:bg-surface-container transition-colors" type="button"><span>Tracks</span><span class="material-symbols-outlined text-[18px]">expand_more</span></button><div class="absolute left-0 top-full pt-space-xs hidden group-hover:block w-72 z-50"><div class="bg-surface-container-high rounded-xl p-space-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)] border border-outline-variant/30 flex flex-col gap-1"><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="cisco-ccna-200-301" href="#"><span class="font-title-md text-title-md text-secondary">Cisco CCNA 200-301</span><span class="font-code-sm text-code-sm text-on-surface-variant">Routing, Switching &amp; Network Automation</span></a><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="comptia-a-core" href="#"><span class="font-title-md text-title-md text-tertiary">CompTIA A+ Core 1 &amp; 2</span><span class="font-code-sm text-code-sm text-on-surface-variant">Hardware, OS, Troubleshooting</span></a><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="network-plus-n10-008" href="#"><span class="font-title-md text-title-md text-primary">Network+ N10-008</span><span class="font-code-sm text-code-sm text-on-surface-variant">Infrastructure Protocols &amp; Diagnostics</span></a><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="linux-and-cloud-sysadmin" href="#"><span class="font-title-md text-title-md text-on-surface">Linux &amp; Cloud SysAdmin</span><span class="font-code-sm text-code-sm text-on-surface-variant">Bash, Kernel, AWS CLI Lab Scenarios</span></a></div></div></div></div><nav class="hidden lg:flex items-center gap-space-sm xl:gap-space-md" data-active-classes="text-primary font-bold bg-surface-container-high rounded-lg"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="features" href="#">Features</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="curriculum-tracks" href="#">Tracks</a><a aria-current="page" class="px-space-sm py-1 transition-colors text-primary font-bold bg-surface-container-high rounded-lg" data-path="pricing" href="#">Pricing</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="for-business" href="#">For Business</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="community-and-labs" href="#">Community &amp; Labs</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="blog" href="#">Blog</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-low border border-outline-variant/30 font-code-sm text-code-sm text-primary"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span>14.8k Active Labs</span></div><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface px-space-sm py-1.5 rounded-lg hover:bg-surface-container transition-colors" data-path="sign-in" href="#">Sign In</a><a class="font-title-md text-title-md bg-primary hover:bg-primary-fixed text-on-primary-container px-space-md py-2 rounded-xl transition-all shadow-[0_1px_8px_rgba(0,0,0,0.04)] font-bold" data-path="get-started" href="#">Get Started</a><div class="pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAKMsdlDwOAckha2D61l4jTIJehbZgg1jIBNgADo9MLl-QZlMw9LguSbrzgpKElg7jKtMjPUYOPu2qg2ih8lBb9eLGUX0mvXfvEyeGJgiKmnvKdk7sKKCm87-omFYwiIt-Aa8tbqsdd_ZO8uXtLNN9-gMemoAut5NDmvDkbq04qsijFRQ1LGcc32QZg29UoJ8gtQ8yBnoZjpHwZsTc90HyxtEw-AWB2Z0mxyjmenwZOjHauoR1qFUy"/></div></div></div></header><main class="w-full pt-16 bg-background"><div class="flex flex-col w-full">
+<!-- SECTION 1: HEADER & BILLING TOGGLE -->
+<section class="relative w-full px-space-md sm:px-space-lg lg:px-margin pt-space-xl pb-space-lg overflow-hidden">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[340px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-20 right-10 w-[300px] h-[220px] bg-secondary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="relative max-w-5xl mx-auto flex flex-col items-center text-center gap-space-md">
+<!-- Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high text-primary font-label-badge text-label-badge uppercase tracking-wider shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span>Flexible Plans for Self-Paced Engineers &amp; Teams</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-headline-lg text-headline-lg lg:font-display-hero lg:text-display-hero text-on-surface tracking-tight max-w-4xl">
+        Invest in Hands-On Mastery, <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-fixed to-secondary">Not Just Video Lectures</span>
+</h1>
+<!-- Subheading -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl text-balance">
+        All plans include unlimited browser-based virtual labs, real Cisco IOS instances, and 24/7 Socratic AI mentor debugging. Zero local hypervisors required.
+      </p>
+<!-- Dynamic Billing Switcher -->
+<div class="mt-space-md flex flex-col sm:flex-row items-center gap-space-md p-1.5 rounded-full bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-1 p-1 bg-surface-container rounded-full" id="billingSwitcherContainer">
+<button class="px-space-md py-2 rounded-full font-title-md text-title-md transition-all text-on-surface-variant hover:text-on-surface" id="toggleMonthly" type="button">
+            Monthly Billing
+          </button>
+<button class="px-space-md py-2 rounded-full font-title-md text-title-md transition-all bg-primary text-on-primary-container font-bold shadow-sm" id="toggleAnnual" type="button">
+            Annual Billing
+          </button>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high text-primary font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-bold">Save 20%</span>
+<span class="text-on-surface-variant hidden md:inline">+ 2 Free Official Exam Vouchers</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: 3-TIER PRICING CARDS -->
+<section class="w-full px-space-md sm:px-space-lg lg:px-margin py-space-lg">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-gutter items-stretch">
+<!-- Plan 1: Community & Starter -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low transition-all hover:bg-surface-container shadow-sm">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase px-space-sm py-1 rounded bg-surface-container-high text-on-surface-variant tracking-wider">
+              Free Tier
+            </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Self-Paced</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Community &amp; Starter</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              For tech students discovering IT infrastructure and basic terminal syntax.
+            </p>
+</div>
+<div class="py-space-sm flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$0</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">/ month forever</span>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<p class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Included Capabilities</p>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+<span><strong class="text-on-surface">5 browser CLI labs</strong> per calendar month</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+<span>Basic Linux kernel &amp; hardware diagnostic tests</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+<span>Public technical Discord &amp; community lab forum</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+<span>Standard CLI Command Documentation access</span>
+</li>
+<li class="flex items-start gap-space-sm text-on-surface-variant/50">
+<span class="material-symbols-outlined text-[20px] shrink-0">remove</span>
+<span>No live Cisco IOS-XE dynamic topologies</span>
+</li>
+<li class="flex items-start gap-space-sm text-on-surface-variant/50">
+<span class="material-symbols-outlined text-[20px] shrink-0">remove</span>
+<span>No AI Socratic mentor troubleshooting</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-space-lg">
+<button class="btn-select-plan w-full py-2.5 rounded-lg bg-surface-container hover:bg-surface-bright text-on-surface font-title-md text-title-md transition-colors text-center" data-plan="free" type="button">
+            Start Free Now
+          </button>
+</div>
+</div>
+<!-- Plan 2: Pro Engineer & Cert Hunter (Featured) -->
+<div class="relative flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-high shadow-xl -mt-2 lg:-mt-4 transition-all">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-space-md py-0.5 rounded-full bg-primary text-on-primary-container font-label-badge text-label-badge tracking-wider font-bold uppercase shadow-sm">
+          Recommended for CCNA &amp; CompTIA
+        </div>
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase px-space-sm py-1 rounded bg-primary/20 text-primary tracking-wider font-semibold">
+              Most Popular
+            </span>
+<div class="flex items-center gap-1 text-primary font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Unlimited Access</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pro Engineer &amp; Cert Hunter</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Engineered for junior network technicians and serious candidates taking exam tracks this year.
+            </p>
+</div>
+<div class="py-space-sm flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary font-bold transition-all" id="pricePro">$23</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant" id="periodPro">/ user / month</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant" id="billingSubPro">billed annually at $276/yr</span>
+</div>
+<!-- Mini Terminal Output Showcase -->
+<div class="rounded-lg bg-surface-container-lowest p-space-sm font-code-sm text-code-sm text-primary flex flex-col gap-1 shadow-inner">
+<div class="flex items-center justify-between text-on-surface-variant text-[11px]">
+<span>NODE: R1-EDGE-IOS-XE</span>
+<span class="text-primary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>ACTIVE</span>
+</div>
+<div class="text-on-surface font-mono text-[12px] overflow-hidden whitespace-nowrap">
+              # conf t <br/>
+              (config)# router ospf 10 <br/>
+<span class="text-primary font-bold">✓ NetMentor AI: Link cost recalculated (10Gbps trunk)</span>
+</div>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<p class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Everything in Starter, plus:</p>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+<span><strong class="text-on-surface">Unlimited Cisco IOS-XE &amp; Linux labs</strong> in WebAssembly</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+<span><strong class="text-on-surface">24/7 AI Socratic Mentor hints</strong> for syntax, root cause &amp; logic</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+<span>CompTIA A+ &amp; Network+ Performance-Based Questions (PBQs)</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+<span>CCNA 200-301 realistic packet flows &amp; topology sandboxes</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+<span>Personalized dynamic syllabus &amp; weakness remediation</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+<span><strong class="text-on-surface">100% Certification Pass Guarantee</strong> (or free extension)</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-space-lg flex flex-col gap-space-xs">
+<button class="btn-select-plan w-full py-3 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary-container font-title-md text-title-md font-bold transition-all text-center shadow-lg hover:shadow-primary/20" data-plan="pro" type="button">
+            Get Pro Access — 7-Day Free Trial
+          </button>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-center">Instant unlock. Zero credit card lock-in.</span>
+</div>
+</div>
+<!-- Plan 3: Enterprise & Team Accelerator -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low transition-all hover:bg-surface-container shadow-sm">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase px-space-sm py-1 rounded bg-secondary-container/20 text-secondary tracking-wider font-semibold">
+              Teams &amp; MSPs
+            </span>
+<span class="font-code-sm text-code-sm text-secondary">Custom Scale</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Enterprise &amp; Team Accelerator</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              For Managed Service Providers, NOC academies, and enterprise engineering departments.
+            </p>
+</div>
+<div class="py-space-sm flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold transition-all" id="priceEnterprise">$63</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant" id="periodEnterprise">/ seat / month</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant" id="billingSubEnterprise">billed annually per seat</span>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<p class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Enterprise-Grade Features</p>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">check_circle</span>
+<span>Everything in Pro for all provisioned team seats</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">check_circle</span>
+<span><strong class="text-on-surface">Centralized Skills Matrix</strong> &amp; Team Readiness Dashboard</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">check_circle</span>
+<span>Custom lab scenario authoring tool with proprietary topologies</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">check_circle</span>
+<span>Dedicated Sandbox VPC with persistent configs &amp; state</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">check_circle</span>
+<span>SSO (Okta, Azure AD), SAML 2.0 &amp; LMS integration hooks</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">check_circle</span>
+<span>99.98% uptime SLA with dedicated Solution Architect</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-space-lg">
+<button class="btn-select-plan w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-secondary-container/20 text-secondary hover:text-on-surface font-title-md text-title-md transition-colors text-center" data-plan="enterprise" type="button">
+            Schedule Team Demo
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: STUDENT & ACADEMIC DISCOUNT CALLOUT -->
+<section class="w-full px-space-md sm:px-space-lg lg:px-margin py-space-md">
+<div class="max-w-7xl mx-auto rounded-xl bg-surface-container-low p-space-md sm:p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 flex items-center justify-center shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-[28px]">school</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-title-md text-on-surface">Enrolled in College, University, or Vocational IT Track?</span>
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-bold">40% OFF</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Instant SheerID verification for accredited institutions and military transition apprentices. Unlock full Pro tier for only $13.80/month.
+          </p>
+</div>
+</div>
+<button class="shrink-0 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-tertiary font-title-md text-title-md transition-all" type="button">
+        Verify Student ID
+      </button>
+</div>
+</section>
+<!-- SECTION 4: DEEP FEATURE COMPARISON MATRIX -->
+<section class="w-full px-space-md sm:px-space-lg lg:px-margin py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col items-center text-center gap-space-xs">
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">Specifications</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Architectural Feature Comparison</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          Compare environment fidelity, synthetic router limits, and AI telemetry levels.
+        </p>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-low shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface font-title-md text-title-md">
+<th class="p-space-md w-2/5">Capability Matrix</th>
+<th class="p-space-md text-center w-1/5">Starter</th>
+<th class="p-space-md text-center w-1/5 text-primary">Pro Engineer</th>
+<th class="p-space-md text-center w-1/5 text-secondary">Enterprise</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y-0">
+<!-- Subcategory 1: Lab Environment -->
+<tr class="bg-surface-container">
+<td class="px-space-md py-2 font-label-badge text-label-badge uppercase text-primary tracking-wider" colspan="4">
+                1. Lab Virtualization &amp; Execution Environment
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">Browser WebAssembly CLI Instances</td>
+<td class="p-space-md text-center text-on-surface-variant font-code-sm">5 / month</td>
+<td class="p-space-md text-center text-primary font-bold font-code-sm">Unlimited</td>
+<td class="p-space-md text-center text-secondary font-bold font-code-sm">Unlimited</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">Multi-Device Cisco IOS-XE Topologies</td>
+<td class="p-space-md text-center text-on-surface-variant">Single router only</td>
+<td class="p-space-md text-center text-on-surface">Up to 12 node mesh</td>
+<td class="p-space-md text-center text-secondary font-bold">Unlimited nodes</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">Persistent Device Configurations &amp; Diff Inspector</td>
+<td class="p-space-md text-center text-on-surface-variant/40"><span class="material-symbols-outlined text-[18px]">close</span></td>
+<td class="p-space-md text-center text-primary"><span class="material-symbols-outlined text-[20px]">check</span></td>
+<td class="p-space-md text-center text-secondary"><span class="material-symbols-outlined text-[20px]">check</span></td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">Custom Network Topology Builder</td>
+<td class="p-space-md text-center text-on-surface-variant/40"><span class="material-symbols-outlined text-[18px]">close</span></td>
+<td class="p-space-md text-center text-on-surface-variant">Read-only presets</td>
+<td class="p-space-md text-center text-secondary font-bold">Full Drag &amp; Drop Editor</td>
+</tr>
+<!-- Subcategory 2: AI Capabilities -->
+<tr class="bg-surface-container">
+<td class="px-space-md py-2 font-label-badge text-label-badge uppercase text-primary tracking-wider" colspan="4">
+                2. Socratic AI &amp; Diagnostic Telemetry
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">Socratic Questioning Prompt Engine</td>
+<td class="p-space-md text-center text-on-surface-variant/40"><span class="material-symbols-outlined text-[18px]">close</span></td>
+<td class="p-space-md text-center text-primary font-bold">Real-time inline</td>
+<td class="p-space-md text-center text-secondary font-bold">Team-tuned heuristics</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">CLI Syntax Auto-Correction &amp; Explanation</td>
+<td class="p-space-md text-center text-on-surface-variant">Standard error log</td>
+<td class="p-space-md text-center text-primary"><span class="material-symbols-outlined text-[20px]">check</span></td>
+<td class="p-space-md text-center text-secondary"><span class="material-symbols-outlined text-[20px]">check</span></td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">Incident &amp; Ticket Triage Simulator</td>
+<td class="p-space-md text-center text-on-surface-variant/40"><span class="material-symbols-outlined text-[18px]">close</span></td>
+<td class="p-space-md text-center text-on-surface">30 Scenarios</td>
+<td class="p-space-md text-center text-secondary font-bold">Unlimited Custom Tickets</td>
+</tr>
+<!-- Subcategory 3: Cert Preparation -->
+<tr class="bg-surface-container">
+<td class="px-space-md py-2 font-label-badge text-label-badge uppercase text-primary tracking-wider" colspan="4">
+                3. Cert Preparation &amp; Evaluation
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">CompTIA Performance-Based Questions (PBQs)</td>
+<td class="p-space-md text-center text-on-surface-variant">2 Sample PBQs</td>
+<td class="p-space-md text-center text-primary font-bold font-code-sm">140+ Interactive PBQs</td>
+<td class="p-space-md text-center text-secondary font-bold font-code-sm">Complete Library</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">Full Cisco CCNA 200-301 Mock Exam Simulations</td>
+<td class="p-space-md text-center text-on-surface-variant/40"><span class="material-symbols-outlined text-[18px]">close</span></td>
+<td class="p-space-md text-center text-primary font-bold">6 Timed Mocks</td>
+<td class="p-space-md text-center text-secondary font-bold">Unlimited Team Mocks</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">Exam Pass Guarantee</td>
+<td class="p-space-md text-center text-on-surface-variant/40"><span class="material-symbols-outlined text-[18px]">close</span></td>
+<td class="p-space-md text-center text-primary"><span class="material-symbols-outlined text-[20px]">check</span></td>
+<td class="p-space-md text-center text-secondary"><span class="material-symbols-outlined text-[20px]">check</span></td>
+</tr>
+<!-- Subcategory 4: Support & Team Administration -->
+<tr class="bg-surface-container">
+<td class="px-space-md py-2 font-label-badge text-label-badge uppercase text-primary tracking-wider" colspan="4">
+                4. Administration &amp; Integrations
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">Skills Competency Analytics</td>
+<td class="p-space-md text-center text-on-surface-variant">Individual only</td>
+<td class="p-space-md text-center text-on-surface">Advanced breakdown</td>
+<td class="p-space-md text-center text-secondary font-bold">Manager Cohort Rollup</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">SSO &amp; LMS Integration (Canvas / Blackboard)</td>
+<td class="p-space-md text-center text-on-surface-variant/40"><span class="material-symbols-outlined text-[18px]">close</span></td>
+<td class="p-space-md text-center text-on-surface-variant/40"><span class="material-symbols-outlined text-[18px]">close</span></td>
+<td class="p-space-md text-center text-secondary"><span class="material-symbols-outlined text-[20px]">check</span></td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md text-on-surface font-medium">Support SLA</td>
+<td class="p-space-md text-center text-on-surface-variant font-code-sm">Community Forum</td>
+<td class="p-space-md text-center text-on-surface font-code-sm">&lt; 12 hr ticketing</td>
+<td class="p-space-md text-center text-secondary font-code-sm font-bold">1-hr Priority &amp; Slack Node</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- SECTION 5: INTERACTIVE FAQ ACCORDION -->
+<section class="w-full px-space-md sm:px-space-lg lg:px-margin py-space-xl">
+<div class="max-w-4xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col items-center text-center gap-space-xs">
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">Troubleshooting &amp; Doubts</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Everything you need to know about the terminal virtualization and certification backing.
+        </p>
+</div>
+<div class="flex flex-col gap-space-sm" id="faqAccordionGroup">
+<!-- FAQ 1 -->
+<div class="rounded-xl bg-surface-container-low transition-all faq-card overflow-hidden">
+<button class="faq-btn w-full px-space-lg py-space-md flex items-center justify-between text-left gap-space-md" type="button">
+<span class="font-title-md text-title-md text-on-surface font-semibold">
+              How is NetMentor different from Cisco Packet Tracer or GNS3?
+            </span>
+<span class="material-symbols-outlined text-primary faq-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-space-lg">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              Unlike Packet Tracer, which runs limited synthetic command subsets, NetMentor compiles native WebAssembly router kernels with fully realized Cisco IOS-XE behavior directly in the browser. Unlike GNS3 or EVE-NG, you don't need a 32GB RAM home lab, manual IOU image licensing, or hypervisor configurations. Plus, our proprietary Socratic AI observes your live keystrokes to coach you when STP fails or OSPF neighbor adjacencies hang.
+            </p>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="rounded-xl bg-surface-container-low transition-all faq-card overflow-hidden">
+<button class="faq-btn w-full px-space-lg py-space-md flex items-center justify-between text-left gap-space-md" type="button">
+<span class="font-title-md text-title-md text-on-surface font-semibold">
+              Do I need to install any heavy software or hypervisors?
+            </span>
+<span class="material-symbols-outlined text-primary faq-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-space-lg">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              None. NetMentor is 100% cloud native. You can run full multi-hop BGP, VLAN trunking, and Wireshark-level packet captures on a basic Chromebook, iPad, or corporate locked-down work laptop without administrator permissions.
+            </p>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="rounded-xl bg-surface-container-low transition-all faq-card overflow-hidden">
+<button class="faq-btn w-full px-space-lg py-space-md flex items-center justify-between text-left gap-space-md" type="button">
+<span class="font-title-md text-title-md text-on-surface font-semibold">
+              Can I cancel or switch certification tracks anytime?
+            </span>
+<span class="material-symbols-outlined text-primary faq-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-space-lg">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              Yes! You are never locked into one track. A single Pro Engineer subscription grants unlimited access to all four active curricula: Cisco CCNA (200-301), CompTIA Network+, CompTIA A+ Core, and Linux Cloud SysAdmin. You can pivot tracks with one click in your settings without paying extra fees.
+            </p>
+</div>
+</div>
+<!-- FAQ 4 -->
+<div class="rounded-xl bg-surface-container-low transition-all faq-card overflow-hidden">
+<button class="faq-btn w-full px-space-lg py-space-md flex items-center justify-between text-left gap-space-md" type="button">
+<span class="font-title-md text-title-md text-on-surface font-semibold">
+              How does the Certification Pass Guarantee work?
+            </span>
+<span class="material-symbols-outlined text-primary faq-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-space-lg">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              Complete at least 90% of your targeted syllabus labs and score 85% or higher on two timed mock exams in our platform. If you take the vendor exam (Cisco or CompTIA) and do not pass, we extend your Pro membership for an additional 6 months totally free and grant an individualized AI diagnostic review of your exam score report.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MODAL: PLAN CHECKOUT MODAL -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md hidden items-center justify-center p-space-md" id="checkoutModal">
+<div class="w-full max-w-lg rounded-xl bg-surface-container p-space-lg flex flex-col gap-space-md shadow-2xl relative">
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface" id="closeModalBtn" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-badge text-label-badge uppercase text-primary">Provisioning Sandbox Session</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="modalPlanTitle">Pro Engineer Access</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1" id="modalPlanSubtitle">
+          Review your 7-day trial parameters before initializing the hypervisor nodes.
+        </p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-2 font-code-sm text-code-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Selected Package:</span>
+<span class="text-on-surface font-bold" id="modalSelectedTier">Pro Engineer</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Billing Cadence:</span>
+<span class="text-primary font-bold" id="modalCadence">Annual (20% off applied)</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Due Today:</span>
+<span class="text-on-surface font-bold">$0.00 (7-Day Trial)</span>
+</div>
+</div>
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault(); alert('Redirecting to secure NetMentor checkout node...');">
+<label class="flex flex-col gap-1 text-on-surface font-body-sm text-body-sm">
+<span>Corporate or Academic Email</span>
+<input class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface focus:outline-none focus:ring-1 focus:ring-primary font-code-sm text-code-sm" placeholder="alex@company.com or student@state.edu" required="" type="email"/>
+</label>
+<button class="w-full py-3 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary-container font-title-md text-title-md font-bold transition-all shadow-md mt-2" type="submit">
+          Confirm &amp; Launch Browser Terminal
+        </button>
+</form>
+</div>
+</div>
+<!-- INTERACTIVE LOGIC SCRIPT -->
+<script>
+    (function initPricingEngine() {
+      let isAnnual = true;
+
+      const btnMonthly = document.getElementById('toggleMonthly');
+      const btnAnnual = document.getElementById('toggleAnnual');
+
+      const pricePro = document.getElementById('pricePro');
+      const periodPro = document.getElementById('periodPro');
+      const billingSubPro = document.getElementById('billingSubPro');
+
+      const priceEnterprise = document.getElementById('priceEnterprise');
+      const periodEnterprise = document.getElementById('periodEnterprise');
+      const billingSubEnterprise = document.getElementById('billingSubEnterprise');
+
+      function updatePricingUI() {
+        if (isAnnual) {
+          btnAnnual.className = "px-space-md py-2 rounded-full font-title-md text-title-md transition-all bg-primary text-on-primary-container font-bold shadow-sm";
+          btnMonthly.className = "px-space-md py-2 rounded-full font-title-md text-title-md transition-all text-on-surface-variant hover:text-on-surface";
+
+          pricePro.textContent = "$23";
+          periodPro.textContent = "/ user / month";
+          billingSubPro.textContent = "billed annually at $276/yr (Save $72)";
+
+          priceEnterprise.textContent = "$63";
+          periodEnterprise.textContent = "/ seat / month";
+          billingSubEnterprise.textContent = "billed annually at $756/yr per seat (Save $192)";
+        } else {
+          btnMonthly.className = "px-space-md py-2 rounded-full font-title-md text-title-md transition-all bg-primary text-on-primary-container font-bold shadow-sm";
+          btnAnnual.className = "px-space-md py-2 rounded-full font-title-md text-title-md transition-all text-on-surface-variant hover:text-on-surface";
+
+          pricePro.textContent = "$29";
+          periodPro.textContent = "/ month";
+          billingSubPro.textContent = "billed monthly, cancel anytime";
+
+          priceEnterprise.textContent = "$79";
+          periodEnterprise.textContent = "/ seat / month";
+          billingSubEnterprise.textContent = "billed monthly, flexible seat count";
+        }
+      }
+
+      if (btnMonthly && btnAnnual) {
+        btnMonthly.addEventListener('click', () => {
+          isAnnual = false;
+          updatePricingUI();
+        });
+        btnAnnual.addEventListener('click', () => {
+          isAnnual = true;
+          updatePricingUI();
+        });
+      }
+
+      // FAQ Accordion Behavior
+      const faqButtons = document.querySelectorAll('.faq-btn');
+      faqButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector('.faq-icon');
+          const isExpanded = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+          // Close all
+          document.querySelectorAll('.faq-content').forEach((c) => {
+            c.style.maxHeight = '0px';
+          });
+          document.querySelectorAll('.faq-icon').forEach((i) => {
+            i.style.transform = 'rotate(0deg)';
+          });
+
+          // Toggle current
+          if (!isExpanded) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+
+      // Checkout Modal Behavior
+      const modal = document.getElementById('checkoutModal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const planBtns = document.querySelectorAll('.btn-select-plan');
+      const modalSelectedTier = document.getElementById('modalSelectedTier');
+      const modalCadence = document.getElementById('modalCadence');
+      const modalPlanTitle = document.getElementById('modalPlanTitle');
+
+      planBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          const plan = btn.getAttribute('data-plan');
+          if (plan === 'free') {
+            modalSelectedTier.textContent = 'Community & Starter';
+            modalPlanTitle.textContent = 'Starter Sandbox Activated';
+            modalCadence.textContent = 'Free Forever ($0)';
+          } else if (plan === 'pro') {
+            modalSelectedTier.textContent = 'Pro Engineer & Cert Hunter';
+            modalPlanTitle.textContent = 'Start 7-Day Free Pro Trial';
+            modalCadence.textContent = isAnnual ? 'Annual ($23/mo billed at $276/yr)' : 'Monthly ($29/mo)';
+          } else {
+            modalSelectedTier.textContent = 'Enterprise & Team Accelerator';
+            modalPlanTitle.textContent = 'Request Enterprise Access & Pilot';
+            modalCadence.textContent = isAnnual ? 'Annual Team Quota' : 'Monthly Flexible Seats';
+          }
+
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        });
+      });
+
+      if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', () => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        });
+      }
+
+      // Close on background click
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 pt-space-xl pb-space-lg"><div class="w-full px-space-lg lg:px-margin grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-lg"><div class="col-span-2 md:col-span-3 lg:col-span-2 flex flex-col gap-space-md pr-space-md"><div class="flex items-center gap-space-sm"><img alt="NetMentor AI Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3Qqj316WsxePaFE-077_od--l8SvgFXndjdbChEQW2AY-1Blm6qwa6UqJVOSDg-kTGyllOp061YIN8_ABK0cQ-0Vqeq-ZlcWXsmgBTp5aEflXtFO5EjziwWqugLUQ20GXgaBj6NNCkRYmhjdZaaveZwpXc_fSrrs0d0qX-adxx--LutEc_QZIP_mIgmma0TSph4h6esf4fybCFcIElH77cqDoV7-znxJmoK0nt3JfZH2MLGWV8Kd-Y60"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor AI</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">High-fidelity network simulation and accelerated certification platform for Cisco, CompTIA, and Cloud DevOps engineering professionals.</p><div class="flex items-center gap-space-sm font-code-sm text-code-sm text-primary"><span class="w-2 h-2 rounded-full bg-primary"></span><span>All Nodes Functional | 99.98% SLA</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Curriculum</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="cisco-ccna-200-301" href="#">Cisco CCNA 200-301</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="network-plus-n10-008" href="#">CompTIA Network+</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="comptia-a-core" href="#">CompTIA A+ Core Labs</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="linux-and-cloud-sysadmin" href="#">Linux Automation CLI</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Interactive Sandbox</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="sandbox-topology" href="#">Topology Simulator</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terminal-emulator" href="#">CLI Terminal Emulator</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="packet-inspector" href="#">Packet Inspector</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="subnet-calculator" href="#">Subnetting Engine</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Enterprise Solutions</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="for-business" href="#">Team Workspaces</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="custom-curriculum" href="#">Custom Lab Authoring</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="sso-security" href="#">SSO &amp; Compliance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="pricing" href="#">Tier Matrix</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Documentation &amp; Ops</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="cli-documentation" href="#">CLI Command Reference</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="api-docs" href="#">Sandbox REST API</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="system-status" href="#">Real-Time Status</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="changelog" href="#">Release Notes</a></div></div><div class="w-full px-space-lg lg:px-margin mt-space-xl pt-space-md border-t border-outline-variant/10 flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div>© 2025 NetMentor AI Platforms Inc. Built for Systems &amp; Network Engineers.</div><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" data-path="security" href="#">Security Operations</a></div></div></footer></body></html>

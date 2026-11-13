@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-tertiary-fixed": "#1e1b19", "surface-dim": "#310000", "inverse-on-surface": "#680200", "secondary-fixed": "#e8e1e0", "primary-fixed": "#e7e1e1", "on-secondary-fixed": "#1e1b1b", "primary-fixed-dim": "#cac5c5", "surface-container": "#480100", "on-primary-container": "#676364", surface: "#310000", "surface-tint": "#cac5c5", "on-secondary-container": "#bab4b3", outline: "#8e9192", "primary-container": "#e7e1e1", "error-container": "#93000a", "surface-container-low": "#410100", "on-secondary-fixed-variant": "#4a4646", "surface-bright": "#790200", "on-secondary": "#333030", "on-tertiary": "#33302e", "on-surface-variant": "#c4c7c8", tertiary: "#ffffff", "surface-container-lowest": "#270000", "secondary-container": "#4a4646", "on-primary": "#323030", "surface-variant": "#700200", secondary: "#ccc5c5", "tertiary-fixed-dim": "#ccc5c2", "secondary-fixed-dim": "#ccc5c5", primary: "#ffffff", "surface-container-high": "#5c0100", "on-tertiary-fixed-variant": "#4a4644", "inverse-surface": "#ffdad4", "on-error": "#690005", "on-background": "#ffdad4", "tertiary-container": "#e9e1de", "on-tertiary-container": "#686361", "on-primary-fixed": "#1d1b1b", "surface-container-highest": "#700200", "outline-variant": "#444748", "inverse-primary": "#615e5e", "tertiary-fixed": "#e9e1de", "on-error-container": "#ffdad6", background: "#310000", "on-primary-fixed-variant": "#494646", "on-surface": "#ffdad4", error: "#ffb4ab"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-xl": "2.5rem", "margin-sm": "1rem", "space-xs": "0.25rem", "gutter-sm": "1rem", "margin-lg": "4rem", "space-lg": "1.5rem", gutter: "1.5rem", "space-sm": "0.5rem", margin: "2rem", "space-md": "1rem"}, fontFamily: {"body-sm": ["Inter"], "display-hero": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "body-md": ["Inter"], "title-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], "body-lg": ["Inter"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}]}}}}</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container"><header class="w-full bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] fixed top-0 z-50"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm text-on-surface hover:opacity-90 transition-opacity" data-path="home" href="#"><div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight">AI</span></div></a><span class="hidden sm:inline-flex items-center font-label-badge text-label-badge uppercase px-space-xs py-0.5 rounded bg-surface-container text-secondary font-code-sm">AI LABS</span></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-badge text-label-badge uppercase text-on-surface-variant">256-Bit TLS &amp; SOC-2 Audited</span></div><a class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[16px]">arrow_back</span><span>Back to NetMentor AI</span></a></div></div></header><main class="w-full pt-16 flex-1 flex flex-col bg-surface-container-lowest"><div class="flex flex-col w-full">
+<div class="w-full min-h-[calc(100vh-4rem)] grid grid-cols-1 lg:grid-cols-12 bg-surface-container-lowest">
+<!-- LEFT PANEL: Security Vault & Cryptographic Telemetry -->
+<div class="relative lg:col-span-5 hidden lg:flex flex-col justify-between p-margin-lg bg-surface-container-low overflow-hidden">
+<!-- Glow & Ambient Network Field -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-[120px] pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-secondary-container/15 blur-[100px] pointer-events-none"></div>
+<!-- Top Metric Header -->
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-badge text-label-badge tracking-widest text-primary uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_#4edea3]"></span>
+<span>NETSEC::AUTH_RECOVERY_NODE_04</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">
+          Zero-Knowledge Access Recovery
+        </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+          Strict enclave verification layer protecting active topology states, CCIE mock instances, and cloud sandbox telemetry.
+        </p>
+</div>
+<!-- Isometric Cryptographic Server Matrix Graphic -->
+<div class="relative z-10 my-auto py-space-xl flex flex-col items-center justify-center">
+<!-- Isometric Cluster Graphic -->
+<div class="relative w-full max-w-sm aspect-square flex items-center justify-center">
+<svg class="w-full h-full drop-shadow-2xl select-none" fill="none" viewbox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+<!-- Background Topology Grid Lines -->
+<path d="M40 180 L200 100 L360 180 L200 260 Z" opacity="0.6" stroke="#3c4a42" stroke-dasharray="4 4" stroke-width="1"></path>
+<path d="M40 220 L200 140 L360 220 L200 300 Z" opacity="0.3" stroke="#3c4a42" stroke-dasharray="4 4" stroke-width="1"></path>
+<!-- Isometric Server Tier 3 (Bottom Platform) -->
+<path d="M200 290 L330 225 L330 205 L200 270 L70 205 L70 225 Z" fill="#0c1324"></path>
+<path d="M200 270 L330 205 L200 140 L70 205 Z" fill="#151b2d"></path>
+<path d="M70 205 L200 270 L200 290 L70 225 Z" fill="#191f31"></path>
+<path d="M200 270 L330 205 L330 225 L200 290 Z" fill="#23293c"></path>
+<!-- Rack Slots & Lights -->
+<line opacity="0.4" stroke="#4edea3" stroke-width="2" x1="100" x2="185" y1="210" y2="252"></line>
+<circle class="animate-pulse" cx="102" cy="211" fill="#4edea3" r="2.5"></circle>
+<circle cx="120" cy="220" fill="#89ceff" r="2"></circle>
+<circle cx="138" cy="229" fill="#4edea3" r="2"></circle>
+<circle cx="156" cy="238" fill="#4edea3" r="2"></circle>
+<!-- Isometric Server Tier 2 (Middle Blade Enclosure) -->
+<path d="M200 230 L310 175 L310 155 L200 210 L90 155 L90 175 Z" fill="#0c1324"></path>
+<path d="M200 210 L310 155 L200 100 L90 155 Z" fill="#191f31"></path>
+<path d="M90 155 L200 210 L200 230 L90 175 Z" fill="#23293c"></path>
+<path d="M200 210 L310 155 L310 175 L200 230 Z" fill="#2e3447"></path>
+<!-- Data Conduits -->
+<line opacity="0.7" stroke="#89ceff" stroke-width="2" x1="120" x2="180" y1="162" y2="192"></line>
+<circle cx="125" cy="164.5" fill="#89ceff" r="2"></circle>
+<circle cx="145" cy="174.5" fill="#4edea3" r="2"></circle>
+<circle class="animate-ping" cx="165" cy="184.5" fill="#89ceff" r="2.5" style="animation-duration: 2.5s;"></circle>
+<!-- Isometric Server Tier 1 (Cryptographic Hardware Vault) -->
+<path d="M200 160 L280 120 L280 85 L200 125 L120 85 L120 120 Z" fill="#151b2d"></path>
+<path d="M200 125 L280 85 L200 45 L120 85 Z" fill="#23293c"></path>
+<path d="M120 85 L200 125 L200 160 L120 120 Z" fill="#191f31"></path>
+<path d="M200 125 L280 85 L280 120 L200 160 Z" fill="#2e3447"></path>
+<!-- Glowing Vault Core Emitter -->
+<circle cx="200" cy="85" fill="#10b981" fill-opacity="0.2" r="16"></circle>
+<circle cx="200" cy="85" fill="#4edea3" fill-opacity="0.6" r="8"></circle>
+<circle cx="200" cy="85" fill="#ffffff" r="3"></circle>
+<!-- Floating Data Hash Sparks -->
+<path d="M200 45 L200 20" stroke="#4edea3" stroke-dasharray="2 3" stroke-width="1.5"></path>
+<circle class="animate-bounce" cx="200" cy="18" fill="#4edea3" r="3"></circle>
+</svg>
+</div>
+<!-- Diagnostic Security Terminal Card -->
+<div class="w-full bg-surface-container rounded-xl p-space-md shadow-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span class="flex items-center gap-1.5 text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              ENCLAVE PROTOCOL ACTIVE
+            </span>
+<span class="text-secondary font-code-sm">TLS_AES_256_GCM</span>
+</div>
+<div class="bg-surface-container-lowest rounded p-space-sm font-code-sm text-code-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="text-outline">Algorithm:</span>
+<span class="text-on-surface font-medium">SHA-256 HMAC Tokenizer</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Client Verification:</span>
+<span class="text-on-surface font-medium">Remote Secure Attestation</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Audit Log IP:</span>
+<span class="text-secondary font-medium">198.51.100.42 (US-EAST-NOC)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Badges Footer -->
+<div class="relative z-10 flex items-center justify-between pt-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-badge text-label-badge uppercase">
+            FIPS 140-3
+          </div>
+<div class="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-label-badge text-label-badge uppercase">
+            SOC-2 Type II
+          </div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">NetMentor SecGov v4.19</span>
+</div>
+</div>
+<!-- RIGHT PANEL: High-Trust Recovery Workflow -->
+<div class="lg:col-span-7 flex flex-col justify-between p-gutter sm:p-margin lg:p-margin-lg bg-surface-container-lowest">
+<!-- Top Action Row -->
+<div class="flex items-center justify-between w-full">
+<a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors group" data-path="auth/login" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span>Back to Login</span>
+</a>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Need assistance?</span>
+<a class="font-label-badge text-label-badge text-secondary hover:underline uppercase" href="#">Enterprise NOC</a>
+</div>
+</div>
+<!-- Main Form Wrapper -->
+<div class="w-full max-w-lg mx-auto py-space-xl flex flex-col gap-space-lg">
+<!-- Header & Identity Icon -->
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">lock_reset</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Reset Your Credentials
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Enter the email associated with your NetMentor account. We'll send a cryptographic magic-link to restore lab access.
+          </p>
+</div>
+<!-- Interactive Recovery Form -->
+<form class="flex flex-col gap-space-lg" id="recoveryForm" onsubmit="event.preventDefault(); handleSendLink();">
+<!-- Floating Material Input Component -->
+<div class="flex flex-col gap-space-xs">
+<div class="relative group rounded-lg bg-surface-container-low transition-all duration-200" id="inputContainer">
+<div class="absolute inset-y-0 left-0 pl-space-md flex items-center pointer-events-none text-on-surface-variant transition-colors" id="emailIcon">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</div>
+<input autocomplete="email" class="peer w-full pl-12 pr-space-md pt-6 pb-2 bg-transparent text-on-surface font-body-md text-body-md outline-none transition-all placeholder-transparent" id="emailInput" placeholder=" " required="" type="email"/>
+<label class="absolute left-12 top-4 font-body-sm text-body-sm text-on-surface-variant duration-200 transform -translate-y-2.5 scale-75 origin-[0] pointer-events-none peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2.5 peer-focus:text-primary" for="emailInput">
+                Account Email Address
+              </label>
+<!-- Active Status / Verification Spinner -->
+<div class="absolute inset-y-0 right-0 pr-space-md flex items-center pointer-events-none opacity-0 transition-opacity" id="inputIndicator">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</div>
+</div>
+<!-- Helper / Context Line -->
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="fieldHelper">
+                Must match your registered organization or student email
+              </span>
+<span class="hidden font-code-sm text-code-sm text-secondary bg-surface-container px-1.5 py-0.5 rounded" id="domainTag">
+                ENTERPRISE SSO
+              </span>
+</div>
+<!-- Inline Animated Error State Box -->
+<div class="hidden flex-col gap-1 p-space-sm rounded-lg bg-error-container text-on-error-container transition-all" id="inlineError">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-error">error</span>
+<span class="font-title-md text-title-md text-error">No Account Located</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-error-container pl-6">
+                No active NetMentor credentials found matching this domain. Please verify your email or sign up for a student workspace.
+              </p>
+</div>
+</div>
+<!-- Primary Call to Action -->
+<button class="w-full flex items-center justify-center gap-space-sm py-space-md px-space-lg rounded bg-primary-container text-on-primary-container font-headline-sm text-headline-sm hover:bg-primary transition-all duration-200 shadow-lg shadow-primary/20 active:scale-[0.99] cursor-pointer" id="submitBtn" type="submit">
+<span id="btnText">Send Reset Magic-Link</span>
+<span class="material-symbols-outlined text-[20px]" id="btnIcon">arrow_forward</span>
+<div class="hidden w-5 h-5 rounded-full border-2 border-on-primary-container border-t-transparent animate-spin" id="btnSpinner"></div>
+</button>
+</form>
+<!-- Notification Banner: Email Sent State -->
+<div class="hidden flex-col gap-space-md p-space-md rounded-xl bg-surface-container shadow-xl" id="successBanner">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">mark_email_read</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface">Magic-Link Dispatched</span>
+<span class="font-label-badge text-label-badge uppercase px-1.5 py-0.5 rounded bg-primary/20 text-primary">ENCRYPTED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Reset link dispatched to <span class="text-on-surface font-code-sm" id="targetEmailLabel">a***@enterprise.com</span>. Check your inbox or spam folder within 15 minutes.
+              </p>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest font-code-sm text-code-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">timer</span>
+<span>Expires in:</span>
+<span class="text-tertiary font-bold" id="countdownClock">14:59</span>
+</div>
+<button class="text-primary hover:underline font-label-badge uppercase cursor-pointer" onclick="triggerResend()" type="button">
+              Resend Now
+            </button>
+</div>
+</div>
+<!-- Security Guidance & Throttle Footer -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">verified_user</span>
+<span>Didn't receive an email? Resend in <span class="font-code-sm text-secondary" id="resendTimer">54s</span> or contact enterprise NOC support.</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">key</span>
+<span>Single-use cryptographic links expire automatically after 15 minutes.</span>
+</div>
+</div>
+<!-- Direct Navigation Options -->
+<div class="pt-space-md flex flex-wrap items-center justify-center gap-space-lg text-center font-body-sm text-body-sm text-on-surface-variant">
+<div>
+            Remember your credentials? 
+            <a class="text-primary hover:underline font-medium ml-1" data-path="auth/login" href="#">Sign In</a>
+</div>
+<span class="text-outline-variant">•</span>
+<div>
+            Need a lab seat? 
+            <a class="text-secondary hover:underline font-medium ml-1" data-path="auth/signup" href="#">Register Account</a>
+</div>
+</div>
+</div>
+<!-- Developer Test Triggers / Diagnostic Toolbar -->
+<div class="w-full max-w-lg mx-auto pt-space-md">
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              QA Verification Triggers
+            </span>
+<span class="font-code-sm text-code-sm text-outline">State Inspector</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-primary font-code-sm text-code-sm flex items-center justify-center gap-1.5 transition-colors cursor-pointer" onclick="simulateState('sent')" type="button">
+<span class="material-symbols-outlined text-[16px]">outgoing_mail</span>
+<span>Test Email Sent</span>
+</button>
+<button class="px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-error font-code-sm text-code-sm flex items-center justify-center gap-1.5 transition-colors cursor-pointer" onclick="simulateState('error')" type="button">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Test Unregistered</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // DOM References
+  const emailInput = document.getElementById('emailInput');
+  const inputContainer = document.getElementById('inputContainer');
+  const inputIndicator = document.getElementById('inputIndicator');
+  const inlineError = document.getElementById('inlineError');
+  const successBanner = document.getElementById('successBanner');
+  const targetEmailLabel = document.getElementById('targetEmailLabel');
+  const submitBtn = document.getElementById('submitBtn');
+  const btnText = document.getElementById('btnText');
+  const btnIcon = document.getElementById('btnIcon');
+  const btnSpinner = document.getElementById('btnSpinner');
+  const domainTag = document.getElementById('domainTag');
+  const resendTimer = document.getElementById('resendTimer');
+
+  // Input keystroke watcher for enterprise domains
+  emailInput.addEventListener('input', (e) => {
+    const val = e.target.value;
+    if (val.includes('@') && val.length > 5) {
+      inputIndicator.classList.remove('opacity-0');
+      if (val.endsWith('.edu') || val.endsWith('cisco.com') || val.endsWith('juniper.net')) {
+        domainTag.classList.remove('hidden');
+      } else {
+        domainTag.classList.add('hidden');
+      }
+    } else {
+      inputIndicator.classList.add('opacity-0');
+      domainTag.classList.add('hidden');
+    }
+    // Clear error on type
+    inlineError.classList.add('hidden');
+    inputContainer.classList.remove('bg-error-container/20');
+  });
+
+  function handleSendLink() {
+    const emailVal = emailInput.value.trim();
+    if (!emailVal) return;
+
+    // Show loading
+    btnText.textContent = "Encrypting Token...";
+    btnIcon.classList.add('hidden');
+    btnSpinner.classList.remove('hidden');
+    submitBtn.disabled = true;
+
+    setTimeout(() => {
+      btnText.textContent = "Send Reset Magic-Link";
+      btnIcon.classList.remove('hidden');
+      btnSpinner.classList.add('hidden');
+      submitBtn.disabled = false;
+
+      // Mask email
+      const parts = emailVal.split('@');
+      const masked = parts[0].charAt(0) + '***@' + (parts[1] || 'domain.com');
+      targetEmailLabel.textContent = masked;
+
+      // Display Success Banner
+      inlineError.classList.add('hidden');
+      successBanner.classList.remove('hidden');
+      successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 900);
+  }
+
+  // Developer / Prototype State Switcher
+  function simulateState(state) {
+    if (state === 'sent') {
+      inlineError.classList.add('hidden');
+      inputContainer.classList.remove('bg-error-container/20');
+      emailInput.value = 'alex.chen@cybercore-defense.com';
+      targetEmailLabel.textContent = 'a***@cybercore-defense.com';
+      domainTag.classList.remove('hidden');
+      inputIndicator.classList.remove('opacity-0');
+      successBanner.classList.remove('hidden');
+      successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else if (state === 'error') {
+      successBanner.classList.add('hidden');
+      emailInput.value = 'ghost.recon@unknown-subdomain.org';
+      domainTag.classList.add('hidden');
+      inputIndicator.classList.add('opacity-0');
+      inlineError.classList.remove('hidden');
+      inputContainer.classList.add('bg-error-container/20');
+      
+      // Inline Shake Animation
+      inputContainer.classList.add('translate-x-1');
+      setTimeout(() => inputContainer.classList.remove('translate-x-1'), 75);
+      setTimeout(() => inputContainer.classList.add('-translate-x-1'), 150);
+      setTimeout(() => inputContainer.classList.remove('-translate-x-1'), 225);
+    }
+  }
+
+  function triggerResend() {
+    const clock = document.getElementById('countdownClock');
+    clock.textContent = "15:00";
+    alert("A fresh SHA-256 HMAC cryptographic token has been queued for delivery.");
+  }
+
+  // Active countdown timer simulation for security guidance
+  let seconds = 54;
+  setInterval(() => {
+    if (seconds > 0) {
+      seconds--;
+      resendTimer.textContent = `${seconds}s`;
+    } else {
+      resendTimer.textContent = 'Ready';
+    }
+  }, 1000);
+</script></main></body></html>

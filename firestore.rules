@@ -1,0 +1,117 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny all access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Security primitives & identity helpers
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function getUserData(uid) {
+      return get(/databases/$(database)/documents/users/$(uid)).data;
+    }
+
+    function hasUserDoc() {
+      return exists(/databases/$(database)/documents/users/$(request.auth.uid));
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == 'christiansiabenankam@gmail.com' ||
+        (hasUserDoc() && getUserData(request.auth.uid).role == 'admin')
+      );
+    }
+
+    function isInstructor() {
+      return isSignedIn() && (isAdmin() || (hasUserDoc() && getUserData(request.auth.uid).role == 'instructor'));
+    }
+
+    function isLabTech() {
+      return isSignedIn() && (isAdmin() || (hasUserDoc() && (getUserData(request.auth.uid).role == 'lab_tech' || getUserData(request.auth.uid).role == 'instructor')));
+    }
+
+    function isOrgManager() {
+      return isSignedIn() && (isAdmin() || (hasUserDoc() && getUserData(request.auth.uid).role == 'org_manager'));
+    }
+
+    function isGuardian() {
+      return isSignedIn() && (isAdmin() || (hasUserDoc() && getUserData(request.auth.uid).role == 'guardian'));
+    }
+
+    // User collection rules
+    function isValidUser(data) {
+      return data.id is string && data.id == request.auth.uid &&
+             data.email is string && data.email.size() > 3 && data.email.size() <= 100 &&
+             data.role in ['student', 'instructor', 'lab_tech', 'org_manager', 'guardian', 'admin'];
+    }
+
+    match /users/{userId} {
+      allow get: if isOwner(userId) || isAdmin() || isInstructor();
+      allow list: if isAdmin();
+      allow create: if isOwner(userId) && isValidUser(incoming());
+      allow update: if (isOwner(userId) && isValidUser(incoming()) && incoming().id == existing().id) || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Lab submissions
+    match /lab_submissions/{submissionId} {
+      allow get: if isSignedIn() && (isOwner(resource.data.studentId) || isInstructor() || isAdmin());
+      allow list: if isSignedIn();
+      allow create: if isSignedIn() && (isOwner(incoming().studentId) || isInstructor() || isAdmin());
+      allow update: if isInstructor() || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Equipment assets (Lab-Ops)
+    match /equipment_assets/{assetId} {
+      allow read: if isSignedIn();
+      allow write: if isLabTech() || isAdmin();
+    }
+
+    // Maintenance logs
+    match /maintenance_logs/{logId} {
+      allow read: if isSignedIn();
+      allow write: if isLabTech() || isAdmin();
+    }
+
+    // Attendance records
+    match /cohort_attendance/{attendanceId} {
+      allow read: if isSignedIn() && (isInstructor() || isGuardian() || isAdmin() || isOwner(resource.data.studentId));
+      allow write: if isInstructor() || isAdmin();
+    }
+
+    // Enterprise Org tenants
+    match /org_tenants/{tenantId} {
+      allow read: if isOrgManager() || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    // System audit logs
+    match /system_audit_logs/{logId} {
+      allow read: if isAdmin();
+      allow create: if isSignedIn();
+      allow update, delete: if false; // Immutable audit log
+    }
+  }
+}

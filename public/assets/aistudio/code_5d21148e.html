@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-tertiary-fixed": "#1e1b19", "surface-dim": "#310000", "inverse-on-surface": "#680200", "secondary-fixed": "#e8e1e0", "primary-fixed": "#e7e1e1", "on-secondary-fixed": "#1e1b1b", "primary-fixed-dim": "#cac5c5", "surface-container": "#480100", "on-primary-container": "#676364", surface: "#310000", "surface-tint": "#cac5c5", "on-secondary-container": "#bab4b3", outline: "#8e9192", "primary-container": "#e7e1e1", "error-container": "#93000a", "surface-container-low": "#410100", "on-secondary-fixed-variant": "#4a4646", "surface-bright": "#790200", "on-secondary": "#333030", "on-tertiary": "#33302e", "on-surface-variant": "#c4c7c8", tertiary: "#ffffff", "surface-container-lowest": "#270000", "secondary-container": "#4a4646", "on-primary": "#323030", "surface-variant": "#700200", secondary: "#ccc5c5", "tertiary-fixed-dim": "#ccc5c2", "secondary-fixed-dim": "#ccc5c5", primary: "#ffffff", "surface-container-high": "#5c0100", "on-tertiary-fixed-variant": "#4a4644", "inverse-surface": "#ffdad4", "on-error": "#690005", "on-background": "#ffdad4", "tertiary-container": "#e9e1de", "on-tertiary-container": "#686361", "on-primary-fixed": "#1d1b1b", "surface-container-highest": "#700200", "outline-variant": "#444748", "inverse-primary": "#615e5e", "tertiary-fixed": "#e9e1de", "on-error-container": "#ffdad6", background: "#310000", "on-primary-fixed-variant": "#494646", "on-surface": "#ffdad4", error: "#ffb4ab"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-xl": "2.5rem", "margin-sm": "1rem", "space-xs": "0.25rem", "gutter-sm": "1rem", "margin-lg": "4rem", "space-lg": "1.5rem", gutter: "1.5rem", "space-sm": "0.5rem", margin: "2rem", "space-md": "1rem"}, fontFamily: {"body-sm": ["Inter"], "display-hero": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "body-md": ["Inter"], "title-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], "body-lg": ["Inter"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}]}}}}</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container"><header class="w-full bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] fixed top-0 z-50"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm text-on-surface hover:opacity-90 transition-opacity" data-path="home" href="#"><div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight">AI</span></div></a><span class="hidden sm:inline-flex items-center font-label-badge text-label-badge uppercase px-space-xs py-0.5 rounded bg-surface-container text-secondary font-code-sm">AI LABS</span></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-badge text-label-badge uppercase text-on-surface-variant">256-Bit TLS &amp; SOC-2 Audited</span></div><a class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[16px]">arrow_back</span><span>Back to NetMentor AI</span></a></div></div></header><main class="w-full pt-16 flex-1 flex flex-col bg-surface-container-lowest"><div class="flex flex-col w-full">
+<!-- Toast Notification Notification Area -->
+<div class="fixed top-20 right-6 z-50 transform translate-y-[-120%] opacity-0 transition-all duration-300 ease-out flex items-center gap-space-md p-space-md bg-surface-container-high text-on-surface rounded-xl shadow-2xl max-w-md" id="auth-toast">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight" id="toast-title">Access Authorized</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate" id="toast-desc">Welcome back, Alexandre! Cisco CCNA Sandbox ready.</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1" onclick="dismissToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="w-full min-h-[calc(100vh-4rem)] flex flex-col lg:flex-row">
+<!-- LEFT PANEL: Cyber-Precision Datacenter Infrastructure View (45%) -->
+<div class="w-full lg:w-[45%] bg-surface-container-lowest relative overflow-hidden flex flex-col justify-between p-margin-sm md:p-margin lg:p-margin-lg">
+<!-- Ambient Radial Backlights -->
+<div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-primary/10 blur-[100px] pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/3 w-80 h-80 rounded-full bg-secondary-container/10 blur-[120px] pointer-events-none"></div>
+<div class="absolute -bottom-20 right-0 w-80 h-80 rounded-full bg-tertiary-container/10 blur-[100px] pointer-events-none"></div>
+<!-- Top Header Meta Cluster -->
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary font-code-sm">GRID ID: CLOUD-US-EAST-04</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight">
+          Global Neural <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-secondary-fixed">Telemetry Matrix</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+          Real-time hardware topology visualization &amp; state synchronization for distributed networking sandboxes.
+        </p>
+</div>
+<!-- Visual Centerpiece: Isometric Server Racks & Fiber Streams -->
+<div class="relative z-10 my-space-lg flex flex-col items-center justify-center">
+<!-- SVG Architecture Diagram with animated packet nodes -->
+<div class="w-full max-w-md relative bg-surface-container-low/60 rounded-xl p-space-md shadow-2xl backdrop-blur-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm bg-surface-container-high/40 px-space-sm py-1 rounded">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-code-sm ml-2">TOPOLOGY_POD_A9</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge text-secondary font-code-sm uppercase">BGP EVPN v4/v6</span>
+</div>
+</div>
+<!-- Isometric Rack SVG Diagram -->
+<svg class="w-full h-auto text-primary" fill="none" viewbox="0 0 420 280" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="fiberGlow" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.9"></stop>
+<stop offset="50%" stop-color="#89ceff" stop-opacity="0.9"></stop>
+<stop offset="100%" stop-color="#ffb95f" stop-opacity="0.8"></stop>
+</lineargradient>
+<lineargradient id="rackGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#1e293b"></stop>
+<stop offset="100%" stop-color="#0c1324"></stop>
+</lineargradient>
+<filter height="140%" id="glowFilter" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- Rack Outer Chassis -->
+<rect fill="url(#rackGrad)" height="240" rx="6" stroke="#33394c" stroke-width="1.5" width="280" x="70" y="20"></rect>
+<line stroke="#191f31" stroke-width="2" x1="86" x2="86" y1="20" y2="260"></line>
+<line stroke="#191f31" stroke-width="2" x1="334" x2="334" y1="20" y2="260"></line>
+<!-- Unit 1: Top of Rack Core Switch (CORE-SW-01) -->
+<rect fill="#151b2d" height="34" rx="2" width="228" x="96" y="32"></rect>
+<rect fill="#4edea3" filter="url(#glowFilter)" height="6" rx="1" width="6" x="104" y="44"></rect>
+<rect fill="#4edea3" height="6" rx="1" width="6" x="114" y="44"></rect>
+<rect fill="#89ceff" height="6" rx="1" width="6" x="124" y="44"></rect>
+<rect fill="#4edea3" height="6" rx="1" width="6" x="134" y="44"></rect>
+<!-- Port Groups (QSFP28 100G) -->
+<g fill="#23293c">
+<rect height="8" rx="1" width="12" x="160" y="40"></rect><rect height="8" rx="1" width="12" x="176" y="40"></rect>
+<rect height="8" rx="1" width="12" x="192" y="40"></rect><rect height="8" rx="1" width="12" x="208" y="40"></rect>
+<rect height="8" rx="1" width="12" x="224" y="40"></rect><rect height="8" rx="1" width="12" x="240" y="40"></rect>
+<rect height="8" rx="1" width="12" x="256" y="40"></rect><rect height="8" rx="1" width="12" x="272" y="40"></rect>
+<rect height="8" rx="1" width="12" x="288" y="40"></rect><rect height="8" rx="1" width="12" x="304" y="40"></rect>
+</g>
+<text fill="#86948a" font-family="JetBrains Mono" font-size="7" x="104" y="60">CORE-SW-01 [N9K-C93180YC-FX3]</text>
+<!-- Unit 2: Spine Router (EDGE-RTR-02) -->
+<rect fill="#191f31" height="42" rx="2" width="228" x="96" y="74"></rect>
+<circle cx="107" cy="88" fill="#4edea3" r="3"></circle>
+<circle cx="117" cy="88" fill="#ffb95f" r="3"></circle>
+<circle cx="127" cy="88" fill="#4edea3" r="3"></circle>
+<!-- Modular Line Cards -->
+<rect fill="#151b2d" height="30" rx="2" width="76" x="146" y="80"></rect>
+<rect fill="#151b2d" height="30" rx="2" width="86" x="230" y="80"></rect>
+<text fill="#86948a" font-family="JetBrains Mono" font-size="7" x="104" y="108">EDGE-ASR1001-HX</text>
+<text fill="#89ceff" font-family="JetBrains Mono" font-size="7" x="236" y="98">OC-192 / POS</text>
+<!-- Unit 3: Hyperconverged Compute Blade (WASM-NODE-CL-01) -->
+<rect fill="#151b2d" height="58" rx="2" width="228" x="96" y="124"></rect>
+<rect fill="#23293c" height="8" rx="1" width="212" x="104" y="132"></rect>
+<!-- Disk bays -->
+<g fill="#191f31">
+<rect height="28" rx="2" width="30" x="104" y="146"></rect><rect height="28" rx="2" width="30" x="138" y="146"></rect>
+<rect height="28" rx="2" width="30" x="172" y="146"></rect><rect height="28" rx="2" width="30" x="206" y="146"></rect>
+<rect height="28" rx="2" width="30" x="240" y="146"></rect><rect height="28" rx="2" width="42" x="274" y="146"></rect>
+</g>
+<circle cx="112" cy="154" fill="#4edea3" r="2"></circle>
+<circle cx="146" cy="154" fill="#4edea3" r="2"></circle>
+<circle cx="180" cy="154" fill="#4edea3" r="2"></circle>
+<circle cx="214" cy="154" fill="#89ceff" r="2"></circle>
+<circle cx="248" cy="154" fill="#4edea3" r="2"></circle>
+<!-- Unit 4: Patch Panel Cable Management -->
+<rect fill="#191f31" height="26" rx="2" width="228" x="96" y="190"></rect>
+<path d="M104 203 Q 120 220, 160 203 T 220 203 T 280 203 T 310 203" fill="none" stroke="#00422b" stroke-width="2"></path>
+<!-- Unit 5: Smart PDU & Battery Backup -->
+<rect fill="#151b2d" height="26" rx="2" width="228" x="96" y="224"></rect>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="8" x="106" y="240">208V AC | 14.8A | 3.07 kW</text>
+<rect fill="#00422b" height="10" rx="1" width="44" x="270" y="232"></rect>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="7" x="274" y="240">PDU STATUS</text>
+<!-- Animated Fiber Cable Splines Cascading Down -->
+<path class="animate-[pulse_2s_infinite]" d="M166 48 C 60 70, 50 180, 108 203" stroke="url(#fiberGlow)" stroke-dasharray="12 4" stroke-linecap="round" stroke-width="2"></path>
+<path d="M256 48 C 360 80, 370 170, 310 203" opacity="0.8" stroke="#89ceff" stroke-dasharray="8 6" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M210 100 C 230 140, 240 160, 252 232" opacity="0.7" stroke="#ffb95f" stroke-dasharray="6 4" stroke-width="1.5"></path>
+<!-- Glowing Packet Burst Node -->
+<circle cx="166" cy="48" fill="#4edea3" filter="url(#glowFilter)" r="4"></circle>
+<circle cx="310" cy="203" fill="#89ceff" r="3"></circle>
+</svg>
+<!-- Interactive Live Diagnostics Pill Stream -->
+<div class="mt-space-md grid grid-cols-1 sm:grid-cols-2 gap-space-xs font-code-sm">
+<div class="flex items-center gap-space-xs p-space-xs bg-surface-container rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-code-sm text-code-sm text-primary truncate">CORE-SW-01: 100Gbps LINK UP</span>
+</div>
+<div class="flex items-center gap-space-xs p-space-xs bg-surface-container rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-code-sm text-code-sm text-secondary truncate">TLS 1.3 Handshake OK</span>
+</div>
+<div class="flex items-center gap-space-xs p-space-xs bg-surface-container rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-code-sm text-code-sm text-tertiary truncate">Socratic Node Active</span>
+</div>
+<div class="flex items-center gap-space-xs p-space-xs bg-surface-container rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-code-sm text-code-sm text-on-surface-variant truncate">BGP AS64512 ESTAB</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Left Panel Bottom Quote Badge -->
+<div class="relative z-10 p-space-md bg-surface-container-high/40 rounded-xl backdrop-blur-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Enter your live lab environment.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Over <strong class="text-primary font-semibold">14,800+</strong> real-time WebAssembly network pods and sandbox nodes running concurrently across edge regions.
+            </span>
+<div class="flex items-center gap-space-sm mt-space-sm">
+<span class="px-space-xs py-0.5 bg-surface-container-highest rounded text-on-surface font-code-sm text-code-sm">Cisco IOS-XE 17.9.4a</span>
+<span class="px-space-xs py-0.5 bg-surface-container-highest rounded text-on-surface font-code-sm text-code-sm">Junos 22.4R1</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: High-Security Modern Authentication Workspace (55%) -->
+<div class="w-full lg:w-[55%] bg-surface flex flex-col justify-center items-center p-margin-sm md:p-margin lg:p-margin-lg relative">
+<!-- Background subtle grid accent -->
+<div class="absolute inset-0 bg-[radial-gradient(#191f31_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+<!-- Centered Card Container -->
+<div class="relative z-10 w-full max-w-xl flex flex-col">
+<!-- Auth Card -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-lg sm:p-space-xl rounded-xl shadow-2xl">
+<!-- Card Header -->
+<div class="mb-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-xs py-0.5 rounded bg-surface-container-high mb-space-xs">
+<span class="material-symbols-outlined text-[14px] text-primary">security</span>
+<span class="font-label-badge text-label-badge uppercase text-primary font-code-sm">ZERO TRUST AUTH PROTOCOL</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Welcome Back, Engineer</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Access your live Cisco IOS-XE and CompTIA sandbox environment.
+            </p>
+</div>
+<!-- Single-Sign-On Providers (Google & GitHub) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm mb-space-md">
+<!-- Google SSO Button -->
+<button class="flex items-center justify-center gap-space-sm px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-all duration-150 text-on-surface group" onclick="triggerSSO('Google')" type="button">
+<!-- Colored Google 'G' SVG -->
+<svg class="w-5 h-5 flex-shrink-0" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
+</svg>
+<span class="font-title-md text-title-md group-hover:text-primary transition-colors">Continue with Google</span>
+</button>
+<!-- GitHub SSO Button -->
+<button class="flex items-center justify-center gap-space-sm px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-all duration-150 text-on-surface group" onclick="triggerSSO('GitHub')" type="button">
+<!-- GitHub Mark SVG -->
+<svg class="w-5 h-5 flex-shrink-0 fill-current text-on-surface group-hover:text-secondary transition-colors" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+<span class="font-title-md text-title-md group-hover:text-secondary transition-colors">Continue with GitHub</span>
+</button>
+</div>
+<!-- Obsidian Separator -->
+<div class="relative flex items-center justify-center my-space-md">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute bg-surface-container-low px-space-sm font-label-badge text-label-badge uppercase text-on-surface-variant font-code-sm">
+              or continue with enterprise SSO / email
+            </span>
+</div>
+<!-- Main Authentication Form -->
+<form class="space-y-space-md mt-space-md" id="login-form" onsubmit="handleAuthSubmit(event)">
+<!-- Email Input Field -->
+<div class="flex flex-col gap-1">
+<label class="font-title-md text-title-md text-on-surface flex items-center justify-between" for="work-email">
+<span>Work / Student Email</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-code-sm uppercase">RADIUS / LDAP SYNCHRONIZED</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant absolute left-3 pointer-events-none">mail</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container rounded font-body-md text-body-md text-on-surface placeholder-on-surface-variant/40 focus:outline-none focus:bg-surface-container-high focus:shadow-[0_0_16px_rgba(16,185,129,0.25)] transition-all duration-150" id="work-email" name="email" placeholder="engineer@enterprise.net" required="" type="email" value="a.mercer@network-cadet.edu"/>
+</div>
+</div>
+<!-- Password Input Field -->
+<div class="flex flex-col gap-1" id="password-group">
+<div class="flex items-center justify-between">
+<label class="font-title-md text-title-md text-on-surface" for="password-input">Password</label>
+<a class="font-body-sm text-body-sm text-secondary hover:text-secondary-fixed transition-colors" href="#forgot" onclick="event.preventDefault(); triggerForgotAlert();">
+                  Forgot password?
+                </a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant absolute left-3 pointer-events-none">lock</span>
+<input class="w-full pl-10 pr-12 py-3 bg-surface-container rounded font-body-md text-body-md text-on-surface placeholder-on-surface-variant/40 focus:outline-none focus:bg-surface-container-high focus:shadow-[0_0_16px_rgba(16,185,129,0.25)] transition-all duration-150" id="password-input" name="password" placeholder="••••••••••••••••" required="" type="password" value="C!sc0-K1net1c-2025#"/>
+<button aria-label="Toggle password visibility" class="absolute right-3 p-1 text-on-surface-variant hover:text-on-surface transition-colors" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="eye-icon">visibility</span>
+</button>
+</div>
+<!-- Error Container (Hidden by default, triggered via test buttons) -->
+<div class="hidden items-center gap-space-xs mt-1 text-error" id="password-error">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span class="font-body-sm text-body-sm" id="password-error-text">Authentication failed: Invalid credentials or expired SSH session.</span>
+</div>
+</div>
+<!-- 2FA / TOTP Security Expandable Panel -->
+<div class="rounded-lg bg-surface-container-high/40 p-space-sm transition-all duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">vpn_key</span>
+<span class="font-title-md text-title-md text-on-surface">Hardware / TOTP Multi-Factor (MFA)</span>
+</div>
+<button class="text-xs font-code-sm text-primary hover:underline cursor-pointer flex items-center gap-0.5" id="mfa-toggle-btn" onclick="toggleMFA()" type="button">
+<span id="mfa-status-text">Show 6-Digit Code</span>
+<span class="material-symbols-outlined text-[16px]" id="mfa-arrow">expand_more</span>
+</button>
+</div>
+<!-- Collapsible 6-Digit Inputs -->
+<div class="hidden mt-space-sm pt-space-sm border-t-0 flex-col gap-space-xs" id="mfa-panel">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Authenticator 6-Digit Token:</span>
+<span class="font-label-badge text-label-badge font-code-sm text-tertiary" id="mfa-timer">Code expires in 04:52</span>
+</div>
+<div class="flex items-center justify-between gap-2 mt-1">
+<input class="w-11 h-12 text-center font-headline-sm text-headline-sm bg-surface-container rounded text-primary focus:outline-none focus:ring-1 focus:ring-primary" id="otp-1" maxlength="1" oninput="advanceOtp(this, 1)" type="text" value="7"/>
+<input class="w-11 h-12 text-center font-headline-sm text-headline-sm bg-surface-container rounded text-primary focus:outline-none focus:ring-1 focus:ring-primary" id="otp-2" maxlength="1" oninput="advanceOtp(this, 2)" type="text" value="2"/>
+<input class="w-11 h-12 text-center font-headline-sm text-headline-sm bg-surface-container rounded text-primary focus:outline-none focus:ring-1 focus:ring-primary" id="otp-3" maxlength="1" oninput="advanceOtp(this, 3)" type="text" value="9"/>
+<span class="text-on-surface-variant font-code-lg text-code-lg">-</span>
+<input class="w-11 h-12 text-center font-headline-sm text-headline-sm bg-surface-container rounded text-primary focus:outline-none focus:ring-1 focus:ring-primary" id="otp-4" maxlength="1" oninput="advanceOtp(this, 4)" type="text" value="4"/>
+<input class="w-11 h-12 text-center font-headline-sm text-headline-sm bg-surface-container rounded text-primary focus:outline-none focus:ring-1 focus:ring-primary" id="otp-5" maxlength="1" oninput="advanceOtp(this, 5)" type="text" value="0"/>
+<input class="w-11 h-12 text-center font-headline-sm text-headline-sm bg-surface-container rounded text-primary focus:outline-none focus:ring-1 focus:ring-primary" id="otp-6" maxlength="1" oninput="advanceOtp(this, 6)" type="text" value="1"/>
+</div>
+</div>
+</div>
+<!-- Remember Browser Checkbox -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded bg-surface-container border-0 text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Remember this browser workstation for 30 days</span>
+</label>
+</div>
+<!-- Primary Action CTA Button -->
+<button class="w-full py-3.5 px-space-md rounded bg-primary-container hover:bg-primary-fixed-dim text-on-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-xs transition-all duration-200 shadow-[0_0_24px_rgba(16,185,129,0.35)] hover:shadow-[0_0_32px_rgba(16,185,129,0.6)] cursor-pointer" id="signin-btn" type="submit">
+<span>Sign In to Terminal &amp; Labs</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<!-- Interactive Test Auth Triggers (Simulations) -->
+<div class="mt-space-lg pt-space-md bg-surface-container-highest/30 rounded-lg p-space-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-badge text-label-badge uppercase text-secondary font-code-sm">SANDBOX AUTH TRIGGER DEMOS</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Simulate States:</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+<button class="px-space-sm py-1.5 rounded bg-surface-container hover:bg-error-container/40 text-error font-code-sm text-code-sm transition-colors text-left flex items-center gap-1.5" onclick="simulateInvalidPassword()" type="button">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Simulate Invalid Password</span>
+</button>
+<button class="px-space-sm py-1.5 rounded bg-surface-container hover:bg-primary/20 text-primary font-code-sm text-code-sm transition-colors text-left flex items-center gap-1.5" onclick="simulateAlexandreLogin()" type="button">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Sign In as Alexandre Mercer</span>
+</button>
+</div>
+</div>
+<!-- Bottom Footer Navigation Link -->
+<div class="mt-space-lg text-center font-body-sm text-body-sm text-on-surface-variant">
+            Don't have an engineer account yet?
+            <a class="text-primary hover:underline ml-1 font-semibold" data-path="signup" href="#">
+              Create Account (/auth/signup)
+            </a>
+</div>
+</div>
+<!-- Security Badge Footer Indicators -->
+<div class="flex flex-wrap items-center justify-center gap-space-lg mt-space-md text-on-surface-variant">
+<div class="flex items-center gap-1 text-xs font-code-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">verified</span>
+<span>Cisco CML Partner</span>
+</div>
+<div class="flex items-center gap-1 text-xs font-code-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">military_tech</span>
+<span>CompTIA Network+ Authorized</span>
+</div>
+<div class="flex items-center gap-1 text-xs font-code-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">lock</span>
+<span>FIPS 140-3 Cryptography</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script for Auth States -->
+<script>
+  // Toggle password visibility
+  function togglePasswordVisibility() {
+    const pwdInput = document.getElementById('password-input');
+    const eyeIcon = document.getElementById('eye-icon');
+    if (pwdInput.type === 'password') {
+      pwdInput.type = 'text';
+      eyeIcon.textContent = 'visibility_off';
+    } else {
+      pwdInput.type = 'password';
+      eyeIcon.textContent = 'visibility';
+    }
+  }
+
+  // Toggle MFA Box
+  function toggleMFA() {
+    const panel = document.getElementById('mfa-panel');
+    const arrow = document.getElementById('mfa-arrow');
+    const statusText = document.getElementById('mfa-status-text');
+    if (panel.classList.contains('hidden')) {
+      panel.classList.remove('hidden');
+      panel.classList.add('flex');
+      arrow.textContent = 'expand_less';
+      statusText.textContent = 'Hide 6-Digit Code';
+      document.getElementById('otp-1').focus();
+    } else {
+      panel.classList.add('hidden');
+      panel.classList.remove('flex');
+      arrow.textContent = 'expand_more';
+      statusText.textContent = 'Show 6-Digit Code';
+    }
+  }
+
+  // Auto-advance OTP inputs
+  function advanceOtp(currentInput, index) {
+    if (currentInput.value.length === 1 && index < 6) {
+      const nextInput = document.getElementById('otp-' + (index + 1));
+      if (nextInput) nextInput.focus();
+    }
+  }
+
+  // Simulation: Invalid Password with shake & red message
+  function simulateInvalidPassword() {
+    const pwdGroup = document.getElementById('password-group');
+    const errBox = document.getElementById('password-error');
+    const pwdInput = document.getElementById('password-input');
+
+    pwdInput.value = 'WrongPassword99!';
+    errBox.classList.remove('hidden');
+    errBox.classList.add('flex');
+    
+    // Add shake animation effect via Tailwind classes
+    pwdGroup.classList.add('animate-bounce');
+    setTimeout(() => {
+      pwdGroup.classList.remove('animate-bounce');
+    }, 600);
+  }
+
+  // Simulation: Sign In as Alexandre Mercer with instantaneous toast preview
+  function simulateAlexandreLogin() {
+    const errBox = document.getElementById('password-error');
+    errBox.classList.add('hidden');
+    errBox.classList.remove('flex');
+
+    document.getElementById('work-email').value = 'a.mercer@network-cadet.edu';
+    document.getElementById('password-input').value = 'C!sc0-K1net1c-2025#';
+
+    // Trigger Toast Notification
+    const toast = document.getElementById('auth-toast');
+    const title = document.getElementById('toast-title');
+    const desc = document.getElementById('toast-desc');
+    title.textContent = 'Welcome back, Alexandre!';
+    desc.textContent = 'Cisco CCNA Sandbox ready. Connecting to WASM pod...';
+    
+    toast.classList.remove('translate-y-[-120%]', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    // Simulate transition effect
+    const btn = document.getElementById('signin-btn');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Spawning Terminal Container...</span>';
+    btn.classList.add('opacity-90');
+
+    setTimeout(() => {
+      btn.innerHTML = '<span>Redirecting to /learner/dashboard...</span>';
+    }, 1800);
+  }
+
+  // General submit handling
+  function handleAuthSubmit(e) {
+    e.preventDefault();
+    simulateAlexandreLogin();
+  }
+
+  // SSO trigger notification
+  function triggerSSO(provider) {
+    const toast = document.getElementById('auth-toast');
+    const title = document.getElementById('toast-title');
+    const desc = document.getElementById('toast-desc');
+    title.textContent = provider + ' SSO Initialized';
+    desc.textContent = 'Handshaking with ' + provider + ' Identity Provider via OAuth2/OIDC...';
+
+    toast.classList.remove('translate-y-[-120%]', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(dismissToast, 4000);
+  }
+
+  function triggerForgotAlert() {
+    const toast = document.getElementById('auth-toast');
+    const title = document.getElementById('toast-title');
+    const desc = document.getElementById('toast-desc');
+    title.textContent = 'Reset Dispatch Initiated';
+    desc.textContent = 'Encrypted reset token dispatched to your security perimeter contact.';
+
+    toast.classList.remove('translate-y-[-120%]', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(dismissToast, 3500);
+  }
+
+  function dismissToast() {
+    const toast = document.getElementById('auth-toast');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+    toast.classList.add('translate-y-[-120%]', 'opacity-0');
+  }
+
+  // Micro countdown timer for OTP code
+  let secondsLeft = 292; // 04:52
+  setInterval(() => {
+    if (secondsLeft > 0) {
+      secondsLeft--;
+      const m = Math.floor(secondsLeft / 60);
+      const s = secondsLeft % 60;
+      const formatted = `Code expires in 0${m}:${s < 10 ? '0' : ''}${s}`;
+      const elem = document.getElementById('mfa-timer');
+      if (elem) elem.textContent = formatted;
+    }
+  }, 1000);
+</script></main></body></html>

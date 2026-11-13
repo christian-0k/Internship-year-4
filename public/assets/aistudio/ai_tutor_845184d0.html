@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_dashboard" name="shell-type"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+@layer base {
+  html, body { width: 100vw; margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c3c6d7; border-radius: 9999px; }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "error": "#ba1a1a",
+        "tertiary-container": "#007d55",
+        "primary-fixed": "#dbe1ff",
+        "on-secondary-fixed-variant": "#3f465c",
+        "on-primary-fixed-variant": "#003ea8",
+        "outline-variant": "#c3c6d7",
+        "on-secondary-fixed": "#131b2e",
+        "on-surface-variant": "#434655",
+        "surface-container-highest": "#d3e4fe",
+        "on-primary-container": "#eeefff",
+        "on-tertiary": "#ffffff",
+        "surface-dim": "#cbdbf5",
+        "on-primary-fixed": "#00174b",
+        "on-primary": "#ffffff",
+        "on-secondary-container": "#5c647a",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#eff4ff",
+        "error-container": "#ffdad6",
+        "primary-container": "#2563eb",
+        "secondary": "#565e74",
+        "secondary-fixed": "#dae2fd",
+        "primary-fixed-dim": "#b4c5ff",
+        "surface-tint": "#0053db",
+        "on-tertiary-fixed": "#002113",
+        "tertiary-fixed": "#6ffbbe",
+        "on-secondary": "#ffffff",
+        "on-tertiary-fixed-variant": "#005236",
+        "surface-variant": "#d3e4fe",
+        "outline": "#737686",
+        "inverse-surface": "#213145",
+        "surface-container": "#e5eeff",
+        "on-surface": "#0b1c30",
+        "surface": "#f8f9ff",
+        "on-tertiary-container": "#bdffdb",
+        "tertiary": "#006242",
+        "on-background": "#0b1c30",
+        "tertiary-fixed-dim": "#4edea3",
+        "secondary-fixed-dim": "#bec6e0",
+        "on-error-container": "#93000a",
+        "secondary-container": "#dae2fd",
+        "on-error": "#ffffff",
+        "surface-container-high": "#dce9ff",
+        "primary": "#004ac6",
+        "inverse-primary": "#b4c5ff",
+        "surface-bright": "#f8f9ff",
+        "background": "#f8f9ff",
+        "inverse-on-surface": "#eaf1ff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "margin": "1rem",
+        "margin-desktop": "2rem",
+        "space-xs": "0.25rem",
+        "gutter-desktop": "1.5rem",
+        "gutter": "1rem",
+        "space-md": "0.75rem",
+        "space-xl": "2rem",
+        "space-sm": "0.5rem",
+        "space-lg": "1.25rem"
+      },
+      "fontFamily": {
+        "code-sm": ["JetBrains Mono"],
+        "headline-lg": ["Inter"],
+        "label-lg": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-lg-mobile": ["Inter"],
+        "label-sm": ["Inter"],
+        "code-md": ["JetBrains Mono"],
+        "body-lg": ["Inter"],
+        "headline-xl": ["Inter"],
+        "headline-md": ["Inter"],
+        "headline-sm": ["Inter"],
+        "headline-xl-mobile": ["Inter"],
+        "body-md": ["Inter"],
+        "label-md": ["Inter"]
+      },
+      "fontSize": {
+        "code-sm": ["11px", { "lineHeight": "16px", "fontWeight": "500" }],
+        "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+        "code-md": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+        "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+        "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+        "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+        "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }]
+      }
+    }
+  }
+};
+</script>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary">
+<header class="fixed top-0 inset-x-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_4px_rgba(11,28,48,0.06)]">
+<div class="h-16 px-gutter-desktop flex items-center justify-between gap-gutter">
+<div class="flex items-center gap-space-lg min-w-0">
+<a class="flex items-center gap-space-sm group focus:outline-none" href="#">
+<img alt="NetOps Academy" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpk7-auD65eCoDv5T7-WlXQgYlIiuw1TztDjQ_qOs-ZrkAw0k8o_TKNCD8-4Y1Hl-E8SOwAFc1wF9peWmumHTgevmSRWu3ByCcc7xflP6eIIm6cbf5hB1VnmGNLNKiBwBkzQLQ-QHUH-eR2R32ycnNLQ_knOWbirUF27-vkjnt7BM6i-bxvM9kuh2ZqAWTGBbea59TO1jSYawYBBQ43_8nz0abp_97BVQiqkPhKUttACrn_ss5wn_3"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold truncate leading-none">NetOps Academy</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight tracking-tight">Enterprise Control Plane</span>
+</div>
+</a>
+<div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-container"></span>
+</span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium">Clusters Online 99.8%</span>
+</div>
+</div>
+<div class="flex-1 max-w-xl mx-space-md hidden md:block">
+<div class="relative flex items-center w-full">
+<span class="material-symbols-outlined absolute left-space-md text-[18px] text-outline pointer-events-none">search</span>
+<input aria-label="Search across Academy" class="w-full h-10 pl-10 pr-space-md bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/25 transition-all shadow-[inset_0_1px_2px_rgba(0,0,0,0.03)]" placeholder="Search courses, lab pods, CLI commands..." type="text"/>
+<kbd class="absolute right-space-sm hidden lg:inline-flex items-center px-1.5 py-0.5 font-code-sm text-code-sm text-outline rounded bg-surface-container-lowest shadow-[0_1px_2px_rgba(0,0,0,0.06)]">⌘K</kbd>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0">
+<div class="hidden lg:inline-flex p-0.5 rounded-xl bg-surface-container-low shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)]">
+<button class="px-space-md py-1 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-primary shadow-[0_1px_3px_rgba(0,0,0,0.05)] transition-colors" type="button">Learner</button>
+<button class="px-space-md py-1 rounded-lg font-label-sm text-label-sm font-medium text-secondary hover:text-on-surface transition-colors" type="button">Instructor</button>
+<button class="px-space-md py-1 rounded-lg font-label-sm text-label-sm font-medium text-secondary hover:text-on-surface transition-colors" type="button">Admin</button>
+<button class="px-space-md py-1 rounded-lg font-label-sm text-label-sm font-medium text-secondary hover:text-on-surface transition-colors" type="button">Lab Tech</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Search" class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button aria-label="Notifications" class="relative w-10 h-10 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span>
+</button>
+</div>
+<div class="h-6 w-px bg-outline-variant/60 hidden sm:block"></div>
+<div class="flex items-center gap-space-sm pl-space-xs">
+<img alt="Alex Mercer profile" class="w-9 h-9 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm7b94d3PZU40fHhKxwkN_wQiZsLt5Y1o2s3uCl_1p6NSr4XbzpECPG171chY_62pCo-uKMngI4KCo5J5sWw3WFPuwmET4ANquBiNqkL6hR62K9mgGuVIdOCrBGqhgtAfpuIjPJW6GSW-zJQpslHhrY6W8pmMW2sWW6RDmjO_hBJulOXtqwEOoaMig6fX5ZuTJJ0jH1kddmseKQqTm8pHCPbYwqgFU0KCqsqpOLZ4go9dXZkGcHPT5"/>
+<div class="hidden xl:flex flex-col min-w-0 text-left">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate leading-none">Alex Mercer</span>
+<span class="font-code-sm text-code-sm text-primary font-medium truncate leading-tight mt-0.5">CCNA Track • Enrolled</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<aside class="fixed top-16 bottom-0 left-0 w-64 z-30 bg-surface-container-lowest shadow-[1px_0_4px_rgba(11,28,48,0.04)] flex flex-col justify-between">
+<div class="flex-1 py-space-lg px-space-md overflow-y-auto">
+<div class="px-space-sm pb-space-sm text-[10px] uppercase font-bold tracking-wider text-outline">
+      Core Operations
+    </div>
+<nav class="flex flex-col gap-1" data-active-classes="bg-surface-container text-primary font-semibold shadow-[inset_3px_0_0_0_#004ac6]">
+<a class="flex items-center px-space-md py-2.5 rounded-xl font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="public-showcase" href="#">Landing / Showcase</a>
+<a class="flex items-center px-space-md py-2.5 rounded-xl font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="learner-dashboard" href="#">Learner Dashboard</a>
+<a aria-current="page" class="flex items-center px-space-md py-2.5 rounded-xl transition-colors bg-surface-container text-primary font-semibold shadow-[inset_3px_0_0_0_#004ac6]" data-path="ai-tutor" href="#">AI Tutor</a>
+<a class="flex items-center px-space-md py-2.5 rounded-xl font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="course-player" href="#">Course Player (LMS)</a>
+<a class="flex items-center px-space-md py-2.5 rounded-xl font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="lab-sandbox" href="#">Lab Sandbox (CLI/Topology)</a>
+<a class="flex items-center px-space-md py-2.5 rounded-xl font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="cohorts-grades" href="#">SMS Cohorts &amp; Grades</a>
+<a class="flex items-center px-space-md py-2.5 rounded-xl font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="student-records" href="#">Student Records</a>
+<a class="flex items-center px-space-md py-2.5 rounded-xl font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="admin-dashboard" href="#">Admin Analytics</a>
+<a class="flex items-center px-space-md py-2.5 rounded-xl font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="cert-readiness" href="#">Cert Readiness</a>
+</nav>
+</div>
+<div class="p-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-[0_1px_4px_rgba(0,0,0,0.04)] flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Active Session</span>
+<span class="font-code-sm text-code-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+          14ms
+        </span>
+</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant font-medium">Pod #04 Active • Cisco vIOS</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-tertiary-container h-full w-4/5 rounded-full"></div>
+</div>
+</div>
+</div>
+</aside>
+<main class="pt-16 pl-64 min-h-screen bg-background relative flex flex-col"><div class="flex flex-col w-full">
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">psychology</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Socratic AI Engineering Mentor</span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-code-sm text-code-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+            LLM Core v4.2 • Diagnostics Active
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate">Telemetry-aware pedagogical feedback for Cisco IOS, Junos, and Arista topologies</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="hidden sm:flex items-center gap-space-xs px-space-md py-1 rounded-xl bg-surface-container font-code-sm text-code-sm text-secondary">
+<span class="material-symbols-outlined text-[16px] text-tertiary">memory</span>
+<span>Context Tokens: <strong class="text-on-surface">3,420 / 16k</strong></span>
+</div>
+<button class="px-space-md py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high font-label-sm text-label-sm font-semibold text-secondary hover:text-on-surface transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+        Reset Thread
+      </button>
+<button class="px-space-md py-1.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm hover:bg-primary-container transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+        Sync Lab Telemetry
+      </button>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg p-space-lg">
+<section class="xl:col-span-8 flex flex-col rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden min-h-[720px] justify-between">
+<div class="px-space-lg py-space-md bg-surface-container-low/50 flex items-center justify-between">
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[18px] text-primary">chat_bubble</span>
+<span>Thread #092 • VLAN Trunking Isolation Troubleshooting</span>
+</div>
+<div class="flex items-center gap-space-md font-code-sm text-code-sm text-outline">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Pod #04 Attached</span>
+<span>Auto-Grade: Active</span>
+</div>
+</div>
+<div class="flex-1 p-space-lg overflow-y-auto space-y-space-xl">
+<div class="flex justify-end gap-space-md">
+<div class="max-w-2xl flex flex-col items-end">
+<div class="flex items-center gap-space-sm mb-1.5">
+<span class="font-code-sm text-code-sm text-outline">14:38:02</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Alex Mercer (Learner)</span>
+</div>
+<div class="p-space-lg rounded-2xl rounded-tr-none bg-primary text-on-primary shadow-sm font-body-md text-body-md leading-relaxed">
+              Why is my VLAN not pinging across switch trunk links? I set up VLAN 10 and VLAN 20 on SW-Trunk and Edge-SW1, but hosts on VLAN 20 can't reach the default gateway on the core router.
+            </div>
+<div class="mt-2 flex items-center gap-space-xs text-secondary font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+<span>Telemetry attached: Pod #04 Running-Config Snapshot</span>
+</div>
+</div>
+<img class="w-10 h-10 rounded-xl object-cover ring-2 ring-primary/20 flex-shrink-0 mt-1" data-alt="Alex Mercer network engineering student avatar with headset and glasses in modern server lab environment with soft blue studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6G5dsHAEgVnUh-rdMug3ocCajV_oWuFQAdA7LfsAgbez2OSl4nMu2wtVfVt_sRWPcKUvaMeIC4KZRlRIy8n7kyVSjVkb7-NSfpeho1C-WR3sUXPY-pPzKruZUt4paS9EK2Ihjvzx937TMWgVQzlWi8gNBJrjcWfqD3ul9Bf0cCaJXG3emQXWcroTCBF1bF0g9X9FXoDRLP-w2Y4CX_279ZcHODi3_0D3O39D7wRy0s0X_6C-surVt"/>
+</div>
+<div class="flex gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0 shadow-sm mt-1">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex-1 max-w-3xl space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-semibold text-on-surface">NetOps AI Tutor</span>
+<span class="px-space-sm py-0.5 rounded-md bg-secondary-container text-on-secondary-fixed font-code-sm text-code-sm font-medium">
+                  Socratic Diagnostic Mode
+                </span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+                Inference 38ms
+              </span>
+</div>
+<div class="p-space-xl rounded-2xl rounded-tl-none bg-surface-container-low shadow-sm text-on-surface space-y-space-md">
+<p class="font-body-md text-body-md leading-relaxed">
+                Let’s isolate this methodically before applying changes. In an 802.1Q multi-switch fabric, connectivity across a trunk link requires alignment along three critical control-plane checkpoints:
+              </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="font-label-sm text-label-sm text-primary uppercase font-bold">1. Encapsulation</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">Tagging validation via standard 802.1Q framing on both ends.</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="font-label-sm text-label-sm text-tertiary uppercase font-bold">2. Allowed Lists</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">Pruning filters excluding target broadcast domains across trunks.</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="font-label-sm text-label-sm text-error uppercase font-bold">3. Native VLAN</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">CDP native VLAN mismatch warnings leaking untagged traffic.</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-highest/60">
+<span class="material-symbols-outlined text-[20px] text-primary">play_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface flex-1">
+<strong>Curriculum Link:</strong> CCNA 200-301 • Mod 2.4 "VLAN Trunking &amp; Native Mismatch"
+                </span>
+<button class="px-space-md py-1 rounded-lg bg-surface-container-lowest text-primary font-code-sm text-code-sm font-semibold hover:bg-surface-container shadow-sm flex items-center gap-1">
+                  Jump to [14:32]
+                  <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+<p class="font-body-md text-body-md leading-relaxed">
+                I pulled telemetry directly from your active <code class="px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-primary">Pod #04 (SW-Trunk)</code>. Inspect the output below closely. What do you observe in the <span class="font-semibold text-on-surface">Vlans in spanning tree forwarding state</span> list for GigabitEthernet0/1?
+              </p>
+<div class="rounded-xl overflow-hidden shadow-sm bg-inverse-surface text-inverse-on-surface font-code-md text-code-md">
+<div class="px-space-md py-space-xs bg-slate-900 flex items-center justify-between text-outline-variant font-code-sm text-code-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-container inline-block"></span>
+<span class="ml-2 font-mono text-slate-300">SW-Trunk# show interfaces trunk</span>
+</div>
+<span class="text-tertiary-fixed font-semibold">Live IOS Output</span>
+</div>
+<div class="p-space-lg space-y-2 overflow-x-auto leading-relaxed">
+<div class="text-slate-400">Port        Mode             Encapsulation  Status        Native vlan</div>
+<div>Gi0/1       on               802.1q         trunking      <span class="text-amber-300 font-bold">1</span></div>
+<div class="text-slate-400 pt-2">Port        Vlans allowed on trunk</div>
+<div>Gi0/1       <span class="text-primary-fixed-dim font-bold">1-10,20,99</span></div>
+<div class="text-slate-400 pt-2">Port        Vlans allowed and active in management domain</div>
+<div>Gi0/1       1,10,20,99</div>
+<div class="text-slate-400 pt-2">Port        Vlans in spanning tree forwarding state and not pruned</div>
+<div class="bg-red-950/60 p-1 rounded text-red-200">Gi0/1       <span class="underline decoration-wavy decoration-red-400 font-bold text-amber-200">1,10</span> <span class="text-red-400 text-xs ml-3">// NOTE: Notice VLAN 20 is completely missing here!</span></div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary-container mt-0.5">help</span>
+<div class="font-body-md text-body-md">
+<strong class="text-on-surface">Socratic Question for you:</strong> If VLAN 20 is configured in the allowed list, but omitted from the Spanning Tree forwarding state on that switchport, has the VLAN database actually been created with <code class="px-1 py-0.5 bg-surface-container rounded font-code-sm text-code-sm">vlan 20</code> command in global config mode?
+                </div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+                Explain CLI Output
+              </button>
+<button class="px-space-md py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">support_agent</span>
+                Escalate to Instructor (Marcus Vance)
+              </button>
+<button class="px-space-md py-2 rounded-xl bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">science</span>
+                Spin Up Diagnostic Sandbox Pod
+              </button>
+<button class="px-space-md py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+                Copy Verified Config Snippet
+              </button>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-lg bg-surface-container-low/70 space-y-space-md">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-outline font-semibold uppercase tracking-wider mr-1">Suggestions:</span>
+<button class="px-space-md py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors shadow-sm">
+            Analyze my running-config
+          </button>
+<button class="px-space-md py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors shadow-sm">
+            Why is OSPF stuck in EXSTART?
+          </button>
+<button class="px-space-md py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors shadow-sm">
+            Explain CIDR /28 mask calculation
+          </button>
+</div>
+<div class="relative bg-surface-container-lowest rounded-2xl shadow-sm p-space-sm focus-within:shadow-md transition-shadow">
+<textarea class="w-full bg-transparent resize-none p-space-sm font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="Ask a diagnostic question or paste CLI commands (e.g., 'show ip interface brief')..." rows="3"></textarea>
+<div class="flex items-center justify-between pt-space-xs px-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="p-2 rounded-xl text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" title="Attach Packet Capture or Running Config">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<button class="p-2 rounded-xl text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" title="Terminal Snippet Mode">
+<span class="material-symbols-outlined text-[20px]">data_object</span>
+</button>
+<div class="flex items-center gap-1.5 ml-2 px-space-sm py-1 rounded-lg bg-surface-container-low font-code-sm text-code-sm text-secondary">
+<span class="material-symbols-outlined text-[15px] text-tertiary">check_circle</span>
+<span>Auto-Sanitize Passwords</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="hidden md:inline font-code-sm text-code-sm text-outline">Press Enter to send, Shift+Enter for newline</span>
+<button class="px-space-lg py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors flex items-center gap-1.5 shadow-sm">
+<span>Send</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<aside class="xl:col-span-4 space-y-space-lg">
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">hub</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Active Lab Context</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-code-sm text-code-sm font-semibold">
+            Synchronized
+          </span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline uppercase font-semibold">Allocated Pod</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">Pod #04 (CCNA Lab Track)</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline uppercase font-semibold">Lab Topology</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">VLAN 10/20 Inter-VLAN Routing</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline uppercase font-semibold">Active Node</span>
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">SW-Trunk (vIOS-L2)</span>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden bg-surface-container p-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Link Telemetry Matrix</span>
+<span class="font-code-sm text-code-sm text-secondary">RTT: 1.2ms</span>
+</div>
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container flex-shrink-0"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold truncate">R1-Core [Gi0/0.10] &lt;-&gt; SW-Trunk</span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary">UP / UP</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-error flex-shrink-0"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold truncate">R1-Core [Gi0/0.20] &lt;-&gt; SW-Trunk</span>
+</div>
+<span class="font-code-sm text-code-sm text-error">ERR-DISABLED</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container flex-shrink-0"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold truncate">SW-Trunk [Gi0/2] &lt;-&gt; Edge-SW1</span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary">TRUNKING</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden relative group">
+<img class="w-full h-44 object-cover rounded-xl" data-alt="Network topology diagram showing core router connected over 802.1Q trunk to Cisco Catalyst switch, clean high-tech enterprise interface blueprint styling in blue and slate grey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLfHzdTApuTxArMKry5pV1FNCDkKwDkoAnnehFULZdex6IYAhxsPs-bMmFI04_R3VznzzydfLVxZQ4uaQb-0TEDIlEEZIW49LtdijhsXUEyxUnUVDRETuBH_MYjd65nUr1FTQBfXOleQAbdAOw8BJiq-5JDMVvZntFEo2v0HtbF23bpQv4cYexOQlww3noLtcQyBh5RVItpAFC6Y4hP6Ip4y_hF5grCpdVvbqoHwMYjhsbqwpqh4f5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/30 to-transparent flex items-end p-space-md">
+<button class="w-full py-1.5 rounded-lg bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm font-semibold hover:bg-surface-container-lowest transition-colors flex items-center justify-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              Expand Full Interactive Topology
+            </button>
+</div>
+</div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">history</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Recent Diagnostic Threads</span>
+</div>
+<button class="font-code-sm text-code-sm text-primary hover:underline">View All</button>
+</div>
+<div class="space-y-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">BGP Route Reflector Loop</span>
+<span class="font-code-sm text-code-sm text-outline">Yesterday</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">Resolved: Missing ORIGINATOR_ID attribute on iBGP peer group</p>
+<div class="flex items-center gap-space-sm pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-code-sm text-code-sm text-primary">CCNP Enterprise</span>
+<span class="text-tertiary font-code-sm text-code-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">task_alt</span> Verified Solved
+              </span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Subnet Allocation for /27 CIDR</span>
+<span class="font-code-sm text-code-sm text-outline">2 days ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">Calculated 8 subnets with 30 usable host addresses per partition</p>
+<div class="flex items-center gap-space-sm pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-code-sm text-code-sm text-primary">IPv4 Fundamentals</span>
+<span class="text-tertiary font-code-sm text-code-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">task_alt</span> Concept Mastered
+              </span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">STP Root Bridge Priority Conflict</span>
+<span class="font-code-sm text-code-sm text-outline">Apr 12</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">Learned: BPDU Guard triggered errdisable on access port</p>
+<div class="flex items-center gap-space-sm pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-code-sm text-code-sm text-primary">Spanning Tree</span>
+<span class="text-secondary font-code-sm text-code-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bookmark</span> Archived
+              </span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container text-on-surface space-y-space-sm">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+<span class="font-label-md text-label-md font-bold">Assigned Instructor Office Hours</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Marcus Vance (Principal CCIE #49121) is live in the Academy lab channel right now.
+        </p>
+<div class="flex items-center gap-space-md pt-space-xs">
+<img class="w-9 h-9 rounded-full object-cover ring-2 ring-tertiary-container" data-alt="Marcus Vance enterprise network instructor portrait smiling in front of server rack datacenter setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1ki92zEjLBUT76pFX82iAIRXiqMYLXTTgTZDErDjHKyXplgBDu7PuBfEu4UzZavXiq28zmY2hpGqxlhvDhyF42sUjOK0i1iJNxh6OBGZTDNNJ8I81h3Gyj92ggBG8yHGtBXlJp90Ivxtkhoe-m7A1x-5YXAuEovB0Zw--v3DSl35Oumn9MY1aa-EljXBXi-b9Uo5xdne6tCdqdFxU43MBg7zy-lBHXxQ-lSbmKPUgwm7V1HXFdBGh"/>
+<div class="flex-1 min-w-0">
+<div class="font-label-sm text-label-sm font-semibold truncate">Marcus Vance</div>
+<div class="font-code-sm text-code-sm text-tertiary truncate">Status: Available for 1:1 Pod Screen Share</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div></main>
+</body></html>

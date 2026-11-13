@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-tertiary-fixed": "#1e1b19", "on-error": "#690005", "on-tertiary-fixed-variant": "#4a4644", "outline-variant": "#444748", "on-tertiary-container": "#686361", surface: "#310000", "surface-container": "#480100", "on-background": "#ffdad4", primary: "#ffffff", "on-tertiary": "#33302e", "on-primary-fixed": "#1d1b1b", "on-surface-variant": "#c4c7c8", "on-surface": "#ffdad4", outline: "#8e9192", "surface-container-lowest": "#270000", "secondary-fixed-dim": "#ccc5c5", "inverse-primary": "#615e5e", "primary-container": "#e7e1e1", "on-secondary-fixed": "#1e1b1b", "on-primary-fixed-variant": "#494646", "secondary-fixed": "#e8e1e0", background: "#310000", tertiary: "#ffffff", "primary-fixed-dim": "#cac5c5", error: "#ffb4ab", "surface-container-highest": "#700200", "tertiary-fixed-dim": "#ccc5c2", "surface-dim": "#310000", "on-secondary-fixed-variant": "#4a4646", "surface-variant": "#700200", "error-container": "#93000a", "on-secondary": "#333030", "surface-container-high": "#5c0100", "tertiary-fixed": "#e9e1de", "on-error-container": "#ffdad6", "inverse-on-surface": "#680200", "secondary-container": "#4a4646", "primary-fixed": "#e7e1e1", "surface-container-low": "#410100", secondary: "#ccc5c5", "on-secondary-container": "#bab4b3", "on-primary": "#323030", "on-primary-container": "#676364", "inverse-surface": "#ffdad4", "tertiary-container": "#e9e1de", "surface-bright": "#790200", "surface-tint": "#cac5c5"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"margin-lg": "4rem", "space-sm": "0.5rem", margin: "2rem", "margin-sm": "1rem", "space-md": "1rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", gutter: "1.5rem"}, fontFamily: {"title-md": ["Inter"], "label-badge": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "body-lg": ["Inter"], "body-sm": ["Inter"], "code-lg": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Inter"], "display-hero": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-low/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-12 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><a class="flex items-center justify-center w-8 h-8 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors duration-150" data-path="course-catalog" href="#" title="Back to Course"><span class="material-symbols-outlined text-[18px]">arrow_back</span></a><div class="flex items-center gap-space-sm min-w-0"><span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-label-badge text-label-badge uppercase tracking-wider shrink-0">MOD 04</span><span class="font-code-sm text-code-sm text-on-surface truncate">VLAN Trunking &amp; 802.1Q Encapsulation</span></div></div><div class="flex-1 max-w-xs hidden md:flex flex-col gap-1 px-space-md"><div class="flex items-center justify-between font-label-badge text-label-badge text-outline"><span class="uppercase tracking-wider">Progress</span><span class="font-code-sm text-code-sm text-primary">68%</span></div><div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full" style="width: 68%"></div></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="flex items-center bg-surface-container rounded p-0.5"><button class="w-7 h-7 flex items-center justify-center rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors duration-150" title="Previous Step" type="button"><span class="material-symbols-outlined text-[16px]">chevron_left</span></button><span class="px-space-xs font-label-badge text-label-badge text-on-surface-variant">04 / 12</span><button class="w-7 h-7 flex items-center justify-center rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors duration-150" title="Next Step" type="button"><span class="material-symbols-outlined text-[16px]">chevron_right</span></button></div><button class="flex items-center gap-space-xs px-space-sm h-7 rounded bg-surface-container-high hover:bg-tertiary-container hover:text-on-tertiary-container text-tertiary font-label-badge text-label-badge uppercase tracking-wider transition-all duration-150 shadow-[0_0_12px_rgba(226,145,0,0.15)]" type="button"><span class="material-symbols-outlined text-[15px]">psychology</span><span class="hidden sm:inline">Ask AI Tutor</span></button></div></div></header><main class="w-full pt-12 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Sub-Header Bar (Learning Control Surface) -->
+<section class="w-full bg-surface-container-low px-gutter py-space-sm shadow-md sticky top-12 z-30">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<!-- Left: Navigation & Lesson Scope -->
+<div class="flex items-center gap-space-sm min-w-0">
+<a class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm shrink-0" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="hidden sm:inline">Back to CCNA Track</span>
+</a>
+<span class="h-4 w-px bg-surface-container-highest shrink-0"></span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-label-badge text-label-badge uppercase tracking-wider shrink-0">
+          CCNA 200-301
+        </span>
+<span class="h-4 w-px bg-surface-container-highest shrink-0"></span>
+<h1 class="font-title-md text-title-md text-on-surface truncate max-w-xs md:max-w-md lg:max-w-xl">
+          1.2 Lab: Cisco Switch VLAN 802.1Q Trunking &amp; Native VLAN Mismatch Remediation
+        </h1>
+</div>
+<!-- Center: Status & Scrubber Steps -->
+<div class="hidden xl:flex items-center gap-space-md">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex items-center justify-between text-label-badge font-label-badge text-outline">
+<span>STEP 3 OF 5 • 60%</span>
+<span class="text-tertiary">24m left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 60%"></div>
+</div>
+</div>
+<div class="flex items-center bg-surface-container rounded p-0.5">
+<button class="px-2 py-1 flex items-center gap-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">chevron_left</span> Prev
+          </button>
+<span class="w-px h-3 bg-surface-container-highest"></span>
+<button class="px-2 py-1 flex items-center gap-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge transition-colors" type="button">
+            Next <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Right: Telemetry & Triggers -->
+<div class="flex items-center gap-space-sm shrink-0">
+<!-- Live Heartbeat Indicator -->
+<div class="hidden lg:flex items-center gap-2 px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-[12px]">Cloud Sync: <span class="text-primary font-semibold">Live (15s)</span></span>
+</div>
+<!-- Topology Toggle -->
+<button class="flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-badge text-label-badge transition-all" id="topology-trigger" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">hub</span>
+<span class="hidden sm:inline">Topology</span>
+</button>
+<!-- Socratic AI Drawer Toggle -->
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-tertiary-container text-on-tertiary-container hover:bg-tertiary transition-all font-label-badge text-label-badge uppercase shadow-[0_0_16px_rgba(226,145,0,0.25)]" id="ai-tutor-toggle" type="button">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>Socratic AI</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Split-Pane Workspace -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-6rem)] relative overflow-hidden bg-surface-container-lowest">
+<!-- LEFT PANE: Video Player & Contextual Study Drawer (5 Cols on 12-col grid) -->
+<section class="lg:col-span-5 flex flex-col bg-surface-container-low overflow-y-auto">
+<!-- Video Player Deck -->
+<div class="relative bg-surface-container-lowest w-full group">
+<!-- Simulated High-Def 16:9 Stream -->
+<div class="aspect-video w-full relative overflow-hidden flex items-center justify-center bg-surface-container-highest">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent z-10 pointer-events-none"></div>
+<!-- Simulated Network Canvas / Overlay -->
+<div class="w-full h-full p-4 flex flex-col justify-between font-code-sm text-code-sm bg-surface-container-lowest relative" style="background-image: radial-gradient(rgba(14, 165, 233, 0.08) 1px, transparent 1px); background-size: 20px 20px;">
+<!-- Overlay Diagnostic Top Bar -->
+<div class="flex items-center justify-between text-[11px] text-outline z-10">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">sensors</span> HLS FEED: CCNA-CORE-02
+              </span>
+<span class="text-tertiary font-label-badge text-label-badge">TOPOLOGY DIAGNOSTIC OVERLAY</span>
+</div>
+<!-- Instructor SVG Diagram Simulation -->
+<div class="flex items-center justify-center w-full my-auto z-10">
+<svg class="w-full max-w-md h-auto" fill="none" viewbox="0 0 460 160" xmlns="http://www.w3.org/2000/svg">
+<!-- SW-01 Node -->
+<rect fill="#191f31" height="60" rx="4" stroke="#4edea3" stroke-width="1.5" width="110" x="30" y="50"></rect>
+<text fill="#dce1fb" font-family="JetBrains Mono" font-size="11" font-weight="bold" text-anchor="middle" x="85" y="75">SW-01 (Dist)</text>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" text-anchor="middle" x="85" y="93">Native VLAN: 1</text>
+<!-- Trunk Link Line -->
+<line class="animate-pulse" stroke="#ffb95f" stroke-dasharray="4 4" stroke-width="2" x1="140" x2="310" y1="80" y2="80"></line>
+<!-- Link Badges -->
+<rect fill="#070d1f" height="18" rx="2" width="90" x="180" y="58"></rect>
+<text fill="#ffb95f" font-family="JetBrains Mono" font-size="9" text-anchor="middle" x="225" y="71">Gi0/1 Trunk 802.1Q</text>
+<circle cx="225" cy="98" fill="#93000a" r="10"></circle>
+<text fill="#ffdad6" font-family="JetBrains Mono" font-size="10" font-weight="bold" text-anchor="middle" x="225" y="101">!</text>
+<!-- SW-02 Node -->
+<rect fill="#191f31" height="60" rx="4" stroke="#00a2e6" stroke-width="1.5" width="110" x="310" y="50"></rect>
+<text fill="#dce1fb" font-family="JetBrains Mono" font-size="11" font-weight="bold" text-anchor="middle" x="365" y="75">SW-02 (Acc)</text>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="9" text-anchor="middle" x="365" y="93">Native VLAN: 99</text>
+</svg>
+</div>
+<!-- Instructor Watermark Badge -->
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant z-10">
+<span class="flex items-center gap-1.5 bg-surface-container-high/80 px-2 py-0.5 rounded text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+                CCIE #41920 David Thorne
+              </span>
+<span class="font-label-badge text-label-badge text-outline">1080p60 • HLS AES-128</span>
+</div>
+</div>
+<!-- Video Play Center Trigger (Interactive Toggle) -->
+<button class="absolute z-20 w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(16,185,129,0.5)] hover:scale-105 transition-transform" id="video-play-btn" type="button">
+<span class="material-symbols-outlined text-[28px]" id="play-icon">play_arrow</span>
+</button>
+</div>
+<!-- Video HUD & Scrubbing Controls -->
+<div class="px-space-md py-space-xs bg-surface-container flex flex-col gap-1">
+<!-- Scrubber Bar -->
+<div class="relative w-full h-1.5 bg-surface-container-highest rounded cursor-pointer group/bar">
+<div class="absolute left-0 top-0 bottom-0 bg-outline/30 rounded" style="width: 78%"></div>
+<div class="absolute left-0 top-0 bottom-0 bg-primary-container rounded" id="video-progress" style="width: 47%"></div>
+<div class="absolute top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary -ml-1.5 opacity-0 group-hover/bar:opacity-100 transition-opacity" style="left: 47%"></div>
+</div>
+<!-- Media Buttons Strip -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<button class="hover:text-primary transition-colors" id="media-play-mini" type="button">
+<span class="material-symbols-outlined text-[20px]">pause</span>
+</button>
+<button class="hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">replay_10</span>
+</button>
+<button class="hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">forward_10</span>
+</button>
+<div class="flex items-center gap-1.5 ml-2">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+<div class="w-14 h-1 bg-surface-container-highest rounded">
+<div class="h-full bg-secondary w-3/4 rounded"></div>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface ml-2 text-[12px]">08:42 / 18:30</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-badge text-label-badge">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary cursor-pointer hover:bg-secondary hover:text-on-secondary transition-colors">
+                1.5x
+              </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant cursor-pointer hover:text-on-surface">
+                1080p
+              </span>
+<button class="text-on-surface-variant hover:text-on-surface p-1" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_in_picture_alt</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface p-1" type="button">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Tabbed Drawer (Transcript / Lab Objectives / Packet Captures) -->
+<div class="flex flex-col flex-1 min-h-0 bg-surface">
+<!-- Tab Headers -->
+<div class="flex items-center bg-surface-container-low px-space-md pt-2 gap-space-xs">
+<button class="tab-btn px-space-sm py-2 font-label-badge text-label-badge uppercase tracking-wider text-primary bg-surface rounded-t transition-all flex items-center gap-1.5" id="tab-transcript">
+<span class="material-symbols-outlined text-[15px]">subtitles</span> Transcript
+          </button>
+<button class="tab-btn px-space-sm py-2 font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant hover:text-on-surface rounded-t transition-all flex items-center gap-1.5" id="tab-objectives">
+<span class="material-symbols-outlined text-[15px]">checklist</span> Objectives
+          </button>
+<button class="tab-btn px-space-sm py-2 font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant hover:text-on-surface rounded-t transition-all flex items-center gap-1.5" id="tab-captures">
+<span class="material-symbols-outlined text-[15px]">network_ping</span> PCAP Files
+          </button>
+</div>
+<!-- Tab Body 1: Interactive Transcript -->
+<div class="flex-1 flex flex-col p-space-md overflow-y-auto gap-space-sm" id="panel-transcript">
+<!-- Search in Transcript -->
+<div class="relative w-full mb-1">
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm px-space-md py-1.5 pl-8 rounded focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search timestamped instructor remarks..." type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-outline text-[16px]">search</span>
+</div>
+<!-- Transcript Items -->
+<div class="flex flex-col gap-2">
+<!-- Active Highlighted Line -->
+<div class="p- space-sm p-2 rounded bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors flex items-start gap-3">
+<span class="font-code-sm text-code-sm text-tertiary px-1.5 py-0.5 rounded bg-surface-container-highest shrink-0">04:15</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-body-sm text-on-surface font-semibold">Native VLAN Mismatch Syslog Discovery</span>
+<span class="flex gap-0.5 items-end h-3">
+<span class="w-0.5 h-3 bg-primary animate-pulse"></span>
+<span class="w-0.5 h-1.5 bg-primary animate-pulse"></span>
+<span class="w-0.5 h-2 bg-primary animate-pulse"></span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  "...Notice the console syslog emitting <code class="text-secondary font-code-sm">%CDP-4-NATIVE_VLAN_MISMATCH</code>. When port Gi0/1 on SW-01 receives untagged frames, it maps them to VLAN 1, but SW-02 considers Native as VLAN 99..."
+                </p>
+</div>
+</div>
+<!-- Inactive Line 1 -->
+<div class="p-2 rounded hover:bg-surface-container cursor-pointer transition-colors flex items-start gap-3">
+<span class="font-code-sm text-code-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-lowest shrink-0">06:30</span>
+<div class="flex-1 min-w-0">
+<span class="font-title-md text-body-sm text-on-surface">Configuring 802.1Q encapsulation on GigabitEthernet0/1</span>
+<p class="font-body-sm text-body-sm text-outline mt-0.5 truncate">
+                  "On older Catalyst 3560/3750 units you would require switchport trunk encapsulation dot1q first..."
+                </p>
+</div>
+</div>
+<!-- Inactive Line 2 (Current Seek Target) -->
+<div class="p-2 rounded bg-surface-container-lowest hover:bg-surface-container cursor-pointer transition-colors flex items-start gap-3">
+<span class="font-code-sm text-code-sm text-secondary px-1.5 py-0.5 rounded bg-surface-container shrink-0">08:42</span>
+<div class="flex-1 min-w-0">
+<span class="font-title-md text-body-sm text-on-surface">Correcting switchport trunk native vlan 99 on SW-01</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  "Let's enter interface Gi0/1 and execute the correction to converge the Spanning Tree root port..."
+                </p>
+</div>
+</div>
+<!-- Inactive Line 3 -->
+<div class="p-2 rounded hover:bg-surface-container cursor-pointer transition-colors flex items-start gap-3">
+<span class="font-code-sm text-code-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-lowest shrink-0">12:10</span>
+<div class="flex-1 min-w-0">
+<span class="font-title-md text-body-sm text-on-surface">Verifying Spanning Tree Rapid-PVST+ forward transitions</span>
+<p class="font-body-sm text-body-sm text-outline mt-0.5 truncate">
+                  "Notice how the PVID-inconsistency unblocks once CDP exchanges matching Native TLVs..."
+                </p>
+</div>
+</div>
+</div>
+<!-- Quick Cheat Sheet Chips -->
+<div class="mt-auto pt-3">
+<span class="font-label-badge text-label-badge text-outline uppercase tracking-wider block mb-2">Key Syntaxes in This Module</span>
+<div class="flex flex-wrap gap-1.5">
+<button class="cli-chip font-code-sm text-code-sm text-primary px-2 py-1 rounded bg-surface-container hover:bg-primary hover:text-on-primary transition-all" type="button">
+                switchport mode trunk
+              </button>
+<button class="cli-chip font-code-sm text-code-sm text-primary px-2 py-1 rounded bg-surface-container hover:bg-primary hover:text-on-primary transition-all" type="button">
+                switchport trunk native vlan 99
+              </button>
+<button class="cli-chip font-code-sm text-code-sm text-secondary px-2 py-1 rounded bg-surface-container hover:bg-secondary hover:text-on-secondary transition-all" type="button">
+                show interface trunk
+              </button>
+<button class="cli-chip font-code-sm text-code-sm text-tertiary px-2 py-1 rounded bg-surface-container hover:bg-tertiary hover:text-on-tertiary transition-all" type="button">
+                show spanning-tree inconsistentports
+              </button>
+</div>
+</div>
+</div>
+<!-- Tab Body 2: Objectives (Hidden initially) -->
+<div class="hidden flex-1 p-space-md flex flex-col gap-3 overflow-y-auto" id="panel-objectives">
+<div class="p-3 rounded bg-surface-container">
+<span class="font-title-md text-body-md text-on-surface font-semibold block">Scenario Overview</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              You are the Lead Network Engineer at Apex Cloud. Switch SW-01 and Distribution Switch SW-02 were recently patched. SW-01 is reporting persistent CDP mismatch notifications and Spanning Tree has isolated VLAN 1 to prevent forwarding loops.
+            </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-badge text-label-badge text-outline uppercase">Active Deliverables</span>
+<div class="flex items-start gap-2 p-2 rounded bg-surface-container-low text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span class="text-on-surface">Verify 802.1Q encapsulation is operational on Gi0/1.</span>
+</div>
+<div class="flex items-start gap-2 p-2 rounded bg-surface-container-low text-body-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">pending</span>
+<span class="text-on-surface">Align the Native VLAN configuration on SW-01 Gi0/1 to VLAN 99.</span>
+</div>
+<div class="flex items-start gap-2 p-2 rounded bg-surface-container-low text-body-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">radio_button_unchecked</span>
+<span class="text-on-surface">Ensure VLAN 10 and VLAN 20 traffic crosses the trunk without loss.</span>
+</div>
+</div>
+</div>
+<!-- Tab Body 3: Captures (Hidden initially) -->
+<div class="hidden flex-1 p-space-md flex flex-col gap-2 overflow-y-auto" id="panel-captures">
+<div class="flex items-center justify-between p-2.5 rounded bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">file_download</span>
+<div>
+<span class="font-code-sm text-code-sm text-on-surface block">native_vlan_mismatch_cdp.pcap</span>
+<span class="text-[11px] text-outline">Wireshark Capture • 48.2 KB</span>
+</div>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-high text-secondary hover:bg-secondary hover:text-on-secondary font-label-badge text-label-badge transition-colors">DOWNLOAD</button>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">file_download</span>
+<div>
+<span class="font-code-sm text-code-sm text-on-surface block">dot1q_remediated_converged.pcap</span>
+<span class="text-[11px] text-outline">Wireshark Capture • 112.4 KB</span>
+</div>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-high text-secondary hover:bg-secondary hover:text-on-secondary font-label-badge text-label-badge transition-colors">DOWNLOAD</button>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT PANE: Virtual WASM xterm.js Sandbox Lab Console (7 Cols on 12-col grid) -->
+<section class="lg:col-span-7 flex flex-col bg-surface-container-lowest h-full relative">
+<!-- Multi-Device Terminal Header -->
+<div class="w-full bg-surface-container-low px-space-sm pt-space-xs flex flex-wrap items-center justify-between gap-space-xs shadow-sm z-10">
+<!-- Device Selection Tabs -->
+<div class="flex items-center gap-1 overflow-x-auto min-w-0" id="device-tabs">
+<!-- Active Tab: SW-01 -->
+<button class="device-tab active flex items-center gap-2 px-space-sm py-1.5 rounded-t bg-surface-container-lowest text-primary font-code-sm text-code-sm transition-all shadow-sm" data-device="SW-01">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-semibold">SW-01</span>
+<span class="text-[11px] text-outline">Cat 9300</span>
+</button>
+<!-- SW-02 -->
+<button class="device-tab flex items-center gap-2 px-space-sm py-1.5 rounded-t hover:bg-surface-container text-on-surface-variant font-code-sm text-code-sm transition-all" data-device="SW-02">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>SW-02</span>
+<span class="text-[11px] text-outline">Dist</span>
+</button>
+<!-- R1 -->
+<button class="device-tab flex items-center gap-2 px-space-sm py-1.5 rounded-t hover:bg-surface-container text-on-surface-variant font-code-sm text-code-sm transition-all" data-device="R1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>R1</span>
+<span class="text-[11px] text-outline">ISR 4331</span>
+</button>
+<!-- Host PC1 -->
+<button class="device-tab flex items-center gap-2 px-space-sm py-1.5 rounded-t hover:bg-surface-container text-on-surface-variant font-code-sm text-code-sm transition-all" data-device="PC1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>PC1</span>
+<span class="text-[11px] text-outline">Alpine Linux</span>
+</button>
+</div>
+<!-- Hypervisor Status & Grading Trigger -->
+<div class="flex items-center gap-space-xs pb-1 shrink-0">
+<div class="hidden sm:flex items-center gap-1.5 text-label-badge font-label-badge text-outline mr-2">
+<span class="material-symbols-outlined text-[14px] text-secondary">memory</span>
+<span>WASM: 0.4ms</span>
+</div>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" id="clear-term-btn" title="Clear Console Buffer" type="button">
+<span class="material-symbols-outlined text-[16px]">clear_all</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" id="restart-pod-btn" title="Restart Simulated Container Pod" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+</button>
+<!-- Glowing Auto-Grade Lab Submission CTA -->
+<button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded bg-primary text-on-primary font-label-badge text-label-badge uppercase font-bold tracking-wider hover:bg-primary-fixed transition-all shadow-[0_0_18px_rgba(78,222,163,0.35)]" id="grade-modal-trigger" type="button">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Auto-Grade Lab</span>
+</button>
+</div>
+</div>
+<!-- Live Terminal Console Buffer (xterm style) -->
+<div class="flex-1 bg-surface-container-lowest p-space-md font-code-sm text-code-sm text-on-surface overflow-y-auto selection:bg-primary selection:text-on-primary select-text" id="terminal-viewport">
+<div class="text-outline mb-2 text-[12px] flex items-center justify-between">
+<span>Cisco IOS Software, Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.3a</span>
+<span class="text-secondary font-label-badge text-label-badge">PTY: /dev/pts/2 [UTF-8]</span>
+</div>
+<div class="space-y-1" id="terminal-content">
+<div class="text-on-surface"><span class="text-primary font-semibold">SW-01#</span> show ip interface brief</div>
+<div class="text-on-surface-variant">Interface                  IP-Address      OK? Method Status                Protocol</div>
+<div class="text-on-surface-variant">GigabitEthernet0/1         unassigned      YES unset  up                    up      </div>
+<div class="text-on-surface-variant">GigabitEthernet0/2         unassigned      YES unset  up                    up      </div>
+<div class="text-on-surface-variant">Vlan1                      192.168.1.2     YES manual up                    up      </div>
+<div class="text-on-surface-variant">Vlan99                     10.99.1.2       YES manual up                    up      </div>
+<div class="pt-2 text-on-surface"><span class="text-primary font-semibold">SW-01#</span> show interfaces trunk</div>
+<div class="text-on-surface-variant">Port        Mode             Encapsulation  Status        Native vlan</div>
+<div class="text-on-surface-variant">Gi0/1       on               802.1q         trunking      1          </div>
+<div class="pt-2 text-error font-medium flex items-start gap-1">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0">warning</span>
+<span>SW-01# %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/1 (1), with SW-02 GigabitEthernet0/1 (99).</span>
+</div>
+<div class="pt-1 text-tertiary">SW-01# %SPANTREE-2-RECV_PVID_ERR: Received BPDU with inconsistent peer vlan id 99 on GigabitEthernet0/1 VLAN1.</div>
+<div class="text-tertiary">SW-01# %SPANTREE-2-BLOCK_PVID_LOCAL: Blocking GigabitEthernet0/1 on VLAN0001. Inconsistent local vlan.</div>
+<div class="pt-2 text-on-surface"><span class="text-primary font-semibold">SW-01#</span> configure terminal</div>
+<div class="text-outline">Enter configuration commands, one per line.  End with CNTL/Z.</div>
+<div class="text-on-surface"><span class="text-primary font-semibold">SW-01(config)#</span> interface gigabitethernet 0/1</div>
+<!-- Interactive Terminal Prompt Line -->
+<div class="flex items-center flex-wrap pt-1 text-on-surface" id="term-active-line">
+<span class="text-primary font-semibold mr-1.5 shrink-0" id="prompt-label">SW-01(config-if)#</span>
+<input autocomplete="off" autofocus="" class="flex-1 min-w-[200px] bg-transparent outline-none font-code-sm text-code-sm text-primary caret-primary" id="terminal-input" placeholder="Type Cisco command (e.g. switchport trunk native vlan 99)..." spellcheck="false" type="text"/>
+</div>
+</div>
+</div>
+<!-- Quick Snippet Injection Bar (Bottom of CLI) -->
+<div class="bg-surface-container px-space-sm py-1.5 flex items-center justify-between gap-space-xs overflow-x-auto text-[12px] font-code-sm">
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="text-outline font-label-badge text-label-badge uppercase tracking-wider">Quick Commands:</span>
+<button class="snippet-btn px-2 py-0.5 rounded bg-surface-container-highest hover:bg-surface-bright text-on-surface transition-colors" data-cmd="switchport trunk native vlan 99" type="button">
+            + native vlan 99
+          </button>
+<button class="snippet-btn px-2 py-0.5 rounded bg-surface-container-highest hover:bg-surface-bright text-on-surface transition-colors" data-cmd="switchport trunk allowed vlan add 20" type="button">
+            + allow vlan 20
+          </button>
+<button class="snippet-btn px-2 py-0.5 rounded bg-surface-container-highest hover:bg-surface-bright text-on-surface transition-colors" data-cmd="show interfaces trunk" type="button">
+            show int trunk
+          </button>
+<button class="snippet-btn px-2 py-0.5 rounded bg-surface-container-highest hover:bg-surface-bright text-on-surface transition-colors" data-cmd="do write memory" type="button">
+            wr mem
+          </button>
+</div>
+<span class="text-[11px] text-outline shrink-0 hidden md:inline">Press [Enter] to submit</span>
+</div>
+<!-- Docked Fault Diagnostics & Injected Malfunctions Panel -->
+<div class="bg-surface-container-low p-space-sm flex flex-col gap-1.5 shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">bug_report</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface font-semibold">
+              Live Topology Fault Injector • 2 Active Anomalies Detected
+            </span>
+</div>
+<span class="text-[11px] text-outline font-code-sm">Telemetry Poll: 1000ms</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-1">
+<!-- Fault 1: Critical -->
+<div class="flex items-start gap-2 p-2 rounded bg-surface-container">
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-badge text-label-badge uppercase tracking-wider font-bold shrink-0">
+              CRIT-01
+            </span>
+<div class="min-w-0">
+<span class="font-title-md text-body-sm text-error font-semibold block leading-tight">Native VLAN Mismatch on Gi0/1</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant truncate">SW-01(VLAN 1) ↔ SW-02(VLAN 99) causing STP PVID inconsistency block.</p>
+</div>
+</div>
+<!-- Fault 2: Warning -->
+<div class="flex items-start gap-2 p-2 rounded bg-surface-container">
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-badge text-label-badge uppercase tracking-wider font-bold shrink-0">
+              WARN-02
+            </span>
+<div class="min-w-0">
+<span class="font-title-md text-body-sm text-tertiary font-semibold block leading-tight">VLAN 20 Pruned on Trunk</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant truncate">Engineering department sub-interfaces failing ping to Default GW.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- SLIDE-OVER 1: Socratic AI Tutor Co-Pilot Drawer -->
+<aside class="fixed right-0 top-12 bottom-0 w-full sm:w-[420px] bg-surface-container shadow-2xl z-40 transform translate-x-full transition-transform duration-300 flex flex-col" id="ai-drawer">
+<!-- Drawer Header -->
+<div class="p-space-md bg-surface-container-high flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</span>
+<div>
+<span class="font-title-md text-body-md text-on-surface font-bold block">NetMentor Socratic Co-Pilot</span>
+<span class="text-[11px] text-tertiary font-code-sm">Real-time CLI State Analyzer</span>
+</div>
+</div>
+<button class="p-1 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" id="close-ai-drawer" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Mode Toggle (Socratic vs Direct) -->
+<div class="px-space-md py-space-xs bg-surface-container-lowest flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-outline uppercase tracking-wider">Teaching Persona</span>
+<div class="flex items-center bg-surface-container rounded p-0.5 font-label-badge text-[11px]">
+<button class="px-2 py-0.5 rounded bg-tertiary text-on-tertiary font-semibold">Socratic Hints</button>
+<button class="px-2 py-0.5 text-on-surface-variant hover:text-on-surface">Direct Solution</button>
+</div>
+</div>
+<!-- Conversation Stream Buffer -->
+<div class="flex-1 p-space-md overflow-y-auto space-y-4">
+<!-- User Query -->
+<div class="flex flex-col items-end">
+<div class="bg-surface-container-highest text-on-surface rounded-xl p-3 max-w-[85%] text-body-sm shadow-sm">
+          Why is SW-01 dropping traffic on VLAN 99 even though the trunk link reports 'up/up'?
+        </div>
+<span class="text-[11px] font-code-sm text-outline mt-1">14:02:12</span>
+</div>
+<!-- AI Socratic Streaming Response -->
+<div class="flex flex-col items-start">
+<div class="flex items-center gap-1.5 mb-1 text-tertiary font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> [AI_DIAGNOSTIC]
+        </div>
+<div class="bg-surface-container-low text-on-surface rounded-xl p-3 max-w-[95%] text-body-sm shadow-sm space-y-2.5">
+<p>
+            Great observation! Notice your Spanning Tree state in the console: <code class="text-tertiary font-code-sm">%SPANTREE-2-BLOCK_PVID_LOCAL</code>.
+          </p>
+<p class="text-on-surface-variant">
+            When 802.1Q trunks have mismatched native VLANs, untagged traffic sent by SW-01 arrives on SW-02 and is mistakenly forwarded into VLAN 99. To prevent bridging loops, Spanning Tree actively shuts down forwarding for that VLAN.
+          </p>
+<!-- Recommended Command Card -->
+<div class="bg-surface-container-lowest p-2.5 rounded font-code-sm text-code-sm space-y-2">
+<span class="text-outline text-[11px] uppercase block tracking-wider">Suggested Fix: Align Native Tag</span>
+<div class="text-primary">SW-01(config-if)# switchport trunk native vlan 99</div>
+<button class="inject-suggested-cmd w-full py-1 rounded bg-surface-container hover:bg-surface-container-high text-secondary text-label-badge font-label-badge uppercase tracking-wider transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">terminal</span> Paste into Active CLI
+            </button>
+</div>
+</div>
+<span class="text-[11px] font-code-sm text-outline mt-1">14:02:15 • SSE Stream Completed</span>
+</div>
+</div>
+<!-- AI Input Box -->
+<div class="p-space-sm bg-surface-container-high">
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-space-md py-2.5 pr-20 rounded focus:outline-none focus:ring-1 focus:ring-tertiary" placeholder="Ask Socratic Mentor about this lab error..." type="text"/>
+<div class="absolute right-2 flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">mic</span></button>
+<button class="p-1 hover:text-tertiary text-tertiary"><span class="material-symbols-outlined text-[18px]">send</span></button>
+</div>
+</div>
+</div>
+</aside>
+<!-- MODAL / DRAWER 2: Automated Lab Verification & Grading Modal -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-4 hidden" id="grade-modal">
+<div class="bg-surface-container max-w-xl w-full rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+<!-- Grading Modal Header -->
+<div class="p-space-md bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">WASM Lab Evaluation Engine</h2>
+<span class="text-outline font-code-sm text-[12px]">Candidate: Alexandre Mercer • Assessment 1.2</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="close-grade-modal" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Rubric Evaluation Body -->
+<div class="p-space-md space-y-4">
+<!-- Overall Score Card -->
+<div class="p-space-md rounded bg-surface-container-lowest flex items-center justify-between">
+<div>
+<span class="text-outline font-label-badge text-label-badge uppercase tracking-wider block">Total Evaluation Result</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">75% (300 / 400 pts)</span>
+</div>
+<span class="px-space-sm py-1 rounded bg-tertiary-container text-on-tertiary-container font-label-badge text-label-badge uppercase tracking-wider font-semibold">
+            Remediation Required
+          </span>
+</div>
+<!-- Rubric Checklist -->
+<div class="space-y-2">
+<span class="font-label-badge text-label-badge text-outline uppercase tracking-wider block">Automated Test Assertions</span>
+<!-- Test 1: Passed -->
+<div class="flex items-start justify-between p-2.5 rounded bg-surface-container-low">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<span class="font-body-md text-body-md text-on-surface font-medium block">Configure 802.1Q Trunk encapsulation on SW-01 Gi0/1</span>
+<span class="text-[12px] text-outline font-code-sm">Status: Operational • Mode: Trunk • Protocol: dot1q</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-primary font-semibold">100/100</span>
+</div>
+<!-- Test 2: Passed -->
+<div class="flex items-start justify-between p-2.5 rounded bg-surface-container-low">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<span class="font-body-md text-body-md text-on-surface font-medium block">Remediate Native VLAN Mismatch (VLAN 99)</span>
+<span class="text-[12px] text-outline font-code-sm">Status: Both peer ends synchronized to Native VLAN 99</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-primary font-semibold">100/100</span>
+</div>
+<!-- Test 3: In Progress -->
+<div class="flex items-start justify-between p-2.5 rounded bg-surface-container-low">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary animate-spin text-[20px] shrink-0 mt-0.5">sync</span>
+<div>
+<span class="font-body-md text-body-md text-on-surface font-medium block">Verify PC1 (VLAN 10) Ping to Default Gateway 192.168.10.1</span>
+<span class="text-[12px] text-outline font-code-sm">Synthetic ICMP echo test running in container pod...</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">TESTING</span>
+</div>
+<!-- Test 4: Failed -->
+<div class="flex items-start justify-between p-2.5 rounded bg-surface-container-low">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
+<div>
+<span class="font-body-md text-body-md text-on-surface font-medium block">Permit VLAN 20 through trunk allowed list</span>
+<span class="text-[12px] text-error font-code-sm">Missing config: 'switchport trunk allowed vlan add 20'</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-error font-semibold">0/100</span>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-md bg-surface-container-high flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface font-label-badge text-label-badge uppercase tracking-wider transition-colors" id="close-grade-btn" type="button">
+          Dismiss
+        </button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded bg-primary text-on-primary hover:bg-primary-fixed font-label-badge text-label-badge uppercase tracking-wider font-bold transition-all shadow-[0_0_16px_rgba(78,222,163,0.35)]" id="rerun-eval-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+          Re-Run Verification
+        </button>
+</div>
+</div>
+</div>
+<!-- SLIDE-OVER 3: Topology Inspector Drawer -->
+<aside class="fixed left-0 top-12 bottom-0 w-full sm:w-[460px] bg-surface-container shadow-2xl z-40 transform -translate-x-full transition-transform duration-300 flex flex-col" id="topology-drawer">
+<div class="p-space-md bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+<span class="font-title-md text-body-md text-on-surface font-bold">Physical &amp; Logical Topology</span>
+</div>
+<button class="p-1 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" id="close-topo-drawer" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex-1 p-space-md overflow-y-auto space-y-4">
+<div class="p-space-md rounded bg-surface-container-lowest flex flex-col gap-3">
+<span class="text-label-badge font-label-badge uppercase text-secondary tracking-wider">Topology Map: Campus Core-Access</span>
+<div class="w-full h-56 rounded bg-surface-container flex items-center justify-center p-2">
+<!-- Topology SVG Diagram -->
+<svg class="w-full h-full" fill="none" viewbox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+<circle cx="160" cy="40" fill="#1e293b" r="18" stroke="#00a2e6" stroke-width="2"></circle>
+<text fill="#dce1fb" font-family="JetBrains Mono" font-size="9" text-anchor="middle" x="160" y="44">R1</text>
+<line stroke="#86948a" stroke-width="1.5" x1="160" x2="90" y1="58" y2="100"></line>
+<line stroke="#86948a" stroke-width="1.5" x1="160" x2="230" y1="58" y2="100"></line>
+<circle cx="90" cy="110" fill="#1e293b" r="18" stroke="#4edea3" stroke-width="2"></circle>
+<text fill="#dce1fb" font-family="JetBrains Mono" font-size="9" text-anchor="middle" x="90" y="114">SW-01</text>
+<line stroke="#ffb95f" stroke-dasharray="3 3" stroke-width="2" x1="108" x2="212" y1="110" y2="110"></line>
+<text fill="#ffb95f" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="160" y="105">Trunk Gi0/1</text>
+<circle cx="230" cy="110" fill="#1e293b" r="18" stroke="#00a2e6" stroke-width="2"></circle>
+<text fill="#dce1fb" font-family="JetBrains Mono" font-size="9" text-anchor="middle" x="230" y="114">SW-02</text>
+<circle cx="90" cy="160" fill="#1e293b" r="12" stroke="#86948a" stroke-width="1"></circle>
+<text fill="#bbcabf" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="90" y="163">PC1</text>
+<line stroke="#86948a" stroke-width="1.5" x1="90" x2="90" y1="128" y2="148"></line>
+</svg>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant">
+          Trunk Link: Gi0/1 on SW-01 interconnects to Gi0/1 on SW-02. The untagged frame discrepancy triggers PVST+ port blocking on SW-01 Gi0/1.
+        </p>
+</div>
+<div class="space-y-2">
+<span class="text-label-badge font-label-badge uppercase text-outline tracking-wider block">Port Allocation Matrix</span>
+<div class="font-code-sm text-code-sm text-on-surface-variant space-y-1">
+<div class="p-2 rounded bg-surface-container flex justify-between">
+<span>SW-01 Gi0/1</span>
+<span class="text-secondary">Trunk (VLANs: 1, 10, 20, 99)</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex justify-between">
+<span>SW-01 Gi0/2</span>
+<span class="text-primary">Access VLAN 10 (PC1 Host)</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex justify-between">
+<span>SW-02 Gi0/1</span>
+<span class="text-secondary">Trunk (Native VLAN: 99)</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<script>
+  (function () {
+    // Tab switching for video auxiliary drawer
+    const tabTranscript = document.getElementById('tab-transcript');
+    const tabObjectives = document.getElementById('tab-objectives');
+    const tabCaptures = document.getElementById('tab-captures');
+
+    const panelTranscript = document.getElementById('panel-transcript');
+    const panelObjectives = document.getElementById('panel-objectives');
+    const panelCaptures = document.getElementById('panel-captures');
+
+    const tabs = [
+      { btn: tabTranscript, panel: panelTranscript },
+      { btn: tabObjectives, panel: panelObjectives },
+      { btn: tabCaptures, panel: panelCaptures }
+    ];
+
+    tabs.forEach(({ btn, panel }) => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.btn.classList.remove('text-primary', 'bg-surface');
+          t.btn.classList.add('text-on-surface-variant');
+          t.panel.classList.add('hidden');
+        });
+        btn.classList.add('text-primary', 'bg-surface');
+        btn.classList.remove('text-on-surface-variant');
+        panel.classList.remove('hidden');
+      });
+    });
+
+    // AI Drawer Toggle
+    const aiDrawer = document.getElementById('ai-drawer');
+    const aiToggle = document.getElementById('ai-tutor-toggle');
+    const closeAiDrawer = document.getElementById('close-ai-drawer');
+
+    function toggleAiDrawer() {
+      const isClosed = aiDrawer.classList.contains('translate-x-full');
+      if (isClosed) {
+        aiDrawer.classList.remove('translate-x-full');
+      } else {
+        aiDrawer.classList.add('translate-x-full');
+      }
+    }
+    aiToggle.addEventListener('click', toggleAiDrawer);
+    closeAiDrawer.addEventListener('click', toggleAiDrawer);
+
+    // Topology Drawer Toggle
+    const topoDrawer = document.getElementById('topology-drawer');
+    const topoToggle = document.getElementById('topology-trigger');
+    const closeTopoDrawer = document.getElementById('close-topo-drawer');
+
+    function toggleTopoDrawer() {
+      const isClosed = topoDrawer.classList.contains('-translate-x-full');
+      if (isClosed) {
+        topoDrawer.classList.remove('-translate-x-full');
+      } else {
+        topoDrawer.classList.add('-translate-x-full');
+      }
+    }
+    topoToggle.addEventListener('click', toggleTopoDrawer);
+    closeTopoDrawer.addEventListener('click', toggleTopoDrawer);
+
+    // Auto-Grade Modal Controls
+    const gradeModal = document.getElementById('grade-modal');
+    const gradeTrigger = document.getElementById('grade-modal-trigger');
+    const closeGradeModal = document.getElementById('close-grade-modal');
+    const closeGradeBtn = document.getElementById('close-grade-btn');
+    const rerunEvalBtn = document.getElementById('rerun-eval-btn');
+
+    function openModal() { gradeModal.classList.remove('hidden'); }
+    function closeModal() { gradeModal.classList.add('hidden'); }
+
+    gradeTrigger.addEventListener('click', openModal);
+    closeGradeModal.addEventListener('click', closeModal);
+    closeGradeBtn.addEventListener('click', closeModal);
+
+    rerunEvalBtn.addEventListener('click', () => {
+      rerunEvalBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span> Evaluating...';
+      setTimeout(() => {
+        rerunEvalBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span> Test Complete';
+      }, 1200);
+    });
+
+    // Device Tab Switching Simulation
+    const deviceButtons = document.querySelectorAll('.device-tab');
+    const promptLabel = document.getElementById('prompt-label');
+
+    deviceButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        deviceButtons.forEach(b => {
+          b.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+          b.classList.add('hover:bg-surface-container', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btn.classList.remove('hover:bg-surface-container', 'text-on-surface-variant');
+
+        const device = btn.getAttribute('data-device');
+        if (device === 'SW-01') promptLabel.textContent = 'SW-01(config-if)#';
+        else if (device === 'SW-02') promptLabel.textContent = 'SW-02#';
+        else if (device === 'R1') promptLabel.textContent = 'R1#';
+        else if (device === 'PC1') promptLabel.textContent = 'pc1:~$';
+      });
+    });
+
+    // Terminal Interactive Simulation
+    const terminalInput = document.getElementById('terminal-input');
+    const terminalContent = document.getElementById('terminal-content');
+    const termActiveLine = document.getElementById('term-active-line');
+    const terminalViewport = document.getElementById('terminal-viewport');
+
+    function appendTerminalLog(cmd) {
+      if (!cmd.trim()) return;
+      const userLine = document.createElement('div');
+      userLine.className = 'text-on-surface';
+      userLine.innerHTML = `<span class="text-primary font-semibold">${promptLabel.textContent}</span> ${escapeHtml(cmd)}`;
+      terminalContent.insertBefore(userLine, termActiveLine);
+
+      // Simulated Response
+      const response = document.createElement('div');
+      response.className = 'text-on-surface-variant text-[13px]';
+
+      if (cmd.includes('native vlan 99')) {
+        response.innerHTML = `
+          <div class="text-primary">%CDP-4-NATIVE_VLAN_RESTORED: Native VLAN consistency resolved on Gi0/1 (VLAN 99).</div>
+          <div class="text-secondary">%SPANTREE-2-UNBLOCK_CONSIST_PORT: Unblocking GigabitEthernet0/1 on VLAN0001. Port transitioned to FORWARDING.</div>
+        `;
+      } else if (cmd.includes('show interfaces trunk') || cmd.includes('show int trunk')) {
+        response.innerHTML = `
+          <div>Port        Mode             Encapsulation  Status        Native vlan</div>
+          <div>Gi0/1       on               802.1q         trunking      99         </div>
+          <div class="mt-1">Port        Vlans allowed on trunk</div>
+          <div>Gi0/1       1-4094</div>
+        `;
+      } else if (cmd.includes('show vlan brief')) {
+        response.innerHTML = `
+          <div>VLAN Name                             Status    Ports</div>
+          <div>---- -------------------------------- --------- -------------------------------</div>
+          <div>1    default                          active    Gi0/3, Gi0/4</div>
+          <div>10   Engineering                      active    Gi0/2</div>
+          <div>20   Operations                       active    </div>
+          <div>99   Management_Native                active    </div>
+        `;
+      } else if (cmd.includes('wr mem') || cmd.includes('write memory')) {
+        response.innerHTML = `
+          <div>Building configuration...</div>
+          <div>[OK] Cryptographic hash verified. Configuration written to NVRAM.</div>
+        `;
+      } else {
+        response.innerHTML = `Command parsed and committed into running-config buffer.`;
+      }
+
+      terminalContent.insertBefore(response, termActiveLine);
+      terminalInput.value = '';
+      terminalViewport.scrollTop = terminalViewport.scrollHeight;
+    }
+
+    terminalInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        appendTerminalLog(terminalInput.value);
+      }
+    });
+
+    // Snippet Quick Insert Buttons
+    document.querySelectorAll('.snippet-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cmd = btn.getAttribute('data-cmd');
+        terminalInput.value = cmd;
+        terminalInput.focus();
+      });
+    });
+
+    // Suggestion Injection from Socratic AI Drawer
+    document.querySelectorAll('.inject-suggested-cmd').forEach(btn => {
+      btn.addEventListener('click', () => {
+        terminalInput.value = 'switchport trunk native vlan 99';
+        toggleAiDrawer();
+        terminalInput.focus();
+      });
+    });
+
+    // Terminal Clear Action
+    document.getElementById('clear-term-btn').addEventListener('click', () => {
+      const lines = terminalContent.querySelectorAll('div:not(#term-active-line)');
+      lines.forEach(l => l.remove());
+    });
+
+    // Media Play Button Toggle
+    const videoPlayBtn = document.getElementById('video-play-btn');
+    const playIcon = document.getElementById('play-icon');
+    let isPlaying = false;
+
+    videoPlayBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      playIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+    });
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+  })();
+</script></main></body></html>

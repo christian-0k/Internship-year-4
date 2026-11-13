@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"inverse-on-surface": "#680200", "inverse-surface": "#ffdad4", "on-primary": "#323030", "tertiary-container": "#e9e1de", "on-tertiary": "#33302e", "on-secondary-fixed": "#1e1b1b", "on-error": "#690005", "secondary-fixed": "#e8e1e0", "secondary-container": "#4a4646", "error-container": "#93000a", "on-secondary-container": "#bab4b3", "primary-fixed": "#e7e1e1", "surface-container-high": "#5c0100", "on-surface-variant": "#c4c7c8", "surface-bright": "#790200", "on-error-container": "#ffdad6", "on-primary-fixed-variant": "#494646", primary: "#ffffff", outline: "#8e9192", "surface-dim": "#310000", "outline-variant": "#444748", "surface-container-low": "#410100", "surface-container": "#480100", "tertiary-fixed": "#e9e1de", "on-tertiary-fixed": "#1e1b19", "surface-container-highest": "#700200", "on-primary-container": "#676364", "on-secondary-fixed-variant": "#4a4646", secondary: "#ccc5c5", "on-secondary": "#333030", "primary-container": "#e7e1e1", "inverse-primary": "#615e5e", "on-background": "#ffdad4", "surface-tint": "#cac5c5", "on-tertiary-container": "#686361", "tertiary-fixed-dim": "#ccc5c2", "surface-variant": "#700200", background: "#310000", tertiary: "#ffffff", "secondary-fixed-dim": "#ccc5c5", "on-surface": "#ffdad4", "on-tertiary-fixed-variant": "#4a4644", surface: "#310000", error: "#ffb4ab", "surface-container-lowest": "#270000", "primary-fixed-dim": "#cac5c5", "on-primary-fixed": "#1d1b1b"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-lg": "1.5rem", "space-sm": "0.5rem", margin: "2rem", "gutter-sm": "1rem", "margin-sm": "1rem", gutter: "1.5rem", "margin-lg": "4rem", "space-md": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem"}, fontFamily: {"display-hero": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "code-lg": ["JetBrains Mono"], "title-md": ["Inter"], "label-badge": ["JetBrains Mono"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "body-md": ["Inter"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-lowest/60"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[24px]">terminal</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">NetMentor<span class="text-primary">.AI</span></span></div></div><span class="font-label-badge text-label-badge uppercase px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary border border-secondary/20">AI AUTHOR</span></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">Curriculum Node Control</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-title-md font-semibold"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Overview</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-title-md font-semibold" data-path="courses" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>My Courses &amp; Track</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="lab-studio" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">lan</span><span>Lab &amp; Sandbox Studio</span></div><span class="font-code-sm text-code-sm text-primary">CCIE</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="grading-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Grading Queue</span></div><span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded-full bg-surface-container-highest text-tertiary">14 Pending</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-escalations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">psychology_alt</span><span>Socratic AI Escalations</span></div><span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container">3 Flagged</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">query_stats</span><span>Analytics &amp; Revenue</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">settings_ethernet</span><span>Settings</span></div></a></nav></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-badge text-label-badge text-outline uppercase">Cluster Telemetry</span><span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span></div><div class="flex flex-col gap-1"><div class="flex items-center justify-between text-code-sm font-code-sm"><span class="text-on-surface-variant">FFmpeg/Whisper:</span><span class="text-primary">GPU Pod 02</span></div><div class="text-code-sm font-code-sm text-outline-variant">Encoding: Online</div></div><div class="mt-1 pt-space-xs border-t border-outline-variant/30 flex items-center justify-between font-code-sm text-code-sm"><span class="text-on-surface-variant">WASM Lab:</span><span class="text-secondary">v4.18 Active</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-outline">terminal</span><span class="hover:text-on-surface">author_portal</span><span class="text-outline">/</span><span class="text-primary font-medium">curriculum_engine</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high"><span class="material-symbols-outlined text-tertiary text-[16px]">schedule</span><span class="font-code-sm text-code-sm text-on-surface-variant">Active Term: <strong class="text-on-surface">Q4 2025</strong></span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high"><span class="material-symbols-outlined text-secondary text-[16px]">assignment_late</span><span class="font-code-sm text-code-sm text-secondary font-medium">3 Pending Reviews</span></div></div><div class="flex items-center gap-space-md"><a class="hidden sm:flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container-highest transition-colors" data-path="courses" href="#"><span class="material-symbols-outlined text-[18px]">visibility</span><span>Preview Student View</span></a><a class="flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md font-semibold hover:bg-primary transition-all shadow-[0_0_16px_rgba(16,185,129,0.25)]" data-path="courses" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span>Create New Course</span></a><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden md:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface leading-tight">David Thorne</span><span class="font-code-sm text-code-sm text-primary">Lead CCIE Author</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Aura -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -top-20 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Main Content Container with Gutter Spacing -->
+<div class="px-space-lg lg:px-margin-lg py-space-lg flex flex-col gap-space-lg">
+<!-- Breadcrumb Bar & Studio Meta Telemetry -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm">
+<span class="text-outline uppercase tracking-wider font-semibold">Author Node:</span>
+<span class="text-primary font-code-sm bg-surface-container-high px-2 py-0.5 rounded">US-EAST-GPU-04</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant font-code-sm">curricula_v4.18</span>
+<span class="text-outline-variant">/</span>
+<span class="text-secondary font-code-sm font-semibold">catalog_manager</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-2 px-space-sm py-1 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Autosave: Synced to S3</span>
+</div>
+<div class="flex items-center gap-2 px-space-sm py-1 rounded bg-surface-container-high font-code-sm text-code-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">cloud_sync</span>
+<span>Whisper Transcoder: Idle (0 queue)</span>
+</div>
+</div>
+</div>
+<!-- Studio Header Block -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg pb-space-sm">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary bg-primary/10 px-2 py-0.5 rounded">AUTHORING STUDIO</span>
+<span class="font-code-sm text-code-sm text-outline">SYS.BUILD 4092-RELEASE</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Course Authoring Studio &amp; Curriculum Directory
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Create, structure, and publish multi-modal networking curricula, WebAssembly CLI challenge labs, and Socratic assessments with automated packet-capture validation.
+          </p>
+</div>
+<!-- Master Actions CTA Group -->
+<div class="relative flex items-center gap-space-sm self-start xl:self-end">
+<div class="relative">
+<button class="flex items-center gap-2 px-space-lg py-3 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md font-semibold hover:bg-primary transition-all shadow-xl shadow-primary-container/20" id="create-dropdown-btn">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Create New Course Draft</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<!-- Dropdown Options Menu -->
+<div class="hidden absolute right-0 mt-2 w-64 rounded-xl bg-surface-container-high shadow-xl p-space-xs z-30 flex flex-col gap-1" id="create-dropdown-menu">
+<a class="flex items-start gap-space-xs p-space-sm rounded-lg hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">terminal</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Blank Canvas Track</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Init empty 5-tier syllabus</span>
+</div>
+</a>
+<a class="flex items-start gap-space-xs p-space-sm rounded-lg hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">auto_mode</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Import from Blueprint</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Cisco CCNA/ENCOR YAML schema</span>
+</div>
+</a>
+<a class="flex items-start gap-space-xs p-space-sm rounded-lg hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5">lan</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">WASM Lab Preset</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">FRRouting + Wireshark harness</span>
+</div>
+</a>
+</div>
+</div>
+<a class="hidden sm:flex items-center gap-2 px-space-md py-3 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Audit History</span>
+</a>
+</div>
+</div>
+<!-- High-Visibility Admin Moderation Status Alert Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-lg">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary"></div>
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md pl-space-xs">
+<div class="flex items-start md:items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-semibold">MODERATION IN PROGRESS</span>
+<span class="font-code-sm text-code-sm text-outline">ID: CR-ENCOR-350-401-REV8</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+                Course <strong class="text-tertiary-fixed font-semibold">“CCNP Enterprise 350-401 ENCOR: Core Routing &amp; Virtualization”</strong> submitted for moderation on Oct 24, 2025. Currently in review queue at <code class="font-code-sm text-code-sm text-secondary bg-surface-container px-1 py-0.5 rounded">/admin/courses</code>.
+              </p>
+<div class="flex items-center gap-2 mt-1 font-code-sm text-code-sm text-on-surface-variant">
+<span>Assigned Moderator:</span>
+<span class="text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">badge</span>
+                  Dr. Ellen Vance, CCIE #49102
+                </span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary font-medium">Auto-Checks: 48/48 Labs Verified</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 w-full md:w-auto justify-end">
+<a class="flex items-center gap-1 px-space-md py-2 rounded-lg bg-surface-container-high text-tertiary font-title-md text-title-md hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Inspect Queue Docket</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Search, Filtering, and View Controls Filter Bar -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md bg-surface-container-low p-space-sm rounded-xl">
+<!-- Filter Tabs -->
+<div class="flex items-center overflow-x-auto gap-1">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-primary font-title-md text-title-md font-semibold whitespace-nowrap shadow-sm">
+            All Courses (6)
+          </button>
+<button class="px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-title-md text-title-md whitespace-nowrap transition-colors">
+            Published &amp; Active (4)
+          </button>
+<button class="px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-title-md text-title-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>Draft in Progress (1)</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</button>
+<button class="px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-title-md text-title-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>Under Moderation (1)</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</button>
+<button class="px-space-md py-2 rounded-lg text-outline hover:text-on-surface-variant font-title-md text-title-md whitespace-nowrap transition-colors">
+            Archived (0)
+          </button>
+</div>
+<!-- Search Input with Cyber Command Feel -->
+<div class="flex items-center gap-space-xs flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full bg-surface-container pl-10 pr-4 py-2 rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-secondary transition-all" placeholder="Search courses by title, exam code (200-301, N10-008), or module..." type="text"/>
+</div>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Filter attributes">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Course Authoring Cards Grid / Stack -->
+<div class="flex flex-col gap-space-lg">
+<!-- Course 1: CCNA 200-301 (Full Featured Live Flagship) -->
+<div class="relative rounded-xl bg-surface-container p-space-lg shadow-xl hover:shadow-2xl transition-all">
+<div class="flex flex-col lg:flex-row gap-space-lg">
+<!-- Visual Hero Card Node Thumbnail -->
+<div class="w-full lg:w-72 h-48 lg:h-auto rounded-lg overflow-hidden relative shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="High-tech network engineering topology diagram featuring Cisco enterprise routers, fiber optic interconnects, glowing green CLI telemetry monitors, and clean dark cyan cybernetic laboratory infrastructure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-KyBM0KXfafcr05TMVzrLXzH0a9SYTU7SajJ-187Iz7mEUJ_7tlWkpM0JC4AD1cfCUQR8SBaPW-6v4DMd_oCzPoJ6rezSa0ZcD-PWDG7_2RyuC-Pptb32TCdSk1x1Jc234QxyPKs3CmUTBvY4aVwlQQxJdsQoQXkcu2iT_0VUpYKlyUvFuMXOiDS4JCMaT0wdzBR6gfqRep2R4YaWfibrD7DnqoKo2scUDhr5fcjCpttbAHVUMzwL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/30 to-transparent"></div>
+<div class="absolute top-2 left-2 flex items-center gap-1.5 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-1 rounded">
+<span class="font-code-sm text-code-sm text-secondary font-semibold">CISCO 200-301</span>
+</div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-code-sm font-code-sm text-on-surface bg-surface-container-low/90 backdrop-blur-md px-2 py-1 rounded">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+                  WASM 4.18
+                </span>
+<span class="text-on-surface-variant">100% Labs Pass</span>
+</div>
+</div>
+<!-- Body Information Grid -->
+<div class="flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-primary/10 text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                      PUBLISHED • LIVE
+                    </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Production rev 14.2</span>
+</div>
+<div class="flex items-center gap-3 font-code-sm text-code-sm text-tertiary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<strong class="text-on-surface">4.9</strong> (1,840 reviews)
+                    </span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors cursor-pointer">
+                    Cisco CCNA 200-301: Enterprise Routing, Switching &amp; Socratic AI
+                  </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  Complete modern curriculum spanning OSPFv3 multi-area topologies, 802.1Q trunking encapsulation, BGP edge multi-homing, and real-time LLM packet decoders for root-cause analysis.
+                </p>
+</div>
+<!-- Metrics & Structure Badges Matrix -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm py-space-sm bg-surface-container-low rounded-lg px-space-md">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">Modules &amp; Structure</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">4 Modules • 42 CLI Labs</span>
+</div>
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">Assessments &amp; Media</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">10 Socratic • 18h Video</span>
+</div>
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">Active Enrollment</span>
+<span class="font-title-md text-title-md text-secondary font-semibold">8,240 Engineers</span>
+</div>
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">Gross Revenue</span>
+<span class="font-title-md text-title-md text-primary font-semibold">$189,520 USD</span>
+</div>
+</div>
+<!-- Transcode Health & Action Buttons -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span>WASM Engine: <strong class="text-on-surface font-code-sm">v4.18 (All Labs Passing)</strong></span>
+<span class="text-outline-variant">•</span>
+<span class="text-outline">FFmpeg Transcoded: 1080p60 + 720p HLS</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md font-semibold hover:bg-primary transition-all" data-path="courses" href="#">
+<span class="material-symbols-outlined text-[18px]">edit_document</span>
+<span>Edit Curriculum</span>
+</a>
+<a class="flex items-center gap-1 px-space-sm py-2 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">preview</span>
+<span>Student View</span>
+</a>
+<a class="flex items-center gap-1 px-space-sm py-2 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+<span>Analytics</span>
+</a>
+<button class="p-2 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Duplicate Course Draft">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Course 4: CCNP Enterprise ENCOR (Under Moderation Queue Card) -->
+<div class="relative rounded-xl bg-surface-container p-space-lg shadow-xl hover:shadow-2xl transition-all">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex flex-col lg:flex-row gap-space-lg">
+<div class="w-full lg:w-72 h-48 lg:h-auto rounded-lg overflow-hidden relative shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="High-density data center routing rack illustration with amber alert telemetry indicators, fiber backbone transceivers, and complex BGP peering architecture diagrams rendered in high-end cybersecurity dark mode aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGVIXusDmYKFE-mGDghGNURk-F9_mywR1gwRDO492VjkwChdsY2ko3rWlUumvALID_qxSkkqY1kvOILRpi2KRUisW86t1AwSeu9dSltlzLtrRkvNgTLUO65R8U8-5ru2p8n8lVEonEwwWlJIqQ1r_fr1rSUspVXzzWqYnoZOsl0CHtdVYe7v4ZL6yQPNFE-KM7TkAzAJA6OSlJ8vyRbd7ulMrZoF4lzRxKCOpq3D4WEjIFHPRHjHIG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<div class="absolute top-2 left-2 flex items-center gap-1 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-1 rounded">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">CISCO 350-401</span>
+</div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-code-sm font-code-sm text-tertiary bg-surface-container-low/95 backdrop-blur-md px-2 py-1 rounded">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                  Pending CCIE Audit
+                </span>
+<span>Submitted 4h ago</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                      IN MODERATION QUEUE
+                    </span>
+<span class="font-code-sm text-code-sm text-outline">Submitted 4h ago • Rev 1.0 Candidate</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">Target: Production Q4</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">
+                  CCNP Enterprise 350-401 ENCOR: Advanced Architecture
+                </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  Deep immersion into enterprise campus fabric, Cisco SD-Access, SD-WAN control planes, LISP mapping protocols, VXLAN encapsulation, and advanced wireless QoS engineering.
+                </p>
+</div>
+<!-- Inline Admin Audit Status Ribbon -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>Pending Admin Approval at <code class="text-secondary font-code-sm">/admin/courses</code> — Automated syntax check: <strong class="text-primary font-semibold">100% Passed</strong>. Awaiting manual CCIE audit.</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline shrink-0">Queue Position #2</span>
+</div>
+<!-- Metadata Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm py-space-sm bg-surface-container-low rounded-lg px-space-md">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">Modules Configured</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">5 Core Modules</span>
+</div>
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">Virtual WASM Labs</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">32 Sandbox Labs</span>
+</div>
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">Recorded Video Assets</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">22 Hours Master HLS</span>
+</div>
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">Lab Topology Memory</span>
+<span class="font-title-md text-title-md text-secondary font-medium">16GB / Cluster Node</span>
+</div>
+</div>
+<!-- Moderation Action Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-outline">
+<span>Author signature: ed25519-valid</span>
+<span class="text-outline-variant">•</span>
+<span>Assigned Reviewer: Dr. Vance</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-high text-tertiary font-title-md text-title-md font-medium hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span>View Submission Package</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-title-md text-title-md hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Inspect Audit Log</span>
+</button>
+<button class="p-2 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Withdraw Submission">
+<span class="material-symbols-outlined text-[18px]">undo</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2-Column Split: CompTIA Network+ & Linux Operations -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Course 2: CompTIA Network+ N10-008 -->
+<div class="rounded-xl bg-surface-container p-space-lg shadow-xl flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-primary/10 text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    PUBLISHED • LIVE
+                  </span>
+<span class="font-code-sm text-code-sm text-outline">COMPTIA N10-008</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<strong class="text-on-surface">4.8</strong> (890)
+                </div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">
+                CompTIA Network+ N10-008 Protocol &amp; Packet Lab
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Hands-on protocol dissection using Wireshark, DHCP snooping troubleshooting, subnet calculators, and fiber optic cabling diagnostics for infrastructure specialists.
+              </p>
+</div>
+<div class="grid grid-cols-3 gap-2 py-2 px-space-sm bg-surface-container-low rounded-lg font-code-sm text-code-sm">
+<div>
+<span class="text-outline block">Syllabus</span>
+<span class="text-on-surface font-medium">3 Modules • 19 Labs</span>
+</div>
+<div>
+<span class="text-outline block">Assessments</span>
+<span class="text-on-surface font-medium">8 Quizzes • 12h Vid</span>
+</div>
+<div>
+<span class="text-outline block">Learners</span>
+<span class="text-secondary font-medium">3,900 Engineers</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-1 text-code-sm font-code-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>WASM Kernel v4.18 OK</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container-highest transition-colors" href="#">
+                  Edit Curriculum
+                </a>
+<a class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" href="#" title="View Analytics">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Course 3: Linux Production Operations -->
+<div class="rounded-xl bg-surface-container p-space-lg shadow-xl flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-primary/10 text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    PUBLISHED • LIVE
+                  </span>
+<span class="font-code-sm text-code-sm text-outline">SYSADMIN LFCS-LINUX</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<strong class="text-on-surface">4.9</strong> (1,120)
+                </div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">
+                Linux Production Operations &amp; Bash Engineering
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Automating multi-tenant Ubuntu environments, systemd daemon management, iptables/nftables firewall policies, and real-time bash script debugging sandbox.
+              </p>
+</div>
+<div class="grid grid-cols-3 gap-2 py-2 px-space-sm bg-surface-container-low rounded-lg font-code-sm text-code-sm">
+<div>
+<span class="text-outline block">Syllabus</span>
+<span class="text-on-surface font-medium">4 Modules • 28 Root Labs</span>
+</div>
+<div>
+<span class="text-outline block">Assessments</span>
+<span class="text-on-surface font-medium">6 Quizzes</span>
+</div>
+<div>
+<span class="text-outline block">Learners</span>
+<span class="text-secondary font-medium">5,200 Engineers</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-1 text-code-sm font-code-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Alpine/Ubuntu Containers Ready</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container-highest transition-colors" href="#">
+                  Edit Curriculum
+                </a>
+<a class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" href="#" title="View Analytics">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Course 5: Wireshark Deep Dive (Draft in Progress) -->
+<div class="rounded-xl bg-surface-container p-space-lg shadow-xl relative overflow-hidden">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-secondary/10 text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+                  DRAFT • IN PROGRESS
+                </span>
+<span class="font-code-sm text-code-sm text-outline">Last modified: Yesterday 21:14 UTC</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+                Wireshark Deep Dive: Decrypting Enterprise TLS &amp; Zero Trust
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Mastering PCAP dissection, Diffie-Hellman ephemeral key extraction, mTLS handshake inspection, and zero trust micro-segmentation validation.
+              </p>
+<!-- Authored Progress Bar -->
+<div class="flex flex-col gap-1.5 mt-2 w-full max-w-md">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Authored Progress: <strong class="text-secondary font-semibold">65% authored</strong></span>
+<span class="text-outline">2 of 4 modules configured</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded transition-all duration-500" style="width: 65%;"></div>
+</div>
+</div>
+</div>
+<!-- Draft Quick Actions -->
+<div class="flex items-center gap-space-sm shrink-0 w-full lg:w-auto justify-end">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container-highest transition-colors">
+                Configure Labs
+              </button>
+<button class="flex items-center gap-1.5 px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md font-semibold hover:bg-primary transition-all shadow-md shadow-primary-container/20">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Resume Editing</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Authoring Toolkit & Infrastructure Status Section -->
+<div class="mt-space-sm pt-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">construction</span>
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Quick Authoring Toolkit &amp; Sandbox Engines</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline hidden sm:inline">Telemetry Pod: US-EAST-GPU-02</span>
+</div>
+<!-- 2 Bento Blocks for Author Acceleration -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- One-Click Sandbox Templates Panel -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between gap-space-sm shadow-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">CONTAINERIZED EMULATION SANDBOXES</span>
+<span class="font-code-sm text-code-sm text-primary">4 Pre-Configured Kernels</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">One-Click Sandbox Templates</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Spin up instant WebAssembly or Docker container environments to prototype interactive student lab terminals directly in your browser.
+              </p>
+</div>
+<!-- Template Chips Grid -->
+<div class="grid grid-cols-2 gap-2 my-1">
+<button class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors text-left group">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">router</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Cisco IOS-XE 17.9</span>
+<span class="font-code-sm text-code-sm text-outline">QEMU Virtual Node</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[16px]">add</span>
+</button>
+<button class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors text-left group">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">security</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">JunOS vSRX</span>
+<span class="font-code-sm text-code-sm text-outline">Flow Firewall Kernel</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[16px]">add</span>
+</button>
+<button class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors text-left group">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Ubuntu 24.04 LVM</span>
+<span class="font-code-sm text-code-sm text-outline">Root Sandbox Pod</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[16px]">add</span>
+</button>
+<button class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors text-left group">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">data_array</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Wireshark PCAP Broker</span>
+<span class="font-code-sm text-code-sm text-outline">Dissect v4.2 Trace</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[16px]">add</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-code-sm font-code-sm text-outline pt-1">
+<span>WASM Container Overhead: ~12MB</span>
+<a class="text-primary hover:underline flex items-center gap-0.5" href="#">
+<span>Manage Global Topologies</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Video & Whisper Transcoding Pipeline Status -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between gap-space-sm shadow-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">AUTOMATED TRANSCRIPTION &amp; ENCODING</span>
+<span class="font-code-sm text-code-sm text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                  Online
+                </span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">FFmpeg / Whisper AI Pipeline</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                High-throughput video processing node generating automated WebVTT closed captions, multi-bitrate HLS streams, and Socratic semantic indexes.
+              </p>
+</div>
+<!-- Micro Metrics Telemetry Bar -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs font-code-sm text-code-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Current Term Output:</span>
+<span class="text-on-surface font-semibold">42 videos transcribed, 0 errors</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Whisper Model:</span>
+<span class="text-secondary">whisper-large-v3-turbo (PyTorch 2.3)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Encoding Benchmark:</span>
+<span class="text-primary font-semibold">Average transcode speed 18x realtime</span>
+</div>
+</div>
+<!-- Health sparkline representation -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">speed</span>
+<span class="font-code-sm text-code-sm text-on-surface">GPU VRAM: 4.8GB / 24GB Utilized</span>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-code-sm text-code-sm transition-colors">
+                View Transcode Logs
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple vanilla toggle for the Create New Course dropdown CTA
+  const dropdownBtn = document.getElementById('create-dropdown-btn');
+  const dropdownMenu = document.getElementById('create-dropdown-menu');
+
+  if (dropdownBtn && dropdownMenu) {
+    dropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+  }
+</script></main></div></body></html>

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-secondary-container": "#bab4b3", "secondary-fixed": "#e8e1e0", outline: "#8e9192", "surface-bright": "#790200", "on-primary-container": "#676364", "inverse-surface": "#ffdad4", "surface-container-high": "#5c0100", "on-primary-fixed": "#1d1b1b", surface: "#310000", "secondary-container": "#4a4646", "on-tertiary-fixed-variant": "#4a4644", "tertiary-fixed-dim": "#ccc5c2", "tertiary-container": "#e9e1de", "secondary-fixed-dim": "#ccc5c5", background: "#310000", "surface-variant": "#700200", "surface-container-lowest": "#270000", "primary-container": "#e7e1e1", "on-error": "#690005", "on-tertiary-fixed": "#1e1b19", "inverse-primary": "#615e5e", "surface-tint": "#cac5c5", "on-primary": "#323030", "on-secondary-fixed-variant": "#4a4646", "primary-fixed-dim": "#cac5c5", tertiary: "#ffffff", "error-container": "#93000a", primary: "#ffffff", "on-primary-fixed-variant": "#494646", "primary-fixed": "#e7e1e1", error: "#ffb4ab", "on-secondary-fixed": "#1e1b1b", "on-secondary": "#333030", "inverse-on-surface": "#680200", "surface-dim": "#310000", "on-background": "#ffdad4", "on-tertiary": "#33302e", "on-error-container": "#ffdad6", "outline-variant": "#444748", "on-tertiary-container": "#686361", "surface-container": "#480100", "on-surface": "#ffdad4", "surface-container-low": "#410100", secondary: "#ccc5c5", "tertiary-fixed": "#e9e1de", "on-surface-variant": "#c4c7c8", "surface-container-highest": "#700200"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {margin: "2rem", gutter: "1.5rem", "margin-sm": "1rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-lg": "4rem", "space-xl": "2.5rem", "space-xs": "0.25rem"}, fontFamily: {"code-lg": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "title-md": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-badge": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="overview" href="#"><img alt="NetMentor AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3Qqj316WsxePaFE-077_od--l8SvgFXndjdbChEQW2AY-1Blm6qwa6UqJVOSDg-kTGyllOp061YIN8_ABK0cQ-0Vqeq-ZlcWXsmgBTp5aEflXtFO5EjziwWqugLUQ20GXgaBj6NNCkRYmhjdZaaveZwpXc_fSrrs0d0qX-adxx--LutEc_QZIP_mIgmma0TSph4h6esf4fybCFcIElH77cqDoV7-znxJmoK0nt3JfZH2MLGWV8Kd-Y60"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">NetMentor AI</span><span class="font-label-badge text-label-badge uppercase px-space-xs py-0.5 rounded-lg bg-surface-container-high text-primary border border-primary/20">AI LABS</span></a><div class="relative group hidden xl:block"><button class="flex items-center gap-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-space-sm py-1.5 rounded-lg hover:bg-surface-container transition-colors" type="button"><span>Tracks</span><span class="material-symbols-outlined text-[18px]">expand_more</span></button><div class="absolute left-0 top-full pt-space-xs hidden group-hover:block w-72 z-50"><div class="bg-surface-container-high rounded-xl p-space-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)] border border-outline-variant/30 flex flex-col gap-1"><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="cisco-ccna-200-301" href="#"><span class="font-title-md text-title-md text-secondary">Cisco CCNA 200-301</span><span class="font-code-sm text-code-sm text-on-surface-variant">Routing, Switching &amp; Network Automation</span></a><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="comptia-a-core" href="#"><span class="font-title-md text-title-md text-tertiary">CompTIA A+ Core 1 &amp; 2</span><span class="font-code-sm text-code-sm text-on-surface-variant">Hardware, OS, Troubleshooting</span></a><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="network-plus-n10-008" href="#"><span class="font-title-md text-title-md text-primary">Network+ N10-008</span><span class="font-code-sm text-code-sm text-on-surface-variant">Infrastructure Protocols &amp; Diagnostics</span></a><a class="flex flex-col p-space-sm rounded-lg hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" data-path="linux-and-cloud-sysadmin" href="#"><span class="font-title-md text-title-md text-on-surface">Linux &amp; Cloud SysAdmin</span><span class="font-code-sm text-code-sm text-on-surface-variant">Bash, Kernel, AWS CLI Lab Scenarios</span></a></div></div></div></div><nav class="hidden lg:flex items-center gap-space-sm xl:gap-space-md" data-active-classes="text-primary font-bold bg-surface-container-high rounded-lg"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="features" href="#">Features</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="curriculum-tracks" href="#">Tracks</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="pricing" href="#">Pricing</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="for-business" href="#">For Business</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="community-and-labs" href="#">Community &amp; Labs</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1 rounded-lg transition-colors" data-path="blog" href="#">Blog</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-low border border-outline-variant/30 font-code-sm text-code-sm text-primary"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span>14.8k Active Labs</span></div><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface px-space-sm py-1.5 rounded-lg hover:bg-surface-container transition-colors" data-path="sign-in" href="#">Sign In</a><a class="font-title-md text-title-md bg-primary hover:bg-primary-fixed text-on-primary-container px-space-md py-2 rounded-xl transition-all shadow-[0_1px_8px_rgba(0,0,0,0.04)] font-bold" data-path="get-started" href="#">Get Started</a><div class="pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAKMsdlDwOAckha2D61l4jTIJehbZgg1jIBNgADo9MLl-QZlMw9LguSbrzgpKElg7jKtMjPUYOPu2qg2ih8lBb9eLGUX0mvXfvEyeGJgiKmnvKdk7sKKCm87-omFYwiIt-Aa8tbqsdd_ZO8uXtLNN9-gMemoAut5NDmvDkbq04qsijFRQ1LGcc32QZg29UoJ8gtQ8yBnoZjpHwZsTc90HyxtEw-AWB2Z0mxyjmenwZOjHauoR1qFUy"/></div></div></div></header><main class="w-full pt-16 bg-background"><div class="flex flex-col w-full">
+<!-- Top Notification Glow & Hero Area -->
+<section class="relative w-full overflow-hidden pb-space-xl pt-space-lg">
+<!-- Ambient Canvas Background Glows -->
+<div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-primary/10 blur-[130px] rounded-full"></div>
+<div class="pointer-events-none absolute top-48 right-12 w-[380px] h-[280px] bg-secondary/10 blur-[110px] rounded-full"></div>
+<div class="w-full px-space-lg lg:px-margin max-w-7xl mx-auto flex flex-col items-center">
+<!-- Announcement Pill Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high shadow-sm hover:bg-surface-variant transition-colors cursor-pointer group mb-space-md">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-primary">New Launch</span>
+<span class="text-on-surface-variant text-body-sm">|</span>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors flex items-center gap-1">
+          Cisco IOS-XE Sandbox with Real-Time AI Packet Analysis
+          <span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+</span>
+</div>
+<!-- Main Headline & Subtitle -->
+<h1 class="font-display-hero text-headline-lg lg:text-display-hero text-center text-on-surface font-extrabold tracking-tight max-w-4xl mt-space-xs">
+        Master IT Maintenance &amp; Cisco Networking with a <span class="text-primary underline decoration-primary/30 decoration-wavy underline-offset-8">24/7 AI Mentor</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant text-center max-w-2xl mt-space-md leading-relaxed">
+        Simulate real hardware malfunctions, configure virtual Cisco switches &amp; routers, and debug enterprise topologies with instant Socratic guidance. Zero lab setup required.
+      </p>
+<!-- CTA Action Row -->
+<div class="flex flex-wrap items-center justify-center gap-space-sm sm:gap-space-md mt-space-lg w-full">
+<button class="flex items-center gap-space-xs font-title-md text-title-md bg-primary hover:bg-primary-fixed text-on-primary-container px-space-lg py-3 rounded-xl transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 font-bold active:scale-[0.98]" id="openSignupHeroBtn">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span>Start Free Lab Trial</span>
+</button>
+<button class="flex items-center gap-space-xs font-title-md text-title-md bg-surface-container-high hover:bg-surface-variant text-secondary hover:text-secondary-fixed px-space-lg py-3 rounded-xl transition-all shadow-md active:scale-[0.98]" id="openLiveDemoModalBtn">
+<span class="material-symbols-outlined text-[20px] text-primary">bolt</span>
+<span>Try Live Lab Demo (CLI)</span>
+</button>
+<button class="flex items-center gap-space-xs font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-space-md py-3 rounded-xl hover:bg-surface-container transition-colors" id="openVideoDemoBtn">
+<span class="material-symbols-outlined text-[22px]">play_circle</span>
+<span>Watch 2-Min Demo</span>
+</button>
+</div>
+<!-- Hero Interactive Split-Pane Terminal & AI Socratic Engine -->
+<div class="w-full mt-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-md rounded-2xl bg-surface-container-lowest p-space-sm shadow-2xl shadow-black/80">
+<!-- Left 7-Col: Realistic Cisco IOS-XE Terminal -->
+<div class="lg:col-span-7 flex flex-col rounded-xl bg-surface-container-low overflow-hidden shadow-inner min-h-[440px]">
+<!-- Terminal Title Bar -->
+<div class="flex items-center justify-between px-space-md py-2.5 bg-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+<span class="font-code-sm text-code-sm text-on-surface-variant ml-space-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">router</span>
+                Router-Core-01# (Cisco IOS-XE 17.6)
+              </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-surface-container text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                Connected
+              </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">12ms</span>
+</div>
+</div>
+<!-- Terminal Content & Command History -->
+<div class="flex-1 p-space-md font-code-sm text-code-sm leading-relaxed overflow-y-auto max-h-[380px] space-y-2 select-text" id="heroTerminalOutput">
+<div class="text-on-surface-variant">Last login: Today 14:02:19 from vty0 on pts/1 [Session ID: 9022]</div>
+<div class="text-primary flex items-center gap-2">
+<span class="text-on-surface font-bold">Router-Core-01#</span>
+<span class="text-secondary font-mono">show ip interface brief</span>
+</div>
+<!-- Terminal Output Table -->
+<div class="text-on-surface-variant overflow-x-auto whitespace-pre font-code-sm pt-1">
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0/0   10.0.12.1       YES manual <span class="text-primary font-bold">up</span> <span class="text-primary font-bold">up</span>      
+GigabitEthernet0/0/1   172.16.50.1     YES NVRAM  <span class="text-primary font-bold">up</span> <span class="text-primary font-bold">up</span>      
+GigabitEthernet0/0/2   192.168.100.1   YES manual <span class="text-error font-bold">administratively down</span> <span class="text-error font-bold">down</span>    
+Loopback0              1.1.1.1         YES manual <span class="text-primary font-bold">up</span> <span class="text-primary font-bold">up</span>
+</div>
+<div class="pt-2 text-tertiary flex items-center gap-2">
+<span class="text-on-surface font-bold">Router-Core-01#</span>
+<span class="text-secondary font-mono">show ip ospf neighbor</span>
+</div>
+<div class="text-on-surface-variant overflow-x-auto whitespace-pre font-code-sm">
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+2.2.2.2           1   <span class="text-tertiary font-bold">EXSTART/DR</span>      00:00:34    10.0.12.2       Gi0/0/0
+              <span class="text-error font-bold">! WARNING: MTU mismatch detected on segment Gi0/0/0 (Local: 1500, Remote: 1540)</span>
+</div>
+<!-- Live Input Prompt Row -->
+<div class="flex items-center gap-2 pt-2 text-on-surface">
+<span class="font-bold text-primary">Router-Core-01#</span>
+<input class="flex-1 bg-transparent border-0 outline-none font-code-sm text-code-sm text-primary placeholder:text-outline-variant/60 focus:ring-0 p-0" id="heroPromptInput" placeholder="Try typing 'ping 10.0.12.2' or 'fix mtu'..." type="text"/>
+<span class="w-2 h-4 bg-primary animate-pulse inline-block"></span>
+</div>
+</div>
+<!-- Bottom Terminal Shortcut Bar -->
+<div class="bg-surface-container px-space-md py-2 flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="font-code-sm text-code-sm text-outline">Shortcuts: [Tab] Autocomplete • [Ctrl+C] Abort</span>
+<div class="flex items-center gap-2">
+<button class="text-code-sm font-code-sm px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface transition-colors" onclick="runHeroCommand('ping 10.0.12.2')">ping 10.0.12.2</button>
+<button class="text-code-sm font-code-sm px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface transition-colors" onclick="runHeroCommand('show run int gi0/0/0')">show run</button>
+<button class="text-code-sm font-code-sm px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-variant text-outline hover:text-on-surface transition-colors" onclick="clearHeroTerminal()">Clear</button>
+</div>
+</div>
+</div>
+<!-- Right 5-Col: AI Socratic Mentor Panel -->
+<div class="lg:col-span-5 flex flex-col justify-between rounded-xl bg-surface-container p-space-md shadow-md relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<!-- AI Header -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</span>
+<div>
+<div class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-1.5">
+                    NetMentor Socratic Co-Pilot
+                    <span class="material-symbols-outlined text-[16px] text-tertiary">auto_awesome</span>
+</div>
+<div class="font-code-sm text-code-sm text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Active Diagnostic Telemetry
+                  </div>
+</div>
+</div>
+<span class="font-label-badge text-label-badge uppercase px-2 py-1 rounded bg-tertiary/15 text-tertiary">AI Socratic Mode</span>
+</div>
+<!-- AI Insight Card -->
+<div class="mt-space-sm p-space-md rounded-xl bg-surface-container-high shadow-sm space-y-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-tertiary font-bold">[OBSERVATION_FLAG: Gi0/0/0]</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Confidence: 99.4%</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                Notice OSPF neighbor <code class="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-code-sm">2.2.2.2</code> is held in <strong class="text-tertiary font-semibold">EXSTART/DR</strong> state. Rather than restarting the process, what fundamental layer-3 parameter must match on point-to-point links before Database Description (DBD) packets can swap?
+              </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">lightbulb</span>
+<span>Hint: Look closely at MTU sizing. If GigabitEthernet0/0/0 ignores larger packets, OSPF DBD sync hangs indefinitely.</span>
+</div>
+</div>
+<!-- Suggestion Quick Chips -->
+<div class="mt-space-md">
+<div class="font-label-badge text-label-badge uppercase text-on-surface-variant mb-space-xs tracking-wider">Suggested Exploration Queries</div>
+<div class="flex flex-wrap gap-2">
+<button class="font-body-sm text-body-sm px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface hover:text-primary transition-colors flex items-center gap-1.5" onclick="simulateAiQuery('Explain why MTU mismatches freeze OSPF in EXSTART state.')">
+<span class="material-symbols-outlined text-[16px] text-primary">chat</span>
+                  Why EXSTART freeze?
+                </button>
+<button class="font-body-sm text-body-sm px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface hover:text-primary transition-colors flex items-center gap-1.5" onclick="simulateAiQuery('How do I safely inspect interface Gi0/0/0 MTU on Cisco IOS-XE?')">
+<span class="material-symbols-outlined text-[16px] text-secondary">search</span>
+                  Inspect Gi0/0/0 MTU
+                </button>
+<button class="font-body-sm text-body-sm px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface hover:text-tertiary transition-colors flex items-center gap-1.5" onclick="simulateAiQuery('Generate a step-by-step fix command without giving away the direct exam answer.')">
+<span class="material-symbols-outlined text-[16px] text-tertiary">quiz</span>
+                  Give Socratic Guide
+                </button>
+</div>
+</div>
+</div>
+<!-- AI Assistant Status Footer -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+              Cisco CCNA 200-301 Alignment Verified
+            </span>
+<button class="text-primary hover:text-primary-fixed font-title-md text-title-md underline decoration-dotted" onclick="toggleAiDrawerInfo()">Toggle View</button>
+</div>
+</div>
+</div>
+<!-- Real-Time Metrics & Credibility Stats Ticker -->
+<div class="w-full mt-space-lg grid grid-cols-2 md:grid-cols-4 gap-space-sm sm:gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col items-center sm:items-start shadow-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-primary">98.4%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 text-center sm:text-left">First-Time Cert Pass Rate</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col items-center sm:items-start shadow-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-secondary">1.2M+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 text-center sm:text-left">CLI Commands Executed</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col items-center sm:items-start shadow-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-tertiary">45+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 text-center sm:text-left">Hands-On Lab Topologies</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col items-center sm:items-start shadow-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface">25,000+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 text-center sm:text-left">Engineers &amp; SysAdmins Trained</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Certification Alignment & Industry Proof Strip -->
+<section class="w-full py-space-lg bg-surface-container-lowest">
+<div class="w-full px-space-lg lg:px-margin max-w-7xl mx-auto flex flex-col items-center">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-on-surface-variant text-center mb-space-md">
+        Aligned to Industry Standards • Verified by Top Tech Employers
+      </span>
+<!-- High Fidelity Certification Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-md w-full">
+<!-- CCNA 200-301 -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high transition-all flex flex-col items-center text-center group cursor-pointer">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform mb-space-xs">
+<span class="material-symbols-outlined text-[28px]">lan</span>
+</div>
+<span class="font-title-md text-title-md font-bold text-on-surface group-hover:text-secondary transition-colors">Cisco CCNA</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">200-301 Official Core</span>
+<span class="mt-2 font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container text-secondary">Switching • OSPF</span>
+</div>
+<!-- CompTIA A+ Core 1 & 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high transition-all flex flex-col items-center text-center group cursor-pointer">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform mb-space-xs">
+<span class="material-symbols-outlined text-[28px]">memory</span>
+</div>
+<span class="font-title-md text-title-md font-bold text-on-surface group-hover:text-tertiary transition-colors">CompTIA A+</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">220-1101 &amp; 1102</span>
+<span class="mt-2 font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container text-tertiary">Hardware • OS</span>
+</div>
+<!-- CompTIA Network+ -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high transition-all flex flex-col items-center text-center group cursor-pointer">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-space-xs">
+<span class="material-symbols-outlined text-[28px]">hub</span>
+</div>
+<span class="font-title-md text-title-md font-bold text-on-surface group-hover:text-primary transition-colors">Network+</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">N10-008 Protocol</span>
+<span class="mt-2 font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container text-primary">TCP/IP • Subnetting</span>
+</div>
+<!-- ITIL 4 Foundation -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high transition-all flex flex-col items-center text-center group cursor-pointer">
+<div class="w-12 h-12 rounded-xl bg-on-surface-variant/10 flex items-center justify-center text-on-surface-variant group-hover:scale-110 transition-transform mb-space-xs">
+<span class="material-symbols-outlined text-[28px]">confirmation_number</span>
+</div>
+<span class="font-title-md text-title-md font-bold text-on-surface group-hover:text-on-surface transition-colors">ITIL 4 Service</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Foundation ITSM</span>
+<span class="mt-2 font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">SLA • Incidents</span>
+</div>
+<!-- AWS Advanced Networking -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high transition-all flex flex-col items-center text-center group cursor-pointer col-span-2 sm:col-span-1">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed-dim/20 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform mb-space-xs">
+<span class="material-symbols-outlined text-[28px]">cloud_sync</span>
+</div>
+<span class="font-title-md text-title-md font-bold text-on-surface group-hover:text-secondary transition-colors">Cloud Networks</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">VPC • DirectConnect</span>
+<span class="mt-2 font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container text-secondary">AWS Specialty</span>
+</div>
+</div>
+<!-- Partner Logo Strip -->
+<div class="flex flex-wrap items-center justify-center gap-space-lg lg:gap-space-xl mt-space-lg text-outline font-title-md text-title-md font-semibold select-none">
+<span class="flex items-center gap-2 hover:text-on-surface transition-colors"><span class="material-symbols-outlined">network_check</span> Cisco NetAcad Certified</span>
+<span class="flex items-center gap-2 hover:text-on-surface transition-colors"><span class="material-symbols-outlined">shield</span> TechCorps CyberLabs</span>
+<span class="flex items-center gap-2 hover:text-on-surface transition-colors"><span class="material-symbols-outlined">dns</span> Global IT Systems</span>
+<span class="flex items-center gap-2 hover:text-on-surface transition-colors"><span class="material-symbols-outlined">apartment</span> NetSolutions Group</span>
+</div>
+</div>
+</section>
+<!-- Four Interactive Certification & Practice Career Tracks -->
+<section class="w-full py-space-xl bg-background">
+<div class="w-full px-space-lg lg:px-margin max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
+<div>
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary">Simulation Tracks</span>
+<h2 class="font-headline-md text-headline-md lg:text-headline-lg font-bold text-on-surface mt-1">
+            Structured Career Tracks Powered by Live Simulators
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+            Select a specialized path. Each track includes progressive topological malfunctions, realistic CLI consoles, and guided AI Socratic verification.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-primary flex items-center gap-1.5 bg-surface-container px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px]">verified_user</span> 100% Browser Executable
+          </span>
+</div>
+</div>
+<!-- 4 Bento Career Track Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Track 1: Hardware Diagnostics & PC Assembly -->
+<div class="group rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-300 p-space-md flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-tertiary/10 rounded-full blur-xl pointer-events-none group-hover:bg-tertiary/20 transition-all"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-tertiary/20 text-tertiary">CompTIA A+ Core 1</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">18 Simulation Labs</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">hardware</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface group-hover:text-tertiary transition-colors">
+              Hardware Diagnostics &amp; PC Assembly
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              POST beep code deciphering, virtual multimeter voltage checks, memory bank seating errors, and thermal paste overheating investigations.
+            </p>
+<div class="mt-space-md pt-space-sm space-y-1.5">
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+<span>Power Supply Tester Sandbox</span>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+<span>RAID 0, 1, 5, 10 Controller Setup</span>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+<span>BIOS/UEFI SecureBoot Flags</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-variant hover:bg-tertiary hover:text-on-tertiary-container font-title-md text-title-md text-on-surface transition-all text-center" onclick="enrollInTrack('CompTIA A+ Hardware Diagnostics')">
+              Enroll Track
+            </button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" onclick="inspectTrackLabs('Hardware Diagnostics')" title="Inspect syllabus">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Track 2: Cisco Routing & Enterprise Switching -->
+<div class="group rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-300 p-space-md flex flex-col justify-between shadow-md relative overflow-hidden ring-1 ring-secondary/20">
+<div class="absolute top-0 right-0 w-24 h-24 bg-secondary/15 rounded-full blur-xl pointer-events-none group-hover:bg-secondary/30 transition-all"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-secondary/20 text-secondary">Cisco CCNA 200-301</span>
+<span class="font-code-sm text-code-sm text-secondary font-bold">34 Topologies</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">alt_route</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface group-hover:text-secondary transition-colors">
+              Cisco Routing &amp; Enterprise Switching
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              802.1Q VLAN trunking, Rapid PVST+ loop resolution, OSPF multi-area configuration, standard/extended ACL policies, and NAT overload.
+            </p>
+<div class="mt-space-md pt-space-sm space-y-1.5">
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+<span>Inter-VLAN SVI Routing Labs</span>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+<span>Spanning-Tree BPDU Guard Debug</span>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+<span>Static &amp; Dynamic NAT Port Forward</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded-lg bg-secondary hover:bg-secondary-fixed text-on-secondary-container font-title-md text-title-md font-bold transition-all text-center" onclick="enrollInTrack('Cisco CCNA Enterprise Switching &amp; Routing')">
+              Enroll Track
+            </button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" onclick="inspectTrackLabs('Cisco CCNA')" title="Inspect syllabus">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Track 3: OS Recovery & Linux SysAdmin -->
+<div class="group rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-300 p-space-md flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full blur-xl pointer-events-none group-hover:bg-primary/20 transition-all"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-primary/20 text-primary">Linux+ / LPIC-1</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">22 CLI Challenges</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">terminal</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface group-hover:text-primary transition-colors">
+              OS Recovery &amp; Linux SysAdmin
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Systemd unit file triage, kernel parameter tuning, GRUB bootloader repair, logical volume management (LVM), and bash pipeline diagnostics.
+            </p>
+<div class="mt-space-md pt-space-sm space-y-1.5">
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+<span>Recover Unbootable GRUB2 Config</span>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+<span>SELinux / AppArmor Access Denied</span>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+<span>Crontab &amp; Journalctl Ingest Analysis</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-variant hover:bg-primary hover:text-on-primary-container font-title-md text-title-md text-on-surface transition-all text-center" onclick="enrollInTrack('Linux SysAdmin &amp; Recovery')">
+              Enroll Track
+            </button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" onclick="inspectTrackLabs('Linux SysAdmin')" title="Inspect syllabus">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Track 4: IT Helpdesk & Incident Resolution -->
+<div class="group rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-300 p-space-md flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-on-surface-variant/10 rounded-full blur-xl pointer-events-none group-hover:bg-on-surface-variant/20 transition-all"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-surface-bright text-on-surface">CompTIA A+ &amp; ITIL</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">40 AI Ticket Simulations</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-variant flex items-center justify-center text-on-surface mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">support_agent</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface group-hover:text-primary transition-colors">
+              IT Helpdesk &amp; Incident Resolution
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Active Directory locked accounts, remote desktop gateway timeouts, DHCP scope exhaustion, and enterprise ticketing SLA escalation models.
+            </p>
+<div class="mt-space-md pt-space-sm space-y-1.5">
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+<span>Simulated AD PowerShell cmdlets</span>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+<span>Windows BitLocker Recovery Keys</span>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+<span>Phishing Email Forensics &amp; MX</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-variant hover:bg-surface-bright text-on-surface font-title-md text-title-md transition-all text-center" onclick="enrollInTrack('IT Helpdesk &amp; Incident Resolution')">
+              Enroll Track
+            </button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-on-surface transition-colors" onclick="inspectTrackLabs('IT Helpdesk')" title="Inspect syllabus">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Terminal Workflow & Feature Spotlight -->
+<section class="w-full py-space-xl bg-surface-container-lowest">
+<div class="w-full px-space-lg lg:px-margin max-w-7xl mx-auto flex flex-col items-center">
+<div class="text-center max-w-3xl mb-space-xl">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-secondary">Diagnostic Workflow</span>
+<h2 class="font-headline-md text-headline-md lg:text-headline-lg font-bold text-on-surface mt-1">
+          How NetMentor AI Builds Genuine Engineering Reflexes
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Unlike multiple choice flashcards, our environment isolates you in broken production environments where every single command generates realistic device feedback.
+        </p>
+</div>
+<!-- 3 Step Journey Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg w-full mb-space-xl">
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col relative">
+<span class="font-headline-lg text-headline-lg text-outline-variant/40 font-black absolute top-4 right-6 select-none">01</span>
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">terminal</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">1. Launch Browser Terminal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+            Instant zero-install access to Cisco IOS-XE, Linux bash shells, and Windows command environments directly through WebAssembly.
+          </p>
+<div class="mt-4 pt-3 flex items-center gap-1 font-code-sm text-code-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">speed</span> 0.4s Container Warmup
+          </div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col relative">
+<span class="font-headline-lg text-headline-lg text-outline-variant/40 font-black absolute top-4 right-6 select-none">02</span>
+<div class="w-12 h-12 rounded-xl bg-error/10 flex items-center justify-center text-error mb-space-md">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">2. Break &amp; Troubleshoot Topologies</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+            The simulator injects real silent errors: duplex mismatches, missing subnets, corrupted grub kernels, and broken spanning-tree roots.
+          </p>
+<div class="mt-4 pt-3 flex items-center gap-1 font-code-sm text-code-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">bug_report</span> 120+ Malfunction Seeds
+          </div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col relative">
+<span class="font-headline-lg text-headline-lg text-outline-variant/40 font-black absolute top-4 right-6 select-none">03</span>
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">psychology</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">3. Socratic AI Guidance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+            The AI never gives away answers directly. It watches command outputs, highlights discrepancies, and asks targeted questions that guide you to the fix.
+          </p>
+<div class="mt-4 pt-3 flex items-center gap-1 font-code-sm text-code-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">school</span> Non-Spoil Pedagogical Model
+          </div>
+</div>
+</div>
+<!-- Feature Spotlight Banner -->
+<div class="w-full rounded-2xl bg-surface-container p-space-lg md:p-space-xl flex flex-col lg:flex-row items-center justify-between gap-space-lg shadow-xl">
+<div class="max-w-xl">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-secondary/10 text-secondary font-code-sm text-code-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px]">insights</span> Automated Cisco Packet Inspection
+          </div>
+<h3 class="font-headline-sm text-headline-sm lg:text-headline-md font-bold text-on-surface">
+            Inspect Wireshark PCAPs Inside Virtual Switches
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Track TCP handshakes, ARP resolutions, and ICMP TTL expirations directly as packets traverse each hop on your customized network graph canvas.
+          </p>
+<div class="mt-space-md flex flex-wrap gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-sm text-body-sm text-on-surface">802.1Q Frame Inspection</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Real-Time OSPF Hello Monitors</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-96 rounded-xl bg-surface-container-lowest p-space-md shadow-inner space-y-2 font-code-sm text-code-sm">
+<div class="flex items-center justify-between text-outline pb-1">
+<span>PACKET STREAM: Gi0/0/1</span>
+<span class="text-primary animate-pulse">• LIVE</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high text-secondary flex justify-between">
+<span>14:10:02.102 ARP Request</span>
+<span>Who has 10.0.12.2?</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high text-primary flex justify-between">
+<span>14:10:02.104 ARP Reply</span>
+<span>10.0.12.2 is 52:54:00:1a</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high text-on-surface-variant flex justify-between">
+<span>14:10:02.110 ICMP Echo</span>
+<span>seq=1 ttl=64 time=1.4ms</span>
+</div>
+<button class="w-full mt-2 py-2 rounded-lg bg-surface-variant hover:bg-surface-bright text-center text-on-surface font-title-md text-title-md transition-colors" onclick="openLiveDemoModal()">
+            Open Interactive Packet Console →
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Terminal Demo Modal (WebAssembly CLI Simulation) -->
+<div class="fixed inset-0 z-50 bg-background/90 backdrop-blur-md hidden items-center justify-center p-space-sm sm:p-space-lg" id="cliDemoModal">
+<div class="w-full max-w-4xl bg-surface-container-low rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[921px] animate-in fade-in zoom-in duration-200">
+<!-- CLI Modal Header -->
+<div class="bg-surface-container-high px-space-md py-3 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-error cursor-pointer" onclick="closeLiveDemoModal()"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+</div>
+<span class="font-title-md text-title-md font-semibold text-on-surface ml-space-xs flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">terminal</span>
+            Live Lab Simulation Shell: Switch-Distribution-01
+          </span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-surface-container text-primary">Free Guest Sandbox</span>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant" onclick="closeLiveDemoModal()">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+</div>
+<!-- CLI Modal Body -->
+<div class="flex-1 bg-surface-container-lowest p-space-md font-code-sm text-code-sm overflow-y-auto space-y-2 text-on-surface select-text" id="modalCliScreen">
+<div class="text-outline">NetMentor AI Micro-Kernel v4.12.0-cisco-wasm (x86_64-simulated)</div>
+<div class="text-on-surface-variant">Type <span class="text-primary font-bold">help</span> to list commands, or try <span class="text-secondary font-mono">show ip route</span>, <span class="text-secondary font-mono">show vlan</span>, <span class="text-secondary font-mono">enable</span>, or <span class="text-secondary font-mono">ping 8.8.8.8</span>.</div>
+<div class="pt-2 text-tertiary">Switch-Dist-01&gt;</div>
+</div>
+<!-- CLI Modal Interactive Input Bar -->
+<div class="bg-surface-container-high p-space-md flex items-center gap-space-sm">
+<span class="font-code-sm text-code-sm text-primary font-bold" id="modalPromptLabel">Switch-Dist-01&gt;</span>
+<input autofocus="" class="flex-1 bg-surface-container-low px-space-md py-2 rounded-lg font-code-sm text-code-sm text-on-surface placeholder:text-outline-variant outline-none focus:ring-1 focus:ring-primary" id="modalCliInput" placeholder="Type a Cisco command (e.g. 'help', 'show vlan', 'enable')..." type="text"/>
+<button class="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary-container font-title-md text-title-md font-bold transition-all" onclick="handleModalSubmit()">
+          Execute
+        </button>
+</div>
+<!-- Quick Command Buttons -->
+<div class="bg-surface-container px-space-md py-2 flex flex-wrap items-center gap-2 text-code-sm font-code-sm">
+<span class="text-on-surface-variant font-label-badge text-label-badge uppercase">Quick Presets:</span>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface" onclick="executeModalPreset('help')">help</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-variant text-secondary" onclick="executeModalPreset('show ip route')">show ip route</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-variant text-secondary" onclick="executeModalPreset('show vlan brief')">show vlan brief</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-variant text-tertiary" onclick="executeModalPreset('enable')">enable</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-variant text-primary" onclick="executeModalPreset('ping 8.8.8.8')">ping 8.8.8.8</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-variant text-outline ml-auto" onclick="executeModalPreset('clear')">clear</button>
+</div>
+</div>
+</div>
+<!-- Slide-Over Signup Drawer (/auth/signup modal) -->
+<div class="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm hidden transition-opacity" id="signupDrawer">
+<div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+<div class="w-screen max-w-md bg-surface-container-low p-space-lg shadow-2xl flex flex-col justify-between overflow-y-auto">
+<div>
+<!-- Drawer Header -->
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Activate Lab Pass</span>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" onclick="closeSignupDrawer()">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+            Get instant 7-day unrestricted access to 45+ Cisco and CompTIA virtual sandboxes with real-time AI mentoring.
+          </p>
+<!-- Pre-Selected Track Display -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">school</span>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase text-outline">Selected Track</span>
+<span class="font-title-md text-title-md font-semibold text-on-surface" id="drawerSelectedTrackLabel">Cisco CCNA 200-301</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-primary font-bold">Included</span>
+</div>
+<!-- Social Quick Auth -->
+<div class="mt-space-lg space-y-2.5">
+<button class="w-full py-2.5 px-space-md rounded-xl bg-surface-container hover:bg-surface-variant font-title-md text-title-md text-on-surface flex items-center justify-center gap-space-sm transition-colors shadow-sm" onclick="triggerAuthSuccess('GitHub')">
+<span class="material-symbols-outlined text-[20px]">code</span>
+<span>Continue with GitHub</span>
+</button>
+<button class="w-full py-2.5 px-space-md rounded-xl bg-surface-container hover:bg-surface-variant font-title-md text-title-md text-on-surface flex items-center justify-center gap-space-sm transition-colors shadow-sm" onclick="triggerAuthSuccess('Google')">
+<span class="material-symbols-outlined text-[20px]">account_circle</span>
+<span>Continue with Google</span>
+</button>
+</div>
+<div class="my-space-md flex items-center gap-space-sm">
+<div class="flex-1 h-px bg-surface-container-highest"></div>
+<span class="font-label-badge text-label-badge uppercase text-outline">or email sign in</span>
+<div class="flex-1 h-px bg-surface-container-highest"></div>
+</div>
+<!-- Signup Input Form -->
+<form class="space-y-space-sm" id="signupForm" onsubmit="handleSignupSubmit(event)">
+<div>
+<label class="block font-title-md text-title-md text-on-surface mb-1">Full Name</label>
+<input class="w-full bg-surface-container-high px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline-variant outline-none focus:ring-1 focus:ring-primary" placeholder="Alex Mercer" required="" type="text"/>
+</div>
+<div>
+<label class="block font-title-md text-title-md text-on-surface mb-1">Work or Student Email</label>
+<input class="w-full bg-surface-container-high px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline-variant outline-none focus:ring-1 focus:ring-primary" placeholder="alex@company.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-title-md text-title-md text-on-surface mb-1">Choose Career Objective</label>
+<select class="w-full bg-surface-container-high px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface outline-none focus:ring-1 focus:ring-primary" id="trackSelectDropdown">
+<option value="Cisco CCNA Enterprise Switching &amp; Routing">Cisco CCNA 200-301 Certification</option>
+<option value="CompTIA A+ Hardware Diagnostics">CompTIA A+ Core 1 &amp; 2 Certification</option>
+<option value="Linux SysAdmin &amp; Recovery">Linux+ / LPIC-1 SysAdmin Track</option>
+<option value="IT Helpdesk &amp; Incident Resolution">IT Helpdesk &amp; ITIL Incident Resolution</option>
+</select>
+</div>
+<button class="w-full mt-space-md py-3 rounded-xl bg-primary hover:bg-primary-fixed text-on-primary-container font-title-md text-title-md font-bold transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 active:scale-[0.98]" type="submit">
+              Activate 7-Day Free Lab Access
+            </button>
+</form>
+<p class="font-body-sm text-body-sm text-outline text-center mt-space-sm">
+            No credit card required. Instant sandbox provisioning.
+          </p>
+</div>
+<!-- Drawer Footer Guarantee -->
+<div class="pt-space-md flex items-center justify-center gap-space-sm font-code-sm text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>99.98% High Availability Lab Nodes</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Demo Modal -->
+<div class="fixed inset-0 z-50 bg-background/90 backdrop-blur-md hidden items-center justify-center p-space-md" id="videoModal">
+<div class="w-full max-w-3xl bg-surface-container-low rounded-2xl overflow-hidden shadow-2xl">
+<div class="p-space-md bg-surface-container-high flex items-center justify-between">
+<span class="font-title-md text-title-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">play_circle</span>
+          2-Minute Interactive Platform Tour
+        </span>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeVideoModal()">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col items-center justify-center bg-surface-container-lowest min-h-[340px] text-center">
+<div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary mb-space-md animate-pulse">
+<span class="material-symbols-outlined text-[36px]">ondemand_video</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Interactive Sandbox Walkthrough</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-2">
+          Watch how a junior engineer fixes a real OSPF area mismatch with live feedback from the NetMentor Socratic AI engine.
+        </p>
+<button class="mt-space-md py-2.5 px-space-lg rounded-xl bg-primary text-on-primary-container font-title-md text-title-md font-bold hover:bg-primary-fixed transition-colors" onclick="closeVideoModal(); openLiveDemoModal();">
+          Switch to Live Interactive CLI
+        </button>
+</div>
+</div>
+</div>
+<!-- Syllabus Inspector Toast / Drawer -->
+<div class="fixed bottom-6 right-6 z-40 max-w-md bg-surface-container-high rounded-xl p-space-md shadow-2xl hidden animate-in slide-in-from-bottom duration-200" id="trackInspectorToast">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">assignment</span>
+<span class="font-title-md text-title-md font-bold text-on-surface" id="inspectorTitle">Track Syllabus</span>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="closeInspectorToast()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2" id="inspectorDetail">
+      Loading comprehensive module list...
+    </p>
+<div class="mt-space-sm pt-space-xs flex justify-end">
+<button class="font-code-sm text-code-sm text-primary hover:underline" id="inspectorActionBtn">
+        Launch Track →
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // Hero Terminal Logic
+  const heroPromptInput = document.getElementById('heroPromptInput');
+  const heroTerminalOutput = document.getElementById('heroTerminalOutput');
+
+  if (heroPromptInput) {
+    heroPromptInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        const cmd = this.value.trim();
+        if (cmd) {
+          runHeroCommand(cmd);
+          this.value = '';
+        }
+      }
+    });
+  }
+
+  function runHeroCommand(cmd) {
+    if (!heroTerminalOutput) return;
+    
+    // Append entered command
+    const cmdRow = document.createElement('div');
+    cmdRow.className = 'pt-2 flex items-center gap-2';
+    cmdRow.innerHTML = '<span class="text-on-surface font-bold">Router-Core-01#</span> <span class="text-secondary font-mono">' + escapeHtml(cmd) + '</span>';
+    heroTerminalOutput.insertBefore(cmdRow, heroTerminalOutput.lastElementChild);
+
+    // Simulated responses
+    const resRow = document.createElement('div');
+    resRow.className = 'text-on-surface-variant overflow-x-auto whitespace-pre font-code-sm';
+
+    const lower = cmd.toLowerCase();
+    if (lower.includes('ping 10.0.12.2')) {
+      resRow.innerHTML = 'Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to 10.0.12.2, timeout is 2 seconds:\n<span class="text-primary font-bold">!!!!!</span>\nSuccess rate is 100 percent (5/5), round-trip min/avg/max = 1/2/4 ms';
+    } else if (lower.includes('fix mtu') || lower.includes('mtu 1500')) {
+      resRow.innerHTML = 'Router-Core-01(config)# interface Gi0/0/0\nRouter-Core-01(config-if)# ip mtu 1500\n<span class="text-primary font-bold">%OSPF-5-ADJCHG: Process 1, Nbr 2.2.2.2 on GigabitEthernet0/0/0 from EXSTART to FULL, Done</span>';
+    } else if (lower.includes('show run')) {
+      resRow.innerHTML = 'interface GigabitEthernet0/0/0\n ip address 10.0.12.1 255.255.255.0\n ip ospf 1 area 0\n ip mtu 1500\n duplex auto\n speed auto';
+    } else {
+      resRow.innerHTML = '<span class="text-outline">Command acknowledged in sandbox environment. Telemetry synced with AI mentor.</span>';
+    }
+
+    heroTerminalOutput.insertBefore(resRow, heroTerminalOutput.lastElementChild);
+    heroTerminalOutput.scrollTop = heroTerminalOutput.scrollHeight;
+  }
+
+  function clearHeroTerminal() {
+    if (!heroTerminalOutput) return;
+    const inputRow = heroTerminalOutput.lastElementChild;
+    heroTerminalOutput.innerHTML = '<div class="text-outline">Terminal screen reset. Session active.</div>';
+    heroTerminalOutput.appendChild(inputRow);
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  // AI Exploration Queries
+  function simulateAiQuery(queryText) {
+    alert("NetMentor AI Response:\\n\\n" + queryText + "\\n\\n[Socratic Co-pilot]: Remember that in Cisco IOS-XE, the IP MTU must align on point-to-point links. When Router A transmits a DBD frame exceeding Router B's MTU, Router B silently discards the frame. Check 'ip ospf mtu-ignore' or adjust the interface MTU!");
+  }
+
+  function toggleAiDrawerInfo() {
+    alert("AI Diagnostic Telemetry:\\n- Protocol Analyzer: Active\\n- Heuristic: OSPF DBD negotiation\\n- Socratic Mode: No answers spoiled\\n- Student Rating: 4.9/5");
+  }
+
+  // Modals Controller
+  const cliDemoModal = document.getElementById('cliDemoModal');
+  const signupDrawer = document.getElementById('signupDrawer');
+  const videoModal = document.getElementById('videoModal');
+
+  // Trigger buttons
+  document.getElementById('openLiveDemoModalBtn')?.addEventListener('click', openLiveDemoModal);
+  document.getElementById('openSignupHeroBtn')?.addEventListener('click', () => openSignupDrawer());
+  document.getElementById('openVideoDemoBtn')?.addEventListener('click', openVideoModal);
+
+  function openLiveDemoModal() {
+    if (cliDemoModal) {
+      cliDemoModal.classList.remove('hidden');
+      cliDemoModal.classList.add('flex');
+      document.getElementById('modalCliInput')?.focus();
+    }
+  }
+
+  function closeLiveDemoModal() {
+    if (cliDemoModal) {
+      cliDemoModal.classList.add('hidden');
+      cliDemoModal.classList.remove('flex');
+    }
+  }
+
+  function openSignupDrawer(trackName) {
+    if (signupDrawer) {
+      signupDrawer.classList.remove('hidden');
+      if (trackName) {
+        const label = document.getElementById('drawerSelectedTrackLabel');
+        const select = document.getElementById('trackSelectDropdown');
+        if (label) label.textContent = trackName;
+        if (select) select.value = trackName;
+      }
+    }
+  }
+
+  function closeSignupDrawer() {
+    if (signupDrawer) signupDrawer.classList.add('hidden');
+  }
+
+  function openVideoModal() {
+    if (videoModal) {
+      videoModal.classList.remove('hidden');
+      videoModal.classList.add('flex');
+    }
+  }
+
+  function closeVideoModal() {
+    if (videoModal) {
+      videoModal.classList.add('hidden');
+      videoModal.classList.remove('flex');
+    }
+  }
+
+  // Interactive Live Demo CLI Modal Simulation
+  let isPrivileged = false;
+  const modalCliInput = document.getElementById('modalCliInput');
+  const modalCliScreen = document.getElementById('modalCliScreen');
+  const modalPromptLabel = document.getElementById('modalPromptLabel');
+
+  if (modalCliInput) {
+    modalCliInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        handleModalSubmit();
+      }
+    });
+  }
+
+  function executeModalPreset(cmd) {
+    if (modalCliInput) {
+      modalCliInput.value = cmd;
+      handleModalSubmit();
+    }
+  }
+
+  function handleModalSubmit() {
+    if (!modalCliInput || !modalCliScreen) return;
+    const cmd = modalCliInput.value.trim();
+    if (!cmd) return;
+
+    const promptText = isPrivileged ? 'Switch-Dist-01#' : 'Switch-Dist-01>';
+    
+    // Render cmd
+    const cmdDiv = document.createElement('div');
+    cmdDiv.className = 'text-primary font-code-sm';
+    cmdDiv.innerHTML = '<span class="text-on-surface">' + promptText + ' </span>' + escapeHtml(cmd);
+    modalCliScreen.appendChild(cmdDiv);
+
+    // Evaluate
+    const responseDiv = document.createElement('div');
+    responseDiv.className = 'text-on-surface-variant whitespace-pre font-code-sm';
+    const lower = cmd.toLowerCase();
+
+    if (lower === 'help' || lower === '?') {
+      responseDiv.innerHTML = `Available commands in guest container:
+  show ip route       - Display simulated IP routing table
+  show vlan brief     - Display 802.1Q active VLAN databases
+  show version        - Display Cisco IOS-XE emulation software specs
+  enable              - Turn on privileged EXEC commands
+  ping &lt;address&gt;     - Send ICMP ECHO packets to target IP
+  clear               - Clear terminal viewport`;
+    } else if (lower === 'clear') {
+      modalCliScreen.innerHTML = '<div class="text-outline">Terminal screen reset.</div>';
+      modalCliInput.value = '';
+      return;
+    } else if (lower === 'enable') {
+      isPrivileged = true;
+      if (modalPromptLabel) modalPromptLabel.textContent = 'Switch-Dist-01#';
+      responseDiv.innerHTML = '<span class="text-tertiary">Privileged EXEC mode active (Switch-Dist-01#). Full simulation unlocked.</span>';
+    } else if (lower === 'disable') {
+      isPrivileged = false;
+      if (modalPromptLabel) modalPromptLabel.textContent = 'Switch-Dist-01>';
+      responseDiv.innerHTML = '<span class="text-outline">User EXEC mode restored.</span>';
+    } else if (lower.includes('show ip route')) {
+      responseDiv.innerHTML = `Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+
+Gateway of last resort is 192.168.1.254 to network 0.0.0.0
+
+O*E2  0.0.0.0/0 [110/1] via 192.168.1.254, 02:14:11, Vlan1
+C     10.10.10.0/24 is directly connected, Vlan10
+C     10.10.20.0/24 is directly connected, Vlan20
+C     192.168.1.0/24 is directly connected, GigabitEthernet1/0/1`;
+    } else if (lower.includes('show vlan') || lower.includes('show vlan brief')) {
+      responseDiv.innerHTML = `VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Gi1/0/3, Gi1/0/4
+10   ENGINEERING_DEV                  active    Gi1/0/1, Gi1/0/2
+20   DATA_CENTER_MGMT                 active    Gi1/0/5, Gi1/0/6
+99   NATIVE_TRUNK_MGMT                active    Gi1/0/24`;
+    } else if (lower.includes('show version')) {
+      responseDiv.innerHTML = `Cisco IOS-XE Software, Version 17.06.01a (SIMULATED-WASM)
+NetMentor AI Virtual Hypervisor compiled 2025 by NetMentor AI Labs.
+Processor ID: NM-2025-VIRT-889012`;
+    } else if (lower.startsWith('ping')) {
+      responseDiv.innerHTML = `Sending 5, 100-byte ICMP Echos to target...
+<span class="text-primary font-bold">!!!!!</span>
+Success rate is 100 percent (5/5), round-trip min/avg/max = 2/3/5 ms`;
+    } else {
+      responseDiv.innerHTML = `<span class="text-error">% Invalid input detected at '^' marker. Type 'help' for options.</span>`;
+    }
+
+    modalCliScreen.appendChild(responseDiv);
+    modalCliInput.value = '';
+    modalCliScreen.scrollTop = modalCliScreen.scrollHeight;
+  }
+
+  // Course Track Actions
+  function enrollInTrack(trackName) {
+    openSignupDrawer(trackName);
+  }
+
+  function inspectTrackLabs(trackName) {
+    const toast = document.getElementById('trackInspectorToast');
+    const title = document.getElementById('inspectorTitle');
+    const detail = document.getElementById('inspectorDetail');
+    const btn = document.getElementById('inspectorActionBtn');
+
+    if (toast && title && detail) {
+      title.textContent = trackName + " Syllabus";
+      detail.textContent = "Includes foundational topology scenarios, real-time command syntax validation, and step-by-step diagnostic objectives authored for 2025 exam blueprints.";
+      toast.classList.remove('hidden');
+      if (btn) {
+        btn.onclick = () => {
+          closeInspectorToast();
+          enrollInTrack(trackName);
+        };
+      }
+    }
+  }
+
+  function closeInspectorToast() {
+    const toast = document.getElementById('trackInspectorToast');
+    if (toast) toast.classList.add('hidden');
+  }
+
+  function triggerAuthSuccess(provider) {
+    alert("Authenticating with " + provider + "... Free 7-Day Lab pass activated! Redirecting to topology sandbox...");
+    closeSignupDrawer();
+  }
+
+  function handleSignupSubmit(e) {
+    e.preventDefault();
+    alert("Welcome to NetMentor AI! Your sandbox container has been provisioned. Redirecting to your initial lab topology...");
+    closeSignupDrawer();
+  }
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 pt-space-xl pb-space-lg"><div class="w-full px-space-lg lg:px-margin grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-lg"><div class="col-span-2 md:col-span-3 lg:col-span-2 flex flex-col gap-space-md pr-space-md"><div class="flex items-center gap-space-sm"><img alt="NetMentor AI Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3Qqj316WsxePaFE-077_od--l8SvgFXndjdbChEQW2AY-1Blm6qwa6UqJVOSDg-kTGyllOp061YIN8_ABK0cQ-0Vqeq-ZlcWXsmgBTp5aEflXtFO5EjziwWqugLUQ20GXgaBj6NNCkRYmhjdZaaveZwpXc_fSrrs0d0qX-adxx--LutEc_QZIP_mIgmma0TSph4h6esf4fybCFcIElH77cqDoV7-znxJmoK0nt3JfZH2MLGWV8Kd-Y60"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor AI</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">High-fidelity network simulation and accelerated certification platform for Cisco, CompTIA, and Cloud DevOps engineering professionals.</p><div class="flex items-center gap-space-sm font-code-sm text-code-sm text-primary"><span class="w-2 h-2 rounded-full bg-primary"></span><span>All Nodes Functional | 99.98% SLA</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Curriculum</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="cisco-ccna-200-301" href="#">Cisco CCNA 200-301</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="network-plus-n10-008" href="#">CompTIA Network+</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="comptia-a-core" href="#">CompTIA A+ Core Labs</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="linux-and-cloud-sysadmin" href="#">Linux Automation CLI</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Interactive Sandbox</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="sandbox-topology" href="#">Topology Simulator</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terminal-emulator" href="#">CLI Terminal Emulator</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="packet-inspector" href="#">Packet Inspector</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="subnet-calculator" href="#">Subnetting Engine</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Enterprise Solutions</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="for-business" href="#">Team Workspaces</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="custom-curriculum" href="#">Custom Lab Authoring</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="sso-security" href="#">SSO &amp; Compliance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="pricing" href="#">Tier Matrix</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">Documentation &amp; Ops</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="cli-documentation" href="#">CLI Command Reference</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="api-docs" href="#">Sandbox REST API</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="system-status" href="#">Real-Time Status</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="changelog" href="#">Release Notes</a></div></div><div class="w-full px-space-lg lg:px-margin mt-space-xl pt-space-md border-t border-outline-variant/10 flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div>© 2025 NetMentor AI Platforms Inc. Built for Systems &amp; Network Engineers.</div><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" data-path="security" href="#">Security Operations</a></div></div></footer></body></html>

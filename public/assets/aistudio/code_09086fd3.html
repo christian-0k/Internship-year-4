@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-tertiary-fixed": "#1e1b19", "surface-dim": "#310000", "inverse-on-surface": "#680200", "secondary-fixed": "#e8e1e0", "primary-fixed": "#e7e1e1", "on-secondary-fixed": "#1e1b1b", "primary-fixed-dim": "#cac5c5", "surface-container": "#480100", "on-primary-container": "#676364", surface: "#310000", "surface-tint": "#cac5c5", "on-secondary-container": "#bab4b3", outline: "#8e9192", "primary-container": "#e7e1e1", "error-container": "#93000a", "surface-container-low": "#410100", "on-secondary-fixed-variant": "#4a4646", "surface-bright": "#790200", "on-secondary": "#333030", "on-tertiary": "#33302e", "on-surface-variant": "#c4c7c8", tertiary: "#ffffff", "surface-container-lowest": "#270000", "secondary-container": "#4a4646", "on-primary": "#323030", "surface-variant": "#700200", secondary: "#ccc5c5", "tertiary-fixed-dim": "#ccc5c2", "secondary-fixed-dim": "#ccc5c5", primary: "#ffffff", "surface-container-high": "#5c0100", "on-tertiary-fixed-variant": "#4a4644", "inverse-surface": "#ffdad4", "on-error": "#690005", "on-background": "#ffdad4", "tertiary-container": "#e9e1de", "on-tertiary-container": "#686361", "on-primary-fixed": "#1d1b1b", "surface-container-highest": "#700200", "outline-variant": "#444748", "inverse-primary": "#615e5e", "tertiary-fixed": "#e9e1de", "on-error-container": "#ffdad6", background: "#310000", "on-primary-fixed-variant": "#494646", "on-surface": "#ffdad4", error: "#ffb4ab"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-xl": "2.5rem", "margin-sm": "1rem", "space-xs": "0.25rem", "gutter-sm": "1rem", "margin-lg": "4rem", "space-lg": "1.5rem", gutter: "1.5rem", "space-sm": "0.5rem", margin: "2rem", "space-md": "1rem"}, fontFamily: {"body-sm": ["Inter"], "display-hero": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "body-md": ["Inter"], "title-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], "body-lg": ["Inter"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}]}}}}</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container"><header class="w-full bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] fixed top-0 z-50"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm text-on-surface hover:opacity-90 transition-opacity" data-path="home" href="#"><div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight">AI</span></div></a><span class="hidden sm:inline-flex items-center font-label-badge text-label-badge uppercase px-space-xs py-0.5 rounded bg-surface-container text-secondary font-code-sm">AI LABS</span></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-badge text-label-badge uppercase text-on-surface-variant">256-Bit TLS &amp; SOC-2 Audited</span></div><a class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[16px]">arrow_back</span><span>Back to NetMentor AI</span></a></div></div></header><main class="w-full pt-16 flex-1 flex flex-col bg-surface-container-lowest"><div class="flex flex-col w-full">
+<div class="w-full min-h-[calc(100vh-4rem)] flex flex-col lg:flex-row bg-surface-container-lowest">
+<!-- LEFT PANEL: Network Verification Gateway Diagnostics -->
+<div class="w-full lg:w-5/12 bg-surface-container-low p-gutter lg:p-margin-lg flex flex-col justify-between relative overflow-hidden">
+<!-- Ambient Glow Behind Topology -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-20 -right-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header Meta Tags -->
+<div class="relative z-10 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-primary font-code-sm">SYS_NODE // GATEWAY_04</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Identity Verification Gateway</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Active telemetry stream inspecting cryptographically signed auth packets.</p>
+</div>
+<!-- Isometric Server Topology & Diagnostics Visual -->
+<div class="relative z-10 my-space-lg flex flex-col items-center justify-center">
+<!-- SVG Isometric Rack Node Diagram -->
+<div class="w-full max-w-sm aspect-[4/3] relative flex items-center justify-center">
+<svg class="w-full h-full drop-shadow-xl" fill="none" viewbox="0 0 380 280" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="rackGrad" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#23293c"></stop>
+<stop offset="100%" stop-color="#0c1324"></stop>
+</lineargradient>
+<lineargradient id="beamGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0.05"></stop>
+</lineargradient>
+</defs>
+<!-- Isometric Rack Base Platform -->
+<polygon fill="#151b2d" opacity="0.6" points="190,40 330,110 190,180 50,110"></polygon>
+<polygon fill="#0c1324" points="190,180 330,110 330,130 190,200"></polygon>
+<polygon fill="#191f31" points="190,180 50,110 50,130 190,200"></polygon>
+<!-- Server Chassis Stack Level 1 -->
+<g transform="translate(0, 10)">
+<polygon fill="url(#rackGrad)" points="190,70 290,120 190,170 90,120"></polygon>
+<polygon fill="#0c1324" points="190,170 290,120 290,136 190,186"></polygon>
+<polygon fill="#191f31" points="190,170 90,120 90,136 190,186"></polygon>
+<!-- Status LEDs -->
+<circle cx="120" cy="132" fill="#4edea3" r="2.5"></circle>
+<circle cx="132" cy="138" fill="#4edea3" r="2.5"></circle>
+<circle cx="144" cy="144" fill="#89ceff" r="2.5"></circle>
+<!-- Grille ventilation lines -->
+<line stroke="#33394c" stroke-width="1.5" x1="200" x2="270" y1="172" y2="137"></line>
+<line stroke="#33394c" stroke-width="1.5" x1="200" x2="270" y1="178" y2="143"></line>
+</g>
+<!-- Server Chassis Stack Level 2 -->
+<g transform="translate(0, -35)">
+<polygon fill="url(#rackGrad)" points="190,70 290,120 190,170 90,120"></polygon>
+<polygon fill="#0c1324" points="190,170 290,120 290,136 190,186"></polygon>
+<polygon fill="#191f31" points="190,170 90,120 90,136 190,186"></polygon>
+<!-- Status LEDs -->
+<circle cx="120" cy="132" fill="#4edea3" r="2.5"></circle>
+<circle cx="132" cy="138" fill="#ffb95f" r="2.5"></circle>
+<circle cx="144" cy="144" fill="#4edea3" r="2.5"></circle>
+<!-- Grille ventilation lines -->
+<line stroke="#33394c" stroke-width="1.5" x1="200" x2="270" y1="172" y2="137"></line>
+<line stroke="#33394c" stroke-width="1.5" x1="200" x2="270" y1="178" y2="143"></line>
+</g>
+<!-- Server Chassis Stack Level 3 (Air-Gapped Pod) -->
+<g transform="translate(0, -80)">
+<polygon fill="#23293c" points="190,70 290,120 190,170 90,120"></polygon>
+<polygon fill="#151b2d" points="190,170 290,120 290,140 190,190"></polygon>
+<polygon fill="#191f31" points="190,170 90,120 90,140 190,190"></polygon>
+<circle cx="190" cy="120" fill="#0c1324" r="14" stroke="#4edea3" stroke-width="1"></circle>
+<path d="M186 117 L190 124 L196 114" stroke="#4edea3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</g>
+<!-- Packet Flow Light Beam -->
+<line stroke="url(#beamGrad)" stroke-dasharray="6 4" stroke-width="2" x1="190" x2="190" y1="15" y2="240">
+<animate attributename="stroke-dashoffset" dur="1.5s" from="0" repeatcount="indefinite" to="-40"></animate>
+</line>
+<!-- Flowing Packet Nodes -->
+<circle cx="190" cy="95" fill="#4edea3" r="4">
+<animate attributename="cy" dur="3s" repeatcount="indefinite" values="40;210;40"></animate>
+</circle>
+</svg>
+</div>
+<!-- Telemetry Log Feed Cards -->
+<div class="w-full flex flex-col gap-space-xs mt-space-md">
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span class="font-code-sm text-code-sm text-on-surface truncate">DKIM &amp; SPF Handshake</span>
+</div>
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-surface-container-high text-primary font-code-sm shrink-0">Validated</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">shield_lock</span>
+<span class="font-code-sm text-code-sm text-on-surface truncate">Air-Gapped Pod Allocation</span>
+</div>
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-surface-container-high text-secondary font-code-sm shrink-0">Waiting Auth</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[18px]">alt_route</span>
+<span class="font-code-sm text-code-sm text-on-surface truncate">Packet Checksum (SHA-256)</span>
+</div>
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-surface-container-high text-tertiary font-code-sm shrink-0">0x9F41...B2A</span>
+</div>
+</div>
+</div>
+<!-- Security Trust Footer -->
+<div class="relative z-10 pt-space-md flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>SESSION: #AUTH-90422</span>
+<span>LATENCY: 14ms</span>
+</div>
+</div>
+<!-- RIGHT PANEL: Focused Verification Center -->
+<div class="w-full lg:w-7/12 p-gutter lg:p-margin-lg flex flex-col justify-center items-center relative">
+<div class="w-full max-w-xl flex flex-col gap-space-lg">
+<!-- Header Info -->
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-space-xs font-label-badge text-label-badge uppercase text-primary font-code-sm">
+<span class="material-symbols-outlined text-[16px]">lock_clock</span>
+<span>Two-Factor Authentication</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Verify Your Identity</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            We've sent a 6-digit confirmation code and magic link to
+            <span class="text-secondary font-medium font-code-sm">alexandre@netmentor.io</span>
+</p>
+</div>
+<!-- Prominent Magic Link Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-high relative overflow-hidden shadow-md flex items-start gap-space-md">
+<div class="w-1.5 absolute left-0 top-0 bottom-0 bg-primary"></div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+</div>
+<div class="flex flex-col gap-0.5 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary font-semibold">Magic Link Active</span>
+<span class="font-label-badge text-label-badge uppercase px-1.5 py-0.5 rounded bg-primary-container/20 text-primary font-code-sm">Ready</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              You can click the link in your email on any authorized device for instant 1-click passwordless sign-in.
+            </p>
+</div>
+</div>
+<!-- Divider with Text -->
+<div class="relative flex items-center justify-center">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute bg-surface-container-lowest px-space-md font-code-sm text-code-sm text-on-surface-variant uppercase tracking-wider">
+            or enter 6-digit verification code
+          </span>
+</div>
+<!-- 2FA TOTP Form Container -->
+<div class="flex flex-col gap-space-md">
+<!-- 6 Square Input Boxes -->
+<div class="flex items-center justify-between gap-space-xs sm:gap-space-sm" id="totp-container">
+<input class="totp-digit w-12 h-14 sm:w-16 sm:h-16 text-center font-code-lg text-headline-md font-bold text-on-surface bg-surface-container rounded-lg outline-none focus:bg-surface-container-high focus:shadow-[0_0_20px_rgba(78,222,163,0.3)] transition-all duration-200" inputmode="numeric" maxlength="1" pattern="[0-9]*" placeholder="·" type="text"/>
+<input class="totp-digit w-12 h-14 sm:w-16 sm:h-16 text-center font-code-lg text-headline-md font-bold text-on-surface bg-surface-container rounded-lg outline-none focus:bg-surface-container-high focus:shadow-[0_0_20px_rgba(78,222,163,0.3)] transition-all duration-200" inputmode="numeric" maxlength="1" pattern="[0-9]*" placeholder="·" type="text"/>
+<input class="totp-digit w-12 h-14 sm:w-16 sm:h-16 text-center font-code-lg text-headline-md font-bold text-on-surface bg-surface-container rounded-lg outline-none focus:bg-surface-container-high focus:shadow-[0_0_20px_rgba(78,222,163,0.3)] transition-all duration-200" inputmode="numeric" maxlength="1" pattern="[0-9]*" placeholder="·" type="text"/>
+<input class="totp-digit w-12 h-14 sm:w-16 sm:h-16 text-center font-code-lg text-headline-md font-bold text-on-surface bg-surface-container rounded-lg outline-none focus:bg-surface-container-high focus:shadow-[0_0_20px_rgba(78,222,163,0.3)] transition-all duration-200" inputmode="numeric" maxlength="1" pattern="[0-9]*" placeholder="·" type="text"/>
+<input class="totp-digit w-12 h-14 sm:w-16 sm:h-16 text-center font-code-lg text-headline-md font-bold text-on-surface bg-surface-container rounded-lg outline-none focus:bg-surface-container-high focus:shadow-[0_0_20px_rgba(78,222,163,0.3)] transition-all duration-200" inputmode="numeric" maxlength="1" pattern="[0-9]*" placeholder="·" type="text"/>
+<input class="totp-digit w-12 h-14 sm:w-16 sm:h-16 text-center font-code-lg text-headline-md font-bold text-on-surface bg-surface-container rounded-lg outline-none focus:bg-surface-container-high focus:shadow-[0_0_20px_rgba(78,222,163,0.3)] transition-all duration-200" inputmode="numeric" maxlength="1" pattern="[0-9]*" placeholder="·" type="text"/>
+</div>
+<!-- Alert / Status Banner (Dynamically controlled) -->
+<div class="hidden p-space-sm rounded bg-surface-container text-body-sm font-body-sm flex items-center gap-space-sm" id="status-message">
+<span class="material-symbols-outlined text-[18px]" id="status-icon"></span>
+<span class="flex-1" id="status-text"></span>
+</div>
+<!-- Timer and Resend Row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">timer</span>
+<span>Code expires in <span class="text-on-surface font-semibold" id="countdown">04:48</span></span>
+</div>
+<div>
+<button class="text-outline cursor-not-allowed transition-colors flex items-center gap-space-xs" disabled="" id="resend-btn">
+<span>Resend Code</span>
+<span id="resend-timer">(disabled for 32s)</span>
+</button>
+</div>
+</div>
+<!-- Actions: Primary CTA & Ghost -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<button class="w-full py-3.5 px-space-md rounded bg-primary text-on-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-sm hover:bg-primary-fixed-dim transition-all shadow-[0_0_20px_rgba(78,222,163,0.25)] hover:shadow-[0_0_28px_rgba(78,222,163,0.45)]" id="verify-submit-btn">
+<span>Verify &amp; Launch Lab Dashboard</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<a class="w-full py-2.5 px-space-md rounded bg-transparent hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center transition-colors" href="#">
+              Change Email Address
+            </a>
+</div>
+<!-- Simulation Triggers (Testing & Demo Sandbox) -->
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-outline font-code-sm">Interactive Sandbox Triggers</span>
+<span class="font-code-sm text-[11px] text-secondary">DEV DEMO</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+<button class="py-2 px-space-sm rounded bg-surface-container text-primary font-code-sm text-code-sm flex items-center justify-center gap-space-xs hover:bg-surface-container-high transition-colors" id="btn-simulate-success">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Simulate Code Auto-Fill</span>
+</button>
+<button class="py-2 px-space-sm rounded bg-surface-container text-error font-code-sm text-code-sm flex items-center justify-center gap-space-xs hover:bg-surface-container-high transition-colors" id="btn-simulate-error">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Simulate Mismatch Error</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Support Footer -->
+<div class="pt-space-md text-center font-body-sm text-body-sm text-on-surface-variant flex flex-wrap items-center justify-center gap-1">
+<span>Need help?</span>
+<a class="text-secondary hover:underline" href="#">Contact IT Lab Support</a>
+<span class="mx-1">or</span>
+<a class="text-secondary hover:underline" data-path="login" href="#">Return to Login (/auth/login)</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Logic for TOTP Inputs & Sandbox Triggers -->
+<script>
+    (function initVerificationScreen() {
+      const inputs = Array.from(document.querySelectorAll('.totp-digit'));
+      const statusBox = document.getElementById('status-message');
+      const statusIcon = document.getElementById('status-icon');
+      const statusText = document.getElementById('status-text');
+      const verifyBtn = document.getElementById('verify-submit-btn');
+      const simSuccessBtn = document.getElementById('btn-simulate-success');
+      const simErrorBtn = document.getElementById('btn-simulate-error');
+      const resendBtn = document.getElementById('resend-btn');
+      const resendTimerEl = document.getElementById('resend-timer');
+      const countdownEl = document.getElementById('countdown');
+
+      // Autofocus first digit
+      if (inputs.length > 0) {
+        inputs[0].focus();
+      }
+
+      // Input Event Listeners for auto-tabbing
+      inputs.forEach((input, index) => {
+        input.addEventListener('input', (e) => {
+          const val = e.target.value.replace(/[^0-9]/g, '');
+          e.target.value = val;
+
+          if (val) {
+            e.target.classList.add('bg-surface-container-high');
+            if (index < inputs.length - 1) {
+              inputs[index + 1].focus();
+            }
+          } else {
+            e.target.classList.remove('bg-surface-container-high');
+          }
+        });
+
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Backspace' && !input.value && index > 0) {
+            inputs[index - 1].focus();
+          }
+        });
+
+        input.addEventListener('paste', (e) => {
+          e.preventDefault();
+          const pasted = (e.clipboardData || window.clipboardData).getData('text');
+          const digits = pasted.replace(/[^0-9]/g, '').slice(0, 6).split('');
+          digits.forEach((digit, i) => {
+            if (inputs[i]) {
+              inputs[i].value = digit;
+              inputs[i].classList.add('bg-surface-container-high');
+            }
+          });
+          const nextIndex = Math.min(digits.length, inputs.length - 1);
+          inputs[nextIndex].focus();
+        });
+      });
+
+      // Show Status Banner
+      function showStatus(type, message) {
+        statusBox.classList.remove('hidden', 'bg-error-container/30', 'text-error', 'bg-primary-container/20', 'text-primary');
+        if (type === 'error') {
+          statusBox.classList.add('bg-error-container/30', 'text-error');
+          statusIcon.textContent = 'error';
+        } else {
+          statusBox.classList.add('bg-primary-container/20', 'text-primary');
+          statusIcon.textContent = 'verified';
+        }
+        statusText.textContent = message;
+      }
+
+      // Trigger verification success
+      function triggerSuccessState() {
+        showStatus('success', 'Token confirmed! Provisioning sandboxed pod /learner/dashboard...');
+        verifyBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">refresh</span><span>Redirecting to Lab Pod...</span>';
+        verifyBtn.disabled = true;
+        setTimeout(() => {
+          alert('Welcome back Alexandre! Identity Authenticated. Routing to Lab Dashboard.');
+        }, 900);
+      }
+
+      // Submit Handler
+      verifyBtn.addEventListener('click', () => {
+        const entered = inputs.map(i => i.value).join('');
+        if (entered.length < 6) {
+          showStatus('error', 'Please enter all 6 digits of the confirmation code.');
+          return;
+        }
+        if (entered === '849201' || entered === '123456') {
+          triggerSuccessState();
+        } else {
+          triggerErrorState();
+        }
+      });
+
+      // Trigger error state with shake animation
+      function triggerErrorState() {
+        showStatus('error', 'Invalid verification code. 2 attempts remaining.');
+        const container = document.getElementById('totp-container');
+        container.classList.add('translate-x-1');
+        setTimeout(() => container.classList.remove('translate-x-1'), 75);
+        setTimeout(() => container.classList.add('-translate-x-1'), 150);
+        setTimeout(() => container.classList.remove('-translate-x-1'), 225);
+      }
+
+      // Simulation: Success Auto-Fill
+      simSuccessBtn.addEventListener('click', () => {
+        const dummy = ['8', '4', '9', '2', '0', '1'];
+        dummy.forEach((char, idx) => {
+          inputs[idx].value = char;
+          inputs[idx].classList.add('bg-surface-container-high');
+        });
+        triggerSuccessState();
+      });
+
+      // Simulation: Error
+      simErrorBtn.addEventListener('click', () => {
+        const wrong = ['9', '9', '9', '0', '0', '0'];
+        wrong.forEach((char, idx) => {
+          inputs[idx].value = char;
+          inputs[idx].classList.add('bg-surface-container-high');
+        });
+        triggerErrorState();
+      });
+
+      // Countdown Timers
+      let resendSec = 32;
+      const resendInterval = setInterval(() => {
+        resendSec--;
+        if (resendSec > 0) {
+          resendTimerEl.textContent = `(disabled for ${resendSec}s)`;
+        } else {
+          clearInterval(resendInterval);
+          resendBtn.disabled = false;
+          resendBtn.classList.remove('text-outline', 'cursor-not-allowed');
+          resendBtn.classList.add('text-secondary', 'hover:underline');
+          resendTimerEl.textContent = '(Available now)';
+        }
+      }, 1000);
+
+      let totalSec = 288; // 4 mins 48s
+      setInterval(() => {
+        if (totalSec > 0) {
+          totalSec--;
+          const m = String(Math.floor(totalSec / 60)).padStart(2, '0');
+          const s = String(totalSec % 60).padStart(2, '0');
+          countdownEl.textContent = `${m}:${s}`;
+        }
+      }, 1000);
+
+    })();
+  </script>
+</div></main></body></html>

@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {tertiary: "#ffffff", "on-error-container": "#ffdad6", "surface-container": "#480100", "on-primary": "#323030", "inverse-surface": "#ffdad4", "surface-container-high": "#5c0100", "surface-container-lowest": "#270000", "on-primary-fixed-variant": "#494646", secondary: "#ccc5c5", "on-tertiary": "#33302e", "surface-tint": "#cac5c5", "on-primary-container": "#676364", "secondary-container": "#4a4646", "inverse-primary": "#615e5e", "on-secondary-fixed-variant": "#4a4646", "on-tertiary-fixed-variant": "#4a4644", "on-secondary-container": "#bab4b3", outline: "#8e9192", error: "#ffb4ab", surface: "#310000", "on-secondary": "#333030", "on-tertiary-container": "#686361", "surface-container-highest": "#700200", "surface-container-low": "#410100", "surface-dim": "#310000", "inverse-on-surface": "#680200", "on-tertiary-fixed": "#1e1b19", "on-secondary-fixed": "#1e1b1b", "tertiary-fixed-dim": "#ccc5c2", "surface-bright": "#790200", "on-background": "#ffdad4", "secondary-fixed": "#e8e1e0", background: "#310000", "error-container": "#93000a", "outline-variant": "#444748", "on-surface-variant": "#c4c7c8", "primary-fixed": "#e7e1e1", "on-surface": "#ffdad4", "tertiary-container": "#e9e1de", "surface-variant": "#700200", primary: "#ffffff", "secondary-fixed-dim": "#ccc5c5", "on-primary-fixed": "#1d1b1b", "primary-fixed-dim": "#cac5c5", "on-error": "#690005", "primary-container": "#e7e1e1", "tertiary-fixed": "#e9e1de"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-xl": "2.5rem", "space-md": "1rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", gutter: "1.5rem", "space-lg": "1.5rem", margin: "2rem", "margin-lg": "4rem", "margin-sm": "1rem"}, fontFamily: {"body-lg": ["Inter"], "code-sm": ["JetBrains Mono"], "body-sm": ["Inter"], "title-md": ["Inter"], "body-md": ["Inter"], "display-hero-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="px-space-md py-space-md bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[22px]">memory</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor<span class="text-primary">.AI</span></span><span class="font-code-sm text-code-sm text-on-surface-variant text-[10px] uppercase tracking-wider">LAB-OPS NODE // 02</span></div></div><span class="font-label-badge text-label-badge px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-secondary border border-secondary/20">NOC</span></div><div class="px-space-md py-space-xs"><div class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-widest my-space-xs">Operations Modules</div></div><nav class="flex flex-col px-space-sm gap-space-xs" data-active-classes="bg-surface-container text-primary font-title-md"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg transition-colors bg-surface-container text-primary font-title-md" data-path="operations-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-body-sm text-body-sm">Operations Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment-inventory" href="#"><span class="material-symbols-outlined text-[18px]">dns</span><span class="font-body-sm text-body-sm">Equipment Inventory</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="maintenance-and-repair-logs" href="#"><span class="material-symbols-outlined text-[18px]">build</span><span class="font-body-sm text-body-sm">Maintenance Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="fault-triage-and-diagnostics" href="#"><span class="material-symbols-outlined text-[18px]">warning</span><span class="font-body-sm text-body-sm">Fault Diagnostics</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="consumables-and-spares" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-sm text-body-sm">Consumables &amp; Spares</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="facility-and-racks" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span class="font-body-sm text-body-sm">Facility &amp; Racks</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings-and-calibration" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-body-sm text-body-sm">Settings &amp; Calibration</span></a></nav></div><div class="p-space-sm m-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-sm shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="flex items-center justify-between"><span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Physical Telemetry</span><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span></div><div class="flex flex-col gap-space-xs"><div class="flex justify-between items-center"><span class="font-body-sm text-body-sm text-on-surface-variant">Active Bays:</span><span class="font-code-sm text-code-sm text-on-surface font-semibold">12 Racks (A-D)</span></div><div class="flex flex-col gap-0.5"><div class="flex justify-between items-center"><span class="font-body-sm text-body-sm text-on-surface-variant">Smart PDU:</span><span class="font-code-sm text-code-sm text-tertiary font-semibold">4.8 / 7.2 kW</span></div><div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-tertiary rounded-full" style="width: 66%"></div></div></div><div class="flex justify-between items-center pt-space-xs"><span class="font-code-sm text-code-sm text-on-surface-variant text-[11px]">NODE-02</span><span class="font-code-sm text-code-sm text-primary text-[11px] font-semibold">ONLINE // 21.4°C</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">terminal</span><span>facility_ops</span><span class="text-outline">/</span><span class="text-primary font-semibold">hardware_matrix</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-0.5 rounded-lg bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-badge text-label-badge text-on-surface uppercase">HVAC &amp; PDU Normal</span></div><div class="hidden 2xl:flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="text-outline">|</span><span>Shift A:</span><span class="text-on-surface font-medium">Marcus Vance</span><span class="font-label-badge text-label-badge text-tertiary bg-surface-container px-1 rounded-DEFAULT">CCT / A+</span></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-body-sm text-body-sm" type="button"><span class="material-symbols-outlined text-[16px] text-tertiary">qr_code_scanner</span><span class="hidden sm:inline">Scan QR Asset</span></button><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-body-sm hover:bg-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">add_alert</span><span class="hidden sm:inline">Log Fault</span></button><div class="relative flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high cursor-pointer"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface px-gutter"><div class="flex flex-col w-full pb-margin-lg">
+<!-- TOP OVERVIEW HERO BANNER -->
+<div class="relative w-full rounded-xl bg-surface-container-low p-space-lg mb-space-lg shadow-xl overflow-hidden">
+<div class="absolute -right-20 -top-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/3 -bottom-24 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-space-sm py-0.5 rounded-DEFAULT flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            FACILITY_ACTIVE // ON-PREM
+          </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">domain</span>
+            US-EAST Campus Hardware Pod
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Building C, Lab Hall 3 (Bays Alpha &amp; Beta)</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-1">
+          Physical Bench Telemetry &amp; Hardware Matrix
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Real-time synchronized bus instrumentation, remote PDU watt-load profiling, and automated physical defect triage across 24 enterprise staging pods.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap self-start lg:self-center">
+<div class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-container-high shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Environmental Master</span>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary text-[18px]">thermostat</span>
+<span>20.8°C / 44% RH</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-container-high shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Current Load</span>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-tertiary font-semibold">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>7.68 kW (53%)</span>
+</div>
+</div>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container font-title-md text-body-sm hover:bg-primary transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Emergency Bus Cycle</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 4 HIGH-IMPACT KPI METRICS -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- KPI 1: Physical Benches -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-md relative overflow-hidden flex flex-col justify-between">
+<div class="flex justify-between items-start mb-space-xs">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Total Staging Pods</span>
+<span class="material-symbols-outlined text-primary text-[20px]">precision_manufacturing</span>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">24</span>
+<span class="font-title-md text-title-md text-on-surface-variant font-medium">Benches</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden flex mb-2">
+<div class="h-full bg-primary" style="width: 66.6%;" title="Operational"></div>
+<div class="h-full bg-tertiary" style="width: 20.8%;" title="In Use"></div>
+<div class="h-full bg-error" style="width: 12.6%;" title="Faulty"></div>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant text-[11px] pt-1">
+<span class="flex items-center gap-1 text-primary"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>16 Ready</span>
+<span class="flex items-center gap-1 text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>5 In-Lab</span>
+<span class="flex items-center gap-1 text-error"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>3 Fault</span>
+</div>
+</div>
+</div>
+<!-- KPI 2: Open Hardware Tickets -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-md relative overflow-hidden flex flex-col justify-between">
+<div class="flex justify-between items-start mb-space-xs">
+<span class="font-label-badge text-label-badge text-error uppercase tracking-wider">Active Triage Defect</span>
+<span class="material-symbols-outlined text-error text-[20px]">error_outline</span>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-headline-lg text-headline-lg text-error tracking-tight font-bold">07</span>
+<span class="font-title-md text-title-md text-on-surface-variant font-medium">Tickets</span>
+</div>
+<div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between items-center text-[12px]">
+<span class="text-error font-medium">2 Critical PDU / Fans</span>
+<span class="font-code-sm text-code-sm bg-error/15 text-error px-1.5 rounded-DEFAULT">P1 Escalated</span>
+</div>
+<div class="flex justify-between items-center text-[12px]">
+<span>3 Cable/Port Faults</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">2 Calibrations</span>
+</div>
+</div>
+</div>
+</div>
+<!-- KPI 3: Urgent Consumables -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-md relative overflow-hidden flex flex-col justify-between">
+<div class="flex justify-between items-start mb-space-xs">
+<span class="font-label-badge text-label-badge text-tertiary uppercase tracking-wider">Stock Depletion Alert</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">inventory</span>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-headline-lg text-headline-lg text-tertiary tracking-tight font-bold">02</span>
+<span class="font-title-md text-title-md text-on-surface-variant font-medium">SKUs Below Min</span>
+</div>
+<div class="flex flex-col gap-1 font-code-sm text-code-sm text-on-surface-variant text-[12px]">
+<div class="flex justify-between items-center">
+<span class="truncate max-w-[140px] text-on-surface">Cat6 Patch 3ft</span>
+<span class="text-tertiary font-bold">9 units (Min: 50)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="truncate max-w-[140px] text-on-surface">8P8C Mod Plugs</span>
+<span class="text-error font-bold">48 pcs (Min: 200)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- KPI 4: Mean Time to Repair (MTTR) -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-md relative overflow-hidden flex flex-col justify-between">
+<div class="flex justify-between items-start mb-space-xs">
+<span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider">Efficiency Metric</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">speed</span>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-headline-lg text-headline-lg text-secondary tracking-tight font-bold">42</span>
+<span class="font-title-md text-title-md text-on-surface-variant font-medium">Minutes MTTR</span>
+</div>
+<div class="flex items-center justify-between text-[12px] pt-1">
+<span class="font-label-badge text-label-badge text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_down</span>
+            -18% THIS SHIFT
+          </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Target &lt; 60m</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full mt-2 overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 70%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE MATRIX SECTION -->
+<div class="flex flex-col bg-surface-container-low rounded-xl p-space-lg shadow-xl mb-space-lg">
+<!-- CONTROLS & FILTER BAR -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+            Interactive Physical Bench &amp; Rack Matrix
+          </h2>
+<span class="font-label-badge text-label-badge px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-secondary">
+            BAY ALPHA &amp; BETA
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Click any active station to inspect console baud rates, execute dry-contact PDU reboots, or dispatch a hot-swap tech.
+        </p>
+</div>
+<!-- FILTER SWITCHERS & LEGEND -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex p-0.5 rounded-lg bg-surface-container-highest text-on-surface-variant font-body-sm text-body-sm">
+<button class="px-space-sm py-1 rounded-DEFAULT bg-primary text-on-primary font-semibold transition-all" type="button">All 24</button>
+<button class="px-space-sm py-1 rounded-DEFAULT hover:text-on-surface transition-all" type="button">Bay A (12)</button>
+<button class="px-space-sm py-1 rounded-DEFAULT hover:text-on-surface transition-all" type="button">Bay B (12)</button>
+<button class="px-space-sm py-1 rounded-DEFAULT hover:text-error text-error/80 transition-all flex items-center gap-1" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Faults (3)
+          </button>
+</div>
+<div class="hidden xl:flex items-center gap-space-sm px-space-sm py-1.5 bg-surface-container rounded-lg font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> Ready</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span> Active Cohort</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error"></span> Lockdown</span>
+</div>
+</div>
+</div>
+<!-- BENCH MATRIX GRID (16 Pods Displayed) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-space-md pt-space-xs">
+<!-- BENCH 01: OPERATIONAL -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">BENCH-01</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY A-01 // RACK 101</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-primary/10 text-primary font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-primary"></span> READY
+            </span>
+</div>
+<!-- Stack Composition -->
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">router</span>
+<span class="truncate">ISR 4331/K9 • IOS-XE 17.6</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">dns</span>
+<span class="truncate">Catalyst 3850-24P-L (PoE+)</span>
+</div>
+</div>
+<!-- User info -->
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-on-surface-variant block text-[11px]">Assigned Queue:</span>
+<span class="text-primary font-code-sm text-code-sm">Unoccupied - Staged &amp; Scrubbed</span>
+</div>
+<!-- Telemetry micro-strip -->
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-on-surface">21.2°C</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-on-surface">240W</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-primary">TTY-01</span></div>
+</div>
+</div>
+<!-- Quick Action Bar -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">terminal</span> TTY
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">power_settings_new</span> PDU
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">schema</span> Topology
+          </button>
+</div>
+</div>
+<!-- BENCH 02: ACTIVE COHORT (YELLOW) -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">BENCH-02</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY A-02 // RACK 102</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-tertiary/15 text-tertiary font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span> IN SESSION
+            </span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">router</span>
+<span class="truncate">ISR 4331 + Cisco 2960-X</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">settings_ethernet</span>
+<span class="truncate">Fiber NIC Dual LC Patch</span>
+</div>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-tertiary block text-[11px] font-semibold">Active Student Cohort:</span>
+<span class="text-on-surface font-medium truncate block">M. Chen (CCNP ENCOR 300-401)</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-on-surface">23.1°C</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-tertiary">385W</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-tertiary">TTY-02 BUSY</span></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">monitor_heart</span> Snoop
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-tertiary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">lock_clock</span> 48m left
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">schema</span> Topology
+          </button>
+</div>
+</div>
+<!-- BENCH 03: HARDWARE FAULT (RED) -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-error">BENCH-03</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY A-03 // RACK 103</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-error/15 text-error font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span> HW FAULT
+            </span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[15px]">cable</span>
+<span class="truncate">RS232 RJ45 Rollover broken tab</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">dns</span>
+<span class="truncate">Catalyst 3850-48F (Isolated)</span>
+</div>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-error block text-[11px] font-semibold">Triage Ticket:</span>
+<span class="text-error font-code-sm text-code-sm">#HW-8931: RS232 Clip Sheared</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-on-surface">19.5°C</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-on-surface">85W (Stby)</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-error">OFFLINE</span></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1">
+<button class="w-full py-1 rounded-DEFAULT bg-error text-on-error font-code-sm text-code-sm text-[11px] font-bold flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">handyman</span> Lock for Triage
+          </button>
+</div>
+</div>
+<!-- BENCH 04: OPERATIONAL -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">BENCH-04</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY A-04 // RACK 104</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-primary/10 text-primary font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-primary"></span> READY
+            </span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">router</span>
+<span class="truncate">ISR 4451-X + C9300-24T</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">analytics</span>
+<span class="truncate">Fluke DSX Patch Analyzer inline</span>
+</div>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-on-surface-variant block text-[11px]">Assigned Queue:</span>
+<span class="text-primary font-code-sm text-code-sm">Staged: CCNA Capstone 4.1</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-on-surface">21.8°C</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-on-surface">320W</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-primary">TTY-04</span></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">terminal</span> TTY
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">power_settings_new</span> PDU
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">schema</span> Topology
+          </button>
+</div>
+</div>
+<!-- BENCH 05: ACTIVE COHORT -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">BENCH-05</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY A-05 // RACK 105</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-tertiary/15 text-tertiary font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span> IN SESSION
+            </span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">dns</span>
+<span class="truncate">Juniper SRX340 Firewall</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">hub</span>
+<span class="truncate">EX2300-48P Switch</span>
+</div>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-tertiary block text-[11px] font-semibold">Active Student Cohort:</span>
+<span class="text-on-surface font-medium truncate block">Alexandre Mercer (JNCIA-Junos)</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-on-surface">22.4°C</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-tertiary">295W</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-tertiary">TTY-05</span></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">monitor_heart</span> Snoop
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-tertiary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">lock_clock</span> 1h 12m
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">schema</span> Topology
+          </button>
+</div>
+</div>
+<!-- BENCH 06: OPERATIONAL -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">BENCH-06</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY A-06 // RACK 106</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-primary/10 text-primary font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-primary"></span> READY
+            </span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">memory</span>
+<span class="truncate">Arista 7050SX-64 (SFP+ 10G)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">dns</span>
+<span class="truncate">Dell PowerEdge R640 Host</span>
+</div>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-on-surface-variant block text-[11px]">Assigned Queue:</span>
+<span class="text-primary font-code-sm text-code-sm">Unoccupied - Health Verified</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-on-surface">20.9°C</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-on-surface">410W</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-primary">TTY-06</span></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">terminal</span> TTY
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">power_settings_new</span> PDU
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">schema</span> Topology
+          </button>
+</div>
+</div>
+<!-- BENCH 07: HARDWARE FAULT (CRITICAL FAN RPM) -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-error">BENCH-07</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY A-07 // RACK 107</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-error/15 text-error font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span> THERMAL TRIP
+            </span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[15px]">mode_fan</span>
+<span class="truncate">Cisco 3850 Fan Tray 2 (0 RPM)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">sensors</span>
+<span class="truncate">Chassis Ambient: 51.4°C CRIT</span>
+</div>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-error block text-[11px] font-semibold">Triage Ticket:</span>
+<span class="text-error font-code-sm text-code-sm">#HW-8942: Blown Fan Module</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-error font-bold">51.4°C!</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-on-surface">510W</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-error">BUS-LOCKED</span></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1">
+<button class="w-full py-1 rounded-DEFAULT bg-error text-on-error font-code-sm text-code-sm text-[11px] font-bold flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">warning</span> Tech Dispatch Pending
+          </button>
+</div>
+</div>
+<!-- BENCH 08: OPERATIONAL -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">BENCH-08</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY A-08 // RACK 108</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-primary/10 text-primary font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-primary"></span> READY
+            </span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">security</span>
+<span class="truncate">Palo Alto PA-440 Firewall</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">dns</span>
+<span class="truncate">Catalyst 3850 PoE Core</span>
+</div>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-on-surface-variant block text-[11px]">Assigned Queue:</span>
+<span class="text-primary font-code-sm text-code-sm">Unoccupied - Staged PCNSE</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-on-surface">20.1°C</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-on-surface">190W</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-primary">TTY-08</span></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">terminal</span> TTY
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">power_settings_new</span> PDU
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">schema</span> Topology
+          </button>
+</div>
+</div>
+<!-- BENCH 09: ACTIVE COHORT -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">BENCH-09</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY B-01 // RACK 201</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-tertiary/15 text-tertiary font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span> IN SESSION
+            </span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">router</span>
+<span class="truncate">Dual Cisco ISR 4321 Mesh</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">alt_route</span>
+<span class="truncate">BGP Multi-homing Topology</span>
+</div>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-tertiary block text-[11px] font-semibold">Active Student Cohort:</span>
+<span class="text-on-surface font-medium truncate block">Sarah Jenkins (CCIE Routing #4)</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-on-surface">23.8°C</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-tertiary">440W</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-tertiary">TTY-09</span></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">monitor_heart</span> Snoop
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-tertiary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">lock_clock</span> 2h 05m
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">schema</span> Topology
+          </button>
+</div>
+</div>
+<!-- BENCH 10: OPERATIONAL -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">BENCH-10</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY B-02 // RACK 202</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-primary/10 text-primary font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-primary"></span> READY
+            </span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">wifi</span>
+<span class="truncate">Cisco Catalyst 9800-CL WLC</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">settings_input_antenna</span>
+<span class="truncate">Dual C9120AXI APs inline</span>
+</div>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-on-surface-variant block text-[11px]">Assigned Queue:</span>
+<span class="text-primary font-code-sm text-code-sm">Ready: CWNA Wireless RF Lab</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-on-surface">21.0°C</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-on-surface">260W</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-primary">TTY-10</span></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">terminal</span> TTY
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">power_settings_new</span> PDU
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">schema</span> Topology
+          </button>
+</div>
+</div>
+<!-- BENCH 11: OPERATIONAL -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-on-surface">BENCH-11</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY B-03 // RACK 203</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-primary/10 text-primary font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-primary"></span> READY
+            </span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">security</span>
+<span class="truncate">FortiGate 60F Unified UTM</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">dns</span>
+<span class="truncate">FortiSwitch 124E-PoE</span>
+</div>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-on-surface-variant block text-[11px]">Assigned Queue:</span>
+<span class="text-primary font-code-sm text-code-sm">Unoccupied - Clean Flash</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-on-surface">19.9°C</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-on-surface">165W</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-primary">TTY-11</span></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">terminal</span> TTY
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">power_settings_new</span> PDU
+          </button>
+<button class="p-1 px-2 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm text-[11px] flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">schema</span> Topology
+          </button>
+</div>
+</div>
+<!-- BENCH 12: FAULT (FIBER OPTIC LOSS) -->
+<div class="group relative rounded-lg bg-surface-container p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-all shadow-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-error">BENCH-12</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant text-[10px]">BAY B-04 // RACK 204</span>
+</div>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-error/15 text-error font-code-sm text-code-sm text-[11px]">
+<span class="w-2 h-2 rounded-full bg-error"></span> OPTICAL FAULT
+            </span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[15px]">lens_blur</span>
+<span class="truncate">Fiber OM3 LC: -28dBm Loss</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">dns</span>
+<span class="truncate">Nexus 9300-FX Core Switch</span>
+</div>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest my-space-xs font-body-sm text-body-sm text-[12px]">
+<span class="text-error block text-[11px] font-semibold">Triage Ticket:</span>
+<span class="text-error font-code-sm text-code-sm">#HW-8939: Dirty Endface/Bend</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-code-sm text-code-sm text-[11px] text-on-surface-variant">
+<div class="flex flex-col"><span class="text-[9px] uppercase">Temp</span><span class="text-on-surface">22.8°C</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">Draw</span><span class="text-on-surface">310W</span></div>
+<div class="flex flex-col"><span class="text-[9px] uppercase">TTY</span><span class="text-on-surface">TTY-12</span></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-1">
+<button class="w-full py-1 rounded-DEFAULT bg-surface-container-highest hover:bg-error hover:text-on-error text-error font-code-sm text-code-sm text-[11px] font-semibold flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">cleaning_services</span> Scope &amp; Clean LC Ferrules
+          </button>
+</div>
+</div>
+</div>
+<!-- BENCH MATRIX FOOTER / SUMMARY INDICATOR -->
+<div class="mt-space-md pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-code-sm text-code-sm text-on-surface-variant text-[12px]">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">sync</span>
+<span>Telemetry Stream Poll: 500ms via MQTT broker (lab-telemetry.east.netmentor.internal)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>Benches 13-24 Paged in Bay Beta View</span>
+<button class="text-secondary hover:underline flex items-center gap-0.5" type="button">
+          Expand All 24 Telemetry Cards <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<!-- LOW CONSUMABLE STOCK ALERT BANNER -->
+<div class="rounded-xl bg-tertiary-container/10 p-space-md mb-space-lg shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-tertiary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[24px]">inventory_2</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold text-[16px]">Low Consumable Inventory Alert</span>
+<span class="font-label-badge text-label-badge bg-tertiary text-on-tertiary px-1 rounded-DEFAULT">ACTION REQUIRED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Cat6 Bulk 1000ft Spool (<strong class="text-on-surface font-semibold">12% remaining / 120ft</strong>) &amp; RJ45 Gold Connectors (<strong class="text-on-surface font-semibold">48 units left</strong>). Automatic safety threshold triggered for next scheduled crimp lab.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm transition-colors" type="button">
+        Dismiss Shift Alert
+      </button>
+<button class="px-space-md py-1.5 rounded-lg bg-tertiary text-on-tertiary font-title-md text-body-sm hover:opacity-90 transition-opacity flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_cart_checkout</span>
+<span>Review Purchase Order #4092</span>
+</button>
+</div>
+</div>
+<!-- SPLIT WIDGETS SECTION: TRIAGE QUEUE & TECHNICIAN LOG -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT (7 COLS): URGENT HARDWARE TRIAGE QUEUE -->
+<div class="lg:col-span-7 flex flex-col bg-surface-container-low rounded-xl p-space-lg shadow-xl">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error text-[22px]">assignment_late</span>
+<div class="flex flex-col">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Urgent Hardware Triage Queue</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Physical intervention dispatched queue</span>
+</div>
+</div>
+<span class="font-label-badge text-label-badge bg-error/15 text-error px-space-xs py-0.5 rounded-DEFAULT font-bold">
+          3 PRIORITY TICKETS
+        </span>
+</div>
+<!-- TICKET LIST -->
+<div class="flex flex-col gap-space-sm">
+<!-- Ticket 1 -->
+<div class="p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-sm text-code-sm font-bold text-error">#HW-8942</span>
+<span class="font-label-badge text-label-badge bg-error/20 text-error px-1 rounded-DEFAULT">P1 CRITICAL</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">BENCH-07 [Bay A-07]</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[11px]">Reported 14m ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+            Cisco Catalyst 3850-48P Fan Tray #2 RPM Stalled (0 RPM). Thermal excursion warning triggered at 51.4°C.
+          </p>
+<div class="flex items-center justify-between pt-space-xs mt-1">
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-tertiary">swap_driving_apps_wheel</span>
+<span>Spares: Fan Module FRU-FAN-3850 (Qty: 4 in Cabinet C)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-body-sm text-body-sm text-[12px] transition-colors" type="button">
+                Isolate Pod Bus
+              </button>
+<button class="px-space-sm py-1 rounded-DEFAULT bg-primary-container text-on-primary-container font-title-md text-body-sm text-[12px] hover:bg-primary transition-colors" type="button">
+                Assign Marcus V.
+              </button>
+</div>
+</div>
+</div>
+<!-- Ticket 2 -->
+<div class="p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-sm text-code-sm font-bold text-tertiary">#HW-8939</span>
+<span class="font-label-badge text-label-badge bg-tertiary/20 text-tertiary px-1 rounded-DEFAULT">P2 ELEVATED</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">BENCH-12 [Bay B-04]</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[11px]">Reported 42m ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+            Fiber OM3 LC/LC Attenuation Loss on TenGigE 1/1/4. Rx power dropped to -28dBm exceeding bit-error margin.
+          </p>
+<div class="flex items-center justify-between pt-space-xs mt-1">
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-secondary">flaky</span>
+<span>Visual inspection required with Fluke FiberInspector</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-secondary font-body-sm text-body-sm text-[12px] transition-colors" type="button">
+                Inspect Patch Port
+              </button>
+</div>
+</div>
+</div>
+<!-- Ticket 3 -->
+<div class="p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-sm text-code-sm font-bold text-on-surface-variant">#HW-8931</span>
+<span class="font-label-badge text-label-badge bg-surface-container-highest text-on-surface-variant px-1 rounded-DEFAULT">P3 STANDARD</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">BENCH-03 [Bay A-03]</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[11px]">Reported 1h 10m ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+            RS232 Serial RJ45 console rollover adapter locking clip snapped. Cable dislodges under slight vibration.
+          </p>
+<div class="flex items-center justify-between pt-space-xs mt-1">
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-primary">build</span>
+<span>Swap with rollover cable from Shelf 2-B</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded-DEFAULT bg-surface-container-highest hover:bg-surface-bright text-on-surface font-body-sm text-body-sm text-[12px] transition-colors" type="button">
+                Mark Fixed &amp; Calibrate
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT (5 COLS): DISPATCH ACTIONS & SHIFT AUDIT LOG -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- QUICK TECHNICIAN DISPATCH & PDU CONTROL -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+            Technician Shift On-Duty
+          </span>
+<span class="font-code-sm text-code-sm text-primary text-[11px] bg-primary/10 px-1.5 py-0.5 rounded-DEFAULT">SHIFT A: 07:00 - 15:30</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold font-code-sm text-code-sm">
+              MV
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-tight">Marcus Vance</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[12px]">Senior Lab Operations Tech (CCT / A+)</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" title="On Hall Floor"></span>
+</div>
+<!-- Rapid Actions -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex flex-col gap-1 items-start text-left" type="button">
+<span class="material-symbols-outlined text-secondary text-[20px]">qr_code_scanner</span>
+<span class="font-title-md text-body-sm text-on-surface">Barcode Asset Audit</span>
+<span class="font-body-sm text-body-sm text-[11px] text-on-surface-variant">Sync serials via wireless scanner</span>
+</button>
+<button class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex flex-col gap-1 items-start text-left" type="button">
+<span class="material-symbols-outlined text-tertiary text-[20px]">tune</span>
+<span class="font-title-md text-body-sm text-on-surface">PDU Port Sequencer</span>
+<span class="font-body-sm text-body-sm text-[11px] text-on-surface-variant">Configure in-rush delay limits</span>
+</button>
+</div>
+</div>
+<!-- LIVE LAB HALL SHIFT LOG -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-xl flex flex-col flex-1">
+<div class="flex items-center justify-between pb-space-sm mb-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">terminal</span>
+            Shift Journal &amp; Audit Trail
+          </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-[11px]">UTC -4</span>
+</div>
+<div class="flex flex-col gap-space-sm font-code-sm text-code-sm text-[12px] flex-1 justify-start">
+<div class="flex items-start gap-space-xs pb-space-xs">
+<span class="text-on-surface-variant shrink-0">14:18:02</span>
+<p class="text-on-surface">
+<span class="text-error font-semibold">[THERMAL]</span> BENCH-07 chassis threshold &gt; 50°C. Auto-alert sent to duty pager.
+            </p>
+</div>
+<div class="flex items-start gap-space-xs pb-space-xs">
+<span class="text-on-surface-variant shrink-0">13:55:40</span>
+<p class="text-on-surface">
+<span class="text-primary font-semibold">[PDU_PWR]</span> Bench-05 remote boot sequence complete. Current draw stabilized at 295W.
+            </p>
+</div>
+<div class="flex items-start gap-space-xs pb-space-xs">
+<span class="text-on-surface-variant shrink-0">13:30:11</span>
+<p class="text-on-surface">
+<span class="text-secondary font-semibold">[CONFIG]</span> Automated scrub applied to Bench-01 following CCNA cohort sign-off. NVRAM sanitized.
+            </p>
+</div>
+<div class="flex items-start gap-space-xs pb-space-xs">
+<span class="text-on-surface-variant shrink-0">12:45:00</span>
+<p class="text-on-surface">
+<span class="text-tertiary font-semibold">[INVENTORY]</span> Automated spool dispenser logged 880ft cut. Spool below safe operating threshold.
+            </p>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<input class="w-full bg-surface-container rounded-lg px-space-sm py-1.5 font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-secondary mr-2" placeholder="Append quick shift note (e.g., 'Re-seated LC fiber on Bench-12')..." type="text"/>
+<button class="px-space-md py-1.5 bg-surface-container-high hover:bg-surface-bright text-secondary rounded-lg font-code-sm text-code-sm shrink-0" type="button">
+            Log Note
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

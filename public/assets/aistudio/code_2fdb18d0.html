@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {tertiary: "#ffffff", "on-error-container": "#ffdad6", "surface-container": "#480100", "on-primary": "#323030", "inverse-surface": "#ffdad4", "surface-container-high": "#5c0100", "surface-container-lowest": "#270000", "on-primary-fixed-variant": "#494646", secondary: "#ccc5c5", "on-tertiary": "#33302e", "surface-tint": "#cac5c5", "on-primary-container": "#676364", "secondary-container": "#4a4646", "inverse-primary": "#615e5e", "on-secondary-fixed-variant": "#4a4646", "on-tertiary-fixed-variant": "#4a4644", "on-secondary-container": "#bab4b3", outline: "#8e9192", error: "#ffb4ab", surface: "#310000", "on-secondary": "#333030", "on-tertiary-container": "#686361", "surface-container-highest": "#700200", "surface-container-low": "#410100", "surface-dim": "#310000", "inverse-on-surface": "#680200", "on-tertiary-fixed": "#1e1b19", "on-secondary-fixed": "#1e1b1b", "tertiary-fixed-dim": "#ccc5c2", "surface-bright": "#790200", "on-background": "#ffdad4", "secondary-fixed": "#e8e1e0", background: "#310000", "error-container": "#93000a", "outline-variant": "#444748", "on-surface-variant": "#c4c7c8", "primary-fixed": "#e7e1e1", "on-surface": "#ffdad4", "tertiary-container": "#e9e1de", "surface-variant": "#700200", primary: "#ffffff", "secondary-fixed-dim": "#ccc5c5", "on-primary-fixed": "#1d1b1b", "primary-fixed-dim": "#cac5c5", "on-error": "#690005", "primary-container": "#e7e1e1", "tertiary-fixed": "#e9e1de"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-xl": "2.5rem", "space-md": "1rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", gutter: "1.5rem", "space-lg": "1.5rem", margin: "2rem", "margin-lg": "4rem", "margin-sm": "1rem"}, fontFamily: {"body-lg": ["Inter"], "code-sm": ["JetBrains Mono"], "body-sm": ["Inter"], "title-md": ["Inter"], "body-md": ["Inter"], "display-hero-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="px-space-md py-space-md bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[22px]">memory</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">NetMentor<span class="text-primary">.AI</span></span><span class="font-code-sm text-code-sm text-on-surface-variant text-[10px] uppercase tracking-wider">LAB-OPS NODE // 02</span></div></div><span class="font-label-badge text-label-badge px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-secondary border border-secondary/20">NOC</span></div><div class="px-space-md py-space-xs"><div class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-widest my-space-xs">Operations Modules</div></div><nav class="flex flex-col px-space-sm gap-space-xs" data-active-classes="bg-surface-container text-primary font-title-md"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="operations-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-body-sm text-body-sm">Operations Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment-inventory" href="#"><span class="material-symbols-outlined text-[18px]">dns</span><span class="font-body-sm text-body-sm">Equipment Inventory</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="maintenance-and-repair-logs" href="#"><span class="material-symbols-outlined text-[18px]">build</span><span class="font-body-sm text-body-sm">Maintenance Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="fault-triage-and-diagnostics" href="#"><span class="material-symbols-outlined text-[18px]">warning</span><span class="font-body-sm text-body-sm">Fault Diagnostics</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg transition-colors bg-surface-container text-primary font-title-md" data-path="consumables-and-spares" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-sm text-body-sm">Consumables &amp; Spares</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="facility-and-racks" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span class="font-body-sm text-body-sm">Facility &amp; Racks</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings-and-calibration" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-body-sm text-body-sm">Settings &amp; Calibration</span></a></nav></div><div class="p-space-sm m-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-sm shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="flex items-center justify-between"><span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Physical Telemetry</span><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span></div><div class="flex flex-col gap-space-xs"><div class="flex justify-between items-center"><span class="font-body-sm text-body-sm text-on-surface-variant">Active Bays:</span><span class="font-code-sm text-code-sm text-on-surface font-semibold">12 Racks (A-D)</span></div><div class="flex flex-col gap-0.5"><div class="flex justify-between items-center"><span class="font-body-sm text-body-sm text-on-surface-variant">Smart PDU:</span><span class="font-code-sm text-code-sm text-tertiary font-semibold">4.8 / 7.2 kW</span></div><div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-tertiary rounded-full" style="width: 66%"></div></div></div><div class="flex justify-between items-center pt-space-xs"><span class="font-code-sm text-code-sm text-on-surface-variant text-[11px]">NODE-02</span><span class="font-code-sm text-code-sm text-primary text-[11px] font-semibold">ONLINE // 21.4°C</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">terminal</span><span>facility_ops</span><span class="text-outline">/</span><span class="text-primary font-semibold">hardware_matrix</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-0.5 rounded-lg bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-badge text-label-badge text-on-surface uppercase">HVAC &amp; PDU Normal</span></div><div class="hidden 2xl:flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="text-outline">|</span><span>Shift A:</span><span class="text-on-surface font-medium">Marcus Vance</span><span class="font-label-badge text-label-badge text-tertiary bg-surface-container px-1 rounded-DEFAULT">CCT / A+</span></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-body-sm text-body-sm" type="button"><span class="material-symbols-outlined text-[16px] text-tertiary">qr_code_scanner</span><span class="hidden sm:inline">Scan QR Asset</span></button><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-body-sm hover:bg-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">add_alert</span><span class="hidden sm:inline">Log Fault</span></button><div class="relative flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high cursor-pointer"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface px-gutter"><div class="flex flex-col w-full pb-16">
+<!-- Top Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-24 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-12 right-10 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+</div>
+<!-- Header & System Identity -->
+<header class="relative flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg mb-space-lg pt-space-sm">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm">
+<span class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-primary font-semibold">SUPPLY_CELL_09</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant font-label-badge text-label-badge uppercase tracking-wider">HARDWARE FABRIC &amp; CONSUMABLES</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Consumables &amp; Passive Spares Management
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Inventory telemetry for structured cabling, modular terminating ends, thermal interfaces, rack labeling media, and rapid field-replacements across physical CCNA/CCNP active test benches.
+      </p>
+</div>
+<!-- Action Toolbar -->
+<div class="flex flex-wrap items-center gap-space-xs shrink-0">
+<button class="group flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" id="quickScanBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary group-hover:scale-110 transition-transform">barcode_scanner</span>
+<span class="font-title-md text-body-sm">Barcode Quick Intake</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-tertiary transition-all" id="generatePoBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span class="font-title-md text-body-sm">Generate Supplier PO</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-title-md text-body-sm shadow-[0_0_20px_-4px_rgba(78,222,163,0.4)] hover:brightness-110 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Add Consumable SKU</span>
+</button>
+</div>
+</header>
+<!-- KPI Pulse Ribbon -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.3)] relative overflow-hidden flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">SKUs Monitored</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[20px]">shelves</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">48</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">Active Items</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>7 Categories (Patch, Copper, Optics, Bulk)</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.3)] relative overflow-hidden flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Stock Health</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-error">
+<span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">88%</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Adequate</span>
+</div>
+<div class="flex items-center gap-2 mt-space-xs font-body-sm text-body-sm">
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-error/20 text-error font-code-sm text-[11px] font-semibold">2 CRITICAL</span>
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-tertiary/20 text-tertiary font-code-sm text-[11px] font-semibold">4 THRESHOLD</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.3)] relative overflow-hidden flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Monthly Consumption</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-[20px]">monitoring</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">$1,240</span>
+<span class="font-code-sm text-code-sm text-primary">+8.4%</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span>High boot-camp churn on RJ45 &amp; Blue Patch</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.3)] relative overflow-hidden flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Pending Auto-Orders</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-tertiary">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-tertiary">2</span>
+<span class="font-code-sm text-code-sm text-on-surface">POs Drafted</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-tertiary">lock_clock</span>
+<span>Awaiting NOC shift-lead sign-off</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Dashboard Split: Main Inventory Grid (8 Cols) & Reorder / Velocity (4 Cols) -->
+<div class="grid grid-cols-1 2xl:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Consumables Inventory Matrix with Interactive Sliders -->
+<div class="2xl:col-span-8 flex flex-col gap-space-md">
+<!-- Filter & Filter Chips Sub-bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded-DEFAULT bg-primary text-on-primary font-label-badge text-label-badge uppercase font-semibold" type="button">All Items (48)</button>
+<button class="px-space-sm py-1 rounded-DEFAULT bg-surface-container-high text-error font-label-badge text-label-badge uppercase hover:bg-surface-container-highest transition-colors" type="button">Critical (2)</button>
+<button class="px-space-sm py-1 rounded-DEFAULT bg-surface-container-high text-tertiary font-label-badge text-label-badge uppercase hover:bg-surface-container-highest transition-colors" type="button">Warning (4)</button>
+<button class="px-space-sm py-1 rounded-DEFAULT bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge uppercase hover:bg-surface-container-highest transition-colors" type="button">Optical &amp; Fiber (11)</button>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span class="text-body-sm">Dynamic Threshold Autopilot:</span>
+<span class="text-primary font-semibold">ENGAGED</span>
+</div>
+</div>
+<!-- Item Card 1: Cat6 Snagless UTP Patch Cables (CRITICAL LOW) -->
+<article class="bg-surface-container-low hover:bg-surface-container transition-all duration-200 rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)] relative group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error rounded-l-xl"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[24px]">cable</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Cat6 Snagless UTP Patch Cables</span>
+<span class="px-space-xs py-0.5 rounded-DEFAULT bg-error/20 text-error font-label-badge text-label-badge">CRITICAL LOW</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant mt-0.5">
+<span>3ft / 1m Blue</span>
+<span>•</span>
+<span>Monoprice Enterprise</span>
+<span class="text-secondary">#MP-C6-BL03</span>
+<span>•</span>
+<span>Unit: $2.40</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs sm:self-start">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-code-sm text-code-sm transition-colors" onclick="quickRestock(this, 25)" type="button">
+                + Quick Restock (25)
+              </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-error-container text-on-error-container font-title-md text-body-sm hover:brightness-110 transition-colors" type="button">
+                Order Now
+              </button>
+</div>
+</div>
+<!-- Stock Level & Capacity Visualization -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center bg-surface-container-lowest/60 p-space-sm rounded-lg">
+<div class="md:col-span-4 flex flex-col">
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Available Storage:</span>
+<span class="font-code-sm text-code-sm text-error font-bold">14 / 100 Cables</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-error rounded-full transition-all duration-300" style="width: 14%"></div>
+</div>
+<span class="font-label-badge text-[10px] text-error mt-1 tracking-wider uppercase">14% Capacity Remaining</span>
+</div>
+<!-- Interactive Threshold Slider -->
+<div class="md:col-span-5 flex flex-col px-space-xs">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Low-Stock Trigger Threshold</span>
+<span class="font-code-sm text-code-sm text-tertiary font-semibold threshold-val">25 units</span>
+</div>
+<input class="w-full accent-tertiary bg-surface-container-highest h-1.5 rounded-lg cursor-pointer" max="50" min="10" oninput="updateSliderVal(this, 'units')" type="range" value="25"/>
+<div class="flex justify-between font-code-sm text-[10px] text-outline mt-1">
+<span>Min: 10</span>
+<span>Active: 25</span>
+<span>Max: 50</span>
+</div>
+</div>
+<!-- Auto Re-Order Switch -->
+<div class="md:col-span-3 flex flex-col justify-center items-start md:items-end">
+<label class="flex items-center gap-space-xs cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface-variant text-right leading-tight">Auto-Reorder (50 pk)</span>
+<input checked="" class="w-4 h-4 accent-primary rounded bg-surface-container-high" type="checkbox"/>
+</label>
+<span class="font-code-sm text-[10px] text-primary mt-1">Trigger Active: ≤ 25</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Item Card 2: RJ45 Cat6 8P8C Modular Pass-Through Connectors (LOW STOCK) -->
+<article class="bg-surface-container-low hover:bg-surface-container transition-all duration-200 rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)] relative group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary rounded-l-xl"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[24px]">hub</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">RJ45 Cat6 8P8C Modular Pass-Through Plugs</span>
+<span class="px-space-xs py-0.5 rounded-DEFAULT bg-tertiary/20 text-tertiary font-label-badge text-label-badge">LOW STOCK</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant mt-0.5">
+<span>Jar of 100</span>
+<span>•</span>
+<span>Platinum Tools EZ</span>
+<span class="text-secondary">#PT-100010C</span>
+<span>•</span>
+<span>Unit: $0.18/plug ($18.00/jar)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs sm:self-start">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-code-sm text-code-sm transition-colors" onclick="quickRestock(this, 100)" type="button">
+                + Quick Restock (Jar)
+              </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container text-on-surface font-title-md text-body-sm transition-colors" type="button">
+                Order Jar
+              </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center bg-surface-container-lowest/60 p-space-sm rounded-lg">
+<div class="md:col-span-4 flex flex-col">
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Remaining Count:</span>
+<span class="font-code-sm text-code-sm text-tertiary font-bold">48 Plugs</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-tertiary rounded-full transition-all duration-300" style="width: 24%"></div>
+</div>
+<span class="font-label-badge text-[10px] text-tertiary mt-1 tracking-wider uppercase">0.48 Jars In Stock</span>
+</div>
+<div class="md:col-span-5 flex flex-col px-space-xs">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Low-Stock Trigger Threshold</span>
+<span class="font-code-sm text-code-sm text-tertiary font-semibold threshold-val">60 plugs</span>
+</div>
+<input class="w-full accent-tertiary bg-surface-container-highest h-1.5 rounded-lg cursor-pointer" max="150" min="20" oninput="updateSliderVal(this, 'plugs')" type="range" value="60"/>
+<div class="flex justify-between font-code-sm text-[10px] text-outline mt-1">
+<span>Min: 20</span>
+<span>Active: 60</span>
+<span>Max: 150</span>
+</div>
+</div>
+<div class="md:col-span-3 flex flex-col justify-center items-start md:items-end">
+<label class="flex items-center gap-space-xs cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface-variant text-right leading-tight">Auto-Reorder (2 Jars)</span>
+<input checked="" class="w-4 h-4 accent-primary rounded bg-surface-container-high" type="checkbox"/>
+</label>
+<span class="font-code-sm text-[10px] text-primary mt-1">Threshold Exceeded</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Item Card 3: Arctic Silver 5 Thermal Paste (CRITICAL) -->
+<article class="bg-surface-container-low hover:bg-surface-container transition-all duration-200 rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)] relative group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error rounded-l-xl"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[24px]">thermostat</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Arctic Silver 5 Polysynthetic Thermal Compound</span>
+<span class="px-space-xs py-0.5 rounded-DEFAULT bg-error/20 text-error font-label-badge text-label-badge">CRITICAL</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant mt-0.5">
+<span>3.5g Syringe</span>
+<span>•</span>
+<span>Restock Lead Time: 2 Business Days</span>
+<span>•</span>
+<span>Unit: $8.50/tube</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs sm:self-start">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-code-sm text-code-sm transition-colors" onclick="quickRestock(this, 5)" type="button">
+                + Quick Restock (5)
+              </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-error-container text-on-error-container font-title-md text-body-sm hover:brightness-110 transition-colors" type="button">
+                Procure Tube
+              </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center bg-surface-container-lowest/60 p-space-sm rounded-lg">
+<div class="md:col-span-4 flex flex-col">
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lab Bench Stock:</span>
+<span class="font-code-sm text-code-sm text-error font-bold">3 Tubes Remaining</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-error rounded-full transition-all duration-300" style="width: 20%"></div>
+</div>
+<span class="font-label-badge text-[10px] text-error mt-1 tracking-wider uppercase">Rack CPU Service Depleted</span>
+</div>
+<div class="md:col-span-5 flex flex-col px-space-xs">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Low-Stock Trigger Threshold</span>
+<span class="font-code-sm text-code-sm text-tertiary font-semibold threshold-val">5 tubes</span>
+</div>
+<input class="w-full accent-tertiary bg-surface-container-highest h-1.5 rounded-lg cursor-pointer" max="15" min="2" oninput="updateSliderVal(this, 'tubes')" type="range" value="5"/>
+<div class="flex justify-between font-code-sm text-[10px] text-outline mt-1">
+<span>Min: 2</span>
+<span>Active: 5</span>
+<span>Max: 15</span>
+</div>
+</div>
+<div class="md:col-span-3 flex flex-col justify-center items-start md:items-end">
+<label class="flex items-center gap-space-xs cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface-variant text-right leading-tight">Auto-Reorder (5 pk)</span>
+<input checked="" class="w-4 h-4 accent-primary rounded bg-surface-container-high" type="checkbox"/>
+</label>
+<span class="font-code-sm text-[10px] text-error mt-1">Flagged for PO-081</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Multi-item Dense Grid for Remaining Modular Spares -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Item 4: Cisco SFP-10G-SR (HEALTHY) -->
+<article class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">sensors</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Cisco SFP-10G-SR</h3>
+<p class="font-code-sm text-[11px] text-on-surface-variant">10GBase-SR Optical Transceiver</p>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-DEFAULT bg-primary/20 text-primary font-label-badge text-label-badge">HEALTHY</span>
+</div>
+<div class="mt-space-md flex justify-between items-baseline">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Current Stock:</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">18 units</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="h-full bg-primary rounded-full" style="width: 72%"></div>
+</div>
+<div class="mt-space-md pt-space-xs bg-surface-container-lowest/50 p-2 rounded-lg">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-label-badge text-[10px] text-on-surface-variant">Threshold Trigger:</span>
+<span class="font-code-sm text-[11px] text-on-surface threshold-val">8 units</span>
+</div>
+<input class="w-full accent-primary bg-surface-container-highest h-1 rounded cursor-pointer" max="20" min="4" oninput="updateSliderVal(this, 'units')" type="range" value="8"/>
+</div>
+</div>
+<div class="flex justify-between items-center pt-space-md mt-space-sm border-t border-surface-container-high/40">
+<span class="font-code-sm text-code-sm text-on-surface-variant">$28.00 / ea</span>
+<button class="text-secondary font-code-sm text-[12px] hover:underline" onclick="quickRestock(this, 5)" type="button">+ Quick +5</button>
+</div>
+</article>
+<!-- Item 5: Velcro Cable Tie Rolls (HEALTHY) -->
+<article class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">roller_shades</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Velcro Cable Tie Spools</h3>
+<p class="font-code-sm text-[11px] text-on-surface-variant">75ft Continuous Black Reusable</p>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-DEFAULT bg-primary/20 text-primary font-label-badge text-label-badge">HEALTHY</span>
+</div>
+<div class="mt-space-md flex justify-between items-baseline">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Current Stock:</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">6 rolls</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="h-full bg-primary rounded-full" style="width: 60%"></div>
+</div>
+<div class="mt-space-md pt-space-xs bg-surface-container-lowest/50 p-2 rounded-lg">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-label-badge text-[10px] text-on-surface-variant">Threshold Trigger:</span>
+<span class="font-code-sm text-[11px] text-on-surface threshold-val">3 rolls</span>
+</div>
+<input class="w-full accent-primary bg-surface-container-highest h-1 rounded cursor-pointer" max="10" min="1" oninput="updateSliderVal(this, 'rolls')" type="range" value="3"/>
+</div>
+</div>
+<div class="flex justify-between items-center pt-space-md mt-space-sm border-t border-surface-container-high/40">
+<span class="font-code-sm text-code-sm text-on-surface-variant">$11.20 / roll</span>
+<button class="text-secondary font-code-sm text-[12px] hover:underline" onclick="quickRestock(this, 2)" type="button">+ Quick +2</button>
+</div>
+</article>
+<!-- Item 6: RS-232 RJ45 to DB9 Console Cables (HEALTHY) -->
+<article class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[20px]">settings_ethernet</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">RS-232 RJ45-to-DB9 Rollover</h3>
+<p class="font-code-sm text-[11px] text-on-surface-variant">6ft Flat Light Blue Console Leads</p>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-DEFAULT bg-primary/20 text-primary font-label-badge text-label-badge">HEALTHY</span>
+</div>
+<div class="mt-space-md flex justify-between items-baseline">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Current Stock:</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">12 cables</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="h-full bg-primary rounded-full" style="width: 80%"></div>
+</div>
+<div class="mt-space-md pt-space-xs bg-surface-container-lowest/50 p-2 rounded-lg">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-label-badge text-[10px] text-on-surface-variant">Threshold Trigger:</span>
+<span class="font-code-sm text-[11px] text-on-surface threshold-val">6 cables</span>
+</div>
+<input class="w-full accent-primary bg-surface-container-highest h-1 rounded cursor-pointer" max="15" min="2" oninput="updateSliderVal(this, 'cables')" type="range" value="6"/>
+</div>
+</div>
+<div class="flex justify-between items-center pt-space-md mt-space-sm border-t border-surface-container-high/40">
+<span class="font-code-sm text-code-sm text-on-surface-variant">$4.50 / cable</span>
+<button class="text-secondary font-code-sm text-[12px] hover:underline" onclick="quickRestock(this, 4)" type="button">+ Quick +4</button>
+</div>
+</article>
+<!-- Item 7: Brady B-427 Wire Label Cartridges (LOW) -->
+<article class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[20px]">label</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Brady B-427 Self-Laminating</h3>
+<p class="font-code-sm text-[11px] text-on-surface-variant">BMP21-PLUS Wire Cartridges (1.5")</p>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-DEFAULT bg-tertiary/20 text-tertiary font-label-badge text-label-badge">LOW</span>
+</div>
+<div class="mt-space-md flex justify-between items-baseline">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Current Stock:</span>
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">2 cartridges</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="h-full bg-tertiary rounded-full" style="width: 25%"></div>
+</div>
+<div class="mt-space-md pt-space-xs bg-surface-container-lowest/50 p-2 rounded-lg">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-label-badge text-[10px] text-on-surface-variant">Threshold Trigger:</span>
+<span class="font-code-sm text-[11px] text-tertiary threshold-val">4 cartridges</span>
+</div>
+<input class="w-full accent-tertiary bg-surface-container-highest h-1 rounded cursor-pointer" max="8" min="1" oninput="updateSliderVal(this, 'cartridges')" type="range" value="4"/>
+</div>
+</div>
+<div class="flex justify-between items-center pt-space-md mt-space-sm border-t border-surface-container-high/40">
+<span class="font-code-sm text-code-sm text-on-surface-variant">$29.90 / cartridge</span>
+<button class="text-tertiary font-code-sm text-[12px] hover:underline" onclick="quickRestock(this, 2)" type="button">+ Quick +2</button>
+</div>
+</article>
+</div>
+</div>
+<!-- Right Column: Auto-PO Draft & Weekly Burn Velocity (4 Cols) -->
+<div class="2xl:col-span-4 flex flex-col gap-space-md">
+<!-- Automated Re-Order PO Draft Card -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.3)] relative overflow-hidden flex flex-col">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_turned_in</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Auto-Generated PO</h2>
+</div>
+<span class="font-code-sm text-code-sm text-primary font-bold">#PO-2025-081</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-sm my-space-xs flex flex-col gap-1">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Primary Logistics:</span>
+<span class="text-on-surface font-semibold">CDW Logistics &amp; Anixter</span>
+</div>
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Routing Node:</span>
+<span class="text-secondary font-mono">Bldg-C / Lab Dock 02</span>
+</div>
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Fulfillment SLA:</span>
+<span class="text-primary font-semibold">Free 2-Day Priority Freight</span>
+</div>
+</div>
+<!-- Line Items Table -->
+<div class="flex flex-col gap-space-xs my-space-sm">
+<div class="flex items-center justify-between text-[11px] font-label-badge text-on-surface-variant uppercase pb-1">
+<span>Threshold Triggered Item</span>
+<span>Est. Subtotal</span>
+</div>
+<!-- PO Row 1 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container/70 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Cat6 UTP 3ft (Blue)</span>
+<span class="font-code-sm text-[11px] text-on-surface-variant">50-Pack Bundle @ $2.40/ea</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">$120.00</span>
+</div>
+<!-- PO Row 2 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container/70 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">RJ45 Modular Plugs</span>
+<span class="font-code-sm text-[11px] text-on-surface-variant">2x Jars of 100 @ $18.00/jar</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">$36.00</span>
+</div>
+<!-- PO Row 3 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container/70 hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Arctic Silver 5 Paste</span>
+<span class="font-code-sm text-[11px] text-on-surface-variant">5x 3.5g Syringes @ $8.50/ea</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">$42.50</span>
+</div>
+</div>
+<!-- Calculation Summary -->
+<div class="bg-surface-container-high/40 p-space-sm rounded-lg flex flex-col gap-1 mt-1">
+<div class="flex justify-between items-center font-body-sm text-body-sm text-on-surface-variant">
+<span>Freight &amp; Lab Handling:</span>
+<span class="text-primary font-code-sm text-code-sm font-semibold">$0.00 (CREDITED)</span>
+</div>
+<div class="flex justify-between items-center font-title-md text-title-md text-on-surface pt-1 border-t border-surface-container-highest">
+<span>Total Draft Commitment:</span>
+<span class="font-code-sm text-code-lg text-primary font-bold">$198.50</span>
+</div>
+</div>
+<!-- PO Actions -->
+<div class="flex flex-col gap-space-xs mt-space-md">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-title-md text-body-sm hover:brightness-110 shadow-[0_0_18px_-4px_rgba(78,222,163,0.35)] transition-all flex items-center justify-center gap-space-xs" onclick="transmitPO(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Approve &amp; Transmit PO</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm transition-colors text-center" type="button">
+              Edit Quantities
+            </button>
+<button class="py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm transition-colors text-center flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">picture_as_pdf</span>
+<span>Export PDF</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Weekly Usage Velocity Chart (Burn Rate during CCNA Bootcamps) -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.3)] flex flex-col gap-space-sm">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Weekly Burn Velocity</span>
+<span class="font-code-sm text-[12px] text-on-surface-variant">Live CCNA Bootcamp Lab Churn</span>
+</div>
+<span class="font-label-badge text-label-badge px-space-xs py-0.5 rounded-DEFAULT bg-secondary/10 text-secondary">
+            W42-W46
+          </span>
+</div>
+<!-- Inline SVG Multi-Bar Burn Rate Chart -->
+<div class="mt-space-sm">
+<div class="flex items-center justify-between text-xs font-code-sm text-on-surface-variant mb-2">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 bg-secondary rounded-sm"></span> RJ45 Plugs (count)</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 bg-primary rounded-sm"></span> Patch Cables (units)</span>
+</div>
+<svg class="w-full h-44 overflow-visible" fill="none" viewbox="0 0 380 140" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid Lines -->
+<line class="text-surface-container-highest" stroke="currentColor" stroke-dasharray="2 4" stroke-width="1" x1="0" x2="380" y1="20" y2="20"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-dasharray="2 4" stroke-width="1" x1="0" x2="380" y1="60" y2="60"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-dasharray="2 4" stroke-width="1" x1="0" x2="380" y1="100" y2="100"></line>
+<!-- Week 42 (Low Cohort) -->
+<rect class="fill-secondary/80 hover:fill-secondary transition-colors" height="55" rx="2" width="16" x="25" y="65"></rect>
+<rect class="fill-primary/80 hover:fill-primary transition-colors" height="40" rx="2" width="16" x="45" y="80"></rect>
+<text class="fill-on-surface-variant font-code-sm text-[10px]" text-anchor="middle" x="43" y="132">Wk 42</text>
+<!-- Week 43 (Exam Prep) -->
+<rect class="fill-secondary/80 hover:fill-secondary transition-colors" height="75" rx="2" width="16" x="100" y="45"></rect>
+<rect class="fill-primary/80 hover:fill-primary transition-colors" height="65" rx="2" width="16" x="120" y="55"></rect>
+<text class="fill-on-surface-variant font-code-sm text-[10px]" text-anchor="middle" x="118" y="132">Wk 43</text>
+<!-- Week 44 (Physical Crimp Workshop) -->
+<rect class="fill-secondary hover:fill-secondary transition-colors" height="105" rx="2" width="16" x="175" y="15"></rect>
+<rect class="fill-primary/80 hover:fill-primary transition-colors" height="80" rx="2" width="16" x="195" y="40"></rect>
+<text class="fill-on-surface-variant font-code-sm text-[10px]" text-anchor="middle" x="193" y="132">Wk 44</text>
+<!-- Week 45 (Rack Cable Management Sprint) -->
+<rect class="fill-secondary/80 hover:fill-secondary transition-colors" height="90" rx="2" width="16" x="250" y="30"></rect>
+<rect class="fill-primary hover:fill-primary transition-colors" height="95" rx="2" width="16" x="270" y="25"></rect>
+<text class="fill-on-surface-variant font-code-sm text-[10px]" text-anchor="middle" x="268" y="132">Wk 45</text>
+<!-- Week 46 (Current Week in Progress) -->
+<rect class="fill-secondary/60" height="70" rx="2" width="16" x="325" y="50"></rect>
+<rect class="fill-primary/60" height="60" rx="2" width="16" x="345" y="60"></rect>
+<text class="fill-tertiary font-code-sm text-[10px] font-semibold" text-anchor="middle" x="343" y="132">Active</text>
+</svg>
+</div>
+<!-- AI Diagnostic Insight for Lab Manager -->
+<div class="mt-space-xs p-space-sm bg-surface-container-high/50 rounded-lg flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">psychology</span>
+<div class="flex flex-col font-body-sm text-[12px] text-on-surface-variant">
+<span class="text-tertiary font-code-sm text-[11px] font-bold">[AI_COPILOT_FORECAST]</span>
+<span>Next week's CCNP Switch Lab will exhaust current RJ45 stock in 3.4 days. Recommended intake buffer: +100 connectors.</span>
+</div>
+</div>
+</section>
+<!-- Active Supplier Directory Micro-deck -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.3)] flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Approved Primary Vendors</span>
+<span class="font-code-sm text-[11px] text-primary">EDI Direct Connect</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container/50">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">CDW Government Logistics</span>
+</div>
+<span class="font-code-sm text-[11px] text-on-surface-variant">Net 30 • Direct EDI</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container/50">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Anixter Fiber &amp; Copper Supply</span>
+</div>
+<span class="font-code-sm text-[11px] text-on-surface-variant">Next-Day Hub</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container/50">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Monoprice B2B Commercial</span>
+</div>
+<span class="font-code-sm text-[11px] text-on-surface-variant">Bulk Spools Only</span>
+</div>
+</section>
+</div>
+</div>
+<!-- Interactive Intake Modal / Scanner Drawer (Simulated) -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-md z-50 hidden items-center justify-center p-gutter" id="scannerModal">
+<div class="bg-surface-container-low rounded-xl max-w-lg w-full p-space-lg shadow-2xl relative flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">qr_code_scanner</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Stock Barcode Scanner</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg" onclick="closeModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="relative w-full h-48 bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col items-center justify-center">
+<div class="w-48 h-32 border-2 border-dashed border-primary/60 rounded-lg flex items-center justify-center relative">
+<span class="w-full h-0.5 bg-primary shadow-[0_0_12px_#4edea3] absolute animate-pulse"></span>
+<span class="font-code-sm text-[11px] text-on-surface-variant">Align 1D/2D Barcode Here</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Manual SKU / UPC Override</label>
+<div class="flex gap-space-xs">
+<input class="flex-1 bg-surface-container-high px-space-sm py-2 rounded-lg font-code-sm text-code-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" placeholder="MP-C6-BL03 or 88727632810" type="text"/>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-title-md text-body-sm hover:brightness-110" onclick="simulateScan()" type="button">
+            Process
+          </button>
+</div>
+</div>
+<div class="hidden p-space-sm rounded-lg bg-primary/10 text-primary font-code-sm text-code-sm flex items-center gap-space-xs" id="scanFeedback">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>SKU Matched: Cat6 3ft Blue. Intake +25 added to node shelf.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function updateSliderVal(slider, unit) {
+    const parent = slider.closest('.flex-col') || slider.parentElement;
+    const valDisplay = parent.querySelector('.threshold-val');
+    if (valDisplay) {
+      valDisplay.textContent = slider.value + ' ' + unit;
+    }
+  }
+
+  function quickRestock(button, amount) {
+    const originalText = button.textContent;
+    button.textContent = 'Restocked +' + amount;
+    button.classList.add('bg-primary', 'text-on-primary');
+    button.classList.remove('bg-surface-container-high', 'text-primary');
+
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.classList.remove('bg-primary', 'text-on-primary');
+      button.classList.add('bg-surface-container-high', 'text-primary');
+    }, 2000);
+  }
+
+  function transmitPO(btn) {
+    const originalHtml = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> Transmitting to EDI...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span> PO-081 Transmitted';
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-surface-container-high', 'text-primary');
+    }, 1800);
+  }
+
+  const modal = document.getElementById('scannerModal');
+  const quickScanBtn = document.getElementById('quickScanBtn');
+  const generatePoBtn = document.getElementById('generatePoBtn');
+
+  if (quickScanBtn) {
+    quickScanBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    });
+  }
+
+  if (generatePoBtn) {
+    generatePoBtn.addEventListener('click', () => {
+      alert("PO-2025-082 draft initialized with all triggered threshold supplies.");
+    });
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function simulateScan() {
+    const feedback = document.getElementById('scanFeedback');
+    feedback.classList.remove('hidden');
+    setTimeout(() => {
+      closeModal();
+      feedback.classList.add('hidden');
+    }, 1500);
+  }
+</script></main></div></body></html>

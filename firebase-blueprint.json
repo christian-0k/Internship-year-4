@@ -1,0 +1,155 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile document containing authentication metadata, RBAC role, and enrolled training tracks.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique user ID matching auth.uid" },
+        "email": { "type": "string", "description": "User account email address" },
+        "displayName": { "type": "string", "description": "Full name of the user" },
+        "photoURL": { "type": "string", "description": "Avatar image URL" },
+        "role": {
+          "type": "string",
+          "enum": ["student", "instructor", "lab_tech", "org_manager", "guardian", "admin"],
+          "description": "Assigned platform RBAC role"
+        },
+        "enrolledTrack": {
+          "type": "string",
+          "enum": ["maintenance", "networking", "dual", "none"],
+          "description": "Primary learning specialization track"
+        },
+        "createdAt": { "type": "string", "description": "ISO timestamp of account creation" },
+        "lastLoginAt": { "type": "string", "description": "ISO timestamp of last activity" }
+      },
+      "required": ["id", "email", "role"]
+    },
+    "LabSubmission": {
+      "title": "LabSubmission",
+      "description": "Interactive lab submission record with automated rubric grades and terminal logs.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique submission ID" },
+        "studentId": { "type": "string", "description": "UID of the student" },
+        "studentName": { "type": "string", "description": "Name of the student" },
+        "labId": { "type": "string", "description": "Target lab identifier" },
+        "labTitle": { "type": "string", "description": "Title of the lab exercise" },
+        "score": { "type": "number", "description": "Awarded score" },
+        "maxScore": { "type": "number", "description": "Maximum possible score" },
+        "status": { "type": "string", "enum": ["in_progress", "submitted", "graded", "flagged"], "description": "Submission status" },
+        "completedAt": { "type": "string", "description": "ISO timestamp of completion" }
+      },
+      "required": ["id", "studentId", "labId", "status"]
+    },
+    "EquipmentAsset": {
+      "title": "EquipmentAsset",
+      "description": "Physical lab bench equipment tracked in the Lab-Ops module.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique asset ID" },
+        "assetTag": { "type": "string", "description": "Scannable asset tag (e.g. NET-RTR-042)" },
+        "name": { "type": "string", "description": "Hardware name" },
+        "category": { "type": "string", "enum": ["Router", "Switch", "Server", "Workstation", "Test Equipment", "Cabling"], "description": "Equipment category" },
+        "model": { "type": "string", "description": "Manufacturer model" },
+        "bay": { "type": "string", "description": "Lab bay location" },
+        "rack": { "type": "string", "description": "Rack unit coordinate" },
+        "status": { "type": "string", "enum": ["online", "faulty", "maintenance", "standby"], "description": "Operational status" },
+        "healthPercent": { "type": "number", "description": "Diagnostic health score 0-100" }
+      },
+      "required": ["id", "assetTag", "name", "category", "status"]
+    },
+    "MaintenanceLog": {
+      "title": "MaintenanceLog",
+      "description": "Technician bench repair, fault diagnostics, and preventive maintenance records.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Log entry identifier" },
+        "assetId": { "type": "string", "description": "Foreign key to EquipmentAsset" },
+        "assetTag": { "type": "string", "description": "Asset barcode/tag" },
+        "title": { "type": "string", "description": "Issue summary" },
+        "severity": { "type": "string", "enum": ["critical", "high", "medium", "low"], "description": "Fault severity" },
+        "technicianId": { "type": "string", "description": "UID of technician" },
+        "status": { "type": "string", "enum": ["open", "investigating", "resolved"], "description": "Ticket status" },
+        "cost": { "type": "number", "description": "Repair / component cost" },
+        "createdAt": { "type": "string", "description": "ISO timestamp" }
+      },
+      "required": ["id", "assetId", "title", "severity", "status"]
+    },
+    "CohortAttendance": {
+      "title": "CohortAttendance",
+      "description": "Student cohort attendance records visible to instructors, sponsors, and guardians.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Attendance record ID" },
+        "studentId": { "type": "string", "description": "Target student UID" },
+        "studentName": { "type": "string", "description": "Target student name" },
+        "cohortId": { "type": "string", "description": "Cohort identifier" },
+        "date": { "type": "string", "description": "Session date YYYY-MM-DD" },
+        "status": { "type": "string", "enum": ["present", "late", "excused", "absent"], "description": "Attendance status" },
+        "checkInMethod": { "type": "string", "enum": ["qr_scanner", "manual_override", "terminal_session"], "description": "Verification method" }
+      },
+      "required": ["id", "studentId", "date", "status"]
+    },
+    "OrgTenant": {
+      "title": "OrgTenant",
+      "description": "Corporate enterprise client organization for workforce training management.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Org identifier" },
+        "name": { "type": "string", "description": "Company name" },
+        "slug": { "type": "string", "description": "URL slug" },
+        "domain": { "type": "string", "description": "Verified email domain" },
+        "seatsAllocated": { "type": "number", "description": "Contracted seat quota" },
+        "seatsUsed": { "type": "number", "description": "Currently activated seats" },
+        "scimStatus": { "type": "string", "description": "SSO/SCIM connection state" },
+        "mrr": { "type": "number", "description": "Monthly recurring revenue" }
+      },
+      "required": ["id", "name", "slug", "seatsAllocated"]
+    },
+    "SystemAuditLog": {
+      "title": "SystemAuditLog",
+      "description": "Immutable security and audit ledger entries for administrative compliance.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Audit entry ID" },
+        "timestamp": { "type": "string", "description": "Event timestamp" },
+        "actor": { "type": "string", "description": "User email or service principal" },
+        "action": { "type": "string", "description": "Audit action performed" },
+        "target": { "type": "string", "description": "Resource target identifier" },
+        "status": { "type": "string", "description": "Result status (SUCCESS/WARN/FAIL)" },
+        "merkleHash": { "type": "string", "description": "Cryptographic tamper-evident hash" }
+      },
+      "required": ["id", "timestamp", "actor", "action", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile with role-based access control and enrolled tracks"
+    },
+    "/lab_submissions/{submissionId}": {
+      "schema": "LabSubmission",
+      "description": "Lab grading records, terminal logs, and assessment scores"
+    },
+    "/equipment_assets/{assetId}": {
+      "schema": "EquipmentAsset",
+      "description": "Physical lab benches and hardware asset tracking"
+    },
+    "/maintenance_logs/{logId}": {
+      "schema": "MaintenanceLog",
+      "description": "Technician repair records and bench maintenance events"
+    },
+    "/cohort_attendance/{attendanceId}": {
+      "schema": "CohortAttendance",
+      "description": "Daily attendance checkpoints and QR check-in records"
+    },
+    "/org_tenants/{tenantId}": {
+      "schema": "OrgTenant",
+      "description": "Enterprise B2B organization memberships and license quotas"
+    },
+    "/system_audit_logs/{logId}": {
+      "schema": "SystemAuditLog",
+      "description": "Platform-wide Merkle security and RBAC audit entries"
+    }
+  }
+}

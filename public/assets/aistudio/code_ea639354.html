@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-primary": "#323030", "inverse-surface": "#ffdad4", surface: "#310000", "on-surface-variant": "#c4c7c8", "on-secondary-fixed-variant": "#4a4646", "outline-variant": "#444748", "secondary-container": "#4a4646", "error-container": "#93000a", "primary-container": "#e7e1e1", "on-tertiary-container": "#686361", "secondary-fixed": "#e8e1e0", secondary: "#ccc5c5", "on-primary-container": "#676364", "on-error": "#690005", "on-surface": "#ffdad4", "inverse-on-surface": "#680200", "on-primary-fixed-variant": "#494646", "surface-bright": "#790200", "surface-container-lowest": "#270000", "tertiary-fixed": "#e9e1de", "surface-tint": "#cac5c5", "surface-dim": "#310000", "surface-container": "#480100", "surface-container-low": "#410100", "on-secondary-container": "#bab4b3", "on-primary-fixed": "#1d1b1b", "surface-container-high": "#5c0100", primary: "#ffffff", outline: "#8e9192", "primary-fixed": "#e7e1e1", "tertiary-fixed-dim": "#ccc5c2", background: "#310000", "secondary-fixed-dim": "#ccc5c5", "on-tertiary-fixed-variant": "#4a4644", "on-tertiary-fixed": "#1e1b19", "inverse-primary": "#615e5e", "tertiary-container": "#e9e1de", error: "#ffb4ab", "surface-container-highest": "#700200", "on-background": "#ffdad4", "surface-variant": "#700200", "on-secondary": "#333030", "on-tertiary": "#33302e", "on-error-container": "#ffdad6", "on-secondary-fixed": "#1e1b1b", "primary-fixed-dim": "#cac5c5", tertiary: "#ffffff"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {margin: "2rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "margin-lg": "4rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2.5rem", gutter: "1.5rem", "margin-sm": "1rem", "space-md": "1rem"}, fontFamily: {"display-hero": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "headline-sm": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], "body-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "title-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "code-sm": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-lowest/60"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[24px]">terminal</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">NetMentor<span class="text-primary">.AI</span></span></div></div><span class="font-label-badge text-label-badge uppercase px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary border border-secondary/20">AI AUTHOR</span></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">Curriculum Node Control</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#">Overview</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="courses" href="#">My Courses &amp; Track</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="lab-studio" href="#">Lab &amp; Sandbox Studio</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="lab-authoring-suite" href="#">Lab Authoring Suite</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="quiz-builder" href="#">Dynamic Quiz Builder</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="grading-queue" href="#">Grading Queue</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-escalations" href="#">Socratic AI Escalations</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics" href="#">Analytics &amp; Revenue</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#">Settings</a></nav></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-badge text-label-badge text-outline uppercase">Cluster Telemetry</span><span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span></div><div class="flex flex-col gap-1"><div class="flex items-center justify-between text-code-sm font-code-sm"><span class="text-on-surface-variant">FFmpeg/Whisper:</span><span class="text-primary">GPU Pod 02</span></div><div class="text-code-sm font-code-sm text-outline-variant">Encoding: Online</div></div><div class="mt-1 pt-space-xs border-t border-outline-variant/30 flex items-center justify-between font-code-sm text-code-sm"><span class="text-on-surface-variant">WASM Lab:</span><span class="text-secondary">v4.18 Active</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-outline">terminal</span><span class="hover:text-on-surface">author_portal</span><span class="text-outline">/</span><span class="text-primary font-medium">curriculum_engine</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high"><span class="material-symbols-outlined text-tertiary text-[16px]">schedule</span><span class="font-code-sm text-code-sm text-on-surface-variant">Active Term: <strong class="text-on-surface">Q4 2025</strong></span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high"><span class="material-symbols-outlined text-secondary text-[16px]">assignment_late</span><span class="font-code-sm text-code-sm text-secondary font-medium">3 Pending Reviews</span></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-lowest border border-outline-variant/30"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span><span class="font-code-sm text-code-sm text-on-surface-variant">Autosave <span class="text-primary">Synced</span></span></div></div><div class="flex items-center gap-space-md"><a class="hidden sm:flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container-highest transition-colors" data-path="courses" href="#"><span class="material-symbols-outlined text-[18px]">visibility</span><span>Preview Student View</span></a><a class="flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md font-semibold hover:bg-primary transition-all shadow-[0_0_16px_rgba(16,185,129,0.25)]" data-path="courses" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span>Create New Course</span></a><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden md:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface leading-tight">David Thorne</span><span class="font-code-sm text-code-sm text-primary">Lead CCIE Author</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Builder Top Action Utility Bar -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant flex-wrap">
+<span class="text-outline">author_portal</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant">quizzes</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold tracking-wide">CCNA-QUIZ-802: VLAN Trunking &amp; BPDU Guard Diagnostic Assessment</span>
+</div>
+<div class="flex items-center gap-space-md flex-wrap pt-0.5">
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-high">
+<span class="material-symbols-outlined text-[16px] text-primary">quiz</span>
+<span class="font-code-sm text-code-sm text-on-surface">5 Questions</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-high">
+<span class="material-symbols-outlined text-[16px] text-tertiary">military_tech</span>
+<span class="font-code-sm text-code-sm text-on-surface">100 Pts Total</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-high">
+<span class="material-symbols-outlined text-[16px] text-secondary">timer</span>
+<span class="font-code-sm text-code-sm text-on-surface">Est. 15 Mins</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-high">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-code-sm text-code-sm text-on-surface">Passing: 75% (75/100)</span>
+</div>
+</div>
+</div>
+<!-- Actions Right -->
+<div class="flex items-center gap-space-sm flex-wrap self-end xl:self-auto">
+<div class="flex items-center gap-2 px-space-sm py-1.5 rounded-lg bg-surface-container-highest/60 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider">Domain 2.1 Mapped</span>
+</div>
+<!-- Student View Mode Toggle Switch -->
+<label class="flex items-center gap-2 px-space-sm py-1.5 rounded-lg bg-surface-container-high cursor-pointer select-none hover:bg-surface-bright transition-colors">
+<span class="font-label-badge text-label-badge uppercase text-on-surface-variant">Live Preview</span>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="preview-toggle" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-lowest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-on-primary peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+</div>
+</label>
+<button class="flex items-center gap-1 px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md font-semibold hover:bg-primary transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)]" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Save &amp; Deploy Quiz</span>
+</button>
+</div>
+</div>
+<!-- Main Canvas Two-Column Workspace -->
+<div class="p-space-lg grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT COLUMN: Questions Outline & Palette (4 Cols on lg) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Question Sequence Deck -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">reorder</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Assessment Queue</span>
+</div>
+<span class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded bg-primary-container/20 text-primary">5 Items</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant -mt-2">
+          Drag handles to re-sequence. Evaluated sequentially by the WASM diagnostic engine.
+        </p>
+<!-- Question items list -->
+<div class="flex flex-col gap-space-sm" id="question-list">
+<!-- Active Editing Item: Q1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-highest shadow-sm relative flex items-start gap-space-sm cursor-pointer group">
+<div class="w-1.5 self-stretch rounded-full bg-primary -ml-1"></div>
+<span class="material-symbols-outlined text-outline cursor-grab pt-1 hover:text-on-surface text-[18px]">drag_indicator</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-primary uppercase">Q1 • Single Select</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">20 pts</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface truncate pt-0.5">802.1Q Native VLAN Ingress Mismatch</span>
+<div class="flex items-center gap-space-xs pt-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-badge bg-surface-container-low text-secondary uppercase">2.1 Trunking</span>
+<span class="text-outline text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">3 min target</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px] pt-1">edit_note</span>
+</div>
+<!-- Q2: Command Sequencer -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex items-start gap-space-sm cursor-pointer group">
+<div class="w-1.5 self-stretch rounded-full bg-transparent -ml-1"></div>
+<span class="material-symbols-outlined text-outline cursor-grab pt-1 hover:text-on-surface text-[18px]">drag_indicator</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-secondary uppercase">Q2 • CLI Sequencer</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">25 pts</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface-variant truncate pt-0.5">BPDU Guard Global vs Port Fast Order</span>
+<div class="flex items-center gap-space-xs pt-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-badge bg-surface-container text-outline uppercase">2.4 STP Edge</span>
+<span class="text-outline text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">4 min target</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface text-[18px] pt-1 opacity-0 group-hover:opacity-100 transition-opacity">more_vert</span>
+</div>
+<!-- Q3: Terminal Syslog AST Regex Analyzer -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex items-start gap-space-sm cursor-pointer group">
+<div class="w-1.5 self-stretch rounded-full bg-transparent -ml-1"></div>
+<span class="material-symbols-outlined text-outline cursor-grab pt-1 hover:text-on-surface text-[18px]">drag_indicator</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-tertiary uppercase">Q3 • Syslog AST Regex</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">25 pts</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface-variant truncate pt-0.5">%SPANTREE-2-BLOCK_BPDU Error State</span>
+<div class="flex items-center gap-space-xs pt-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-badge bg-surface-container text-tertiary-fixed-dim uppercase">2.6 Diagnostic</span>
+<span class="text-outline text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">3 min target</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface text-[18px] pt-1 opacity-0 group-hover:opacity-100 transition-opacity">more_vert</span>
+</div>
+<!-- Q4: Port Matrix Bezel Selector -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex items-start gap-space-sm cursor-pointer group">
+<div class="w-1.5 self-stretch rounded-full bg-transparent -ml-1"></div>
+<span class="material-symbols-outlined text-outline cursor-grab pt-1 hover:text-on-surface text-[18px]">drag_indicator</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-secondary-fixed uppercase">Q4 • Bezel Matrix</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">15 pts</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface-variant truncate pt-0.5">Catalyst 3650 Gi1/0/24 Port Pinning</span>
+<div class="flex items-center gap-space-xs pt-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-badge bg-surface-container text-outline uppercase">1.2 Physical</span>
+<span class="text-outline text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">2 min target</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface text-[18px] pt-1 opacity-0 group-hover:opacity-100 transition-opacity">more_vert</span>
+</div>
+<!-- Q5: Socratic Scenario Question -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex items-start gap-space-sm cursor-pointer group">
+<div class="w-1.5 self-stretch rounded-full bg-transparent -ml-1"></div>
+<span class="material-symbols-outlined text-outline cursor-grab pt-1 hover:text-on-surface text-[18px]">drag_indicator</span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-primary uppercase">Q5 • Socratic Scenario</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">15 pts</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface-variant truncate pt-0.5">Root Bridge Election Storm Isolation</span>
+<div class="flex items-center gap-space-xs pt-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-badge bg-surface-container text-outline uppercase">2.3 Topology</span>
+<span class="text-outline text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">3 min target</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface text-[18px] pt-1 opacity-0 group-hover:opacity-100 transition-opacity">more_vert</span>
+</div>
+</div>
+</div>
+<!-- Add Question Palette -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<span class="font-label-badge text-label-badge text-outline uppercase tracking-wider">Palette: Add Question Node</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-space-xs">
+<button class="flex items-center gap-2 p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface transition-colors text-left">
+<span class="material-symbols-outlined text-primary text-[20px]">radio_button_checked</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md leading-tight">Multiple Choice</span>
+<span class="font-code-sm text-code-sm text-outline">Single / Multi</span>
+</div>
+</button>
+<button class="flex items-center gap-2 p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface transition-colors text-left">
+<span class="material-symbols-outlined text-secondary text-[20px]">low_priority</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md leading-tight">Drag &amp; Drop</span>
+<span class="font-code-sm text-code-sm text-outline">CLI Sequencer</span>
+</div>
+</button>
+<button class="flex items-center gap-2 p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface transition-colors text-left">
+<span class="material-symbols-outlined text-tertiary text-[20px]">terminal</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md leading-tight">CLI Terminal</span>
+<span class="font-code-sm text-code-sm text-outline">Syslog regex AST</span>
+</div>
+</button>
+<button class="flex items-center gap-2 p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface transition-colors text-left">
+<span class="material-symbols-outlined text-primary text-[20px]">grid_view</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md leading-tight">Bezel Click</span>
+<span class="font-code-sm text-code-sm text-outline">Switch port matrix</span>
+</div>
+</button>
+</div>
+<button class="w-full mt-space-xs flex items-center justify-center gap-2 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-title-md text-title-md transition-colors">
+<span class="material-symbols-outlined text-primary text-[18px]">add_box</span>
+<span>+ Fill in the Blanks (Code Block)</span>
+</button>
+</div>
+<!-- Quick Telemetry & Guardrail Health -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-outline uppercase">Scoring Rubric Balance</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">100/100 Pts</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 20%"></div>
+<div class="bg-secondary h-full" style="width: 25%"></div>
+<div class="bg-tertiary h-full" style="width: 25%"></div>
+<div class="bg-secondary-fixed h-full" style="width: 15%"></div>
+<div class="bg-primary-fixed-dim h-full" style="width: 15%"></div>
+</div>
+<div class="flex justify-between items-center text-outline font-code-sm text-code-sm pt-1">
+<span>5 Domains Covered</span>
+<span>Adaptive Rigor: Tier 3</span>
+</div>
+</div>
+</div>
+<!-- RIGHT / MAIN AREA: Active Question Dynamic Form Editor (8 Cols on lg) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Editor Card -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-xl flex flex-col gap-space-lg">
+<!-- Question Header & Top Metas -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-1 rounded bg-primary-container text-on-primary-container font-label-badge text-label-badge font-bold uppercase">Editing Q1</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Question Configurator</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface-variant transition-colors" title="Duplicate Question">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface-variant transition-colors" title="Export as YAML">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-error-container hover:text-error transition-colors" title="Delete Question">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Meta Selector Row: Type, Domain, Points, Time -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="flex flex-col gap-1 md:col-span-1">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Type</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-lowest text-on-surface font-title-md text-title-md rounded-lg px-3 py-2 pr-8 focus:outline-none focus:ring-1 focus:ring-secondary">
+<option selected="">Multiple Choice (Single)</option>
+<option>Multiple Choice (Multiple)</option>
+<option>CLI Drag &amp; Drop Sequence</option>
+<option>Syslog AST Regex Token</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2.5 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Cisco CCNA 200-301 Blueprint Domain</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-lowest text-secondary font-title-md text-title-md rounded-lg px-3 py-2 pr-8 focus:outline-none focus:ring-1 focus:ring-secondary truncate">
+<option selected="">2.1 Configure and verify VLANs (normal range) spanning multiple switches</option>
+<option>2.4 Configure and verify Layer 2 protocols (STP/RSTP/PortFast/BPDU Guard)</option>
+<option>2.5 Interpret root port, designated port, and blocking port states</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2.5 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 md:col-span-1">
+<div class="flex items-center justify-between">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Points • Time</label>
+</div>
+<div class="grid grid-cols-2 gap-1.5">
+<input class="w-full bg-surface-container-lowest text-on-surface font-code-sm text-code-sm rounded-lg px-2.5 py-2 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Pts" type="number" value="20"/>
+<input class="w-full bg-surface-container-lowest text-on-surface font-code-sm text-code-sm rounded-lg px-2.5 py-2 focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Est." type="text" value="3m"/>
+</div>
+</div>
+</div>
+<!-- Question Prompt Rich Input Field -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase flex items-center gap-1.5">
+<span>Question Prompt &amp; Scenario Blueprint</span>
+<span class="text-primary font-code-sm">(Markdown + CLI Syntax Highlight)</span>
+</label>
+<div class="flex items-center gap-1 text-outline">
+<button class="p-1 rounded hover:bg-surface-container-high hover:text-on-surface font-code-sm text-code-sm">**B**</button>
+<button class="p-1 rounded hover:bg-surface-container-high hover:text-on-surface font-code-sm text-code-sm">`Code`</button>
+<button class="p-1 rounded hover:bg-surface-container-high hover:text-on-surface font-code-sm text-code-sm">Insert Topology</button>
+</div>
+</div>
+<div class="relative bg-surface-container-lowest rounded-lg p-space-md">
+<textarea class="w-full bg-transparent text-on-surface font-body-md text-body-md focus:outline-none resize-y leading-relaxed" placeholder="State the technical failure or packet trace scenario here..." rows="4">Refer to the topology and running-config telemetry below. Switch 1 (`SW1`) has trunk interface `GigabitEthernet1/0/1` configured with `switchport trunk native vlan 99`. Switch 2 (`SW2`) on the peer link has retained default settings with native VLAN 1. 
+
+A workstation attached to access port `Gi1/0/10` on SW1 generates an untagged broadcast ARP frame for host resolution. Which statement precisely characterizes the packet propagation behavior across this 802.1Q trunk link?</textarea>
+<!-- Embedded Diagnostic Topology Micro-card preview -->
+<div class="mt-space-md p-space-sm bg-surface-container-high/80 rounded-lg flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+<span class="font-code-sm text-code-sm text-on-surface font-medium">[VLAN_DIAG_TOPOLOGY_01.svg linked]</span>
+<span class="font-label-badge text-label-badge text-outline uppercase px-1.5 py-0.5 rounded bg-surface-container-lowest">Auto-Rendered</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span class="cursor-pointer hover:underline">Inspect Diagram Nodes</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Answer Choices Configuration -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Configured Answer Choices</span>
+<span class="font-code-sm text-code-sm text-primary">(Choose radio to assign answer key)</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">4 Choices Present</span>
+</div>
+<div class="flex flex-col gap-space-sm" id="choices-container">
+<!-- Choice A (Marked Correct) -->
+<div class="p-space-md rounded-xl bg-surface-container-high/80 shadow-sm flex flex-col md:flex-row items-start gap-space-md transition-all">
+<div class="flex items-center gap-2 pt-1 self-start">
+<input checked="" class="w-4 h-4 text-primary bg-surface-container-lowest focus:ring-0 cursor-pointer" id="choice_a" name="correct_answer" type="radio"/>
+<span class="font-code-sm text-code-sm font-bold text-primary">Choice A</span>
+</div>
+<div class="flex-1 w-full min-w-0">
+<textarea class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg p-2.5 focus:outline-none focus:ring-1 focus:ring-primary" rows="2">Frames emitted from SW1 untagged (VLAN 99) are ingested by SW2 into its native VLAN 1, resulting in cross-VLAN broadcast leakage.</textarea>
+</div>
+<div class="flex md:flex-col items-center gap-1 self-end md:self-start">
+<span class="px-2 py-1 rounded bg-primary-container text-on-primary-container font-label-badge text-label-badge uppercase font-bold tracking-wider">Correct Key</span>
+<button class="p-1.5 text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">drag_indicator</span></button>
+</div>
+</div>
+<!-- Choice B -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high/50 flex flex-col md:flex-row items-start gap-space-md transition-colors">
+<div class="flex items-center gap-2 pt-1 self-start">
+<input class="w-4 h-4 text-primary bg-surface-container-lowest focus:ring-0 cursor-pointer" id="choice_b" name="correct_answer" type="radio"/>
+<span class="font-code-sm text-code-sm font-medium text-on-surface-variant">Choice B</span>
+</div>
+<div class="flex-1 w-full min-w-0">
+<textarea class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg p-2.5 focus:outline-none focus:ring-1 focus:ring-secondary" rows="2">The switch hardware automatically encapsulates 802.1Q tags onto untagged frames using ingress PVID matching before egress.</textarea>
+</div>
+<div class="flex md:flex-col items-center gap-1 self-end md:self-start">
+<span class="px-2 py-1 rounded bg-surface-container-highest text-outline font-label-badge text-label-badge uppercase">Distractor</span>
+<button class="p-1.5 text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">drag_indicator</span></button>
+</div>
+</div>
+<!-- Choice C -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high/50 flex flex-col md:flex-row items-start gap-space-md transition-colors">
+<div class="flex items-center gap-2 pt-1 self-start">
+<input class="w-4 h-4 text-primary bg-surface-container-lowest focus:ring-0 cursor-pointer" id="choice_c" name="correct_answer" type="radio"/>
+<span class="font-code-sm text-code-sm font-medium text-on-surface-variant">Choice C</span>
+</div>
+<div class="flex-1 w-full min-w-0">
+<textarea class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg p-2.5 focus:outline-none focus:ring-1 focus:ring-secondary" rows="2">DTP forces Gi1/0/1 into an automatic access fallback mode, discarding all ingress frames immediately.</textarea>
+</div>
+<div class="flex md:flex-col items-center gap-1 self-end md:self-start">
+<span class="px-2 py-1 rounded bg-surface-container-highest text-outline font-label-badge text-label-badge uppercase">Distractor</span>
+<button class="p-1.5 text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">drag_indicator</span></button>
+</div>
+</div>
+<!-- Choice D -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high/50 flex flex-col md:flex-row items-start gap-space-md transition-colors">
+<div class="flex items-center gap-2 pt-1 self-start">
+<input class="w-4 h-4 text-primary bg-surface-container-lowest focus:ring-0 cursor-pointer" id="choice_d" name="correct_answer" type="radio"/>
+<span class="font-code-sm text-code-sm font-medium text-on-surface-variant">Choice D</span>
+</div>
+<div class="flex-1 w-full min-w-0">
+<textarea class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg p-2.5 focus:outline-none focus:ring-1 focus:ring-secondary" rows="2">STP Root Guard preempts the packet forwarder engine and transitions the bridge ID into blocking loop suppression.</textarea>
+</div>
+<div class="flex md:flex-col items-center gap-1 self-end md:self-start">
+<span class="px-2 py-1 rounded bg-surface-container-highest text-outline font-label-badge text-label-badge uppercase">Distractor</span>
+<button class="p-1.5 text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">drag_indicator</span></button>
+</div>
+</div>
+</div>
+<button class="self-start flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-md text-title-md transition-colors">
+<span class="material-symbols-outlined text-primary text-[18px]">add_circle</span>
+<span>+ Add Answer Choice</span>
+</button>
+</div>
+<!-- Socratic AI Tutor Guardrail Configuration Panel -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary font-label-badge text-label-badge uppercase font-bold">[AI_SOCRATIC_GUARDRAIL]</span>
+<span class="font-title-md text-title-md text-on-surface">Interactive AI Guidance System</span>
+</div>
+<span class="font-label-badge text-label-badge text-tertiary uppercase">Active Enforcement</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-badge text-label-badge text-on-surface-variant uppercase">Socratic AI Prompt Conditioning</label>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg">
+<textarea class="w-full bg-transparent text-on-surface font-body-md text-body-md focus:outline-none" rows="2">Guide student to consider the default PVID behavior when untagged frames traverse a trunk without revealing Option A directly.</textarea>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Hint Escalation Limit</span>
+<span class="font-code-sm text-code-sm text-tertiary">-5 XP per hint inquiry</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">2 Hints</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Anti-Cheat Safeguard</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Strict RFC 2328 Mode</span>
+</div>
+<div class="px-2 py-1 rounded bg-primary-container/20 text-primary font-label-badge text-label-badge uppercase font-semibold">Active</div>
+</div>
+</div>
+</div>
+<!-- Automated Validation & Remediation Routing -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">rule</span>
+<span class="font-title-md text-title-md text-on-surface">Automated Evaluation &amp; Remediation Pipeline</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">Deterministic WASM Node</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Validation Trigger</span>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-code-sm text-code-sm">
+                Verify input against Choice A Key. If failed: log telemetric delta &lt; 0.
+              </div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Target Remediation URI</span>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest text-secondary font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[16px]">link</span>
+<span class="truncate">/learn/ccna-200-301/vlan-trunking-lab</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- LIVE "STUDENT MODE" INTERACTIVE PREVIEW DRAWER -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-2xl flex flex-col gap-space-md" id="student-preview-card">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="h-2.5 w-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-badge text-label-badge text-primary uppercase font-bold tracking-widest">LIVE STUDENT VIEW ENGINE</span>
+<span class="font-code-sm text-code-sm text-outline">| Q1 of 5</span>
+</div>
+<div class="flex items-center gap-space-md font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>02:48 remaining</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">20 Pts</span>
+</div>
+</div>
+<!-- Student View Question Body -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Refer to the topology and running-config telemetry below. Switch 1 (<span class="font-code-sm text-code-sm text-secondary bg-surface-container-lowest px-1 rounded">SW1</span>) has trunk interface <span class="font-code-sm text-code-sm text-secondary bg-surface-container-lowest px-1 rounded">GigabitEthernet1/0/1</span> configured with <span class="font-code-sm text-code-sm text-primary bg-surface-container-lowest px-1 rounded">switchport trunk native vlan 99</span>. Switch 2 (<span class="font-code-sm text-code-sm text-secondary bg-surface-container-lowest px-1 rounded">SW2</span>) on the peer link has retained default settings with native VLAN 1.
+          </p>
+<!-- SVG Visual Topology Illustration (Network Trunk Diagnostic Diagram) -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex flex-col items-center justify-center">
+<svg class="w-full max-w-xl h-44" fill="none" viewbox="0 0 540 160" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid Background Subtle Matrix -->
+<defs>
+<pattern height="20" id="netGrid" patternunits="userSpaceOnUse" width="20">
+<path class="text-surface-container-high/40" d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#netGrid)" height="100%" width="100%"></rect>
+<!-- Trunk Connection Bus -->
+<line class="text-primary" stroke="currentColor" stroke-dasharray="4 4" stroke-width="3" x1="150" x2="390" y1="80" y2="80"></line>
+<!-- Trunk Label Badge -->
+<rect class="fill-surface-container-highest" height="26" rx="4" width="100" x="220" y="66"></rect>
+<text class="text-primary font-code-sm text-[11px] font-bold" fill="currentColor" text-anchor="middle" x="270" y="83">802.1Q TRUNK</text>
+<!-- Switch 1 Node -->
+<g transform="translate(60, 40)">
+<rect class="fill-surface-container-high" height="75" rx="6" width="90"></rect>
+<rect class="fill-surface-container-highest" height="18" rx="6" width="90" x="0" y="0"></rect>
+<text class="text-on-surface font-code-sm text-[11px] font-semibold" fill="currentColor" text-anchor="middle" x="45" y="13">SW1 (Core)</text>
+<text class="text-secondary font-code-sm text-[10px]" fill="currentColor" text-anchor="middle" x="45" y="38">Gi1/0/1</text>
+<rect class="fill-primary-container/20" height="18" rx="3" width="60" x="15" y="46"></rect>
+<text class="text-primary font-code-sm text-[10px] font-bold" fill="currentColor" text-anchor="middle" x="45" y="58">PVID: 99</text>
+</g>
+<!-- Switch 2 Node -->
+<g transform="translate(390, 40)">
+<rect class="fill-surface-container-high" height="75" rx="6" width="90"></rect>
+<rect class="fill-surface-container-highest" height="18" rx="6" width="90" x="0" y="0"></rect>
+<text class="text-on-surface font-code-sm text-[11px] font-semibold" fill="currentColor" text-anchor="middle" x="45" y="13">SW2 (Dist)</text>
+<text class="text-secondary font-code-sm text-[10px]" fill="currentColor" text-anchor="middle" x="45" y="38">Gi1/0/1</text>
+<rect class="fill-tertiary-container/20" height="18" rx="3" width="60" x="15" y="46"></rect>
+<text class="text-tertiary font-code-sm text-[10px] font-bold" fill="currentColor" text-anchor="middle" x="45" y="58">PVID: 1 (Def)</text>
+</g>
+<!-- Packet Egress Vector -->
+<circle class="fill-primary" cx="210" cy="80" r="5"></circle>
+<path class="text-primary" d="M 215 80 L 235 80" marker-end="url(#arrow)" stroke="currentColor" stroke-width="2"></path>
+<text class="text-error font-code-sm text-[10px]" fill="currentColor" text-anchor="middle" x="270" y="112">Native VLAN Mismatch Warning</text>
+</svg>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+            A workstation attached to access port <span class="font-code-sm text-code-sm text-secondary bg-surface-container-lowest px-1 rounded">Gi1/0/10</span> on SW1 generates an untagged broadcast ARP frame for host resolution. Which statement precisely characterizes the packet propagation behavior across this 802.1Q trunk link?
+          </p>
+<!-- Interactive Simulated Radio Group -->
+<div class="flex flex-col gap-2 pt-1" id="interactive-student-options">
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-high/90 hover:bg-surface-bright cursor-pointer transition-colors shadow-sm">
+<input class="w-4 h-4 text-primary bg-surface-container-lowest focus:ring-0" name="preview_choice" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface">Frames emitted from SW1 untagged (VLAN 99) are ingested by SW2 into its native VLAN 1, resulting in cross-VLAN broadcast leakage.</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary bg-surface-container-lowest focus:ring-0" name="preview_choice" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface-variant">The switch hardware automatically encapsulates 802.1Q tags onto untagged frames using ingress PVID matching before egress.</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary bg-surface-container-lowest focus:ring-0" name="preview_choice" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface-variant">DTP forces Gi1/0/1 into an automatic access fallback mode, discarding all ingress frames.</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary bg-surface-container-lowest focus:ring-0" name="preview_choice" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface-variant">STP Root Guard preempts the packet forwarder engine and transitions the bridge ID into blocking loop suppression.</span>
+</label>
+</div>
+<!-- Student Live Actions & Socratic Trigger -->
+<div class="flex items-center justify-between pt-2 flex-wrap gap-2">
+<button class="flex items-center gap-2 px-space-sm py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-bright text-tertiary transition-colors" id="hint-trigger-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span class="font-code-sm text-code-sm font-semibold">Request Socratic Hint (2 Left • -5 XP)</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md font-semibold hover:bg-primary transition-colors" type="button">
+<span>Submit Answer for Verification</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Simulated Socratic AI Response Banner (Interactive Toggle) -->
+<div class="hidden p-space-sm rounded-lg bg-surface-container-lowest flex items-start gap-space-sm" id="hint-banner">
+<span class="material-symbols-outlined text-tertiary text-[20px] pt-0.5">smart_toy</span>
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-tertiary uppercase font-bold">[SOCRATIC_MENTOR_COPILOT]</span>
+<span class="font-code-sm text-code-sm text-outline">-5 XP Applied</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Remember how 802.1Q treats frames belonging to a port's native VLAN when transmitting over a trunk link: does it apply an encapsulation tag header, or strip it? If SW2 receives an untagged frame on a trunk, which VLAN does its local logic associate that frame with?
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic Builder Micro-Interactions
+  document.addEventListener('DOMContentLoaded', () => {
+    // Socratic Hint Preview Toggle in Student Mode
+    const hintBtn = document.getElementById('hint-trigger-btn');
+    const hintBanner = document.getElementById('hint-banner');
+    if (hintBtn && hintBanner) {
+      hintBtn.addEventListener('click', () => {
+        hintBanner.classList.toggle('hidden');
+      });
+    }
+
+    // Toggle Student Mode Drawer visibility
+    const previewToggle = document.getElementById('preview-toggle');
+    const previewCard = document.getElementById('student-preview-card');
+    if (previewToggle && previewCard) {
+      previewToggle.addEventListener('change', (e) => {
+        if (e.target.checked) {
+          previewCard.classList.remove('hidden');
+        } else {
+          previewCard.classList.add('hidden');
+        }
+      });
+    }
+  });
+</script></main></div></body></html>

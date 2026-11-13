@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-primary": "#323030", "inverse-surface": "#ffdad4", surface: "#310000", "on-surface-variant": "#c4c7c8", "on-secondary-fixed-variant": "#4a4646", "outline-variant": "#444748", "secondary-container": "#4a4646", "error-container": "#93000a", "primary-container": "#e7e1e1", "on-tertiary-container": "#686361", "secondary-fixed": "#e8e1e0", secondary: "#ccc5c5", "on-primary-container": "#676364", "on-error": "#690005", "on-surface": "#ffdad4", "inverse-on-surface": "#680200", "on-primary-fixed-variant": "#494646", "surface-bright": "#790200", "surface-container-lowest": "#270000", "tertiary-fixed": "#e9e1de", "surface-tint": "#cac5c5", "surface-dim": "#310000", "surface-container": "#480100", "surface-container-low": "#410100", "on-secondary-container": "#bab4b3", "on-primary-fixed": "#1d1b1b", "surface-container-high": "#5c0100", primary: "#ffffff", outline: "#8e9192", "primary-fixed": "#e7e1e1", "tertiary-fixed-dim": "#ccc5c2", background: "#310000", "secondary-fixed-dim": "#ccc5c5", "on-tertiary-fixed-variant": "#4a4644", "on-tertiary-fixed": "#1e1b19", "inverse-primary": "#615e5e", "tertiary-container": "#e9e1de", error: "#ffb4ab", "surface-container-highest": "#700200", "on-background": "#ffdad4", "surface-variant": "#700200", "on-secondary": "#333030", "on-tertiary": "#33302e", "on-error-container": "#ffdad6", "on-secondary-fixed": "#1e1b1b", "primary-fixed-dim": "#cac5c5", tertiary: "#ffffff"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {margin: "2rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "margin-lg": "4rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2.5rem", gutter: "1.5rem", "margin-sm": "1rem", "space-md": "1rem"}, fontFamily: {"display-hero": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "headline-sm": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "code-lg": ["JetBrains Mono"], "body-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "title-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "code-sm": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {"display-hero": ["56px", {lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800"}], "label-badge": ["11px", {lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "display-hero-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800"}], "code-lg": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "700"}], "body-md": ["15px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}], "code-sm": ["13px", {lineHeight: "20px", letterSpacing: "0em", fontWeight: "400"}], "headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-lowest/60"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[24px]">terminal</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">NetMentor<span class="text-primary">.AI</span></span></div></div><span class="font-label-badge text-label-badge uppercase px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary border border-secondary/20">AI AUTHOR</span></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">Curriculum Node Control</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#">Overview</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="courses" href="#">My Courses &amp; Track</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="lab-studio" href="#">Lab &amp; Sandbox Studio</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="lab-authoring-suite" href="#">Lab Authoring Suite</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="quiz-builder" href="#">Dynamic Quiz Builder</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="grading-queue" href="#">Grading Queue</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-escalations" href="#">Socratic AI Escalations</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics" href="#">Analytics &amp; Revenue</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#">Settings</a></nav></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-badge text-label-badge text-outline uppercase">Cluster Telemetry</span><span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span></div><div class="flex flex-col gap-1"><div class="flex items-center justify-between text-code-sm font-code-sm"><span class="text-on-surface-variant">FFmpeg/Whisper:</span><span class="text-primary">GPU Pod 02</span></div><div class="text-code-sm font-code-sm text-outline-variant">Encoding: Online</div></div><div class="mt-1 pt-space-xs border-t border-outline-variant/30 flex items-center justify-between font-code-sm text-code-sm"><span class="text-on-surface-variant">WASM Lab:</span><span class="text-secondary">v4.18 Active</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-outline">terminal</span><span class="hover:text-on-surface">author_portal</span><span class="text-outline">/</span><span class="text-primary font-medium">curriculum_engine</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high"><span class="material-symbols-outlined text-tertiary text-[16px]">schedule</span><span class="font-code-sm text-code-sm text-on-surface-variant">Active Term: <strong class="text-on-surface">Q4 2025</strong></span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high"><span class="material-symbols-outlined text-secondary text-[16px]">assignment_late</span><span class="font-code-sm text-code-sm text-secondary font-medium">3 Pending Reviews</span></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-lowest border border-outline-variant/30"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span><span class="font-code-sm text-code-sm text-on-surface-variant">Autosave <span class="text-primary">Synced</span></span></div></div><div class="flex items-center gap-space-md"><a class="hidden sm:flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container-highest transition-colors" data-path="courses" href="#"><span class="material-symbols-outlined text-[18px]">visibility</span><span>Preview Student View</span></a><a class="flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md font-semibold hover:bg-primary transition-all shadow-[0_0_16px_rgba(16,185,129,0.25)]" data-path="courses" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span>Create New Course</span></a><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden md:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface leading-tight">David Thorne</span><span class="font-code-sm text-code-sm text-primary">Lead CCIE Author</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Control Bar / Subheader -->
+<div class="w-full bg-surface-container-low px-space-lg py-space-sm shadow-md flex flex-col gap-3">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<!-- Breadcrumb & Spec Status -->
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 text-code-sm font-code-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">lan</span>
+            Author Portal
+          </span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">Labs</span>
+<span class="text-outline">/</span>
+<span class="text-primary font-semibold truncate">CCNA-LAB-402: Native VLAN Mismatch Remediation &amp; 802.1Q Trunk Fault Engine</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-code-sm font-code-sm">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span>Draft Autosaved 2s ago (Redis Stream)</span>
+</div>
+<span class="text-outline text-xs">•</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="text-xs uppercase tracking-wider font-semibold">Cisco CCNA 200-301 (Domain 2.1 &amp; 2.2)</span>
+</div>
+</div>
+</div>
+<!-- Action Suite -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-secondary text-code-sm font-code-sm flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[18px] text-secondary">play_circle</span>
+<span>Test in WASM Sandbox</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-lowest text-xs text-primary">0.4ms</span>
+</button>
+<div class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container text-code-sm font-code-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>AST: Valid (0 Errors)</span>
+</div>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-code-sm font-code-sm flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>Student View</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md font-semibold hover:bg-primary transition-all shadow-[0_0_20px_rgba(16,185,129,0.35)] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+<span>Publish Lab Spec</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dual-Pane Core Workbench -->
+<div class="w-full grid grid-cols-1 xl:grid-cols-2 gap-space-md p-space-md items-start">
+<!-- LEFT PANE: YAML DSL Code Editor -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-xl min-w-0">
+<!-- Editor Tabs -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm pt-space-xs">
+<div class="flex items-center gap-1 overflow-x-auto">
+<button class="flex items-center gap-2 px-space-md py-2 rounded-t-lg bg-surface-container-lowest text-primary font-code-sm text-code-sm font-semibold shadow-inner">
+<span class="material-symbols-outlined text-[16px] text-primary">code</span>
+<span>topology_spec.yaml</span>
+<span class="w-2 h-2 rounded-full bg-primary/80"></span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-t-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-code-sm text-code-sm transition-all">
+<span class="material-symbols-outlined text-[16px] text-outline">description</span>
+<span>initial_configs.ios</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-t-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-code-sm text-code-sm transition-all">
+<span class="material-symbols-outlined text-[16px] text-tertiary">warning</span>
+<span>fault_injection.yaml</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-t-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-code-sm text-code-sm transition-all">
+<span class="material-symbols-outlined text-[16px] text-secondary">account_tree</span>
+<span>validation_ast.json</span>
+</button>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant px-2">
+<button class="p-1 hover:text-on-surface rounded bg-surface-container-high/40 hover:bg-surface-container-high" title="Format Document">
+<span class="material-symbols-outlined text-[16px]">format_align_left</span>
+</button>
+<button class="p-1 hover:text-on-surface rounded bg-surface-container-high/40 hover:bg-surface-container-high" title="Copy Raw Spec">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Editor Code Body -->
+<div class="flex text-code-sm font-code-sm leading-relaxed overflow-x-auto p-space-sm bg-surface-container-lowest max-h-[640px] select-text">
+<!-- Line Numbers -->
+<div class="flex flex-col text-right pr-4 select-none text-outline-variant font-code-sm opacity-60">
+<span>01</span><span>02</span><span>03</span><span>04</span><span>05</span>
+<span>06</span><span>07</span><span>08</span><span>09</span><span>10</span>
+<span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+<span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+<span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
+<span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+<span>31</span><span>32</span>
+</div>
+<!-- Syntax Monospace Content -->
+<div class="flex flex-col flex-1 pl-2 font-code-sm text-on-surface whitespace-pre">
+<div><span class="text-outline"># NetMentor DSL v2.4 - Native VLAN Misconfiguration Simulation</span></div>
+<div><span class="text-primary font-semibold">schema_version</span><span class="text-outline">:</span> <span class="text-tertiary">"2025.4-lts"</span></div>
+<div><span class="text-primary font-semibold">lab_id</span><span class="text-outline">:</span> <span class="text-tertiary">"ccna-200-301-vlan-trunking-fault"</span></div>
+<div><span class="text-primary font-semibold">environment</span><span class="text-outline">:</span> <span class="text-secondary">"qemu-wasm-cat9300-iosxe-17.9"</span></div>
+<div><span class="text-primary font-semibold">runtime_isolation</span><span class="text-outline">:</span> <span class="text-secondary font-bold">ebpf_strict_namespaces</span></div>
+<div></div>
+<div><span class="text-primary font-semibold">nodes</span><span class="text-outline">:</span></div>
+<div>  - <span class="text-secondary font-semibold">id</span><span class="text-outline">:</span> <span class="text-on-surface font-bold">sw1</span></div>
+<div> <span class="text-primary">hardware</span><span class="text-outline">:</span> <span class="text-tertiary">"Cisco Catalyst 9300-24T"</span></div>
+<div> <span class="text-primary">role</span><span class="text-outline">:</span> <span class="text-secondary">Distribution</span></div>
+<div> <span class="text-primary">ports</span><span class="text-outline">:</span> [<span class="text-secondary">"Gi1/0/1"</span>, <span class="text-secondary">"Gi1/0/2"</span>]</div>
+<div> <span class="text-primary">native_vlan</span><span class="text-outline">:</span> <span class="text-tertiary font-bold">1</span> <span class="text-outline"># IEEE default untagged PVID</span></div>
+<div></div>
+<div>  - <span class="text-secondary font-semibold">id</span><span class="text-outline">:</span> <span class="text-on-surface font-bold">sw2</span></div>
+<div> <span class="text-primary">hardware</span><span class="text-outline">:</span> <span class="text-tertiary">"Cisco Catalyst 3850-24P"</span></div>
+<div> <span class="text-primary">role</span><span class="text-outline">:</span> <span class="text-secondary">Access</span></div>
+<div> <span class="text-primary">ports</span><span class="text-outline">:</span> [<span class="text-secondary">"Gi1/0/1"</span>, <span class="text-secondary">"Gi1/0/24"</span>]</div>
+<div class="bg-surface-container-high/60 -mx-2 px-2 rounded"><span class="text-primary">native_vlan</span><span class="text-outline">:</span> <span class="text-tertiary font-bold">99</span> <span class="text-outline"># INJECTED MISMATCH: CDP %CDP-4-NATIVE_VLAN_MISMATCH</span></div>
+<div></div>
+<div><span class="text-primary font-semibold">links</span><span class="text-outline">:</span></div>
+<div>  - <span class="text-secondary">source</span><span class="text-outline">:</span> <span class="text-on-surface">"sw1:Gi1/0/1"</span></div>
+<div> <span class="text-secondary">target</span><span class="text-outline">:</span> <span class="text-on-surface">"sw2:Gi1/0/1"</span></div>
+<div> <span class="text-primary">encapsulation</span><span class="text-outline">:</span> <span class="text-secondary">dot1q</span></div>
+<div> <span class="text-primary">duplex</span><span class="text-outline">:</span> <span class="text-secondary">full</span></div>
+<div> <span class="text-primary">vlan_allowed</span><span class="text-outline">:</span> <span class="text-tertiary">"1,10,20,99"</span></div>
+<div> <span class="text-primary">native_vlan_mismatch</span><span class="text-outline">:</span> <span class="text-tertiary font-bold">true</span></div>
+<div></div>
+<div><span class="text-primary font-semibold">fault_injection</span><span class="text-outline">:</span></div>
+<div> <span class="text-secondary">schedule</span><span class="text-outline">:</span> <span class="text-tertiary">on_boot</span></div>
+<div> <span class="text-secondary">type</span><span class="text-outline">:</span> <span class="text-error font-semibold">BPDU_GUARD_TRIGGER_MISCONFIG</span></div>
+<div> <span class="text-secondary">target_interface</span><span class="text-outline">:</span> <span class="text-on-surface">"sw1:Gi1/0/1"</span></div>
+<div> <span class="text-secondary">delay</span><span class="text-outline">:</span> <span class="text-tertiary">45s</span></div>
+</div>
+</div>
+<!-- Editor Status Bar Footer -->
+<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container text-code-sm font-code-sm text-on-surface-variant">
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1.5 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            YAML v1.2 Compliant
+          </span>
+<span class="text-outline-variant">|</span>
+<span>Engine: <strong class="text-on-surface">LibYAML WASM JIT</strong></span>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-xs">UTF-8</span>
+<span class="text-secondary font-medium">Ln 18, Col 24</span>
+</div>
+</div>
+</div>
+<!-- RIGHT PANE: Real-Time Network Topology Graph Preview -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-xl min-w-0">
+<!-- Topology Graph Action Header -->
+<div class="flex flex-wrap items-center justify-between bg-surface-container-low px-space-md py-space-sm gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">WASM Canvas Topology Engine</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-code-sm">Live AST (12ms)</span>
+</div>
+<!-- Controls -->
+<div class="flex items-center gap-1">
+<div class="flex items-center bg-surface-container-high rounded-lg p-0.5">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Zoom In">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Zoom Out">
+<span class="material-symbols-outlined text-[16px]">zoom_out</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Recenter Topology">
+<span class="material-symbols-outlined text-[16px]">center_focus_strong</span>
+</button>
+</div>
+<button class="px-2 py-1 rounded-lg bg-surface-container-high text-xs font-code-sm text-primary flex items-center gap-1 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[14px]">motion_photos_on</span>
+<span>Physics ON</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface" title="Export SVG Artifact">
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+</div>
+</div>
+<!-- Graph Stage SVG Visualizer -->
+<div class="relative w-full h-[585px] bg-gradient-to-b from-surface-container-lowest via-surface-container-low to-surface-container-lowest flex items-center justify-center overflow-hidden">
+<!-- Ambient Circuit Grid Background -->
+<svg class="absolute inset-0 w-full h-full opacity-15 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="32" id="net-grid" patternunits="userSpaceOnUse" width="32">
+<path class="text-secondary/40" d="M 32 0 L 0 0 0 32" fill="none" stroke="currentColor" stroke-width="0.75"></path>
+<circle class="text-secondary" cx="0" cy="0" fill="currentColor" r="1.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#net-grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Live Network Nodes and Edges Visualization -->
+<svg class="relative w-full h-full max-w-[620px] max-h-[540px] drop-shadow-2xl" fill="none" viewbox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+<!-- Connection Link 1: SW1 -> SW2 (Trunk Line with Mismatch Alarm) -->
+<line class="text-tertiary" stroke="currentColor" stroke-dasharray="6 4" stroke-width="3" x1="200" x2="400" y1="230" y2="230">
+<animate attributename="stroke-dashoffset" dur="1.2s" repeatcount="indefinite" values="0;20"></animate>
+</line>
+<!-- Host Connection: PC1 -> SW1 -->
+<line class="text-primary/70" stroke="currentColor" stroke-width="2" x1="100" x2="200" y1="380" y2="230"></line>
+<!-- Host Connection: PC2 -> SW2 -->
+<line class="text-secondary/70" stroke="currentColor" stroke-width="2" x1="500" x2="400" y1="380" y2="230"></line>
+<!-- Highlighting Warning Halo around Trunk Link -->
+<rect class="fill-surface-container-high/90 stroke-tertiary/60" height="48" rx="8" width="130" x="235" y="200"></rect>
+<text class="fill-tertiary font-code-sm text-[10px] font-bold" text-anchor="middle" x="300" y="218">! NATIVE VLAN MISMATCH</text>
+<text class="fill-on-surface font-code-sm text-[11px]" text-anchor="middle" x="300" y="235">SW1: 1 ↔ SW2: 99</text>
+<!-- Node SW-01 (Cat 9300) -->
+<g class="cursor-pointer" transform="translate(200, 230)">
+<circle class="fill-surface-container stroke-primary/50" r="46" stroke-width="2"></circle>
+<circle class="fill-surface-container-high" r="40"></circle>
+<circle class="fill-primary animate-pulse" r="6"></circle>
+<text class="fill-primary font-headline-sm text-[13px] font-bold tracking-wider" text-anchor="middle" y="-52">SW-01 (CAT 9300)</text>
+<text class="fill-on-surface-variant font-code-sm text-[10px]" text-anchor="middle" y="-14">Gi1/0/1 (Trunk)</text>
+<text class="fill-on-surface font-code-sm text-[10px]" text-anchor="middle" y="18">PVID: 1</text>
+<text class="fill-outline font-code-sm text-[9px]" text-anchor="middle" y="30">DISTRIBUTION</text>
+</g>
+<!-- Fault Beacon on SW-01 / Gi1/0/1 -->
+<g transform="translate(250, 230)">
+<circle class="fill-error/30 animate-ping" r="12"></circle>
+<circle class="fill-error" r="8"></circle>
+<text class="fill-on-error font-headline-sm text-[10px] font-extrabold" text-anchor="middle" x="0" y="3">!</text>
+</g>
+<!-- Node SW-02 (Cat 3850) -->
+<g class="cursor-pointer" transform="translate(400, 230)">
+<circle class="fill-surface-container stroke-secondary/50" r="46" stroke-width="2"></circle>
+<circle class="fill-surface-container-high" r="40"></circle>
+<circle class="fill-secondary animate-pulse" r="6"></circle>
+<text class="fill-secondary font-headline-sm text-[13px] font-bold tracking-wider" text-anchor="middle" y="-52">SW-02 (CAT 3850)</text>
+<text class="fill-on-surface-variant font-code-sm text-[10px]" text-anchor="middle" y="-14">Gi1/0/1 (Trunk)</text>
+<text class="fill-tertiary font-code-sm text-[10px] font-bold" text-anchor="middle" y="18">PVID: 99</text>
+<text class="fill-outline font-code-sm text-[9px]" text-anchor="middle" y="30">ACCESS POD</text>
+</g>
+<!-- Host PC-01 (HR VLAN 10) -->
+<g transform="translate(100, 380)">
+<rect class="fill-surface-container-high stroke-primary/30" height="56" rx="8" stroke-width="1.5" width="70" x="-35" y="-28"></rect>
+<text class="fill-on-surface font-title-md text-[11px] font-bold" text-anchor="middle" y="-6">PC-01</text>
+<text class="fill-primary font-code-sm text-[10px]" text-anchor="middle" y="10">VLAN 10</text>
+<text class="fill-outline-variant font-code-sm text-[8px]" text-anchor="middle" y="22">10.10.10.25</text>
+</g>
+<!-- Host PC-02 (Eng VLAN 20) -->
+<g transform="translate(500, 380)">
+<rect class="fill-surface-container-high stroke-secondary/30" height="56" rx="8" stroke-width="1.5" width="70" x="-35" y="-28"></rect>
+<text class="fill-on-surface font-title-md text-[11px] font-bold" text-anchor="middle" y="-6">PC-02</text>
+<text class="fill-secondary font-code-sm text-[10px]" text-anchor="middle" y="10">VLAN 20</text>
+<text class="fill-outline-variant font-code-sm text-[8px]" text-anchor="middle" y="22">10.10.20.84</text>
+</g>
+<!-- Active BPDU Trip Notification Overlay inside stage -->
+<g transform="translate(160, 80)">
+<rect class="fill-error-container/80 stroke-error/40" height="42" rx="6" width="280"></rect>
+<text class="fill-on-error-container font-headline-sm text-[11px] font-bold" text-anchor="middle" x="140" y="18">ERR-DISABLE: BPDU GUARD TRIPPED</text>
+<text class="fill-on-surface font-code-sm text-[10px]" text-anchor="middle" x="140" y="32">Port Gi1/0/1 transitioning to inconsistent state</text>
+</g>
+</svg>
+<!-- Floating Ping Telemetry Card -->
+<div class="absolute bottom-3 left-3 bg-surface-container/90 backdrop-blur-md rounded-lg p-2.5 shadow-lg flex items-center gap-3">
+<div class="flex flex-col">
+<span class="text-xs uppercase text-outline font-label-badge">Fabric Telemetry</span>
+<span class="text-code-sm font-code-sm text-primary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              RTT: 0.8ms • Zero Drops
+            </span>
+</div>
+<div class="h-6 w-px bg-outline-variant/40"></div>
+<div class="flex flex-col">
+<span class="text-xs uppercase text-outline font-label-badge">Emulated ASIC</span>
+<span class="text-code-sm font-code-sm text-secondary font-semibold">Cisco UADP 3.0</span>
+</div>
+</div>
+<!-- Node Inspector Mini Badge -->
+<div class="absolute top-3 right-3 bg-surface-container/90 backdrop-blur-md rounded-lg px-3 py-1.5 shadow-md flex items-center gap-2 text-xs font-code-sm">
+<span class="text-on-surface-variant">Active Inspect:</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-bold">sw1:Gi1/0/1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM DRAWER: Rubric Engine & AST Grading Matrix -->
+<div class="w-full px-space-md pb-space-lg">
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-xl flex flex-col gap-space-md">
+<!-- Matrix Header -->
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-bold">Grading Engine Specification &amp; AST Rubric</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deterministic auto-evaluation assertions executed inside the WASM network broker upon submission.</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 px-3 py-1 rounded-lg bg-surface-container-high font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Total Lab Weight:</span>
+<span class="text-primary font-bold">100 Pts</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-title-md text-title-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add Grading Objective</span>
+</button>
+</div>
+</div>
+<!-- Rubric Table / Rows -->
+<div class="overflow-x-auto rounded-lg">
+<div class="min-w-[900px] flex flex-col gap-2">
+<!-- Table Header -->
+<div class="grid grid-cols-12 gap-3 px-space-md py-2 text-xs font-label-badge uppercase tracking-wider text-outline bg-surface-container-lowest/60 rounded">
+<span class="col-span-1">ID</span>
+<span class="col-span-3">Checkpoint Goal</span>
+<span class="col-span-3">Evaluation Method &amp; Target</span>
+<span class="col-span-2">AST Parser / Verification</span>
+<span class="col-span-1 text-center">Weight</span>
+<span class="col-span-2 text-right">Actions</span>
+</div>
+<!-- Objective Row 1 -->
+<div class="grid grid-cols-12 gap-3 items-center px-space-md py-3 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<span class="col-span-1 font-code-sm text-code-sm text-primary font-bold">CHK-01</span>
+<div class="col-span-3 flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Verify Native VLAN Match on Gi1/0/1</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-xs">Target: SW-01 and SW-02 configuration parity</span>
+</div>
+<div class="col-span-3 flex flex-col font-code-sm text-code-sm">
+<span class="text-secondary truncate">CMD: show interface Gi1/0/1 switchport</span>
+<span class="text-tertiary text-xs">Regex: /Trunking Native Mode VLAN: 99/g</span>
+</div>
+<div class="col-span-2 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary text-xs font-code-sm font-semibold">Pass/Fail Strict</span>
+<span class="material-symbols-outlined text-primary text-[16px]">verified_user</span>
+</div>
+<div class="col-span-1 text-center font-code-sm text-title-md text-primary font-bold">
+              25 pts
+            </div>
+<div class="col-span-2 flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" title="Test AST Regex Assertion">
+<span class="material-symbols-outlined text-[18px]">bug_report</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" title="Edit Checkpoint">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-error" title="Delete Rule">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Objective Row 2 -->
+<div class="grid grid-cols-12 gap-3 items-center px-space-md py-3 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<span class="col-span-1 font-code-sm text-code-sm text-primary font-bold">CHK-02</span>
+<div class="col-span-3 flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Resolve STP Loop &amp; BPDU Recovery</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-xs">Ensure erratic port resets are cleared without reboot</span>
+</div>
+<div class="col-span-3 flex flex-col font-code-sm text-code-sm">
+<span class="text-secondary truncate">CMD: show spanning-tree summary</span>
+<span class="text-outline text-xs">Penalty per AI hint request: -5 pts</span>
+</div>
+<div class="col-span-2 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-secondary/10 text-secondary text-xs font-code-sm font-semibold">State Machine Node</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">memory</span>
+</div>
+<div class="col-span-1 text-center font-code-sm text-title-md text-primary font-bold">
+              35 pts
+            </div>
+<div class="col-span-2 flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" title="Test AST Regex Assertion">
+<span class="material-symbols-outlined text-[18px]">bug_report</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" title="Edit Checkpoint">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-error" title="Delete Rule">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Objective Row 3 -->
+<div class="grid grid-cols-12 gap-3 items-center px-space-md py-3 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<span class="col-span-1 font-code-sm text-code-sm text-primary font-bold">CHK-03</span>
+<div class="col-span-3 flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">ICMP End-to-End Inter-VLAN Transit</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant text-xs">WASM Packet Broker check: PC-01 to Default Gateway</span>
+</div>
+<div class="col-span-3 flex flex-col font-code-sm text-code-sm">
+<span class="text-secondary truncate">PCAP / Ping broker probe</span>
+<span class="text-primary text-xs">Assertion: 5/5 echoes replied (RTT &lt; 5ms)</span>
+</div>
+<div class="col-span-2 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary text-xs font-code-sm font-semibold">PCAP Broker L3</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]">network_ping</span>
+</div>
+<div class="col-span-1 text-center font-code-sm text-title-md text-primary font-bold">
+              40 pts
+            </div>
+<div class="col-span-2 flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" title="Test AST Regex Assertion">
+<span class="material-symbols-outlined text-[18px]">bug_report</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" title="Edit Checkpoint">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-error" title="Delete Rule">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Injection Drawer Details -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest text-xs font-code-sm text-on-surface-variant">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[16px]">info</span>
+<span>Grading runtime executes inside isolated WebAssembly QEMU thread. Non-invasive TAP sniffers will not alert student CLI.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-outline">Parser:</span>
+<span class="text-primary">TreeSitter-CiscoIOS 0.19.2</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
